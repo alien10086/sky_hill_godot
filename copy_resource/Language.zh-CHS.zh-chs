@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="utf-8"?><root><!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader><data name="Accuracy" xml:space="preserve"><value>准度</value></data><data name="accuracy_main_spec" xml:space="preserve"><value> 命中率</value></data><data name="achievement_unlocked" xml:space="preserve"><value>成就已解锁！</value></data><data name="achievements" xml:space="preserve"><value>成就</value></data><data name="Active:" xml:space="preserve"><value>主动：</value></data><data name="Advice" xml:space="preserve"><value>建议</value></data><data name="Advice: advice_1" xml:space="preserve"><value>睡眠即可恢复精力。 </value></data><data name="Advice: advice_10" xml:space="preserve"><value>不要听取陌生人的意见。 </value></data><data name="Advice: advice_2" xml:space="preserve"><value>你的技能将影响不同类型的武器。 </value></data><data name="Advice: advice_3" xml:space="preserve"><value>准备战斗。 战斗时无法装备武器。 </value></data><data name="Advice: advice_4" xml:space="preserve"><value>修好配电器, 即可使用电梯。 </value></data><data name="Advice: advice_5" xml:space="preserve"><value>熟食比生食更易满足饥饿感。 </value></data><data name="Advice: advice_6" xml:space="preserve"><value>试着瞄准身体部位。 这些怪物一定有弱点。 </value></data><data name="Advice: advice_7" xml:space="preserve"><value>不要浪费你的精力。 把握好你的回合。 </value></data><data name="Advice: advice_8" xml:space="preserve"><value>改进厨房和工作台来解锁全新的加工图纸。 </value></data><data name="Advice: advice_9" xml:space="preserve"><value>大多数图纸只能在你的房间制作。 </value></data><data name="attack" xml:space="preserve"><value>攻击</value></data><data name="Back" xml:space="preserve"><value>返回</value></data><data name="BAD_EVENT_1" xml:space="preserve"><value>晚上有人偷偷溜进了我的房间。 早上少了一个 XXX。 至少我还活着。 </value></data><data name="BAD_EVENT_2" xml:space="preserve"><value>噩梦让我饱受折磨。 一个被摧毁的世界和一群贪婪的变种怪物, 如此可怕的景象, 人性还剩下些什么......我醒来的时候精疲力竭, 一身冷汗。 </value></data><data name="BAD_EVENT_3" xml:space="preserve"><value>好像我昨天吃坏东西了。 用了整卷卫生纸才消停。 </value></data><data name="BAD_EVENT_4" xml:space="preserve"><value>我一回到床上就听见有人在尖叫。 那是个女人被撕裂时发出的令人恐惧、揪心的尖叫, 在寂静的楼道里回荡。 然而她并没痛苦多长时间。 但我却久久不能入睡......</value></data><data name="BAD_EVENT_5" xml:space="preserve"><value>我醒来时, 看到一个奇怪的小生物在我的背包里乱翻。 天知道在病毒入侵前它是个什么东西。 它发现了我, 尖叫着冲向出口, 从门下面爬了出去。 我检查背包时发现, 这混蛋啃坏了我的 XXX。 该死的, 它牙齿是什么做的啊？</value></data><data name="BAD_EVENT_6" xml:space="preserve"><value>我醒来后看见的第一样东西就是两个黑色的瞳孔, 从暗处注视着我。 我伸手去拿武器, 但那东西速度不是一般的快, 一个模糊的人影向我扑来, 我感觉手臂一阵剧痛！但它突然以同样迅疾的速度从开着的门那冲了出去。 我想, 这次我真是太走运了。 </value></data><data name="BAD_EVENT_7" xml:space="preserve"><value>整晚都有什么东西在门后大声吸气, 还发出啃爪子的声音。 我有好几个小时都睡不着。 </value></data><data name="BAD_EVENT_8" xml:space="preserve"><value>黑暗中我被奇怪的的沙沙声吵醒。 我伸手去拿武器, 抓住了能摸到的第一个东西......然后什么东西把我从床上拽了下来, 拖入黑暗。 无数的小爪子抓着我, 不停地撕扯。 我开始疯狂地反击, 但那东西不停地拖着我, 拖啊拖啊......然后我就醒了。 我在房间中间, 浑身发抖, 还抓着东西在击打着地板。 我很高兴, 这只是一个噩梦, 但我的武器就没那么走运了, 因为在惊恐时我胡乱地挥舞, 就把它给毁了。 </value></data><data name="change_man_text_donthave" xml:space="preserve"><value>我没有那种东西......</value></data><data name="change_man_text_have" xml:space="preserve"><value>我会给你这个：</value></data><data name="change_man_text_intro" xml:space="preserve"><value>嗨！我想我是唯一还活着的。 但我不需要朋友。 我就需要一样东西：</value></data><data name="change_man_text_outro" xml:space="preserve"><value>你怎么看？</value></data><data name="char_info" xml:space="preserve"><value>角色信息</value></data><data name="Clear" xml:space="preserve"><value>清除</value></data><data name="Close" xml:space="preserve"><value>关闭</value></data><data name="cloud_saves" xml:space="preserve"><value>云端备份</value></data><data name="cloud_sync" xml:space="preserve"><value>云端同步：</value></data><data name="connected" xml:space="preserve"><value>已连接</value></data><data name="Continue" xml:space="preserve"><value>继续</value></data><data name="Craft" xml:space="preserve"><value>制作</value></data><data name="craft_btn" xml:space="preserve"><value>制作</value></data><data name="craft_recipe_need_home" xml:space="preserve"><value>你只能在你的房间制作这个图纸。 </value></data><data name="crafting" xml:space="preserve"><value>正在制作</value></data><data name="Credits" xml:space="preserve"><value>点数</value></data><data name="Cutscenes" xml:space="preserve"><value>过场画面</value></data><data name="Damage" xml:space="preserve"><value>伤害</value></data><data name="death_text" xml:space="preserve"><value>你死了。 </value></data><data name="dex" xml:space="preserve"><value>敏捷度</value></data><data name="Dexterity" xml:space="preserve"><value>敏捷度</value></data><data name="dexterity_main_spec" xml:space="preserve"><value> 躲闪率。 </value></data><data name="dexterity_weapon_spec" xml:space="preserve"><value> 摧毁 DEX 武器。 </value></data><data name="dictaphone" xml:space="preserve"><value>口述录音机</value></data><data name="eat" xml:space="preserve"><value>吃</value></data><data name="electricity_shield_dialog_1" xml:space="preserve"><value>要修理保险盒, 我需要：</value></data><data name="electricity_shield_dialog_2" xml:space="preserve"><value>还有另外一种方法。 我可以尝试使用手头的任何东西来修复面板。 这也许会有用。 但这将消耗我一些能量, 而且在这个过程中, 我可能会丢失一些材料。 我是否应该尝试？</value></data><data name="ending" xml:space="preserve"><value>结束</value></data><data name="ending_wdyt" xml:space="preserve"><value>你在想什么？和我们分享你的想法：</value></data><data name="enter_code" xml:space="preserve"><value>输入代码</value></data><data name="equip" xml:space="preserve"><value>装备</value></data><data name="error" xml:space="preserve"><value>错误：</value></data><data name="error_offline" xml:space="preserve"><value>无法连接服务器, 请检查互联网连接。 </value></data><data name="Exit" xml:space="preserve"><value>退出</value></data><data name="exp" xml:space="preserve"><value>经验值</value></data><data name="extra_turn" xml:space="preserve"><value>额外回合！</value></data><data name="Fight" xml:space="preserve"><value>战斗</value></data><data name="Food" xml:space="preserve"><value>食物</value></data><data name="Fullscreen" xml:space="preserve"><value>全屏</value></data><data name="get_from_cloud" xml:space="preserve"><value>从云端获得</value></data><data name="Good" xml:space="preserve"><value>不错</value></data><data name="GOOD_EVENT_1" xml:space="preserve"><value>我睡觉时什么都没发生。 对我来说这真是个好消息。 </value></data><data name="GOOD_EVENT_2" xml:space="preserve"><value>我一躺上床就听见小鸟们开始唱歌了。 那旋律虽有些伤感, 但很能抚慰人。 我睡得比平时都好, 没做噩梦, 也没什么紧迫感和焦虑。 </value></data><data name="GOOD_EVENT_3" xml:space="preserve"><value>我昨晚无法入睡。 为了放松一下, 我开始清理弄回来的一些东西。 找到了！我很满意自己的发现, 随即安然入睡。 </value></data><data name="GOOD_EVENT_4" xml:space="preserve"><value>我决定把背包的碎屑和灰尘清一清。 你可以想象一下, 当我发现一堆吃剩的食物足以弄一顿晚餐的时候, 我有多惊讶！虽然不怎么好吃, 但很令人满足。 </value></data><data name="GOOD_EVENT_5" xml:space="preserve"><value>我梦见了自己, 灾难发生前的自己。 我坐在公园里, 人们走来走去, 阳光也很明媚。 一个似曾相识的女孩向我走来, 拉着我的手, 要带我去某个地方。 我们走了很长的时间, 周围的光线越来越亮, 直到它笼罩着我们进入了一个无法穿透的充满舒适和幸福感的茧。 我醒来后, 这种感觉不久就消失了。 </value></data><data name="GOOD_EVENT_6" xml:space="preserve"><value>我看见了一个类似手术室的房间。 在房间中央放着一个奇怪的装置, 装置外面罩着乳白色的玻璃钟罩, 罩子下面是人形剪影。 两名男子手里拿着几张纸, 站在一旁静静地交谈。 我走近了一些, 从他们肩膀方向看了一下那几张纸。 纸上写的东西我并不熟悉, 甚至可以说很陌生。 但同时, 这也让我想起了一些东西, 一些很难理解的东西。 当我靠得更近, 可以更清楚地看那些内容的时候, 其中一名男子开始尖叫, 并用手指了指位于装置中央的屏幕。 另一名男子急忙点头, 并按下了遥控器上的什么东西......我醒了。 我醒来的时候, 有一种得知了答案的感觉, 但并不知道问题是什么......</value></data><data name="hard_level_easy" xml:space="preserve"><value>简单</value></data><data name="hard_level_hard" xml:space="preserve"><value>困难</value></data><data name="hard_level_hardcore" xml:space="preserve"><value>极难</value></data><data name="hard_level_normal" xml:space="preserve"><value>普通</value></data><data name="Health" xml:space="preserve"><value>生命值</value></data><data name="Healthy" xml:space="preserve"><value>生命值</value></data><data name="herd_level_question" xml:space="preserve"><value>选择难度：</value></data><data name="Hide" xml:space="preserve"><value>躲藏</value></data><data name="hours:" xml:space="preserve"><value>小时数：</value></data><data name="Hunger" xml:space="preserve"><value>饥饿</value></data><data name="inventory_header_name" xml:space="preserve"><value>背包</value></data><data name="InventoryItemDescription: bad_overdue" xml:space="preserve"><value>％ 的几率中毒, 失去 XXX 点生命值</value></data><data name="InventoryItemDescription: Bed" xml:space="preserve"><value>每个床等级将增加睡眠时恢复的生命值</value></data><data name="InventoryItemDescription: Door" xml:space="preserve"><value>每个门等级将减少睡眠时的发生不良事件的概率</value></data><data name="InventoryItemDescription: good_antidote" xml:space="preserve"><value>解毒</value></data><data name="InventoryItemDescription: Kitchen" xml:space="preserve"><value>每个厨房等级将解锁新的烹饪食谱</value></data><data name="InventoryItemDescription: maniac_photo" xml:space="preserve"><value>一张全家福。 底部写着：“回见！”</value></data><data name="InventoryItemDescription: Workbench" xml:space="preserve"><value>每个工作台等级将解锁全新的加工图纸</value></data><data name="InventoryItemName: alchocol" xml:space="preserve"><value>酒精</value></data><data name="InventoryItemName: anesthetic" xml:space="preserve"><value>止痛药</value></data><data name="InventoryItemName: antibiotics" xml:space="preserve"><value>抗生素</value></data><data name="InventoryItemName: antidote" xml:space="preserve"><value>解药</value></data><data name="InventoryItemName: any_fruit" xml:space="preserve"><value>水果</value></data><data name="InventoryItemName: any_veg" xml:space="preserve"><value>蔬菜</value></data><data name="InventoryItemName: arc_katarrh" xml:space="preserve"><value>拳刺</value></data><data name="InventoryItemName: army_food" xml:space="preserve"><value>军用级 MRE</value></data><data name="InventoryItemName: Audio tape" xml:space="preserve"><value></value></data><data name="InventoryItemName: axe" xml:space="preserve"><value>斧子</value></data><data name="InventoryItemName: axe_crescent" xml:space="preserve"><value>丹麦斧</value></data><data name="InventoryItemName: backsword" xml:space="preserve"><value>短柄斧</value></data><data name="InventoryItemName: bandage" xml:space="preserve"><value>绷带</value></data><data name="InventoryItemName: bandy" xml:space="preserve"><value>高尔夫球杆</value></data><data name="InventoryItemName: bat" xml:space="preserve"><value>棒球棍</value></data><data name="InventoryItemName: Battery" xml:space="preserve"><value>电池</value></data><data name="InventoryItemName: battery_2" xml:space="preserve"><value>电池</value></data><data name="InventoryItemName: battle_shovel" xml:space="preserve"><value>军用铲</value></data><data name="InventoryItemName: bed_2" xml:space="preserve"><value>床等级2</value></data><data name="InventoryItemName: bed_3" xml:space="preserve"><value>床等级3</value></data><data name="InventoryItemName: big_med" xml:space="preserve"><value>大型医疗包</value></data><data name="InventoryItemName: blade" xml:space="preserve"><value>刀片</value></data><data name="InventoryItemName: Blank keycard" xml:space="preserve"><value>空白密钥卡</value></data><data name="InventoryItemName: blood_monster" xml:space="preserve"><value>变种怪的血</value></data><data name="InventoryItemName: boiled_egg" xml:space="preserve"><value>熟鸡蛋</value></data><data name="InventoryItemName: boiled_rice" xml:space="preserve"><value>熟米饭</value></data><data name="InventoryItemName: bread" xml:space="preserve"><value>面包</value></data><data name="InventoryItemName: bread_with_butter" xml:space="preserve"><value>黄油三明治</value></data><data name="InventoryItemName: bread_with_cheese" xml:space="preserve"><value>奶酪三明治</value></data><data name="InventoryItemName: brick" xml:space="preserve"><value>砖</value></data><data name="InventoryItemName: burger" xml:space="preserve"><value>汉堡</value></data><data name="InventoryItemName: butter" xml:space="preserve"><value>黄油</value></data><data name="InventoryItemName: Card recorder" xml:space="preserve"><value>密钥卡记录器</value></data><data name="InventoryItemName: Card recorder without battery" xml:space="preserve"><value>密钥卡记录器无​​电池</value></data><data name="InventoryItemName: chain_sword" xml:space="preserve"><value>链锯剑</value></data><data name="InventoryItemName: cheese" xml:space="preserve"><value>芝士</value></data><data name="InventoryItemName: chemicals" xml:space="preserve"><value>化学制品</value></data><data name="InventoryItemName: chocolate" xml:space="preserve"><value>巧克力</value></data><data name="InventoryItemName: Chocolate bar" xml:space="preserve"><value></value></data><data name="InventoryItemName: circle_saw" xml:space="preserve"><value>圆锯</value></data><data name="InventoryItemName: coctail" xml:space="preserve"><value>鸡尾酒</value></data><data name="InventoryItemName: coffee" xml:space="preserve"><value>咖啡</value></data><data name="InventoryItemName: coffee_beans" xml:space="preserve"><value>咖啡豆</value></data><data name="InventoryItemName: coffee_with_milk" xml:space="preserve"><value>牛奶咖啡</value></data><data name="InventoryItemName: coin" xml:space="preserve"><value>金币</value></data><data name="InventoryItemName: cola" xml:space="preserve"><value>可乐</value></data><data name="InventoryItemName: Cooked fish" xml:space="preserve"><value></value></data><data name="InventoryItemName: copper_wires" xml:space="preserve"><value>线</value></data><data name="InventoryItemName: dai_katana" xml:space="preserve"><value>大刀</value></data><data name="InventoryItemName: Dictaphone" xml:space="preserve"><value></value></data><data name="InventoryItemName: dismember" xml:space="preserve"><value>浆纱机</value></data><data name="InventoryItemName: Door key" xml:space="preserve"><value>密钥</value></data><data name="InventoryItemName: door_2" xml:space="preserve"><value>门等级2</value></data><data name="InventoryItemName: door_3" xml:space="preserve"><value>门等级3</value></data><data name="InventoryItemName: double_sword" xml:space="preserve"><value>双刃剑</value></data><data name="InventoryItemName: Drugs" xml:space="preserve"><value></value></data><data name="InventoryItemName: egg" xml:space="preserve"><value>鸡蛋</value></data><data name="InventoryItemName: egg_nog" xml:space="preserve"><value>蛋酒</value></data><data name="InventoryItemName: electrochase" xml:space="preserve"><value>牛角刺棒</value></data><data name="InventoryItemName: electrosword" xml:space="preserve"><value>电剑</value></data><data name="InventoryItemName: emery_brick" xml:space="preserve"><value>磨石</value></data><data name="InventoryItemName: emery_paper" xml:space="preserve"><value>砂纸</value></data><data name="InventoryItemName: f1_apple" xml:space="preserve"><value>苹果</value></data><data name="InventoryItemName: f1_banana" xml:space="preserve"><value>香蕉</value></data><data name="InventoryItemName: f1_cherry" xml:space="preserve"><value>樱桃</value></data><data name="InventoryItemName: f1_melon" xml:space="preserve"><value>瓜</value></data><data name="InventoryItemName: f1_orange" xml:space="preserve"><value>橘子</value></data><data name="InventoryItemName: f1_pear" xml:space="preserve"><value>梨子</value></data><data name="InventoryItemName: f1_qiwi" xml:space="preserve"><value>猕猴桃</value></data><data name="InventoryItemName: f1_strawberry" xml:space="preserve"><value>草莓</value></data><data name="InventoryItemName: f1_watermelon" xml:space="preserve"><value>西瓜</value></data><data name="InventoryItemName: feeder_stuff" xml:space="preserve"><value>垃圾食品</value></data><data name="InventoryItemName: First aid kit" xml:space="preserve"><value></value></data><data name="InventoryItemName: fish" xml:space="preserve"><value>鱼</value></data><data name="InventoryItemName: fish_n_chips" xml:space="preserve"><value>炸鱼薯条</value></data><data name="InventoryItemName: food_for_animals" xml:space="preserve"><value>宠物食品</value></data><data name="InventoryItemName: footcrusher" xml:space="preserve"><value>破碎机</value></data><data name="InventoryItemName: Fresh fish" xml:space="preserve"><value></value></data><data name="InventoryItemName: fried_fish" xml:space="preserve"><value>炸鱼</value></data><data name="InventoryItemName: fried_meat" xml:space="preserve"><value>熟肉</value></data><data name="InventoryItemName: fruit_salad" xml:space="preserve"><value>水果沙拉</value></data><data name="InventoryItemName: generator" xml:space="preserve"><value>发电机</value></data><data name="InventoryItemName: glandules" xml:space="preserve"><value>金属废料</value></data><data name="InventoryItemName: glepha" xml:space="preserve"><value>飞刀</value></data><data name="InventoryItemName: glue" xml:space="preserve"><value>胶水</value></data><data name="InventoryItemName: halberd" xml:space="preserve"><value>戟</value></data><data name="InventoryItemName: hammer" xml:space="preserve"><value>锤子</value></data><data name="InventoryItemName: hammersword" xml:space="preserve"><value>锤剑</value></data><data name="InventoryItemName: Hands" xml:space="preserve"><value>赤手空拳</value></data><data name="InventoryItemName: Hands0" xml:space="preserve"><value>赤手空拳</value></data><data name="InventoryItemName: hard_strike" xml:space="preserve"><value>重击</value></data><data name="InventoryItemName: hopesh" xml:space="preserve"><value>寇派斯弯刀</value></data><data name="InventoryItemName: horary_axe" xml:space="preserve"><value>机械斧</value></data><data name="InventoryItemName: hunter" xml:space="preserve"><value>猎人</value></data><data name="InventoryItemName: jagdcommando" xml:space="preserve"><value>猎人特种部队</value></data><data name="InventoryItemName: joulien" xml:space="preserve"><value>菜丝汤</value></data><data name="InventoryItemName: juice" xml:space="preserve"><value>果汁</value></data><data name="InventoryItemName: katana" xml:space="preserve"><value>武士刀</value></data><data name="InventoryItemName: katarh" xml:space="preserve"><value>拳刺</value></data><data name="InventoryItemName: kitchen_2" xml:space="preserve"><value>厨房等级2</value></data><data name="InventoryItemName: kitchen_3" xml:space="preserve"><value>厨房等级3</value></data><data name="InventoryItemName: kitchen_4" xml:space="preserve"><value>厨房等级4</value></data><data name="InventoryItemName: knife" xml:space="preserve"><value>厨刀</value></data><data name="InventoryItemName: knuckles" xml:space="preserve"><value>钩爪</value></data><data name="InventoryItemName: lighting_rod" xml:space="preserve"><value>避雷针</value></data><data name="InventoryItemName: lobotomy" xml:space="preserve"><value>脑叶切除术</value></data><data name="InventoryItemName: mace" xml:space="preserve"><value>钉锤</value></data><data name="InventoryItemName: machete" xml:space="preserve"><value>弯刀</value></data><data name="InventoryItemName: macuavile" xml:space="preserve"><value>马夸威特战棍</value></data><data name="InventoryItemName: maniac_photo" xml:space="preserve"><value>一张照片</value></data><data name="InventoryItemName: Matches" xml:space="preserve"><value></value></data><data name="InventoryItemName: maul" xml:space="preserve"><value>大木槌</value></data><data name="InventoryItemName: meal" xml:space="preserve"><value>面粉</value></data><data name="InventoryItemName: meat" xml:space="preserve"><value>生肉</value></data><data name="InventoryItemName: meat_soup" xml:space="preserve"><value>肉汤</value></data><data name="InventoryItemName: mechanism" xml:space="preserve"><value>齿轮</value></data><data name="InventoryItemName: med_bag" xml:space="preserve"><value>医疗箱</value></data><data name="InventoryItemName: milk" xml:space="preserve"><value>牛奶</value></data><data name="InventoryItemName: Milk cocktail" xml:space="preserve"><value></value></data><data name="InventoryItemName: milk_shake" xml:space="preserve"><value>奶昔</value></data><data name="InventoryItemName: misery" xml:space="preserve"><value>苦难者</value></data><data name="InventoryItemName: mop" xml:space="preserve"><value>拖把</value></data><data name="InventoryItemName: mushroom" xml:space="preserve"><value>蘑菇</value></data><data name="InventoryItemName: naginata" xml:space="preserve"><value>长刀</value></data><data name="InventoryItemName: nails" xml:space="preserve"><value>钉子</value></data><data name="InventoryItemName: Nails" xml:space="preserve"><value>钉子</value></data><data name="InventoryItemName: nails_bat" xml:space="preserve"><value>带钉子的棒球棍</value></data><data name="InventoryItemName: Nippers" xml:space="preserve"><value>斜口钳</value></data><data name="InventoryItemName: normal_med" xml:space="preserve"><value>医疗包</value></data><data name="InventoryItemName: nut" xml:space="preserve"><value>坚果</value></data><data name="InventoryItemName: overdue_apple" xml:space="preserve"><value>过期苹果</value></data><data name="InventoryItemName: overdue_banana" xml:space="preserve"><value>过期香蕉</value></data><data name="InventoryItemName: overdue_bolgar_pepper" xml:space="preserve"><value>过期甜椒</value></data><data name="InventoryItemName: overdue_brussels_cabbage" xml:space="preserve"><value>过期芽甘蓝</value></data><data name="InventoryItemName: overdue_cherry" xml:space="preserve"><value>过期樱桃</value></data><data name="InventoryItemName: overdue_corn" xml:space="preserve"><value>过期玉米</value></data><data name="InventoryItemName: overdue_meat" xml:space="preserve"><value>烂肉</value></data><data name="InventoryItemName: overdue_milk" xml:space="preserve"><value>过期牛奶</value></data><data name="InventoryItemName: overdue_onion" xml:space="preserve"><value>过期洋葱</value></data><data name="InventoryItemName: overdue_orange" xml:space="preserve"><value>过期橘子</value></data><data name="InventoryItemName: overdue_pear" xml:space="preserve"><value>过期梨子</value></data><data name="InventoryItemName: overdue_pepper" xml:space="preserve"><value>过期辣椒</value></data><data name="InventoryItemName: pancakes" xml:space="preserve"><value>煎饼</value></data><data name="InventoryItemName: Password log book" xml:space="preserve"><value>密码日志本</value></data><data name="InventoryItemName: pie_1" xml:space="preserve"><value>巧克力馅饼</value></data><data name="InventoryItemName: pie_2" xml:space="preserve"><value>坚果馅饼</value></data><data name="InventoryItemName: pie_3" xml:space="preserve"><value>水果馅饼</value></data><data name="InventoryItemName: Piece of cake" xml:space="preserve"><value></value></data><data name="InventoryItemName: piece_of_photo_1" xml:space="preserve"><value>照片碎片＃1</value></data><data name="InventoryItemName: piece_of_photo_2" xml:space="preserve"><value>照片碎片＃2</value></data><data name="InventoryItemName: piece_of_photo_3" xml:space="preserve"><value>照片碎片＃3</value></data><data name="InventoryItemName: piece_of_photo_4" xml:space="preserve"><value>照片碎片＃4</value></data><data name="InventoryItemName: pistol" xml:space="preserve"><value>手枪</value></data><data name="InventoryItemName: pneumhammer" xml:space="preserve"><value>气锤</value></data><data name="InventoryItemName: poleaxe" xml:space="preserve"><value>战斧</value></data><data name="InventoryItemName: preserves" xml:space="preserve"><value>罐裝食品</value></data><data name="InventoryItemName: preserving" xml:space="preserve"><value>锡罐</value></data><data name="InventoryItemName: protraction" xml:space="preserve"><value>刺钢丝</value></data><data name="InventoryItemName: rag" xml:space="preserve"><value>破布</value></data><data name="InventoryItemName: ragout" xml:space="preserve"><value>炖</value></data><data name="InventoryItemName: rapier" xml:space="preserve"><value>长剑</value></data><data name="InventoryItemName: razor" xml:space="preserve"><value>剃刀</value></data><data name="InventoryItemName: Recorded keycard" xml:space="preserve"><value>密钥卡</value></data><data name="InventoryItemName: rice" xml:space="preserve"><value>米饭</value></data><data name="InventoryItemName: rifle" xml:space="preserve"><value>步枪</value></data><data name="InventoryItemName: ripper" xml:space="preserve"><value>开膛手</value></data><data name="InventoryItemName: sai" xml:space="preserve"><value>空手道短叉</value></data><data name="InventoryItemName: salad" xml:space="preserve"><value>沙拉</value></data><data name="InventoryItemName: saw" xml:space="preserve"><value>锯</value></data><data name="InventoryItemName: scissors" xml:space="preserve"><value>剪刀</value></data><data name="InventoryItemName: scotch" xml:space="preserve"><value>电工胶带</value></data><data name="InventoryItemName: scrap" xml:space="preserve"><value>铁撬</value></data><data name="InventoryItemName: scythe" xml:space="preserve"><value>长柄镰刀</value></data><data name="InventoryItemName: sekator" xml:space="preserve"><value>枝剪</value></data><data name="InventoryItemName: shotgun" xml:space="preserve"><value>猎枪</value></data><data name="InventoryItemName: shovel" xml:space="preserve"><value>铲子</value></data><data name="InventoryItemName: shovel_of_sapper" xml:space="preserve"><value>工兵铲</value></data><data name="InventoryItemName: sickle" xml:space="preserve"><value>镰刀</value></data><data name="InventoryItemName: sikuacoatl" xml:space="preserve"><value>恶灵</value></data><data name="InventoryItemName: small_med" xml:space="preserve"><value>小型医疗包</value></data><data name="InventoryItemName: spear" xml:space="preserve"><value>长矛</value></data><data name="InventoryItemName: spike_knuckles" xml:space="preserve"><value>刺钉钩爪</value></data><data name="InventoryItemName: staff" xml:space="preserve"><value>员工</value></data><data name="InventoryItemName: star_knife" xml:space="preserve"><value>星型刀</value></data><data name="InventoryItemName: stick" xml:space="preserve"><value>棒</value></data><data name="InventoryItemName: sticks" xml:space="preserve"><value>火柴</value></data><data name="InventoryItemName: stilet" xml:space="preserve"><value>匕首</value></data><data name="InventoryItemName: sugar" xml:space="preserve"><value>糖</value></data><data name="InventoryItemName: sushi" xml:space="preserve"><value>寿司</value></data><data name="InventoryItemName: sword" xml:space="preserve"><value>剑</value></data><data name="InventoryItemName: sword_hook" xml:space="preserve"><value>剑钩</value></data><data name="InventoryItemName: sword_saw" xml:space="preserve"><value>剑锯</value></data><data name="InventoryItemName: table_2" xml:space="preserve"><value>工作台等级2</value></data><data name="InventoryItemName: table_3" xml:space="preserve"><value>工作台等级3</value></data><data name="InventoryItemName: table_4" xml:space="preserve"><value>工作台等级4</value></data><data name="InventoryItemName: taco" xml:space="preserve"><value>墨西哥卷饼</value></data><data name="InventoryItemName: tanto" xml:space="preserve"><value>短刀</value></data><data name="InventoryItemName: tonpha" xml:space="preserve"><value>东方棍</value></data><data name="InventoryItemName: tools" xml:space="preserve"><value>工具包</value></data><data name="InventoryItemName: trident" xml:space="preserve"><value>三叉戟</value></data><data name="InventoryItemName: tube" xml:space="preserve"><value>管子</value></data><data name="InventoryItemName: tube_with_keenly" xml:space="preserve"><value>尖管</value></data><data name="InventoryItemName: ulu" xml:space="preserve"><value>圆叶刀</value></data><data name="InventoryItemName: v1_bolgar_pepper" xml:space="preserve"><value>甜椒</value></data><data name="InventoryItemName: v1_brussels_cabbage" xml:space="preserve"><value>芽甘蓝</value></data><data name="InventoryItemName: v1_corn" xml:space="preserve"><value>玉米</value></data><data name="InventoryItemName: v1_garlic" xml:space="preserve"><value>大蒜</value></data><data name="InventoryItemName: v1_onion" xml:space="preserve"><value>洋葱</value></data><data name="InventoryItemName: v1_pepper" xml:space="preserve"><value>胡椒</value></data><data name="InventoryItemName: vegetable_ragout" xml:space="preserve"><value>炖蔬菜</value></data><data name="InventoryItemName: vegetable_soup" xml:space="preserve"><value>蔬菜汤</value></data><data name="InventoryItemName: vegetable-salad" xml:space="preserve"><value>蔬菜沙拉</value></data><data name="InventoryItemName: vibrospear" xml:space="preserve"><value>振动长矛</value></data><data name="InventoryItemName: VIP-guest card" xml:space="preserve"><value>VIP 密钥卡</value></data><data name="InventoryItemName: water" xml:space="preserve"><value>水</value></data><data name="InventoryItemName: wires" xml:space="preserve"><value>电缆</value></data><data name="InventoryItemName: wood" xml:space="preserve"><value>木件</value></data><data name="Journal" xml:space="preserve"><value>日记</value></data><data name="journal_empty_text" xml:space="preserve"><value>你的日记是空的。 探索酒店, 找到各种数据来填写你的日志。 </value></data><data name="JournalName: diary_page" xml:space="preserve"><value></value></data><data name="JournalName: EXPERIMENT_NOTE_1" xml:space="preserve"><value>打印的笔记</value></data><data name="JournalName: last_letter" xml:space="preserve"><value></value></data><data name="JournalName: MANIAC_ENDING_NOTE_1" xml:space="preserve"><value>剪报 ＃1</value></data><data name="JournalName: MANIAC_ENDING_NOTE_2" xml:space="preserve"><value>剪报 ＃2</value></data><data name="JournalName: MANIAC_ENDING_NOTE_3" xml:space="preserve"><value>剪报 ＃3</value></data><data name="JournalName: MANIAC_ENDING_NOTE_4" xml:space="preserve"><value>剪报 ＃4</value></data><data name="JournalName: MANIAC_ENDING_NOTE_5" xml:space="preserve"><value>启示录</value></data><data name="JournalName: NOTE_1" xml:space="preserve"><value>报纸第 1 页</value></data><data name="JournalName: NOTE_10" xml:space="preserve"><value>世界百科全书。 第 7 版。 2037 年。 </value></data><data name="JournalName: NOTE_11" xml:space="preserve"><value>报纸第 4 页</value></data><data name="JournalName: NOTE_12" xml:space="preserve"><value>来自《今日》杂志 ＃1 的一页</value></data><data name="JournalName: NOTE_13" xml:space="preserve"><value>含维基解密文章片段的打印页</value></data><data name="JournalName: NOTE_14" xml:space="preserve"><value>一封信</value></data><data name="JournalName: NOTE_15" xml:space="preserve"><value>未发送的信</value></data><data name="JournalName: NOTE_16" xml:space="preserve"><value>报纸社论</value></data><data name="JournalName: NOTE_17" xml:space="preserve"><value>私人信件</value></data><data name="JournalName: NOTE_18" xml:space="preserve"><value>公告</value></data><data name="JournalName: NOTE_19" xml:space="preserve"><value>皱巴巴的笔记</value></data><data name="JournalName: NOTE_2" xml:space="preserve"><value>报纸第 2 页</value></data><data name="JournalName: NOTE_20" xml:space="preserve"><value>血迹斑斑的笔记</value></data><data name="JournalName: NOTE_21" xml:space="preserve"><value>用口红写的笔记</value></data><data name="JournalName: NOTE_22" xml:space="preserve"><value>蓝色的笔记本</value></data><data name="JournalName: NOTE_23" xml:space="preserve"><value>撕破的报纸</value></data><data name="JournalName: NOTE_24" xml:space="preserve"><value>广告</value></data><data name="JournalName: NOTE_25" xml:space="preserve"><value>女孩日记第 1 部分</value></data><data name="JournalName: NOTE_26" xml:space="preserve"><value>女孩日记第 2 部分</value></data><data name="JournalName: NOTE_27" xml:space="preserve"><value>女孩日记第 3 部分</value></data><data name="JournalName: NOTE_28" xml:space="preserve"><value>笔记本上撕下来的一页</value></data><data name="JournalName: NOTE_29" xml:space="preserve"><value>餐巾纸笔记</value></data><data name="JournalName: NOTE_3" xml:space="preserve"><value>报纸第 3 页</value></data><data name="JournalName: NOTE_30" xml:space="preserve"><value>撕下来日记的第 1 页</value></data><data name="JournalName: NOTE_31" xml:space="preserve"><value>撕下来日记的第 2 页</value></data><data name="JournalName: NOTE_32" xml:space="preserve"><value>一张墙纸上的笔记</value></data><data name="JournalName: NOTE_33" xml:space="preserve"><value>报纸边缘参差不齐的笔迹</value></data><data name="JournalName: NOTE_34" xml:space="preserve"><value>相册上的笔记</value></data><data name="JournalName: NOTE_35" xml:space="preserve"><value>相册上的便迹</value></data><data name="JournalName: NOTE_36" xml:space="preserve"><value>只有一篇笔记的笔记本</value></data><data name="JournalName: NOTE_37" xml:space="preserve"><value>某人的笔记</value></data><data name="JournalName: NOTE_38" xml:space="preserve"><value>日记第 1 部分</value></data><data name="JournalName: NOTE_39" xml:space="preserve"><value>日记第 2 部分</value></data><data name="JournalName: NOTE_4" xml:space="preserve"><value>联合国军宣传册</value></data><data name="JournalName: NOTE_40" xml:space="preserve"><value>日记第 3 部分</value></data><data name="JournalName: NOTE_41" xml:space="preserve"><value>一篇笔记</value></data><data name="JournalName: NOTE_42" xml:space="preserve"><value>来自《今日》杂志 ＃2 的一页</value></data><data name="JournalName: NOTE_43" xml:space="preserve"><value>来自《今日》杂志 ＃3 的一页</value></data><data name="JournalName: NOTE_44" xml:space="preserve"><value>脏污的笔记</value></data><data name="JournalName: NOTE_45" xml:space="preserve"><value>奇怪的笔记</value></data><data name="JournalName: NOTE_46" xml:space="preserve"><value>商业信件</value></data><data name="JournalName: NOTE_47" xml:space="preserve"><value>笔记本空白边缘的笔迹</value></data><data name="JournalName: NOTE_48" xml:space="preserve"><value>日记片段</value></data><data name="JournalName: NOTE_49" xml:space="preserve"><value>卫生纸上参差不齐的笔迹</value></data><data name="JournalName: NOTE_5" xml:space="preserve"><value>来自《当代历史的秘密》杂志 ​​＃1 的一页</value></data><data name="JournalName: NOTE_50" xml:space="preserve"><value>医疗报告的一部分</value></data><data name="JournalName: NOTE_51" xml:space="preserve"><value>参差不齐的笔记</value></data><data name="JournalName: NOTE_6" xml:space="preserve"><value>来自《当代历史的秘密》杂志 ​​＃2 的一页</value></data><data name="JournalName: NOTE_7" xml:space="preserve"><value>来自《当代历史的秘密》杂志 ​​＃3 的一页</value></data><data name="JournalName: NOTE_8" xml:space="preserve"><value>来自《当代历史的秘密》杂志 ​​＃4 的一页</value></data><data name="JournalName: NOTE_9" xml:space="preserve"><value>卫报的采访片段</value></data><data name="JournalText: diary_page" xml:space="preserve"><value></value></data><data name="JournalText: EXPERIMENT_NOTE_1" xml:space="preserve"><value>登录：AMADEUS5
+密码：ShATTEREDRealitY</value></data><data name="JournalText: last_letter" xml:space="preserve"><value></value></data><data name="JournalText: MANIAC_ENDING_NOTE_1" xml:space="preserve"><value>......野蛮屠杀了五条人命, 其中包括一名儿童。 警方认为此案是连环杀手所为, 且和两月前发生的另一起案件相关, 当起案件使用的是类似于谋杀工具的自制凶器。 由于本案缺乏清晰的作案逻辑和动机, 因而使搜查工作变得错综复杂。 多数专家一致认为, 本案凶手患有精神疾病......</value></data><data name="JournalText: MANIAC_ENDING_NOTE_2" xml:space="preserve"><value>......显然, 本案与城西 12 英里处发生的另一起谋杀案相关。 一个年轻女子被重击致死, 且并未发现有强奸或抢劫的迹象。 案发区域唯一的监控摄像头仅拍摄到了一个模糊的影子正从犯罪现场逃离......</value></data><data name="JournalText: MANIAC_ENDING_NOTE_3" xml:space="preserve"><value>...倾向于认为, 这一系列的谋杀案件都具有一个固定模式, 如果不是, 也可以确定至少凶犯患有严重的精神疾病。 在所有立案调查的案件中, 作案凶器均为自制工具, 这说明凶手可能是一名技术娴熟的工匠或机械师。 而这一点也加大了凶器本身的鉴别难度。 媒体已将凶手化名为“机械师”......</value></data><data name="JournalText: MANIAC_ENDING_NOTE_4" xml:space="preserve"><value>......目前, 受连环杀手攻击后唯一的幸存者。 调查人员正询问一名受害者, 他遭“机械师”袭击后, 奇迹般地幸存了下来。 警方仍没有作出公开声明, 但初步数据显示, 凶手不仅受感官剥夺症状的影响, 还患有一种罕见的精神疾病, 以致出现严重的现实感丧失......</value></data><data name="JournalText: MANIAC_ENDING_NOTE_5" xml:space="preserve"><value>恶心。 他们始终都在我们中间。 向来如此。 只是我们从未留意。 他们伪装自己。 四处躲藏。 啃食我们。 可并没有人亲眼所见。 他们从某种程度上改变了我们, 甚至是在我们未有察觉的情况下改变了我们。 
+但我看得到他们。 这是我的天赋。 我知道, 遭受打击或创伤后, 这样的才能就能得以发挥。 对我来说, 那确是难忘的一天。 当天, 我在 9 号公路经历了一场可怕的车祸。 当然, 我很幸运, 至少比在车上其他人要幸运。 因为我还活着, 而他们就没这么好运了。 而且我必须拯救所有人。 如果不是我, 还能有谁？之后, 我看到......
+
+现在, 我总是会带把刀在身上。 时刻准备。 他们可能藏在任何地方。 其中一人假扮乞丐, 披着身破布。 另一个住在桥下, 还吃狗。 
+
+很快, 我发现刀根本不够用。 他们数量太多了, 而且非常危险。 而人们却看不到这些危险。 我的执照被吊销了。 但我一定会独自完成这一切, 如果这就是宿命的话。 
+
+我还记得, 那个关于 Benning 一家*不忍卒读*的时刻, 他们所有人, 全家老少, 都死了, 他们的尸体被 5 个丑陋的怪物残忍地吞噬。 可怜的 Anny！她才只有 8 岁！我记得当时内心充斥着难以压抑的愤怒, 手中紧握着武器, 还记得那 5 个怪物受到伏击后在血泊中痛苦扭动的身躯。 他妈的, 要是我及时赶到, 要是......
+
+我记得其中一个怪物试图逃离。 那无耻的家伙受了重伤, 脓水溅得到处都是, 但最后它还是从窗户跳了出去, 消失在小巷......
+
+我了解到有一场战争正在进行。 这些怪物混入我们内部, 诱使我们相互争斗, 好方便它们对我们下手。 我只希望, 我们会比他们更聪明, 好识破它们的伎俩。 </value></data><data name="JournalText: NOTE_1" xml:space="preserve"><value>2015 年 10 月。 Tihran 在位于阿拉伯沙漠的试验基地成功完成了核试验。 全球共同体及 Salakhia 政府均对 Tihran 激进的伊斯兰组织表示担忧, 在过去 40 年间, 此组织一再挑起与 Salakhia 政府在政治及军事方面的争端。 虽然, 他们强调 Tihran 是一个世俗国家, 但我认为只要是我专栏的长期读者应该都不会相信这一说法。 现在, 这些狂热分子已经控制了末日装备, 而究竟如何才能阻止他们将其投入使用？
+由联合国支持进行的和平会谈将是挽救万千生命的唯一途径。 此会谈将于下周拉开帷幕……</value></data><data name="JournalText: NOTE_10" xml:space="preserve"><value>新瘟疫的病媒是代号为 1839 的突变型鼠疫杆菌。 病菌经由空气传播, 传播距离可达 45 码, 且但凡接触感染源或直接接触感染人群或带致病活性的产品均可被感染。 
+
+发病潜伏期为 5 天左右。 症状表现为黑色斑点遍布全身。 发病后两周将出现内脏坏死。 发病后三周将出现脑坏死, 并导致患者死亡。 
+
+死亡率约为 97％。 剩余 3％ 的患者具有该疾病先天抗性。 他们染病后, 将出现不同的症状。 一些人会因特定身体部位的组织坏死而致残, 但也有一些人只会出现轻微症状且几乎不受什么影响。 但幸存者仍然是潜在带菌者, 因此必须将其隔离净化或灭除。 </value></data><data name="JournalText: NOTE_11" xml:space="preserve"><value>…...俄罗斯已向所谓的“东方联盟”政府发出了抗议公函。 该联盟在中国兼并西伯利亚领土之时, 以协助新瘟疫受害者为借口成立。 俄罗斯联邦总统表示, 他认为这是一种对俄罗斯实施侵略的行为, 且俄罗斯将不会与此联盟建立任何外交关系。 许多分析师认为这决定性的一步属于不折不扣的民粹主义行为。 俄罗斯欧洲地区受到传染病的严重影响, 且恢复其政治及军事方面的世界影响力几乎......</value></data><data name="JournalText: NOTE_12" xml:space="preserve"><value>我们的新世界又将是何面貌？在全球性灾难的持续性威胁解除之时, 由于核武器禁令的施行, 我们无法与“东方联盟”不断升级的挑衅行为抗衡。 世界如果过于软弱, 新瘟疫 — 一个真正的神罚, 将会让全球 2/3 的地区陷入野蛮暴虐。 联合国将不复存在, 新欧洲拾起前欧盟散落的残墟, 孑然重生, 而这一切不过强弩之末。 俄罗斯内战一触即发, 我们的政治家们碍于官方体制, 拒绝像前两次一样再度恢复我们的核能水平。 将军说, 我们虽有十足把握应对全球冲突, 但......</value></data><data name="JournalText: NOTE_13" xml:space="preserve"><value>......与东方联盟接壤的新欧洲正面临着一场神秘疾病的爆发。 所有感染者中有一半已经死亡。 幸存者中有 92% 发生变异, 他们不仅生理上发生了转变, 且表现出更强的攻击倾向和羸弱的智力水平。 疫病中心很快控制了疫情, 但国际社会对东方联盟在新欧洲领土测试其生物武器的行为表示强烈谴责。 </value></data><data name="JournalText: NOTE_14" xml:space="preserve"><value>东方联盟人口密集区的骚乱仍在继续。 昨天, 一个中国家庭被当街用石块砸死。 连儿童也不例外。 这一切都是我亲眼所见。 这个世界究竟怎么了？</value></data><data name="JournalText: NOTE_15" xml:space="preserve"><value>......东方联盟借由此事向新欧洲发起了攻击。 怪物。 不然还能是什么。 首先, 他们用病毒感染人群, 然后再用子弹射击。 我们需要采取行动......</value></data><data name="JournalText: NOTE_16" xml:space="preserve"><value>一年前的东方联盟绝对想不到, 在今天的 2 月 24 日, 他们会处于眼下的境地。 我们英勇的士兵们和欧洲及俄罗斯的盟友一同将侵略者驱逐回国, 为数以千计的受害者报仇雪恨。 同胞们, 我很清楚, 对你们很多人而言, 战争税都是一种沉重的负担, 但请记住, 你们已经选择接受我们的领导, 并希望我们能带领你们走向繁荣！而繁荣的世界就不该有东方同盟！</value></data><data name="JournalText: NOTE_17" xml:space="preserve"><value>结束了, Petra。 他们就是一群疯子。 他们发射了导弹。 天知道他们在里面装了什么。 可能是疟疾, 甚至更糟的是, 埃博拉病毒也有可能。 Petra, 把所有门都锁上, 打开生物防御, 呆在里面不要出来。 我不知道还能不能再见到你。 我爱你。 </value></data><data name="JournalText: NOTE_18" xml:space="preserve"><value>大家请注意！这不是演习。 请前往最近的生化危机避难所。 不要惊慌。 妇女和儿童优先。 </value></data><data name="JournalText: NOTE_19" xml:space="preserve"><value>别傻了！搞得好像尖叫着跑来跑去会让你不感染这些病毒似的。 如果我们一起同时开车去避难所, 就会造成严重的交通拥堵, 那可真他妈帮上大忙了。 我很庆幸自己还有点脑子。 家里装了防御系统。 现在我可以从带防菌涂料的 placsogel 窗户看到外面那些愚蠢的害虫是怎么挣扎的。 他们没有希望了。 </value></data><data name="JournalText: NOTE_2" xml:space="preserve"><value>……正当 Salakhia 欢庆和平会谈成功终结 40 年来的冲突之时, 一场叛乱却在 Tihran 爆发。 伊斯兰组织对和谈结果颇为愤怒, 称其“对异教徒的态度过于宽松”, 而其举动已得到当地民众的支持。 他们要求政府下台并提前进行改选。 对此, 全球共同体正积极探讨针对 Tihran 国乱的可行制裁手段, 而此举措将于新政府上台后正式实行。 伊斯兰组织的头目 Hakim 声称……</value></data><data name="JournalText: NOTE_20" xml:space="preserve"><value>他们在抓我的门。 他们杀了 Tom。 就那么杀了他。 把他的手扯了下来。 谢天谢地当时他已经死了。 我把自己锁在酒店房间里。 见鬼！这些吹嘘的防御系统拿他们一点办法也没有。 我们活下来难道是要被这些鬼东西撕成碎片！他们从哪冒出来的？</value></data><data name="JournalText: NOTE_21" xml:space="preserve"><value>我在这已经待了两个星期了。 我们的食物就快没了。 Betty 跑了。 太糟糕了！我是那么喜欢摸她蓬松的毛。 贝蒂总让我想起以往那些一切还算...正常的日子。 而且没食物的时候, 我本可以吃了她。 屁话。 </value></data><data name="JournalText: NOTE_22" xml:space="preserve"><value>Joe 牺牲了。 他用扫帚杀死了一个怪物, 给我和 Missy 争取了逃离的时间。 其他怪物抓住了他, 把他拖过了门廊......我真是受不了了。 我们差点没从 12 楼下来。 电梯用不了的时候, 呆在这就是等死。 </value></data><data name="JournalText: NOTE_23" xml:space="preserve"><value>......在这篇文章的最后, 我们想问您, 我们亲爱的读者：您正在如何保护自己和亲人？请在我们的网站专区留言, 我们将在下一期中公布最佳评论！</value></data><data name="JournalText: NOTE_24" xml:space="preserve"><value>阅读十一月的期刊：遗愿清单构想。 世界末日前要做的 10 件事。 </value></data><data name="JournalText: NOTE_25" xml:space="preserve"><value>我希望没有人发现我在用日记本......这年头谁还用纸写东西？......我们到这来, 是因为老爸要参加一些愚蠢的商业活动, 而我得在这家烂酒店无聊至死。 每个人都在谈论世界末日, 而我想的只是回家后要怎么告诉 Mike, 我喜欢他......我不知道我是否可以订些香槟送到房间......他们会相信我 18 岁了？ </value></data><data name="JournalText: NOTE_26" xml:space="preserve"><value>这已经是第二天我没让酒店清洁员进我房间了。 捣毁系统！这会给他们个教训, 他们规定的“18 岁以下不得饮酒”简直愚蠢之极......Mike 办了个万圣节派对。 在 Facebook 上看到的。 可我还困在这！</value></data><data name="JournalText: NOTE_27" xml:space="preserve"><value>去你的万圣节！都是些小孩的玩意。 老爸回来得越来越晚了。 我怎么觉得好像要在这待上一万年似的。 我猜 Mike 现在正和 Clara 或 Sam 玩得开心。 好消息, 我找到了迷你酒吧。 现在就差开锁了。 我听说发夹那东西会有用。 </value></data><data name="JournalText: NOTE_28" xml:space="preserve"><value>我能马上搞定。 仍然成功避开了那些背后隐藏着恐怖的门。 但我总忍不住问自己：要是没食物了, 我还能撑多久？如果我临时找来的武器不足以对付接下来要伏击我的怪物, 怎么办？还有, 我要是生病了怎么办？身体感觉虚弱, 还在发烧, 听到他们肮脏的爪子咔嗒作响, 正向我靠近......我可以慢一点, 看看沿路的每个房间, 我畏畏缩缩, 全身都在恐惧中颤抖, 害怕看到另一具尸体, 他们可能是......活着但......转化了的......
+
+我不知道该怎么办。 我只知道没什么比待在这里更糟。 </value></data><data name="JournalText: NOTE_29" xml:space="preserve"><value>只要我能离开这, 我一定要给自己来上一杯极好的咖啡压压惊。 它的味道将美得让我无法自拔。 我会买精选的咖啡豆, 用我最棒的黄铜咖啡壶来泡......天啊！我简直太想喝咖啡了！</value></data><data name="JournalText: NOTE_3" xml:space="preserve"><value>……全人类的灾难日。 昨天（2016 年 5 月 16 日）, 恐怖分子引爆了 3 枚核弹, 夺走了 300,000 名 Salakhia 和美国公民的生命, 标志着一个新时代的到来：这不仅是充满恐惧、死伤的时代, 也是笼罩着核恐怖主义阴霾的时代。 名为“Light”的伊斯兰极端组织宣布对此次袭击负责。 据匿名消息称, 此“圣战”组织由新 Tihran 政府直接资助, 此推测的印证来自于核……</value></data><data name="JournalText: NOTE_30" xml:space="preserve"><value>......Tom 用他在储藏室里找到的木棍和圆锯, 设计了一个很棒的武器。 至少昨天用它敲裂两个怪物头颅的时候, 感觉挺不错。 你无法相信, Tom 在我身边, 我有多么高兴。 老妈总说他是个恶棍, 但我一点不在乎！</value></data><data name="JournalText: NOTE_31" xml:space="preserve"><value>......做梦都想着食物, 那些......“真正的”食物。 而不是那些恶心的罐装食品, 我还得连着再吃一个星期, 我不要！想想, 你在拐角餐馆里能找到的那些口感丰富美味的汉堡！虽然简单, 也不精细, 但好吃得不得了！切开的面包配上汁多味美的牛肉, 再盖上一片奶酪。 还有鲜嫩的绿色蔬菜：生菜、几片番茄、泡菜......
+该死的！我又饿了。 哎, 再吃一罐豆子好了。 </value></data><data name="JournalText: NOTE_32" xml:space="preserve"><value>......看着门的时候, 我发现了一个怪物弄出来的裂缝。 它的爪子伸进来, 又抽出去, 把门上的裂缝弄得越来越宽。 虽然门很厚, 但也可能撑不了多久。 可是, 根本无路可逃！怪物知道我在这, 它是绝不会罢手的。 而且我还会一次又一次地看到它那该死的爪子。 该死的！为什么偏偏是我？
+好了, 别紧张。 门还可以给你争取一些时间。 也许是三天。 甚至一个星期也说不定。 我必须想个主意。 我还有很多......
+
+（笔记没有写完, 后面的内容都被血迹覆盖了）</value></data><data name="JournalText: NOTE_33" xml:space="preserve"><value>我看见了一只鸟。 它正在窗外飞着。 做一只鸟该有多好啊！你想飞哪就飞哪。 想吃就吃。 是啊, 大吃一顿。 鸟尝起来很美味。 我好想大吃一顿......</value></data><data name="JournalText: NOTE_34" xml:space="preserve"><value>Megan 两天前死了。 她被那混蛋的爪子抓伤了, 手部因感染而变得极其丑陋。 开始只是肿胀, 然后就变成了黑色。 最后不得不把手给切了下来。 我给她喂了所有能缓解疼痛的药, 但并没有什么效果。 该死！Rob 至少幸运地被那胖子一击毙命。 他落地前就已经没命了, 脑浆溅得到处都是。 
+
+我到......不, 如果我能离开这, 我一定会记住你们的, 伙计们。 我一定会。 </value></data><data name="JournalText: NOTE_35" xml:space="preserve"><value>爆炸。 记不得了。 我脑子一团乱。 我看着自己的手。 这是手吗？我也不知道。 我感觉全身发痒。 我用我的爪子刨着荆棘。 脑子里有很多杂音。 感觉谁的尸体就在我旁边。 
+
+Lisa！对！她是叫这名字。 她是我的......我想不起来了。 她是......
+
+是的, 我可以的。 她是我的食物。 </value></data><data name="JournalText: NOTE_36" xml:space="preserve"><value>是时候祈祷了​​。 所有人都死了。 </value></data><data name="JournalText: NOTE_37" xml:space="preserve"><value>也许没有人会读到这些。 但无论如何, 我还是要写：人们啊, 请永远不要忘记, 希望总是有的。 即使是在这样的地方</value></data><data name="JournalText: NOTE_38" xml:space="preserve"><value>第 1 天。 
+为了让自己清醒, 我决定写一篇日记。 我听说这会有用, 尤其是在你孤独无助, 还被变异人包围的时候。 我下了楼。 很难相信, 整个城市已经没有活人了。 我猜士兵应该可以活下来, 就像电影里演的那样。 但不管怎么样, 我都不会待在这了, 不然我要么慢慢疯掉, 要么累死......这可不是我想要的。 沿路走很有可能踢着到桶走并不难子, 当然, 我会小心点。 我带着我的枪。 我就知道会用得上。 我就是这么智慧。 
+
+第 4 天。 
+我只下了两个楼层。 楼梯都被那些怪物们给堵了。 他们差一点就发现我了, 但我成功从一扇打开门那窜了出去, 心里一直在祈祷：别让我再在里面碰到该死的怪物了......我还是很幸运的。 两个恐怖的怪物就在门边发出咕哝声, 整整 4 个小时我都在发抖（感觉跟四年差不多）。 四周没有厕所, 所以我只好拉在身上了。 我他妈还在乎这些！他们终于走了......但我现在太虚弱了, 根本无法上路。 </value></data><data name="JournalText: NOTE_39" xml:space="preserve"><value>第 6 天。 
+......楼下传来了撕心裂肺的尖叫。 听声音, 应该是一个女人。 我从一个洞里看了下去：一只巨大变异人已经把门给毁了, 门后躲着一个可怜的女孩, 那怪物用它奇丑无比的手像抓玩具似得抓着她。 当然, 她正努力挣脱, 但那怪物的速度可比她快多了。 哦对了, 那女人看起来还蛮迷人的......不过这是怪物把她啃了之前的事。 看到那一幕, 我都要吐了, 但我并不想招来更多怪物。 
+
+第 13 天 (？)
+弹药用尽。 我把最后两枚子弹射入了怪物的头部（或者说像“头”的什么东西吧）, 那怪物是个新种, 看起来既奇怪又瘆人, 没什么固定形态, 还长着四条腿。 好了, 我打中的地方应该是怪兽的头, 因为那东西现在死得很彻底。 </value></data><data name="JournalText: NOTE_4" xml:space="preserve"><value>“你是否受够了担惊受怕的生活？这些狂热分子严重侵袭了我们生活中最重要的部分：我们的家庭, 我们的文化, 我们的自由！残暴的攻击已夺走了全球数百万民众的生命！伦敦地铁哭泣的孩童、莫斯科爆炸摧毁的住宅区、法兰克福烧毁的圣保罗教堂......看到这一切惨剧, 你还在等什么？加入联合国军队吧！让我们一起捍卫自由！“</value></data><data name="JournalText: NOTE_40" xml:space="preserve"><value>第 24 天。 
+看来我没法往下写了。 我已经失血过多。 而且也没有药, 根本没法止血。 所以朋友, 如果你发现我的尸体, 那么祝你这个还有生还希望的疯子好运！来, 为我的健康干一杯！</value></data><data name="JournalText: NOTE_41" xml:space="preserve"><value>在我躲在一个废弃的房间里时, 我想出了一个还挺不错的主意。 如果我用锤子和钩爪改进一下我的斧子会怎么样呢？它将成为终极武器！</value></data><data name="JournalText: NOTE_42" xml:space="preserve"><value>......所谓的核武器«禁令», 哈哈！他们轻松地就换用了生物攻击！就好像我们被新瘟疫折磨得还不够似得。 
+
+从另一方面来说, 我得承认这的确有效。 削弱了敌方的士气, 摧毁了其兵力, 而一个很明显的优势就是让敌方自己的人转而反抗其军队。 不用说, 还能用的基础设施总比地面火力点冒烟的弹坑要强多了。 
+
+但是谁在观察那些监视者？还剩多少时间就会有下一批新瘟疫从实验室跑出来？这次怕是会把寄生生物和我们一起从地球上永远灭杀。 </value></data><data name="JournalText: NOTE_43" xml:space="preserve"><value>......但东方同盟忽略了一件事：不论你有多强, 你都无法打败一群愤怒的俾格米人。 即使是巨人也不例外。 在他们与新欧洲开战后, 他们就完全忘记了世界上的其他人同样对他们怀恨在心。 所以, 他们现在就像是笼中困兽。 而且那笼子正不断缩小, 最终将会把他们逼死。 </value></data><data name="JournalText: NOTE_44" xml:space="preserve"><value>我昨晚做了一个噩梦。 Sean 变成了那些怪物中间的一个, 我必须跑过两侧有很多门的一条无尽的走廊, 才能躲开他。 我刚跑到门前, 门就关了, 我得不停地跑, 同时后方不断传来低沉的喘息声, 还有爪子咔嗒作响, 那声音向我步步逼近......
+
+我惊出了一身冷汗, 然后就醒了。 看看 Sean 现在情况怎么样。 谢天谢地, 他没有什么变化。 还是和前一天同样的尸体。 谢天谢地！</value></data><data name="JournalText: NOTE_45" xml:space="preserve"><value>“他们”在对我歌唱, “他们”在窃窃私语。 
+外面响起了警笛声, 很急促。 然而这一切都是徒劳的。 
+“他们”说, 他们是来指引我的。 确实如此。 
+我很高兴。 
+高烧让我全身发热。 那感觉就是肠胃在不停地翻腾, 体内就跟沸了锅似得。 我在变身。 
+但我很高兴。 
+“他们”给了我一个目标。 那就是去指引别人。 
+很快......</value></data><data name="JournalText: NOTE_46" xml:space="preserve"><value>Cheng, 别在这逗留太久。 我懂了, 生意归生意, 而这笔交易......还有很多利害攸关的问题, 但你得知道每个人都神经紧张。 踩到别人的脚趾, 看别人的方式不对, 都可能“玩完” , 所以不管在什么情况下, 你都得假装你是澳大利亚人, 而不是东方联盟的人, 并且你还遗传了你祖母的眼睛。 </value></data><data name="JournalText: NOTE_47" xml:space="preserve"><value>......我拿到该死的生物学博士学位的这半年以来, 付出了多少努力, 浪费了多少时间。 而且你知道吗？就算是知道宽纹叶鰕虎鱼可以在一生中很容易地改变自己的性别, 但当你需要杀死那些变种的时候, 这些根本不会有任何帮助！</value></data><data name="JournalText: NOTE_48" xml:space="preserve"><value>......从我躲在自己房间起, 我就没洗过澡。 可以肯定的是, 那些发电机仍然完好, 因为采用的是自动化设计, 而且能用很多年。 但我快没水了。 我想, 我臭得跟废料场差不多。 好事是, 跟我新邻居让人难以忍受的恶臭比起来, 我身上的味道简直不值一提。 哈哈。 
+
+好吧, 这是我最小的一个问题。 我估计后援就快来了, 但到时我可能已经把水用完了。 我必须把现在的用量减少四分之一, 这样的话就会够用了。 </value></data><data name="JournalText: NOTE_49" xml:space="preserve"><value>他们从来不睡觉。 他们什么都不怕。 他们感觉不到疼痛。 他们是冲我们来的。 </value></data><data name="JournalText: NOTE_5" xml:space="preserve"><value>......“他们让我们别无选择。 我们必须誓死抗击此暴虐罪行。 但我们不能让更多无辜的人因此丧生, 包括我们的亲人和朋友。 Tihran 及其盟国均已被夷为平地。 残存的不过废墟荒原, 科幻梦魇竟成现实。 在决定为恐怖组织提供核武器的那一刻起, 他们的命运就已注定......”</value></data><data name="JournalText: NOTE_50" xml:space="preserve"><value>......尽管使用了三倍剂量, 但患者仍然生命垂危。 体温是 106°F, 几近致命的温度。 患者神志不清, 语无伦次, 而且对听觉刺激毫无反应。 
+
+快速射线照片显示, 内部神经系统出现重要功能重建, 且肌肉组织和骨骼均出现快速增长。 理论上, 患者应在这一过程开始时休克而死, 但其胰腺、肾脏和胸腔左侧的几个肿瘤产生了一种未知激素, 而且很明显的是, 这种激素让患者存活了下来, 甚至还在此基础上完成了有机体重组......</value></data><data name="JournalText: NOTE_51" xml:space="preserve"><value>21 世纪初, 我还是个孩子的时候, 我经常和附近的孩子们一起玩“僵尸启示录”。 我们弄了个树屋。 我们爬到那里, 设想大群僵尸逼近, 然后我们不停地射击, 直到后援赶来。 不过最后一般都是我老妈跑来叫我们吃饭。 
+
+这是多么美好的回忆啊！哪像今天这么惨, 等吃饭都是这么不着边际。 </value></data><data name="JournalText: NOTE_6" xml:space="preserve"><value>......为 Tihran 之战的英雄们而建造的这一纪念碑将让我们永远铭记那些战死勇士的不朽事迹, 是他们用生命换来了我们的安全和自由。 它将让我们铭记核能潜藏的本质性威胁。 它将让我们铭记各国之间的伟大友谊, 而正是在此具有纪念意义的一天, 为维护全人类幸福, 各国共同签署了《核武器使用禁令》及《全面禁除武器级钚公约》......</value></data><data name="JournalText: NOTE_7" xml:space="preserve"><value>2017 年 9 月, 在诸多舆论压力及恐怖分子核袭击的影响下, 联合国作出了一项决策, 具体涉及限制核能、缩减核武器储备、暂停武器级钚生产, 同时建立一个独立的跨国委员会, 以确保事先由该委员会制定的决策均得以贯彻落实。 各国已一致签署相关文件。  </value></data><data name="JournalText: NOTE_8" xml:space="preserve"><value>因经由大众媒介的传播, 新瘟疫仅三个月时间便感染了整个非洲, 并蔓延至欧洲大陆。 病死率为 97％。 中国是第一个全面戒守边境并实行严格检疫的国家。 许多其他国家也相继仿效中国施行的举措。 但在 2021 年初, 即使设有严格检疫限制的国家也同样遭遇了新瘟疫感染中心增加的情况。 遭受瘟疫侵袭的欧洲、非洲、近东地区已悉数瓦解成小国。 内战在受染的印度地区爆发, 进而导致了此局面的进一步恶化。 </value></data><data name="JournalText: NOTE_9" xml:space="preserve"><value>“但如果没有 Schmidt, 我们都将几乎无法生存。 ”
+“Neher 先生, 其他科学家也参与了疫苗研发......“
+“是的, 但时间已经不多了。 新的瘟疫已劫掠整个地球。 中国和美国并没有因为严格的检疫和感染中心的迅速消除而放弃, 但人们并不认为此情况将如之前一般持续下去。 关键时刻, Schmidt 的‘拯救’计划取得了突出进展。 “
+“所以你认为他应该获得诺贝尔奖？”
+“你这问题根本毫无意义。 你很清楚, 如果没有他和他的研究, 你我现在都会是 17 大道某处的黑腐尸, 哪里还能在这里说话。 ”</value></data><data name="keep_local" xml:space="preserve"><value>保持本地</value></data><data name="lang" xml:space="preserve"><value>中国</value></data><data name="Level" xml:space="preserve"><value>关卡</value></data><data name="Loading" xml:space="preserve"><value>载入中</value></data><data name="Main menu" xml:space="preserve"><value>主菜单</value></data><data name="Mechanic" xml:space="preserve"><value></value></data><data name="Medical" xml:space="preserve"><value>医疗包</value></data><data name="miss" xml:space="preserve"><value>失误</value></data><data name="Music" xml:space="preserve"><value>音乐</value></data><data name="New Game" xml:space="preserve"><value>新游戏</value></data><data name="New level!" xml:space="preserve"><value>新关卡！</value></data><data name="New perks:" xml:space="preserve"><value>新技能：</value></data><data name="New!" xml:space="preserve"><value>新！</value></data><data name="No" xml:space="preserve"><value>否</value></data><data name="of" xml:space="preserve"><value>/</value></data><data name="off" xml:space="preserve"><value>关闭</value></data><data name="ok" xml:space="preserve"><value>确定</value></data><data name="on" xml:space="preserve"><value>开启</value></data><data name="Other" xml:space="preserve"><value>其他</value></data><data name="parse" xml:space="preserve"><value>parse</value></data><data name="Passive:" xml:space="preserve"><value>被动：</value></data><data name="perk_desc: ACTIVE_PERK_1" xml:space="preserve"><value>即使陷入困境, 你的身体也不会那么轻易地屈服。 接下来的 10 轮, 你的行动都是免费的。 </value></data><data name="perk_desc: ACTIVE_PERK_10" xml:space="preserve"><value>你在床下找到了一件神秘装置。 它有什么作用？</value></data><data name="perk_desc: ACTIVE_PERK_2" xml:space="preserve"><value>现在你已做好了充分的准备, 迎接通往出口的漫长旅程。 你有足够的食物可以吃到饱, 但这机会只有一次。 </value></data><data name="perk_desc: ACTIVE_PERK_3" xml:space="preserve"><value>你从房间拿到的急救包是非常小的, 但可以保你一天的命。 恢复 50 点生命值。 </value></data><data name="perk_desc: ACTIVE_PERK_4" xml:space="preserve"><value>找到了！你凭空获得了基地的全新升级。 </value></data><data name="perk_desc: ACTIVE_PERK_5" xml:space="preserve"><value>你已经看了一堆间谍电影。 开锁现在对你来说小菜一碟, 你能打开任何一扇门。 </value></data><data name="perk_desc: ACTIVE_PERK_6" xml:space="preserve"><value>运用你惊人的听力和分析技能去关注每一个细节。 透视当前、上下楼层的墙体。 </value></data><data name="perk_desc: ACTIVE_PERK_7" xml:space="preserve"><value>你记得起床和四处游荡......之后的一切都模糊不清。 </value></data><data name="perk_desc: ACTIVE_PERK_8" xml:space="preserve"><value>你惊人地走运, 能赢得任何战斗。 你的敌人甚至不会察觉是什么击中了他们。 霉运转瞬即逝......</value></data><data name="perk_desc: ACTIVE_PERK_9" xml:space="preserve"><value>即便在此破败不堪的世界, 一个人也总有机会重新来过。 您可以重新使用所有获得的技能点数。 </value></data><data name="perk_desc: PASSIVE_PERK_1" xml:space="preserve"><value>你总是主动出击。 你从不放弃, 从不气馁。 失败的只会是你的敌人不会是你。 </value></data><data name="perk_desc: PASSIVE_PERK_10" xml:space="preserve"><value>经典永不过时！你总希望成为亨弗莱·鲍嘉那样的人。 </value></data><data name="perk_desc: PASSIVE_PERK_2" xml:space="preserve"><value>你一直很在意自己的体重, 而现在你患上了暴食症。 每轮仅消耗 50％ 的食物。 但要注意！你每次进食都有 25％ 的几率受到与食物治疗量相等的伤害。 </value></data><data name="perk_desc: PASSIVE_PERK_3" xml:space="preserve"><value>该死的楼梯！魔鬼的杰作！在楼梯上你的伤害降低 50％。 在房间内, 则可提高 25%。 </value></data><data name="perk_desc: PASSIVE_PERK_4" xml:space="preserve"><value>你习惯了奢华的生活。 你的房间是全城最好的。 从 3 级床和 3 级门开始。 不幸的是, 你备受庇护的生活方式让你变得软弱。 你将受到 25％ 的额外伤害。 </value></data><data name="perk_desc: PASSIVE_PERK_5" xml:space="preserve"><value>多年沉溺于饮酒作乐将对你造成损害。 你百毒不侵, 进食过期食品也对你没有不良影响。 不利的一面是, 如果你饿了, 你将遭受退化之苦, 且每轮会损失 5 倍以上的生命值。 </value></data><data name="perk_desc: PASSIVE_PERK_6" xml:space="preserve"><value>你仔细搜索每一个角落, 且意外的是, 你总能找到些什么！但谁可以一直记录这些东西？！每 10 轮将失去一个随机物品。 </value></data><data name="perk_desc: PASSIVE_PERK_7" xml:space="preserve"><value>你会从一个极端转向另一个极端。 每项技能点数将随机增加 1 - 8 个属性点。 升级时, 你将仅获得一个技能点。 </value></data><data name="perk_desc: PASSIVE_PERK_8" xml:space="preserve"><value>你患有严重的、能让你全身无力的恐高症。 该死的摩天大楼！你从 60 点的最大生命值开始。 楼层越低, 你就越有信心。 每 10 层楼最多可获得 10 点生命值。 </value></data><data name="perk_desc: PASSIVE_PERK_9" xml:space="preserve"><value>你是一个真正的宿命论者, 你相信命运。 每次命中可造成 1％ - 300％ 的基础伤害。 </value></data><data name="perk_name: ACTIVE_PERK_1" xml:space="preserve"><value>困难时期</value></data><data name="perk_name: ACTIVE_PERK_10" xml:space="preserve"><value>神秘设备</value></data><data name="perk_name: ACTIVE_PERK_2" xml:space="preserve"><value>救生包</value></data><data name="perk_name: ACTIVE_PERK_3" xml:space="preserve"><value>急救方法</value></data><data name="perk_name: ACTIVE_PERK_4" xml:space="preserve"><value>灵感</value></data><data name="perk_name: ACTIVE_PERK_5" xml:space="preserve"><value>像电影里演的那么干</value></data><data name="perk_name: ACTIVE_PERK_6" xml:space="preserve"><value>演绎法</value></data><data name="perk_name: ACTIVE_PERK_7" xml:space="preserve"><value>失忆症</value></data><data name="perk_name: ACTIVE_PERK_8" xml:space="preserve"><value>幸运的混蛋</value></data><data name="perk_name: ACTIVE_PERK_9" xml:space="preserve"><value>新生活</value></data><data name="perk_name: PASSIVE_PERK_1" xml:space="preserve"><value>狂暴</value></data><data name="perk_name: PASSIVE_PERK_10" xml:space="preserve"><value>怀旧电影</value></data><data name="perk_name: PASSIVE_PERK_2" xml:space="preserve"><value>暴食症</value></data><data name="perk_name: PASSIVE_PERK_3" xml:space="preserve"><value>阶梯恐惧症</value></data><data name="perk_name: PASSIVE_PERK_4" xml:space="preserve"><value>懦夫</value></data><data name="perk_name: PASSIVE_PERK_5" xml:space="preserve"><value>瘾君子</value></data><data name="perk_name: PASSIVE_PERK_6" xml:space="preserve"><value>一团糟</value></data><data name="perk_name: PASSIVE_PERK_7" xml:space="preserve"><value>“一招鲜”</value></data><data name="perk_name: PASSIVE_PERK_8" xml:space="preserve"><value>恐高症</value></data><data name="perk_name: PASSIVE_PERK_9" xml:space="preserve"><value>概率游戏</value></data><data name="perks_intro" xml:space="preserve"><value>在开始之前, 你可以选择一项被动技能和一项主动技能。 要解锁新技能, 下楼即可！</value></data><data name="Play" xml:space="preserve"><value>开始</value></data><data name="Poisoned!" xml:space="preserve"><value>中毒了！</value></data><data name="powerful_blow" xml:space="preserve"><value>致命一击！</value></data><data name="press" xml:space="preserve"><value>按</value></data><data name="press_any_key_text" xml:space="preserve"><value>轻按以唤醒...</value></data><data name="Quest PC bat name: pc_10" xml:space="preserve"><value>LesserEvil.bat</value></data><data name="Quest PC bat name: pc_11" xml:space="preserve"><value>mr_black.bat</value></data><data name="Quest PC bat name: pc_12" xml:space="preserve"><value>Nikki.bat</value></data><data name="Quest PC bat name: pc_13" xml:space="preserve"><value>ILoveU.bat</value></data><data name="Quest PC bat name: pc_8_1" xml:space="preserve"><value>Answers.bat</value></data><data name="Quest PC bat name: pc_9" xml:space="preserve"><value>Seeker.bat</value></data><data name="Quest PC press any key" xml:space="preserve"><value>按任意键即可死亡......</value></data><data name="Quest PC Text: pc_10_1" xml:space="preserve"><value>她在附近。 你打算怎么办？</value></data><data name="Quest PC Text: pc_10_2" xml:space="preserve"><value>他们无论如何都会找到你。 </value></data><data name="Quest PC Text: pc_10_3" xml:space="preserve"><value>他们无论如何都会抓住你。 </value></data><data name="Quest PC Text: pc_10_4" xml:space="preserve"><value>他们比你强。 </value></data><data name="Quest PC Text: pc_11_1" xml:space="preserve"><value>想谈谈吗？</value></data><data name="Quest PC Text: pc_11_2" xml:space="preserve"><value>好。 你还好吗？</value></data><data name="Quest PC Text: pc_11_3" xml:space="preserve"><value>你的来电对我们非常重要。 </value></data><data name="Quest PC Text: pc_11_4" xml:space="preserve"><value>我为你感到高兴</value></data><data name="Quest PC Text: pc_12_1" xml:space="preserve"><value>你认识她吗？</value></data><data name="Quest PC Text: pc_12_2" xml:space="preserve"><value>你爱她吗？</value></data><data name="Quest PC Text: pc_12_3" xml:space="preserve"><value>你会去找她吗？</value></data><data name="Quest PC Text: pc_12_4" xml:space="preserve"><value>你怎么能忘了呢？</value></data><data name="Quest PC Text: pc_12_5" xml:space="preserve"><value>现在, 她也恨你了。 </value></data><data name="Quest PC Text: pc_12_6" xml:space="preserve"><value>她正在你旅程的终点​​等着你</value></data><data name="Quest PC Text: pc_12_7" xml:space="preserve"><value>但她会找到你的。 </value></data><data name="Quest PC Text: pc_13_1" xml:space="preserve"><value>你认为我是谁？</value></data><data name="Quest PC Text: pc_13_2" xml:space="preserve"><value>你一定在想：“他这是在取笑我, 这个混蛋！我只能回答‘是’或者‘不是’。 ”对吧？</value></data><data name="Quest PC Text: pc_13_3" xml:space="preserve"><value>没错, 我是在取笑你。 但你可知道, 我真的很崇拜你。 看着办吧。 </value></data><data name="Quest PC Text: pc_8_1" xml:space="preserve"><value>你相信这一切都是真的？</value></data><data name="Quest PC Text: pc_8_2" xml:space="preserve"><value>你还相信这一切都是真的？</value></data><data name="Quest PC Text: pc_8_3" xml:space="preserve"><value>你真的相信这一切都是真的？</value></data><data name="Quest PC Text: pc_8_4" xml:space="preserve"><value>好孩子！</value></data><data name="Quest PC Text: pc_8_5" xml:space="preserve"><value>现在你明白了。 </value></data><data name="Quest PC Text: pc_9_1" xml:space="preserve"><value>你渴望力量？</value></data><data name="Quest PC Text: pc_9_2" xml:space="preserve"><value>你渴望知识？</value></data><data name="Quest PC Text: pc_9_3" xml:space="preserve"><value>你渴望死亡？</value></data><data name="Quest PC Text: pc_9_4" xml:space="preserve"><value>你渴望答案？</value></data><data name="Quest PC Text: pc_9_5" xml:space="preserve"><value>好吧, 我给你。 但你会用吗？</value></data><data name="Quest PC Text: pc_9_6" xml:space="preserve"><value>而且现在你的世界已经不存在了, 你打算怎么用？</value></data><data name="Quest PC Text: pc_9_7" xml:space="preserve"><value>你不会那么轻松地脱困的。 </value></data><data name="Quest PC Text: pc_9_8" xml:space="preserve"><value>小心他们!</value></data><data name="Quest PC Text: pc_9_9" xml:space="preserve"><value>那你为什么还要来？</value></data><data name="Quest SMS body: sms_1_1" xml:space="preserve"><value>我依然爱你。 我在“我们特别的地方”等着你。 你还记得, 我们在 XXX 楼相遇的情景吗？</value></data><data name="Quest SMS body: sms_1_2" xml:space="preserve"><value>看, 你又迟到了。 如果你想道歉, 我在 XXX 楼。 我不会等多久。 </value></data><data name="Quest SMS body: sms_1_3" xml:space="preserve"><value>我只是想......抱抱你......再抱抱你......</value></data><data name="Quest SMS body: sms_1_3-2" xml:space="preserve"><value>我有些等烦了。 我走了。 去你的礼物！去你的！</value></data><data name="Quest SMS body: sms_2_1" xml:space="preserve"><value>你是个很酷的家伙。 约吗？我在第 XXX 楼, 怕你忘了。 </value></data><data name="Quest SMS body: sms_2_2" xml:space="preserve"><value>很遗憾你错过了所有的精彩。 不过别担心, 我们会赢回来的。  </value></data><data name="Quest SMS body: sms_3_1" xml:space="preserve"><value>今天我叔叔不太舒服。 你能帮他看看吗？他在第 XXX 楼。 要开一个重要会议, 所以...</value></data><data name="Quest SMS body: sms_3_2" xml:space="preserve"><value>这家伙挺酷的, 对吧？</value></data><data name="Quest SMS body: sms_4_1" xml:space="preserve"><value>爸爸？你在哪里？我在 XXX 楼都等了你 3 小时了！我又累又饿, 还很怕！</value></data><data name="Quest SMS body: sms_4_2" xml:space="preserve"><value>我躲在第 XXX 楼。 快点, 爸爸！拜托！</value></data><data name="Quest SMS body: sms_4_3" xml:space="preserve"><value>我定会回来找你算账的, 你个混蛋！我会把你撕成碎片。 给 Katy。 </value></data><data name="Quest SMS body: sms_4_3-2" xml:space="preserve"><value>我一直很喜欢玩捉迷藏。 快来找我。 </value></data><data name="Quest SMS body: sms_5_1" xml:space="preserve"><value>我们中的一个必须活着离开这。 我给你藏了点东西。 在第 XXX 楼。 </value></data><data name="Quest SMS body: sms_5_2" xml:space="preserve"><value>谢谢......</value></data><data name="Quest SMS body: sms_5_2-2" xml:space="preserve"><value>也许我们会再见面的。 </value></data><data name="Quest SMS body: sms_6_1" xml:space="preserve"><value>第 XXX 楼</value></data><data name="Quest SMS body: sms_6_2" xml:space="preserve"><value>第 XXX 楼</value></data><data name="Quest SMS body: sms_6_3" xml:space="preserve"><value>1232341123 楼</value></data><data name="Quest SMS body: sms_7_1" xml:space="preserve"><value>他说：“我们将在 XXX 天堂见面, 而且你会在本净中重生！”14:2</value></data><data name="Quest SMS body: sms_7_2" xml:space="preserve"><value>他打败了恶灵, 进入了通往天堂的 XXX 门。 他放弃了挚爱。 55:12</value></data><data name="Quest SMS body: sms_7_3" xml:space="preserve"><value>但他踌躇不前, 坠入了地狱的深渊。 12:#%</value></data><data name="Quest SMS body: sms_7_3-2" xml:space="preserve"><value>污秽侵袭了他的灵魂, 但他拔剑出鞘, 勇挫敌人, 活了下来。  №％：213</value></data><data name="Quest SMS body: sms_8_1" xml:space="preserve"><value>你需要答案？第 XXX 楼</value></data><data name="Quest SMS from: sms_1_1" xml:space="preserve"><value>亲爱的 &lt;3</value></data><data name="Quest SMS from: sms_1_2" xml:space="preserve"><value>亲爱的 &lt;3</value></data><data name="Quest SMS from: sms_1_3" xml:space="preserve"><value>亲爱的 &lt;3</value></data><data name="Quest SMS from: sms_1_3-2" xml:space="preserve"><value>亲爱的 &lt;3</value></data><data name="Quest SMS from: sms_2_1" xml:space="preserve"><value>兄弟, </value></data><data name="Quest SMS from: sms_2_2" xml:space="preserve"><value>兄弟, </value></data><data name="Quest SMS from: sms_3_1" xml:space="preserve"><value>Julia 2</value></data><data name="Quest SMS from: sms_3_2" xml:space="preserve"><value>Julia 2</value></data><data name="Quest SMS from: sms_4_1" xml:space="preserve"><value>女儿</value></data><data name="Quest SMS from: sms_4_2" xml:space="preserve"><value>女儿</value></data><data name="Quest SMS from: sms_4_3" xml:space="preserve"><value>爸爸</value></data><data name="Quest SMS from: sms_4_3-2" xml:space="preserve"><value>女儿</value></data><data name="Quest SMS from: sms_5_1" xml:space="preserve"><value>混球 Joe</value></data><data name="Quest SMS from: sms_5_2" xml:space="preserve"><value>混球 Joe</value></data><data name="Quest SMS from: sms_5_2-2" xml:space="preserve"><value>混球 Joe</value></data><data name="Quest SMS from: sms_6_1" xml:space="preserve"><value>帽商</value></data><data name="Quest SMS from: sms_6_2" xml:space="preserve"><value>帽商</value></data><data name="Quest SMS from: sms_6_3" xml:space="preserve"><value>帽商</value></data><data name="Quest SMS from: sms_7_1" xml:space="preserve"><value>见证</value></data><data name="Quest SMS from: sms_7_2" xml:space="preserve"><value>见证</value></data><data name="Quest SMS from: sms_7_3" xml:space="preserve"><value>见证</value></data><data name="Quest SMS from: sms_7_3-2" xml:space="preserve"><value>见证</value></data><data name="Quest SMS from: sms_8_1" xml:space="preserve"><value>Carlos</value></data><data name="quit_game" xml:space="preserve"><value>quit game</value></data><data name="Random generation" xml:space="preserve"><value>随机生成</value></data><data name="remove" xml:space="preserve"><value>remove</value></data><data name="RemoveItemRequest" xml:space="preserve"><value>You can parse this thing and get random stuff. Ability to make some things are simply removed without the material. Continue?</value></data><data name="Resume" xml:space="preserve"><value>继续</value></data><data name="ROOF_ENDING_NOTE_1" xml:space="preserve"><value>当这一切开始的时候......好吧, 你也知道, 失去自己所爱是一件非常痛苦的事。 我也许还算幸运。 没看到他们变成什么样。 他们当场死亡, 爆炸的气浪冲倒了广告牌。 震惊之中, 我们看到它先是剧烈地摇晃, 随即崩散坠地。 就像慢动作一般, 时间仿佛成了胶着的果冻......它坠落的地方离我仅一步之遥。 我是唯一幸存下来的人。 </value></data><data name="ROOF_ENDING_NOTE_2" xml:space="preserve"><value>有些事一直困扰着我。 我记不清灾难之前发生了什么。 但我还记得他们的面孔。 特别是我的 Nikki。 当时, 她下月要考数学, 她很担心, 很忧虑......好了好了。 我快把自己逼疯了。 现在, 我只是忍受着极度的愤恨, 靠扫荡废墟过活, 还得躲着那些变种怪物。 我得找个理由坚持下去。 </value></data><data name="ROOF_ENDING_NOTE_3" xml:space="preserve"><value>......后援始终没有出现。 我一天又一天地在街上游荡, 偶尔抬头看天, 希望看到一架军用直升机或战斗机, 或一个气球也好。 然而, 什么也没有。 存活下来的人们聚集在广场, 在地上画下 SOS（求救信号）的标志, 点起大火。 结果却成了变种怪物的美餐。 噪声会把他们引来。 我情愿独处。 </value></data><data name="ROOF_ENDING_NOTE_4" xml:space="preserve"><value>我脑海里会不自觉地浮现家人的面孔。 我会梦到他们。 他们成了变种, 双眼无神地看着我。 有时, 我会问自己, 如果那一切只是一个梦, 一个疯子的妄​​想呢？而在现实中, 我睡在温暖的被窝里, 躺在心爱的人怀里, 在噩梦中惊出一身冷汗。 他们说, 临死时会从梦境脱离。 </value></data><data name="ROOF_ENDING_NOTE_5" xml:space="preserve"><value>......为什么我总这样？起初, 我只想找几个罐头, 好在这堆废墟中再撑一个晚上。 但两个巨型怪兽死守在入口的紧要位置, 所以我不得不逗留一晚。 我很好奇, 所以我决定向上爬两层楼......结果却不知为何爬了几十层楼。 奇怪的是, 之前的房客几乎没引起什么麻烦, 但我能听到他们在门后恶狠狠地咆哮。 我觉得有什么东西在吸引我, 召唤我。 我想我快疯了。 </value></data><data name="ROOF_ENDING_NOTE_6" xml:space="preserve"><value>这就是命啊！我昨晚梦到了 Nikki。 她在叫我。 她呼喊着要我必须过去帮助她。 她叫我上楼。 还是下楼来着？那感觉就像是, 时间停滞在这座摩天大楼内, 而我也弄不清自己是上楼了还是下楼了。 我看不清变换的楼层号, 我就像那些感染者一样徘徊在楼道和废弃的房间里, 和当地的动物争抢过期的罐头食品。 不久前, 我在一个房间布满灰尘的镜子里照了照自己的样子。 我惊奇地发现自己就是一个穿着破衣烂衫还满身是血的怪物。 比任何变种怪物都好不到哪去。 </value></data><data name="ROOF_ENDING_NOTE_7" xml:space="preserve"><value>我的 Nikki！她越来越大声地在呼唤我。 亲爱的, 我一定会突出重围来见你的。 等我</value></data><data name="ROOF_ENDING_NOTE_8" xml:space="preserve"><value>从我困在这个该死的酒店起, 我每次睡着后都会做同一个梦。 我住在最顶层的复式套间。 这感觉如此真实。 我身边的一切都陷入了混乱。 我生存。 我猎杀。 我向自由飞奔。 这就像是另一种生活, 有目标的生活。 那样的生活里, 我听不到 Nikki 的低语, 也听不到要我去顶楼的呼唤。 亲爱的, 我马上就来找你。 就一会儿......花不了多长时间。 </value></data><data name="ROOF_ENDING_NOTE_9" xml:space="preserve"><value>最后的爆裂。 一个慌乱的梦。 我再也分不清哪些是真哪些是假。 哪个我才是真的？是下楼的那个, 还是上楼的？高烧让我疲倦至极。 是 Nikki。 她又在叫我了！等等, 亲爱的！我就来了！</value></data><data name="Run" xml:space="preserve"><value>跑</value></data><data name="Save" xml:space="preserve"><value>保存</value></data><data name="SECRET_ENDING_1" xml:space="preserve"><value>协议 B1G-83-0310M4
+
+受试者试图从第 6 研究所 62 号实验室窃取“AKADO”项目文件。 三名保安（依据协议表彰为优秀服务人员）设法遏制受试者的行动, 以防项目相关的宝贵数据丢失。 
+
+在进一步的调查过程中, 我们发现, 受试者参与了 Research Complex N40 项目, 并担任 Fergusson 医生的助手。 之前工作场所和个人传记相关的数据被巧妙地伪造了。 显然, 受试者参与项目的是为了充当行业间谍并对项目进行破坏。 
+
+不幸的是, 保安们用尽了所有办法都没能找出是何人雇佣了这名受试者。 但文件 PG-177-R6F 中提供了一张完整列表, 其内容为有充分动机的嫌疑人及派遣身份不被承认的别动队员可产生的影响。 
+
+[机密]生物学研究部请求将“Nord-West”项目的受试者从 R 区检测中心转移至 14 号实验室。 该请求是基于受试者具有出色的适应能力、技能和心理素质, 且所有这几项指标均明显高于平均水平。 该公司可通过对此类受试者进行进一步实验而大受裨益。 
+
+[机密]转移请求已得到机构负责人 E.Summers 的批准。 受试者被转移到 14 号实验室。 </value></data><data name="select object" xml:space="preserve"><value>选择物品</value></data><data name="select room" xml:space="preserve"><value>选择房间</value></data><data name="select_btn" xml:space="preserve"><value>选择</value></data><data name="select_recipe" xml:space="preserve"><value>选择物品进行制作：</value></data><data name="Settings" xml:space="preserve"><value>设置</value></data><data name="Skill points" xml:space="preserve"><value>技能点</value></data><data name="Skills" xml:space="preserve"><value>技能</value></data><data name="skip" xml:space="preserve"><value>跳过</value></data><data name="sleep" xml:space="preserve"><value>睡眠</value></data><data name="sleep_menu_text" xml:space="preserve"><value>你可在睡眠时使用饥饿点进行恢复。 </value></data><data name="Sounds" xml:space="preserve"><value>声音</value></data><data name="spd" xml:space="preserve"><value>速度</value></data><data name="Speed" xml:space="preserve"><value>速度</value></data><data name="speed_main_spec" xml:space="preserve"><value>额外回合几率 = </value></data><data name="speed_weapon_spec" xml:space="preserve"><value> 摧毁 SPD 武器。 </value></data><data name="start_sync" xml:space="preserve"><value>开始同步</value></data><data name="stop_sync" xml:space="preserve"><value>停止同步</value></data><data name="str" xml:space="preserve"><value>力量</value></data><data name="Strength" xml:space="preserve"><value>力量</value></data><data name="strength_main_spec" xml:space="preserve"><value>爆击率 (X1.5) = </value></data><data name="strength_weapon_spec" xml:space="preserve"><value> 摧毁 STR 武器</value></data><data name="sure_exit" xml:space="preserve"><value>你确定要退出？</value></data><data name="sure_new_game" xml:space="preserve"><value>你确定要开始一个新游戏？</value></data><data name="Survive" xml:space="preserve"><value>生存</value></data><data name="Talk: CARDKEY_PHRASE" xml:space="preserve"><value>KEY
+CARDKEY_PHRASE
+COINS_PHRASE
+COMBAT_PHRASE_1
+COMBAT_PHRASE_2
+COMBAT_PHRASE_3
+COMBAT_PHRASE_4
+COMBAT_PHRASE_5
+COMBAT_PHRASE_6
+DOOR_LOCKED_PHRASE
+ELECTRICITY_PROBLEM_PHRASE
+EMPTY_PHRASE
+HEALTH_PHRASE_1
+HEALTH_PHRASE_2
+HEALTH_PHRASE_3
+HEALTH_PHRASE_4
+HEALTH_PHRASE_4
+HEALTH_PHRASE_5
+HUNGER_PHRASE_1
+HUNGER_PHRASE_2
+HUNGER_PHRASE_3
+HUNGER_PHRASE_4
+HUNGER_PHRASE_5
+KEY_PHRASE
+LOFT_BROKEN_PHRASE
+LOOT_PHRASE_1
+LOOT_PHRASE_2
+LOOT_PHRASE_3
+LOOT_PHRASE_4
+LOOT_PHRASE_5
+MISC_PHRASE_1
+MISC_PHRASE_2
+MISC_PHRASE_3
+MISC_PHRASE_4
+MISC_PHRASE_5
+MONSTER_STOPPER_PHRASE
+NIKKI_PHRASE
+NO_WEAPON_PHRASE
+REPAIR_SHIELD_PHRASE
+SLEEP_HUNGER_PHRASE
+VIP_CARD_PHRASE
+Yeah!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+这是某种电子安全系统。 我需要一张密钥卡。 </value></data><data name="Talk: COINS_PHRASE" xml:space="preserve"><value>我没有零用钱。 </value></data><data name="Talk: COMBAT_PHRASE_1" xml:space="preserve"><value>我最好还是跑吧！</value></data><data name="Talk: COMBAT_PHRASE_2" xml:space="preserve"><value>我恨你！</value></data><data name="Talk: COMBAT_PHRASE_3" xml:space="preserve"><value>有些发抖......停下来。 放松。 呼吸。  </value></data><data name="Talk: COMBAT_PHRASE_4" xml:space="preserve"><value>我不会就这样放弃的！</value></data><data name="Talk: COMBAT_PHRASE_5" xml:space="preserve"><value>我要报仇。 </value></data><data name="Talk: COMBAT_PHRASE_6" xml:space="preserve"><value>我希望我的武器不会让我失望。 </value></data><data name="Talk: DOCTOR" xml:space="preserve"><value>你看上去不像酒店职员!</value></data><data name="Talk: DOOR_LOCKED_PHRASE" xml:space="preserve"><value>我打不开门。 </value></data><data name="Talk: ELECTRICITY_PROBLEM_PHRASE" xml:space="preserve"><value>一定是这层或以上楼层的电源出了故障......</value></data><data name="Talk: electricity_shield_repair_failed" xml:space="preserve"><value>该死！真浪费时间。 我是否该再试一次？</value></data><data name="Talk: electricity_shield_repair_failed_losed_item" xml:space="preserve"><value>糟糕！我只是浪费时间, 还失去了一个 XXX。 我是否该再试一次？</value></data><data name="Talk: electricity_shield_repaired" xml:space="preserve"><value>真的有用！我的努力没有白费！</value></data><data name="Talk: electricity_shield_repaired_losed_item" xml:space="preserve"><value>完成！但我失去了一个 XXX。 </value></data><data name="Talk: EMPTY_PHRASE" xml:space="preserve"><value>什么也没有......</value></data><data name="Talk: HEALTH_PHRASE_1" xml:space="preserve"><value>我有点不舒服。 </value></data><data name="Talk: HEALTH_PHRASE_2" xml:space="preserve"><value>该死的！我满身都是血！</value></data><data name="Talk: HEALTH_PHRASE_3" xml:space="preserve"><value>我已经失去了......太多的血......</value></data><data name="Talk: HEALTH_PHRASE_4" xml:space="preserve"><value>我得......喘口气。 </value></data><data name="Talk: HEALTH_PHRASE_5" xml:space="preserve"><value>绷带......我有一些绷带。 </value></data><data name="Talk: HUNGER_PHRASE_1" xml:space="preserve"><value>我饿了。 </value></data><data name="Talk: HUNGER_PHRASE_2" xml:space="preserve"><value>食物。 我需要食物。 </value></data><data name="Talk: HUNGER_PHRASE_3" xml:space="preserve"><value>我要吃点东西。 </value></data><data name="Talk: HUNGER_PHRASE_4" xml:space="preserve"><value>我饿死了。 </value></data><data name="Talk: HUNGER_PHRASE_5" xml:space="preserve"><value>别再想着食物了。 </value></data><data name="Talk: KEY_PHRASE" xml:space="preserve"><value>上锁了！我需要一把钥匙！</value></data><data name="Talk: LOFT_BROKEN_PHRASE" xml:space="preserve"><value>这层楼的电梯好像坏了。 </value></data><data name="Talk: LOOT_PHRASE_1" xml:space="preserve"><value>也许这能让我再活一天......</value></data><data name="Talk: LOOT_PHRASE_2" xml:space="preserve"><value>有些人可能把这东西当垃圾......但我呢？我把它当宝贝。 </value></data><data name="Talk: LOOT_PHRASE_3" xml:space="preserve"><value>这应该能派上用场。 </value></data><data name="Talk: LOOT_PHRASE_4" xml:space="preserve"><value>呃......我该怎么用它呢？</value></data><data name="Talk: LOOT_PHRASE_5" xml:space="preserve"><value>有一天我会需要这个。  </value></data><data name="Talk: met_second_enemy" xml:space="preserve"><value></value></data><data name="Talk: MISC_PHRASE_1" xml:space="preserve"><value>也许这是一个梦, 只是个噩梦而已......</value></data><data name="Talk: MISC_PHRASE_2" xml:space="preserve"><value>有时我觉得这摩天大楼就跟没完没了似得......</value></data><data name="Talk: MISC_PHRASE_3" xml:space="preserve"><value>我觉得我好像看到什么东西从那出去了......</value></data><data name="Talk: MISC_PHRASE_4" xml:space="preserve"><value>我离开这的时候......如果我能离开这......</value></data><data name="Talk: MISC_PHRASE_5" xml:space="preserve"><value>等等......我听到了什么......我做到了！</value></data><data name="Talk: MONSTER_STOPPER_PHRASE" xml:space="preserve"><value>该死的！这怪物守在这我根本动不了。 </value></data><data name="Talk: NIKKI_PHRASE" xml:space="preserve"><value>这是什么？Nikki？谁是 Nikki？</value></data><data name="Talk: NO_WEAPON_PHRASE" xml:space="preserve"><value>我不能赤手空拳地战斗！</value></data><data name="Talk: REPAIR_SHIELD_PHRASE" xml:space="preserve"><value>要修好这东西, 我需要 XXX</value></data><data name="Talk: SLEEP_HUNGER_PHRASE" xml:space="preserve"><value>我不能饿着肚子睡觉！</value></data><data name="Talk: VIP_CARD_PHRASE" xml:space="preserve"><value>要使用电梯, 我得找到 VIP 密钥卡。 </value></data><data name="Talk: Yeah!" xml:space="preserve"><value>太棒了！</value></data><data name="to continue" xml:space="preserve"><value>继续</value></data><data name="to_rooms_selection" xml:space="preserve"><value>前往房间选择</value></data><data name="to_show_markers" xml:space="preserve"><value>始终显示行动标记</value></data><data name="Tutorial" xml:space="preserve"><value>教程</value></data><data name="Tutorial: go_down" xml:space="preserve"><value>你可以往下......</value></data><data name="Tutorial: go_left" xml:space="preserve"><value>往左......</value></data><data name="Tutorial: go_right" xml:space="preserve"><value>......还可以往右。 </value></data><data name="tutorial_attack_answer_1" xml:space="preserve"><value>有两类进攻：</value></data><data name="tutorial_attack_answer_2" xml:space="preserve"><value>1) 你可以轻按一个敌人或他们的图标。 
+2) 或选择此图标, 切换至高级模式：</value></data><data name="tutorial_attack_answer_3" xml:space="preserve"><value>... 轻按敌人或他们的图标, 用改良的击中率和伤害实现全垒打。 </value></data><data name="tutorial_attack_title" xml:space="preserve"><value>如何使用战斗？</value></data><data name="tutorial_craft_answer_1" xml:space="preserve"><value>只需选择一个类别, 如食物或武器, 并轻按你想制作的食谱。 所有原料都将自动添加, 要制作, 请按此按钮：</value></data><data name="tutorial_craft_answer_2" xml:space="preserve"><value>有些配方仅可带回家中制作。 它们以标记为此图标：</value></data><data name="tutorial_craft_title" xml:space="preserve"><value>如何使用制作？</value></data><data name="tutorial_hunger_answer" xml:space="preserve"><value>每次从一个房间进入另一个房间都会损失一个饥饿值。 如果饥饿值为零, 则将损失两个生命值来代替。 </value></data><data name="tutorial_hunger_title" xml:space="preserve"><value>如何使用饥饿？</value></data><data name="tutorial_markers_answer" xml:space="preserve"><value> 行动标记会给你显示房间中所有的互动物品。 你可以在暂停菜单总关闭这些标记。 </value></data><data name="tutorial_markers_title" xml:space="preserve"><value>什么是行动标记？</value></data><data name="tutorial_ok_button" xml:space="preserve"><value>我明白了！</value></data><data name="VIP-room" xml:space="preserve"><value>贵宾室</value></data><data name="Weapons" xml:space="preserve"><value>武器</value></data><data name="which_saves" xml:space="preserve"><value>你想使用哪个存档？</value></data><data name="Windowed" xml:space="preserve"><value>窗口模式</value></data><data name="Yes" xml:space="preserve"><value>是</value></data><data name="your_code" xml:space="preserve"><value>你的代码：</value></data></root>
