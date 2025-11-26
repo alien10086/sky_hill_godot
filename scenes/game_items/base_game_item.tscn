@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://0clqwb0ftmqk"]
+
+[ext_resource type="Script" uid="uid://cihbuh714hcpt" path="res://scenes/game_items/base_game_item.gd" id="1_wce15"]
+[ext_resource type="Texture2D" uid="uid://b7bobd3adgi3y" path="res://assets/sprites/game_items/backsword.png" id="2_ylfuw"]
+[ext_resource type="Texture2D" uid="uid://bc3eycqer0kqg" path="res://assets/ui_game_items_base_background.png" id="3_w4725"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_si38a"]
+bg_color = Color(0.5548653, 0.27937403, 0.89272857, 1)
+
+[node name="BaseGameItem" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1818.0
+offset_bottom = -978.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wce15")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_si38a")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ylfuw")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_w4725")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 45.0
+offset_bottom = 33.0
+text = "100"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
