@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxchamw7gq7ex"]
+
+[ext_resource type="PackedScene" uid="uid://0clqwb0ftmqk" path="res://scenes/game_items/base_game_item.tscn" id="1_lh34f"]
+[ext_resource type="Script" uid="uid://4nyewqowpi0w" path="res://scenes/inventory/left_weapon_slot.gd" id="1_xf2v5"]
+[ext_resource type="Texture2D" uid="uid://dpc3rosofusbq" path="res://assets/ui/ui_backpack_plus_icon.png" id="3_evbsh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lh34f"]
+bg_color = Color(0.101960786, 0.09803922, 0.08235294, 1)
+
+[node name="LeftWeaponSlot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xf2v5")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(350, 120)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lh34f")
+
+[node name="BaseGameItem" parent="." instance=ExtResource("1_lh34f")]
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 17.0
+offset_top = 11.0
+offset_right = 117.0
+offset_bottom = 111.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 19.0
+offset_right = 179.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 25
+text = "棒"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 61.0
+offset_right = 292.0
+offset_bottom = 101.0
+theme_override_font_sizes/font_size = 25
+text = "伤害: 3.2 - 4.2"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 15.0
+offset_top = 82.0
+offset_right = 83.0
+offset_bottom = 109.0
+bbcode_enabled = true
+text = "[color=black][bgcolor=#55bb33] +1.2 [/bgcolor][/color]"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1.3316722, 2.126257, 0.8857317, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 9.0
+offset_right = 117.0
+offset_bottom = 109.0
+texture = ExtResource("3_evbsh")

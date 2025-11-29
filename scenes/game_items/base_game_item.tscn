@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cihbuh714hcpt" path="res://scenes/game_items/base_game_item.gd" id="1_wce15"]
 [ext_resource type="Texture2D" uid="uid://b7bobd3adgi3y" path="res://assets/sprites/game_items/backsword.png" id="2_ylfuw"]
-[ext_resource type="Texture2D" uid="uid://bc3eycqer0kqg" path="res://assets/ui_game_items_base_background.png" id="3_w4725"]
+[ext_resource type="Texture2D" uid="uid://bc3eycqer0kqg" path="res://assets/ui/ui_game_items_base_background.png" id="3_w4725"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_si38a"]
-bg_color = Color(0.5548653, 0.27937403, 0.89272857, 1)
+bg_color = Color(0.003921569, 0.007843138, 0, 0.5764706)
 
 [node name="BaseGameItem" type="Control"]
 custom_minimum_size = Vector2(100, 100)

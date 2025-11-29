@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2jjnutr6hqxc"]
+
+[ext_resource type="Script" uid="uid://d21tyyol0k71w" path="res://scenes/inventory/delete_area.gd" id="1_gglg4"]
+[ext_resource type="Texture2D" uid="uid://boftldjgsctgl" path="res://assets/ui/ui_backpack_delete.png" id="1_ren5c"]
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 75.0
+offset_bottom = 75.0
+script = ExtResource("1_gglg4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_right = 75.0
+offset_bottom = 78.0
+texture = ExtResource("1_ren5c")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

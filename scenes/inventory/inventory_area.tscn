@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://8j0wfwtjjvh7"]
+
+[ext_resource type="Script" uid="uid://cu8n6ex114b57" path="res://scenes/inventory/inventory_area.gd" id="1_58t31"]
+[ext_resource type="PackedScene" uid="uid://dxchamw7gq7ex" path="res://scenes/inventory/left_weapon_slot.tscn" id="3_r8sxk"]
+[ext_resource type="PackedScene" uid="uid://c2jjnutr6hqxc" path="res://scenes/inventory/delete_area.tscn" id="4_58t31"]
+[ext_resource type="PackedScene" uid="uid://bc71f10ac1l2b" path="res://scenes/inventory/right_weapon_slot.tscn" id="5_1le48"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmxej"]
+bg_color = Color(0.37413922, 0.37413928, 0.37413913, 1)
+
+[node name="InventoryArea" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_58t31")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(800, 30)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 79.0
+offset_right = 801.0
+offset_bottom = 109.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rmxej")
+
+[node name="DeleteArea" parent="." instance=ExtResource("4_58t31")]
+layout_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 82.0
+offset_right = 802.0
+offset_bottom = 106.0
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "背包"
+
+[node name="Panel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(800, 500)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 112.0
+offset_right = 802.0
+offset_bottom = 612.0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(800, 300)
+layout_mode = 1
+offset_left = 7.0
+offset_top = 115.0
+offset_right = 807.0
+offset_bottom = 608.0
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 7
+
+[node name="LeftWeaponSlot" parent="." instance=ExtResource("3_r8sxk")]
+layout_mode = 1
+offset_top = 625.0
+offset_right = -1568.0
+offset_bottom = -333.0
+
+[node name="RightWeaponSlot" parent="." instance=ExtResource("5_1le48")]
+layout_mode = 1
+offset_left = 449.0
+offset_top = 627.0
+offset_right = -1116.0
+offset_bottom = -336.0

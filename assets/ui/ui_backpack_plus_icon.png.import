@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc3eycqer0kqg"
-path="res://.godot/imported/ui_game_items_base_background.png-77bc9c023b72ad961867f7c0cf7e42c0.ctex"
+uid="uid://dpc3rosofusbq"
+path="res://.godot/imported/ui_backpack_plus_icon.png-d7b5824bf6a1f9e1368590afa66b48db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_game_items_base_background.png"
-dest_files=["res://.godot/imported/ui_game_items_base_background.png-77bc9c023b72ad961867f7c0cf7e42c0.ctex"]
+source_file="res://assets/ui/ui_backpack_plus_icon.png"
+dest_files=["res://.godot/imported/ui_backpack_plus_icon.png-d7b5824bf6a1f9e1368590afa66b48db.ctex"]
 
 [params]
 
