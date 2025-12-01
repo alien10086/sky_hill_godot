@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3gykt8inhtec"]
+
+[ext_resource type="Script" uid="uid://fggb6p6xxaxn" path="res://scenes/craft/base_craft_item.gd" id="1_1ns6f"]
+[ext_resource type="Texture2D" uid="uid://dpkmyt44ditni" path="res://assets/sprites/game_items/coin.png" id="1_odtnn"]
+
+[node name="BaseCraftItem" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1820.0
+offset_bottom = -980.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ns6f")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 4.0
+offset_right = 55.0
+offset_bottom = 54.0
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("1_odtnn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 45.0
+offset_bottom = 30.0
+text = "0"
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

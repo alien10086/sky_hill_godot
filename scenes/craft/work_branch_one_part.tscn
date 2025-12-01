@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://byx2n6eenxhxn"]
+
+[ext_resource type="PackedScene" uid="uid://cotd4a3fextts" path="res://scenes/craft/craft_build_button.tscn" id="1_lthlq"]
+[ext_resource type="Script" uid="uid://bodt5ao02ugya" path="res://scenes/craft/work_branch_one_part.gd" id="1_nxood"]
+[ext_resource type="PackedScene" uid="uid://ca8sy74sc1cng" path="res://scenes/craft/craft_delete_button.tscn" id="2_nxood"]
+[ext_resource type="Texture2D" uid="uid://dn4pm8hgo0ogw" path="res://assets/ui/ui_backpack_build_area.png" id="3_okpty"]
+[ext_resource type="PackedScene" uid="uid://d3gykt8inhtec" path="res://scenes/craft/base_craft_item.tscn" id="4_w64qy"]
+
+[node name="WorkBranchOnePart" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1379.0
+offset_bottom = -746.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nxood")
+
+[node name="CraftBuildButton" parent="." instance=ExtResource("1_lthlq")]
+layout_mode = 1
+offset_left = 368.0
+offset_top = 27.0
+offset_right = -72.0
+offset_bottom = -204.0
+
+[node name="CraftDeleteButton" parent="." instance=ExtResource("2_nxood")]
+layout_mode = 1
+offset_left = 66.0
+offset_top = 29.0
+offset_right = -377.0
+offset_bottom = -201.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 410.0
+offset_bottom = 253.0
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("3_okpty")
+
+[node name="resultCraftItem" parent="." instance=ExtResource("4_w64qy")]
+visible = false
+layout_mode = 1
+offset_left = 206.0
+offset_top = 3.0
+offset_right = -213.0
+offset_bottom = -211.0
+
+[node name="BaseCraftItem1" parent="." instance=ExtResource("4_w64qy")]
+visible = false
+layout_mode = 1
+offset_left = 4.0
+offset_top = 201.0
+offset_right = -419.0
+offset_bottom = -10.0
+
+[node name="BaseCraftItem2" parent="." instance=ExtResource("4_w64qy")]
+visible = false
+layout_mode = 1
+offset_left = 133.0
+offset_top = 199.0
+offset_right = -280.0
+offset_bottom = -11.0
+
+[node name="BaseCraftItem3" parent="." instance=ExtResource("4_w64qy")]
+visible = false
+layout_mode = 1
+offset_left = 273.0
+offset_top = 202.0
+offset_right = -146.0
+offset_bottom = -9.0
+
+[node name="BaseCraftItem4" parent="." instance=ExtResource("4_w64qy")]
+visible = false
+layout_mode = 1
+offset_left = 399.0
+offset_top = 198.0
+offset_right = -14.0
+offset_bottom = -12.0
