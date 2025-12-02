@@ -14,7 +14,7 @@ script = ExtResource("1_ixyo4")
 layout_mode = 0
 offset_left = 2.0
 offset_top = 3.0
-offset_right = 522.0
+offset_right = 448.0
 offset_bottom = 57.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ixyo4")
 
@@ -34,49 +34,47 @@ text = "选择物品进行制作："
 layout_mode = 0
 offset_left = 3.0
 offset_top = 62.0
-offset_right = 523.0
-offset_bottom = 591.0
+offset_right = 448.0
+offset_bottom = 579.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_top = 62.0
-offset_right = 518.0
-offset_bottom = 589.0
+offset_right = 446.0
+offset_bottom = 579.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 text = "武器"
 
 [node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 text = "食物"
 
 [node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 text = "医疗"
 
 [node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 text = "其他"
 
 [node name="Button5" type="Button" parent="HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 text = "VIP升级"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer"]
-custom_minimum_size = Vector2(270, 0)
+custom_minimum_size = Vector2(210, 0)
 layout_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="HBoxContainer/ScrollContainer"]
 layout_mode = 2
-theme_override_constants/h_separation = 35
-theme_override_constants/v_separation = 4
 columns = 2

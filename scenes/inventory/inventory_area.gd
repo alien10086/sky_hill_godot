@@ -32,7 +32,7 @@ func _ready() -> void:
 	# 初始化武器栏
 	_setup_weapon_slots()
 	# 添加测试武器
-	_add_test_weapons()
+	#_add_test_weapons()
 	# 初始显示库存物品
 	_update_inventory_display()
 	

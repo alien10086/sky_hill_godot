@@ -6,6 +6,8 @@ extends Control
 @onready var base_craft_item_3: BaseCraftItemUI = $BaseCraftItem3
 @onready var base_craft_item_4: BaseCraftItemUI = $BaseCraftItem4
 
+@onready var craft_build_button: Control = $CraftBuildButton
+@onready var craft_delete_button: Control = $CraftDeleteButton
 
 
 # 当前选中的合成配方
@@ -20,6 +22,29 @@ func _ready() -> void:
 	craft_manager = CraftManager.get_instance()
 	craft_manager.load_recipes()
 	inventory_manager = InventoryManage.get_instance()
+	
+	craft_build_button.build_now_craft.connect(_on_build_now_craft)
+	craft_delete_button.delete_now_craft.connect(_on_delete_now_craft)
+
+func _on_delete_now_craft():
+	current_craft_data = null
+	hide_craft()
+
+	
+func _on_build_now_craft():
+	
+	if current_craft_data:
+	
+		var can_craft_flag:bool = craft_manager.can_craft(current_craft_data, inventory_manager.get_all_items())
+		if can_craft_flag:
+			inventory_manager.add_item(current_craft_data.result_identity)
+			# TODO 这里需要增加 删除合成素材的能力
+			
+			
+	
+	
+	pass
+	
 
 func _on_total_craft_item_selected(craft_data: CraftData):
 	hide_craft()
