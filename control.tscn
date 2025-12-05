@@ -5,17 +5,27 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qtu10"]
 shader = ExtResource("1_62e2m")
-shader_parameter/USE_PIXELATE = true
-shader_parameter/USE_OUTLINE = false
-shader_parameter/USE_QUANTIZE = false
-shader_parameter/USE_CRT = true
+shader_parameter/use_pixelate = false
 shader_parameter/pixel_size = 1.0
-shader_parameter/outline_thickness = 1.0
+shader_parameter/use_outline = false
+shader_parameter/outline_size = 1.0
 shader_parameter/outline_color = Color(0, 0, 0, 1)
-shader_parameter/color_steps = 8
+shader_parameter/use_palettizer = false
+shader_parameter/use_glitch = false
+shader_parameter/glitch_amount = 0.15
+shader_parameter/glitch_speed = 2.0
+shader_parameter/use_crt = false
+shader_parameter/crt_distort = 0.1
 shader_parameter/scanline_strength = 0.6
-shader_parameter/distortion_strength = 0.1370000065075
-shader_parameter/crt_brightness = 1.2
+shader_parameter/chroma_offset = 1.0
+shader_parameter/use_grain = false
+shader_parameter/grain_amount = 0.1
+shader_parameter/use_bloom = false
+shader_parameter/bloom_strength = 0.5
+shader_parameter/bloom_threshold = 0.7
+shader_parameter/brightness = 1.0
+shader_parameter/contrast = 1.0
+shader_parameter/saturation = 1.0
 
 [node name="Control" type="Control"]
 layout_mode = 3
