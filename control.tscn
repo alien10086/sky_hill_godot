@@ -5,8 +5,8 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qtu10"]
 shader = ExtResource("1_62e2m")
-shader_parameter/use_pixelate = false
-shader_parameter/pixel_size = 1.0
+shader_parameter/use_pixelate = true
+shader_parameter/pixel_size = 26.2950012015125
 shader_parameter/use_outline = false
 shader_parameter/outline_size = 1.0
 shader_parameter/outline_color = Color(0, 0, 0, 1)
