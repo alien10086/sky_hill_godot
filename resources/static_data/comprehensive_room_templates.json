@@ -1,0 +1,99 @@
+[
+  {
+    "template_id": 1,
+    "usage_count": 2,
+    "floors": [
+      "80",
+      "36"
+    ],
+    "areas": {
+      "center_floor": [
+        {
+          "type": "chair",
+          "name": "chair_4",
+          "x": "163.9",
+          "y": "0",
+          "state": ""
+        },
+        {
+          "type": "bed",
+          "name": "bed_4",
+          "x": "193.8",
+          "y": "0",
+          "state": ""
+        },
+        {
+          "type": "floorlamp",
+          "name": "floorlamp_4",
+          "x": "134.9",
+          "y": "0",
+          "state": ""
+        }
+      ],
+      "center_high": [
+        {
+          "type": "ceilinglight",
+          "name": "ceilinglight_19",
+          "x": "156.1",
+          "y": "163.1",
+          "state": ""
+        }
+      ]
+    }
+  },
+  {
+    "template_id": 2,
+    "usage_count": 2,
+    "floors": [
+      "60",
+      "5"
+    ],
+    "areas": {
+      "center_floor": [
+        {
+          "type": "floorlamp",
+          "name": "floorlamp_3",
+          "x": "188.9",
+          "y": "0",
+          "state": ""
+        }
+      ],
+      "center_high": [
+        {
+          "type": "ceilinglight",
+          "name": "ceilinglight_18",
+          "x": "152.7",
+          "y": "165.1",
+          "state": ""
+        }
+      ],
+      "center_mid": [
+        {
+          "type": "watch",
+          "name": "watch_6",
+          "x": "131.6",
+          "y": "115.6",
+          "state": ""
+        }
+      ],
+      "left_floor": [
+        {
+          "type": "bed",
+          "name": "bed_6",
+          "x": "98.09999",
+          "y": "0",
+          "state": ""
+        }
+      ],
+      "right_floor": [
+        {
+          "type": "cycle",
+          "name": "cycle_2",
+          "x": "228.7",
+          "y": "0",
+          "state": ""
+        }
+      ]
+    }
+  }
+]

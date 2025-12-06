@@ -1,0 +1,155 @@
+[
+  {
+    "template_id": 1,
+    "usage_count": 4,
+    "floors": [
+      "97",
+      "80",
+      "54",
+      "36"
+    ],
+    "items": [
+      {
+        "type": "bed",
+        "name": "bed_4",
+        "x": "193.8",
+        "y": "0"
+      },
+      {
+        "type": "floorlamp",
+        "name": "floorlamp_4",
+        "x": "134.9",
+        "y": "0"
+      },
+      {
+        "type": "ceilinglight",
+        "name": "ceilinglight_19",
+        "x": "156.1",
+        "y": "163.1"
+      }
+    ]
+  },
+  {
+    "template_id": 2,
+    "usage_count": 4,
+    "floors": [
+      "78",
+      "58",
+      "52",
+      "38"
+    ],
+    "items": [
+      {
+        "type": "floorlamp",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0"
+      },
+      {
+        "type": "bed",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0"
+      },
+      {
+        "type": "case",
+        "name": "case_49",
+        "x": "235.6",
+        "y": "0"
+      },
+      {
+        "type": "ceilinglight",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1"
+      }
+    ]
+  },
+  {
+    "template_id": 3,
+    "usage_count": 3,
+    "floors": [
+      "87",
+      "65",
+      "4"
+    ],
+    "items": [
+      {
+        "type": "bed",
+        "name": "bed_4",
+        "x": "193.8",
+        "y": "0"
+      },
+      {
+        "type": "box",
+        "name": "box_1",
+        "x": "93.39999",
+        "y": "0"
+      },
+      {
+        "type": "ceilinglight",
+        "name": "ceilinglight_18",
+        "x": "156.1",
+        "y": "163.1"
+      }
+    ]
+  },
+  {
+    "template_id": 4,
+    "usage_count": 3,
+    "floors": [
+      "86",
+      "35",
+      "19"
+    ],
+    "items": [
+      {
+        "type": "floorlamp",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0"
+      },
+      {
+        "type": "bed",
+        "name": "bed_6",
+        "x": "98.09999",
+        "y": "0"
+      },
+      {
+        "type": "case",
+        "name": "case_14",
+        "x": "227.2",
+        "y": "0"
+      },
+      {
+        "type": "ceilinglight",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1"
+      }
+    ]
+  },
+  {
+    "template_id": 5,
+    "usage_count": 3,
+    "floors": [
+      "68",
+      "55",
+      "43"
+    ],
+    "items": [
+      {
+        "type": "bed",
+        "name": "bed_5",
+        "x": "200.2",
+        "y": "0"
+      },
+      {
+        "type": "ceilinglight",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175"
+      }
+    ]
+  }
+]
