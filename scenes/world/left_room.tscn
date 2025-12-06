@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://x7bjbfcj1o5d"]
+
+[ext_resource type="Texture2D" uid="uid://b15y47co4bqa8" path="res://assets/sprites/world_items/vip_home_background.png" id="1_8hx5u"]
+[ext_resource type="Script" uid="uid://cya3x2bof0j45" path="res://scenes/world/left_room.gd" id="1_w4ao2"]
+
+[node name="LeftRoom" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w4ao2")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 738.4616
+offset_bottom = 430.7693
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("1_8hx5u")
+expand_mode = 1
+stretch_mode = 6
