@@ -1,3 +1,51 @@
-[gd_scene format=3 uid="uid://v57ha3afj5f"]
+[gd_scene load_steps=6 format=3 uid="uid://v57ha3afj5f"]
 
-[node name="Level100" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://baycnhc1arkaf" path="res://scenes/world/vip_left_room.tscn" id="1_gny7m"]
+[ext_resource type="PackedScene" uid="uid://f25xwdiim6mg" path="res://scenes/world/vip_middle_room.tscn" id="2_7j7ei"]
+[ext_resource type="PackedScene" uid="uid://d15n8iau7tcqo" path="res://scenes/world/vip_right_room.tscn" id="3_xrnqk"]
+[ext_resource type="Texture2D" uid="uid://doxdvfi46ryyj" path="res://assets/sprites/world_items/vip_100_out.png" id="4_7j7ei"]
+[ext_resource type="Texture2D" uid="uid://w8od78ah2nq8" path="res://assets/sprites/world_items/vip0.png" id="5_xrnqk"]
+
+[node name="Level100" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 120.0
+offset_top = 423.0
+offset_right = 160.0
+offset_bottom = 463.0
+scale = Vector2(0.58, 0.58)
+
+[node name="VipLeftRoom" parent="." instance=ExtResource("1_gny7m")]
+layout_mode = 1
+
+[node name="VipMiddleRoom" parent="." instance=ExtResource("2_7j7ei")]
+layout_mode = 1
+offset_left = 955.0
+offset_top = 2.0
+offset_right = 955.0
+offset_bottom = 2.0
+
+[node name="VipRightRoom" parent="." instance=ExtResource("3_xrnqk")]
+layout_mode = 1
+offset_left = 1908.0
+offset_top = 2.0
+offset_right = 1908.0
+offset_bottom = 2.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -166.66667
+offset_top = -48.333324
+offset_right = 2070.3333
+offset_bottom = 394.6667
+scale = Vector2(1.44, 1.44)
+texture = ExtResource("4_7j7ei")
+
+[node name="top" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 446.55176
+offset_top = -450.0
+offset_right = 1215.5518
+offset_bottom = -282.0
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("5_xrnqk")
