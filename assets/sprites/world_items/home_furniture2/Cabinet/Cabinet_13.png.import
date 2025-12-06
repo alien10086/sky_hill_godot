@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://08s3wdd8qrje"
-path="res://.godot/imported/atlas0-#5915_329.png-fe074d621eaff9776ecd0e8c40e7b9a2.ctex"
+path="res://.godot/imported/Cabinet_13.png-3ac4fa849fb97a2d4f85d7fc543caeb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/world_items/home_furniture2/Cabinet/atlas0-#5915_329.png"
-dest_files=["res://.godot/imported/atlas0-#5915_329.png-fe074d621eaff9776ecd0e8c40e7b9a2.ctex"]
+source_file="res://assets/sprites/world_items/home_furniture2/Cabinet/Cabinet_13.png"
+dest_files=["res://.godot/imported/Cabinet_13.png-3ac4fa849fb97a2d4f85d7fc543caeb3.ctex"]
 
 [params]
 

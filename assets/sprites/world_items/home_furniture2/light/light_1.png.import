@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7jwnfnhubxh7"
-path="res://.godot/imported/atlas0-#5915_12.png-0df01a0043e013260612387f4e827869.ctex"
+path="res://.godot/imported/light_1.png-760559f5a4fabc830c70e3e32b19d534.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/world_items/home_furniture2/light/atlas0-#5915_12.png"
-dest_files=["res://.godot/imported/atlas0-#5915_12.png-0df01a0043e013260612387f4e827869.ctex"]
+source_file="res://assets/sprites/world_items/home_furniture2/light/light_1.png"
+dest_files=["res://.godot/imported/light_1.png-760559f5a4fabc830c70e3e32b19d534.ctex"]
 
 [params]
 

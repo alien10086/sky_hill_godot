@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3iwwf2uxwuty"
-path="res://.godot/imported/atlas0-#5915_326.png-a37c73eb03cb398e330478fa0fa79f96.ctex"
+path="res://.godot/imported/Chair_6.png-f4670a4dd594528082fa40f768ee7fe0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/world_items/home_furniture2/Chair/atlas0-#5915_326.png"
-dest_files=["res://.godot/imported/atlas0-#5915_326.png-a37c73eb03cb398e330478fa0fa79f96.ctex"]
+source_file="res://assets/sprites/world_items/home_furniture2/Chair/Chair_6.png"
+dest_files=["res://.godot/imported/Chair_6.png-f4670a4dd594528082fa40f768ee7fe0.ctex"]
 
 [params]
 

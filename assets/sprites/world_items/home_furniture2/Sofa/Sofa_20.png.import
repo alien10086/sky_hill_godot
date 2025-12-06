@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bq6yrl38a8nam"
-path="res://.godot/imported/atlas0-#5915_450.png-efb4b679e1be0b743b66044cf5469883.ctex"
+path="res://.godot/imported/Sofa_20.png-a8d7aa5d9c8845b15a80e607a16d74ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/world_items/home_furniture2/Sofa/atlas0-#5915_450.png"
-dest_files=["res://.godot/imported/atlas0-#5915_450.png-efb4b679e1be0b743b66044cf5469883.ctex"]
+source_file="res://assets/sprites/world_items/home_furniture2/Sofa/Sofa_20.png"
+dest_files=["res://.godot/imported/Sofa_20.png-a8d7aa5d9c8845b15a80e607a16d74ca.ctex"]
 
 [params]
 

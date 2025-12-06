@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0c7cxp72agj5"
-path="res://.godot/imported/atlas0-#5915_120.png-bf5a478e2b11aff12f809d6ecd046524.ctex"
+path="res://.godot/imported/vending_machine_0.png-e013eb0c40ea22608ab422379ec0baa3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/world_items/home_furniture2/vending_machine/atlas0-#5915_120.png"
-dest_files=["res://.godot/imported/atlas0-#5915_120.png-bf5a478e2b11aff12f809d6ecd046524.ctex"]
+source_file="res://assets/sprites/world_items/home_furniture2/vending_machine/vending_machine_0.png"
+dest_files=["res://.godot/imported/vending_machine_0.png-e013eb0c40ea22608ab422379ec0baa3.ctex"]
 
 [params]
 

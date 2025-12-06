@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1c5mmqp3gkme"
-path="res://.godot/imported/atlas0-#5915_97.png-8869a1eca00490519da126317d6fd35e.ctex"
+path="res://.godot/imported/flower_9.png-8ef6a135303948fbb98a3e77772e2d59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/world_items/home_furniture2/flower/atlas0-#5915_97.png"
-dest_files=["res://.godot/imported/atlas0-#5915_97.png-8869a1eca00490519da126317d6fd35e.ctex"]
+source_file="res://assets/sprites/world_items/home_furniture2/flower/flower_9.png"
+dest_files=["res://.godot/imported/flower_9.png-8ef6a135303948fbb98a3e77772e2d59.ctex"]
 
 [params]
 

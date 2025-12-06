@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://don638fimr57w"
-path="res://.godot/imported/atlas0-#5915_58.png-f524ef5b95d8641b0b146273b8363570.ctex"
+path="res://.godot/imported/electronics_15.png-93c14b8889e1c26df0788e463322b3d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/world_items/home_furniture2/electronics/atlas0-#5915_58.png"
-dest_files=["res://.godot/imported/atlas0-#5915_58.png-f524ef5b95d8641b0b146273b8363570.ctex"]
+source_file="res://assets/sprites/world_items/home_furniture2/electronics/electronics_15.png"
+dest_files=["res://.godot/imported/electronics_15.png-93c14b8889e1c26df0788e463322b3d0.ctex"]
 
 [params]
 
