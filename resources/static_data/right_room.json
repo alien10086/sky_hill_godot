@@ -1,0 +1,5710 @@
+[
+    [
+      {
+        "floor_index": "99",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "99",
+        "room": "right",
+        "name": "box_1",
+        "x": "85.5",
+        "y": "0",
+        "state": "used"
+      },
+      {
+        "floor_index": "99",
+        "room": "right",
+        "name": "bed_21",
+        "x": "144",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "99",
+        "room": "right",
+        "name": "case_1",
+        "x": "297.7",
+        "y": "0",
+        "state": "used"
+      },
+      {
+        "floor_index": "99",
+        "room": "right",
+        "name": "camera_2",
+        "x": "323.5",
+        "y": "29.8",
+        "state": ""
+      },
+      {
+        "floor_index": "99",
+        "room": "right",
+        "name": "ceilinglight_17",
+        "x": "148",
+        "y": "164",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "98",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "98",
+        "room": "right",
+        "name": "bed_24",
+        "x": "69.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "98",
+        "room": "right",
+        "name": "column_4",
+        "x": "246.6",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "98",
+        "room": "right",
+        "name": "case_4",
+        "x": "268.5",
+        "y": "0.1999969",
+        "state": "used"
+      },
+      {
+        "floor_index": "98",
+        "room": "right",
+        "name": "column_1",
+        "x": "280.2",
+        "y": "60.2",
+        "state": ""
+      },
+      {
+        "floor_index": "98",
+        "room": "right",
+        "name": "pictures_7",
+        "x": "114.4",
+        "y": "56.6",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "97",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "97",
+        "room": "right",
+        "name": "bed_4",
+        "x": "193.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "97",
+        "room": "right",
+        "name": "floorlamp_4",
+        "x": "134.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "97",
+        "room": "right",
+        "name": "ceilinglight_19",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      },
+      {
+        "floor_index": "97",
+        "room": "right",
+        "name": "enemy_1",
+        "x": "250",
+        "y": "0",
+        "state": "dead"
+      }
+    ],
+    [
+      {
+        "floor_index": "96",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "96",
+        "room": "right",
+        "name": "book_1",
+        "x": "85.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "96",
+        "room": "right",
+        "name": "bed_1",
+        "x": "152.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "96",
+        "room": "right",
+        "name": "pictures_5",
+        "x": "171.6273",
+        "y": "67.88753",
+        "state": ""
+      },
+      {
+        "floor_index": "96",
+        "room": "right",
+        "name": "column_5",
+        "x": "278.7",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "96",
+        "room": "right",
+        "name": "flower_2",
+        "x": "291.5",
+        "y": "26.5",
+        "state": ""
+      },
+      {
+        "floor_index": "96",
+        "room": "right",
+        "name": "ceilinglight_17",
+        "x": "148",
+        "y": "164",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "95",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "95",
+        "room": "right",
+        "name": "bed_6",
+        "x": "98.09999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "95",
+        "room": "right",
+        "name": "shelving_3",
+        "x": "239.4",
+        "y": "0",
+        "state": "used"
+      },
+      {
+        "floor_index": "95",
+        "room": "right",
+        "name": "aquahouse_1",
+        "x": "255.9",
+        "y": "16",
+        "state": "used"
+      },
+      {
+        "floor_index": "95",
+        "room": "right",
+        "name": "watch_7",
+        "x": "265.3",
+        "y": "46.9",
+        "state": ""
+      },
+      {
+        "floor_index": "95",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "102",
+        "y": "74.8",
+        "state": "used"
+      },
+      {
+        "floor_index": "95",
+        "room": "right",
+        "name": "book_3",
+        "x": "138.7",
+        "y": "96.3",
+        "state": ""
+      },
+      {
+        "floor_index": "95",
+        "room": "right",
+        "name": "camera_1",
+        "x": "110.06",
+        "y": "116.09",
+        "state": ""
+      },
+      {
+        "floor_index": "95",
+        "room": "right",
+        "name": "cup_3",
+        "x": "147.6",
+        "y": "115.9",
+        "state": ""
+      },
+      {
+        "floor_index": "95",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "94",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "94",
+        "room": "right",
+        "name": "chair_5",
+        "x": "96.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "94",
+        "room": "right",
+        "name": "bed_1",
+        "x": "222.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "94",
+        "room": "right",
+        "name": "case_1",
+        "x": "171.1",
+        "y": "0",
+        "state": "used"
+      },
+      {
+        "floor_index": "94",
+        "room": "right",
+        "name": "camera_2",
+        "x": "196.9",
+        "y": "29.8",
+        "state": ""
+      },
+      {
+        "floor_index": "94",
+        "room": "right",
+        "name": "walllamp_6",
+        "x": "253.6",
+        "y": "97.7",
+        "state": ""
+      },
+      {
+        "floor_index": "94",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "93",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "93",
+        "room": "right",
+        "name": "bed_30",
+        "x": "143.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "93",
+        "room": "right",
+        "name": "floorlamp_7",
+        "x": "292.4",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "93",
+        "room": "right",
+        "name": "pictures_3",
+        "x": "174.9517",
+        "y": "58.18965",
+        "state": ""
+      },
+      {
+        "floor_index": "93",
+        "room": "right",
+        "name": "case_23",
+        "x": "80.69999",
+        "y": "0.1999969",
+        "state": "used"
+      },
+      {
+        "floor_index": "93",
+        "room": "right",
+        "name": "cup_2",
+        "x": "94.79999",
+        "y": "90.8",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "92",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "92",
+        "room": "right",
+        "name": "bed_5",
+        "x": "200.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "92",
+        "room": "right",
+        "name": "table_12",
+        "x": "91.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "92",
+        "room": "right",
+        "name": "case_61",
+        "x": "216.8",
+        "y": "89.2",
+        "state": "used"
+      },
+      {
+        "floor_index": "92",
+        "room": "right",
+        "name": "book_1",
+        "x": "228.1",
+        "y": "107.1",
+        "state": ""
+      },
+      {
+        "floor_index": "92",
+        "room": "right",
+        "name": "aquahouse_1",
+        "x": "280.7",
+        "y": "107.5",
+        "state": "used"
+      },
+      {
+        "floor_index": "92",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "91",
+        "room": "right",
+        "name": "med_bed",
+        "x": "43.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "91",
+        "room": "right",
+        "name": "med_table",
+        "x": "180.8",
+        "y": "0",
+        "state": "used"
+      },
+      {
+        "floor_index": "91",
+        "room": "right",
+        "name": "med_locker",
+        "x": "277.4",
+        "y": "0",
+        "state": "used"
+      },
+      {
+        "floor_index": "91",
+        "room": "right",
+        "name": "med_kit",
+        "x": "150.6",
+        "y": "95.6",
+        "state": "used"
+      },
+      {
+        "floor_index": "91",
+        "room": "right",
+        "name": "ceilinglight_4",
+        "x": "163.3",
+        "y": "176.6",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "90",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "90",
+        "room": "right",
+        "name": "chair_2",
+        "x": "153.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "90",
+        "room": "right",
+        "name": "case_3",
+        "x": "99",
+        "y": "0",
+        "state": "used"
+      },
+      {
+        "floor_index": "90",
+        "room": "right",
+        "name": "toy",
+        "x": "104.6",
+        "y": "46.2",
+        "state": ""
+      },
+      {
+        "floor_index": "90",
+        "room": "right",
+        "name": "case_49",
+        "x": "235.6",
+        "y": "0",
+        "state": "used"
+      },
+      {
+        "floor_index": "90",
+        "room": "right",
+        "name": "globus",
+        "x": "245.1",
+        "y": "51.9",
+        "state": ""
+      },
+      {
+        "floor_index": "90",
+        "room": "right",
+        "name": "watch_6",
+        "x": "131.6",
+        "y": "115.6",
+        "state": ""
+      },
+      {
+        "floor_index": "90",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "87",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "87",
+        "room": "right",
+        "name": "bed_4",
+        "x": "193.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "87",
+        "room": "right",
+        "name": "box_1",
+        "x": "93.39999",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "87",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      },
+      {
+        "floor_index": "87",
+        "room": "right",
+        "name": "enemy_1",
+        "x": "250",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "89",
+        "room": "right",
+        "name": "med_bed_broken",
+        "x": "43.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "89",
+        "room": "right",
+        "name": "blood_4",
+        "x": "0.2000008",
+        "y": "38.5",
+        "state": ""
+      },
+      {
+        "floor_index": "89",
+        "room": "right",
+        "name": "med_table_broken",
+        "x": "190.2",
+        "y": "0",
+        "state": "used"
+      },
+      {
+        "floor_index": "89",
+        "room": "right",
+        "name": "med_locker_broken",
+        "x": "234.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "89",
+        "room": "right",
+        "name": "med_kit",
+        "x": "159.4",
+        "y": "91.7",
+        "state": "used"
+      }
+    ],
+    [
+      {
+        "floor_index": "88",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "88",
+        "room": "right",
+        "name": "bed_6",
+        "x": "98.09999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "88",
+        "room": "right",
+        "name": "case_23",
+        "x": "276",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "88",
+        "room": "right",
+        "name": "iphone_1",
+        "x": "311.7",
+        "y": "90.6",
+        "state": ""
+      },
+      {
+        "floor_index": "88",
+        "room": "right",
+        "name": "watch_6",
+        "x": "131.6",
+        "y": "115.6",
+        "state": ""
+      },
+      {
+        "floor_index": "88",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      },
+      {
+        "floor_index": "88",
+        "room": "right",
+        "name": "enemy_5",
+        "x": "170",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "86",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "86",
+        "room": "right",
+        "name": "bed_6",
+        "x": "98.09999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "86",
+        "room": "right",
+        "name": "case_14",
+        "x": "227.2",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "86",
+        "room": "right",
+        "name": "book_1",
+        "x": "243.7",
+        "y": "44.3",
+        "state": ""
+      },
+      {
+        "floor_index": "86",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "102",
+        "y": "74.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "86",
+        "room": "right",
+        "name": "cup_4",
+        "x": "131.62",
+        "y": "116.09",
+        "state": ""
+      },
+      {
+        "floor_index": "86",
+        "room": "right",
+        "name": "cup_1",
+        "x": "147.6",
+        "y": "115.9",
+        "state": ""
+      },
+      {
+        "floor_index": "86",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      },
+      {
+        "floor_index": "86",
+        "room": "right",
+        "name": "enemy_1",
+        "x": "250",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "85",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "85",
+        "room": "right",
+        "name": "bed_30",
+        "x": "143.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "85",
+        "room": "right",
+        "name": "case_2",
+        "x": "292.4",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "85",
+        "room": "right",
+        "name": "book_1",
+        "x": "307.7",
+        "y": "29.2",
+        "state": ""
+      },
+      {
+        "floor_index": "85",
+        "room": "right",
+        "name": "pictures_3",
+        "x": "174.9517",
+        "y": "58.18965",
+        "state": ""
+      },
+      {
+        "floor_index": "85",
+        "room": "right",
+        "name": "warbdone_2",
+        "x": "71.89999",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "85",
+        "room": "right",
+        "name": "rocket_2",
+        "x": "116.3",
+        "y": "145.2",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "84",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "84",
+        "room": "right",
+        "name": "case_44",
+        "x": "193.8",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "84",
+        "room": "right",
+        "name": "cup_bronze_2",
+        "x": "261.7",
+        "y": "99.4",
+        "state": ""
+      },
+      {
+        "floor_index": "84",
+        "room": "right",
+        "name": "box_1",
+        "x": "93.39999",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "84",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "83",
+        "room": "right",
+        "name": "electric_shield_2",
+        "x": "277.1",
+        "y": "108.6",
+        "state": ""
+      },
+      {
+        "floor_index": "83",
+        "room": "right",
+        "name": "washingmachine_used",
+        "x": "244.1",
+        "y": "0.5",
+        "state": ""
+      },
+      {
+        "floor_index": "83",
+        "room": "right",
+        "name": "washingmachine",
+        "x": "243.1",
+        "y": "52.5",
+        "state": ""
+      },
+      {
+        "floor_index": "83",
+        "room": "right",
+        "name": "washingmachine",
+        "x": "190.1",
+        "y": "0.5",
+        "state": ""
+      },
+      {
+        "floor_index": "83",
+        "room": "right",
+        "name": "washingmachine",
+        "x": "190.1",
+        "y": "52.5",
+        "state": ""
+      },
+      {
+        "floor_index": "83",
+        "room": "right",
+        "name": "washingmachine",
+        "x": "137.1",
+        "y": "0.5",
+        "state": ""
+      },
+      {
+        "floor_index": "83",
+        "room": "right",
+        "name": "washingmachine",
+        "x": "137.1",
+        "y": "52.5",
+        "state": ""
+      },
+      {
+        "floor_index": "83",
+        "room": "right",
+        "name": "kitchentable_1",
+        "x": "9.200012",
+        "y": "0.09999847",
+        "state": ""
+      },
+      {
+        "floor_index": "83",
+        "room": "right",
+        "name": "basket",
+        "x": "143.6",
+        "y": "102.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "83",
+        "room": "right",
+        "name": "iron_stay",
+        "x": "96.10001",
+        "y": "49.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "82",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "82",
+        "room": "right",
+        "name": "bed_30",
+        "x": "143.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "82",
+        "room": "right",
+        "name": "floorlamp_7",
+        "x": "292.4",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "82",
+        "room": "right",
+        "name": "shelf_6",
+        "x": "145.6",
+        "y": "77.5",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "82",
+        "room": "right",
+        "name": "t_shirt_4",
+        "x": "206.2",
+        "y": "91.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "82",
+        "room": "right",
+        "name": "case_17",
+        "x": "76.09999",
+        "y": "0.1999969",
+        "state": "not_used"
+      }
+    ],
+    [
+      {
+        "floor_index": "81",
+        "room": "right",
+        "name": "chair_and_box",
+        "x": "235.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "81",
+        "room": "right",
+        "name": "change_man",
+        "x": "204",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "81",
+        "room": "right",
+        "name": "ceilinglight_16",
+        "x": "159.4",
+        "y": "156",
+        "state": ""
+      },
+      {
+        "floor_index": "81",
+        "room": "right",
+        "name": "bed_6",
+        "x": "60.09999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "81",
+        "room": "right",
+        "name": "case_66",
+        "x": "61.8",
+        "y": "74.5",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "81",
+        "room": "right",
+        "name": "camera_2",
+        "x": "104",
+        "y": "94.2",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "80",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "80",
+        "room": "right",
+        "name": "bed_4",
+        "x": "193.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "80",
+        "room": "right",
+        "name": "floorlamp_4",
+        "x": "134.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "80",
+        "room": "right",
+        "name": "ceilinglight_19",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "79",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "79",
+        "room": "right",
+        "name": "bed_24",
+        "x": "69.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "79",
+        "room": "right",
+        "name": "case_60",
+        "x": "246.6",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "79",
+        "room": "right",
+        "name": "flower_2",
+        "x": "280",
+        "y": "38.8",
+        "state": ""
+      },
+      {
+        "floor_index": "79",
+        "room": "right",
+        "name": "pictures_7",
+        "x": "114.4",
+        "y": "56.6",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "78",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "78",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "78",
+        "room": "right",
+        "name": "case_49",
+        "x": "235.6",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "78",
+        "room": "right",
+        "name": "toy_2",
+        "x": "291.2",
+        "y": "51.9",
+        "state": ""
+      },
+      {
+        "floor_index": "78",
+        "room": "right",
+        "name": "watch_6",
+        "x": "131.6",
+        "y": "115.6",
+        "state": ""
+      },
+      {
+        "floor_index": "78",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      },
+      {
+        "floor_index": "78",
+        "room": "right",
+        "name": "enemy_1",
+        "x": "250",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "77",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "77",
+        "room": "right",
+        "name": "bed_4",
+        "x": "193.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "77",
+        "room": "right",
+        "name": "case_29",
+        "x": "60.2",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "77",
+        "room": "right",
+        "name": "aquahouse_1",
+        "x": "94.3",
+        "y": "36",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "77",
+        "room": "right",
+        "name": "ceilinglight_19",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      },
+      {
+        "floor_index": "77",
+        "room": "right",
+        "name": "enemy_5",
+        "x": "170",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "76",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "76",
+        "room": "right",
+        "name": "bed_7",
+        "x": "24.39999",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "76",
+        "room": "right",
+        "name": "bonsai",
+        "x": "156.9",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "76",
+        "room": "right",
+        "name": "box_1",
+        "x": "215.8",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "76",
+        "room": "right",
+        "name": "gramophone_2",
+        "x": "297.8",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "76",
+        "room": "right",
+        "name": "shelf_5",
+        "x": "132.2",
+        "y": "83.1",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "76",
+        "room": "right",
+        "name": "camera_1",
+        "x": "177.6",
+        "y": "85.4",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "75",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "75",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "75",
+        "room": "right",
+        "name": "cycle_2",
+        "x": "228.7",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "75",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "102",
+        "y": "74.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "75",
+        "room": "right",
+        "name": "gramophone_1",
+        "x": "112",
+        "y": "76.8",
+        "state": ""
+      },
+      {
+        "floor_index": "75",
+        "room": "right",
+        "name": "book_2",
+        "x": "111",
+        "y": "96.3",
+        "state": ""
+      },
+      {
+        "floor_index": "75",
+        "room": "right",
+        "name": "camera_1",
+        "x": "110.06",
+        "y": "116.09",
+        "state": ""
+      },
+      {
+        "floor_index": "75",
+        "room": "right",
+        "name": "cup_3",
+        "x": "147.6",
+        "y": "115.9",
+        "state": ""
+      },
+      {
+        "floor_index": "75",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      },
+      {
+        "floor_index": "75",
+        "room": "right",
+        "name": "enemy_2",
+        "x": "234",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "74",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "74",
+        "room": "right",
+        "name": "bonsai",
+        "x": "85.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "74",
+        "room": "right",
+        "name": "bed_21",
+        "x": "144",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "74",
+        "room": "right",
+        "name": "flower_2",
+        "x": "299.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "74",
+        "room": "right",
+        "name": "ceilinglight_1",
+        "x": "160.9",
+        "y": "155.2",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "73",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "73",
+        "room": "right",
+        "name": "bed_32",
+        "x": "193.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "73",
+        "room": "right",
+        "name": "shelf_8",
+        "x": "195.4",
+        "y": "77.9",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "73",
+        "room": "right",
+        "name": "amplifier",
+        "x": "209.1",
+        "y": "79.9",
+        "state": ""
+      },
+      {
+        "floor_index": "73",
+        "room": "right",
+        "name": "iphone_1",
+        "x": "246.6",
+        "y": "119.4",
+        "state": ""
+      },
+      {
+        "floor_index": "73",
+        "room": "right",
+        "name": "case_59",
+        "x": "88.39999",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "73",
+        "room": "right",
+        "name": "microwave",
+        "x": "100.4",
+        "y": "38.6",
+        "state": ""
+      },
+      {
+        "floor_index": "73",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      },
+      {
+        "floor_index": "73",
+        "room": "right",
+        "name": "enemy_5",
+        "x": "170",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "72",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "72",
+        "room": "right",
+        "name": "bonsai",
+        "x": "85.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "72",
+        "room": "right",
+        "name": "bed_21",
+        "x": "144",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "72",
+        "room": "right",
+        "name": "case_4",
+        "x": "295",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "72",
+        "room": "right",
+        "name": "desklamp_20",
+        "x": "306.5",
+        "y": "60",
+        "state": ""
+      },
+      {
+        "floor_index": "72",
+        "room": "right",
+        "name": "ceilinglight_17",
+        "x": "148",
+        "y": "164",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "71",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "71",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "71",
+        "room": "right",
+        "name": "shelving_3",
+        "x": "239.4",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "71",
+        "room": "right",
+        "name": "hand",
+        "x": "102",
+        "y": "89.6",
+        "state": ""
+      },
+      {
+        "floor_index": "71",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "70",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "70",
+        "room": "right",
+        "name": "box_1",
+        "x": "85.5",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "70",
+        "room": "right",
+        "name": "bed_21",
+        "x": "144",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "70",
+        "room": "right",
+        "name": "rocket_1",
+        "x": "299.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "70",
+        "room": "right",
+        "name": "ceilinglight_1",
+        "x": "160.9",
+        "y": "155.2",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "69",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "69",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "69",
+        "room": "right",
+        "name": "case_23",
+        "x": "276",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "69",
+        "room": "right",
+        "name": "cup_2",
+        "x": "290.1",
+        "y": "90.6",
+        "state": ""
+      },
+      {
+        "floor_index": "69",
+        "room": "right",
+        "name": "watch_6",
+        "x": "131.6",
+        "y": "115.6",
+        "state": ""
+      },
+      {
+        "floor_index": "69",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "68",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "68",
+        "room": "right",
+        "name": "bed_5",
+        "x": "200.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "68",
+        "room": "right",
+        "name": "warbdone_4",
+        "x": "91.8",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "68",
+        "room": "right",
+        "name": "retroradio",
+        "x": "110.7",
+        "y": "145.6",
+        "state": ""
+      },
+      {
+        "floor_index": "68",
+        "room": "right",
+        "name": "photo",
+        "x": "254.5",
+        "y": "89.2",
+        "state": ""
+      },
+      {
+        "floor_index": "68",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "67",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "67",
+        "room": "right",
+        "name": "bed_7",
+        "x": "24.39999",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "67",
+        "room": "right",
+        "name": "boombox",
+        "x": "156.9",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "67",
+        "room": "right",
+        "name": "box_1",
+        "x": "215.8",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "67",
+        "room": "right",
+        "name": "gramophone_2",
+        "x": "297.8",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "67",
+        "room": "right",
+        "name": "shelf_5",
+        "x": "132.2",
+        "y": "83.1",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "67",
+        "room": "right",
+        "name": "desklamp_10",
+        "x": "142.9",
+        "y": "84.7",
+        "state": ""
+      },
+      {
+        "floor_index": "67",
+        "room": "right",
+        "name": "book_2",
+        "x": "178.7",
+        "y": "106.6",
+        "state": ""
+      },
+      {
+        "floor_index": "67",
+        "room": "right",
+        "name": "camera_1",
+        "x": "177.6",
+        "y": "85.4",
+        "state": ""
+      },
+      {
+        "floor_index": "67",
+        "room": "right",
+        "name": "enemy_2",
+        "x": "234",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "66",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "66",
+        "room": "right",
+        "name": "bed_6",
+        "x": "98.09999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "66",
+        "room": "right",
+        "name": "case_49",
+        "x": "235.6",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "66",
+        "room": "right",
+        "name": "palm_3_used",
+        "x": "239.3",
+        "y": "51.9",
+        "state": ""
+      },
+      {
+        "floor_index": "66",
+        "room": "right",
+        "name": "hand",
+        "x": "102",
+        "y": "89.6",
+        "state": ""
+      },
+      {
+        "floor_index": "66",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "65",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "65",
+        "room": "right",
+        "name": "bed_4",
+        "x": "193.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "65",
+        "room": "right",
+        "name": "box_1",
+        "x": "93.39999",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "65",
+        "room": "right",
+        "name": "ceilinglight_19",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "64",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "64",
+        "room": "right",
+        "name": "bed_7",
+        "x": "24.39999",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "64",
+        "room": "right",
+        "name": "bonsai",
+        "x": "156.9",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "64",
+        "room": "right",
+        "name": "book_1",
+        "x": "215.8",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "64",
+        "room": "right",
+        "name": "aquahouse_1",
+        "x": "212.5",
+        "y": "20.9",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "64",
+        "room": "right",
+        "name": "globus",
+        "x": "246.2",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "64",
+        "room": "right",
+        "name": "gramophone_2",
+        "x": "297.8",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "64",
+        "room": "right",
+        "name": "pictures_6",
+        "x": "49.3",
+        "y": "61.9",
+        "state": ""
+      },
+      {
+        "floor_index": "64",
+        "room": "right",
+        "name": "enemy_4",
+        "x": "248",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "63",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "63",
+        "room": "right",
+        "name": "bed_32",
+        "x": "193.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "63",
+        "room": "right",
+        "name": "corner_1",
+        "x": "236.1",
+        "y": "121.9",
+        "state": ""
+      },
+      {
+        "floor_index": "63",
+        "room": "right",
+        "name": "case_24",
+        "x": "88.39999",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "63",
+        "room": "right",
+        "name": "glass",
+        "x": "109.5329",
+        "y": "89.84853",
+        "state": ""
+      },
+      {
+        "floor_index": "63",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      },
+      {
+        "floor_index": "63",
+        "room": "right",
+        "name": "enemy_6",
+        "x": "248",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "chair_2",
+        "x": "153.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "case_3",
+        "x": "99",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "phone",
+        "x": "104.6",
+        "y": "46.2",
+        "state": ""
+      },
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "shelving_3",
+        "x": "239.4",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "aquahouse_1",
+        "x": "255.9",
+        "y": "16",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "videocamera",
+        "x": "246.5",
+        "y": "46.6",
+        "state": ""
+      },
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "102",
+        "y": "74.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "camera_1",
+        "x": "110.06",
+        "y": "116.09",
+        "state": ""
+      },
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "cup_1",
+        "x": "147.6",
+        "y": "115.9",
+        "state": ""
+      },
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      },
+      {
+        "floor_index": "62",
+        "room": "right",
+        "name": "enemy_5",
+        "x": "170",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "61",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "61",
+        "room": "right",
+        "name": "book_1",
+        "x": "85.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "61",
+        "room": "right",
+        "name": "bed_1",
+        "x": "152.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "61",
+        "room": "right",
+        "name": "case_64",
+        "x": "136.5",
+        "y": "87.3",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "61",
+        "room": "right",
+        "name": "case_62",
+        "x": "170.9",
+        "y": "104.9",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "61",
+        "room": "right",
+        "name": "gramophone_1",
+        "x": "210.1",
+        "y": "122.8",
+        "state": ""
+      },
+      {
+        "floor_index": "61",
+        "room": "right",
+        "name": "table_2",
+        "x": "258.6",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "61",
+        "room": "right",
+        "name": "cup_4",
+        "x": "328.6",
+        "y": "44.8",
+        "state": ""
+      },
+      {
+        "floor_index": "61",
+        "room": "right",
+        "name": "ceilinglight_9",
+        "x": "160.9",
+        "y": "159.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "60",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "60",
+        "room": "right",
+        "name": "bed_6",
+        "x": "98.09999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "60",
+        "room": "right",
+        "name": "cycle_2",
+        "x": "228.7",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "60",
+        "room": "right",
+        "name": "watch_6",
+        "x": "131.6",
+        "y": "115.6",
+        "state": ""
+      },
+      {
+        "floor_index": "60",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "59",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "59",
+        "room": "right",
+        "name": "book_1",
+        "x": "85.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "59",
+        "room": "right",
+        "name": "bed_21",
+        "x": "144",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "59",
+        "room": "right",
+        "name": "case_4",
+        "x": "295",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "59",
+        "room": "right",
+        "name": "pencil",
+        "x": "300.6",
+        "y": "60",
+        "state": ""
+      },
+      {
+        "floor_index": "59",
+        "room": "right",
+        "name": "ceilinglight_1",
+        "x": "160.9",
+        "y": "155.2",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "58",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "58",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "58",
+        "room": "right",
+        "name": "case_49",
+        "x": "235.6",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "58",
+        "room": "right",
+        "name": "shparkling",
+        "x": "291.2",
+        "y": "51.9",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "58",
+        "room": "right",
+        "name": "watch_6",
+        "x": "131.6",
+        "y": "115.6",
+        "state": ""
+      },
+      {
+        "floor_index": "58",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "57",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "57",
+        "room": "right",
+        "name": "bed_7",
+        "x": "24.39999",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "57",
+        "room": "right",
+        "name": "boombox",
+        "x": "156.9",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "57",
+        "room": "right",
+        "name": "box_1",
+        "x": "215.8",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "57",
+        "room": "right",
+        "name": "gramophone_2",
+        "x": "297.8",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "57",
+        "room": "right",
+        "name": "shelf_5",
+        "x": "132.2",
+        "y": "83.1",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "57",
+        "room": "right",
+        "name": "camera_1",
+        "x": "177.6",
+        "y": "85.4",
+        "state": ""
+      },
+      {
+        "floor_index": "57",
+        "room": "right",
+        "name": "enemy_5",
+        "x": "170",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "56",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "56",
+        "room": "right",
+        "name": "chair_2",
+        "x": "153.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "56",
+        "room": "right",
+        "name": "case_3",
+        "x": "99",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "56",
+        "room": "right",
+        "name": "retroradio",
+        "x": "110.5",
+        "y": "46.2",
+        "state": ""
+      },
+      {
+        "floor_index": "56",
+        "room": "right",
+        "name": "cycle_2",
+        "x": "228.7",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "56",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "102",
+        "y": "74.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "56",
+        "room": "right",
+        "name": "book_2",
+        "x": "111",
+        "y": "96.3",
+        "state": ""
+      },
+      {
+        "floor_index": "56",
+        "room": "right",
+        "name": "camera_1",
+        "x": "110.06",
+        "y": "116.09",
+        "state": ""
+      },
+      {
+        "floor_index": "56",
+        "room": "right",
+        "name": "cup_1",
+        "x": "147.6",
+        "y": "115.9",
+        "state": ""
+      },
+      {
+        "floor_index": "56",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "55",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "55",
+        "room": "right",
+        "name": "bed_5",
+        "x": "200.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "55",
+        "room": "right",
+        "name": "table_12",
+        "x": "91.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "55",
+        "room": "right",
+        "name": "shelf_2",
+        "x": "250.8",
+        "y": "89.2",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "55",
+        "room": "right",
+        "name": "amplifier",
+        "x": "286.1",
+        "y": "100",
+        "state": ""
+      },
+      {
+        "floor_index": "55",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "54",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "54",
+        "room": "right",
+        "name": "bed_32",
+        "x": "193.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "54",
+        "room": "right",
+        "name": "corner_1",
+        "x": "236.1",
+        "y": "121.9",
+        "state": ""
+      },
+      {
+        "floor_index": "54",
+        "room": "right",
+        "name": "floorlamp_4",
+        "x": "134.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "54",
+        "room": "right",
+        "name": "ceilinglight_19",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "53",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "53",
+        "room": "right",
+        "name": "chair_5",
+        "x": "96.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "53",
+        "room": "right",
+        "name": "bed_1",
+        "x": "222.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "53",
+        "room": "right",
+        "name": "case_1",
+        "x": "171.1",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "53",
+        "room": "right",
+        "name": "walllamp_6",
+        "x": "253.6",
+        "y": "97.7",
+        "state": ""
+      },
+      {
+        "floor_index": "53",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "52",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "52",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "52",
+        "room": "right",
+        "name": "case_49",
+        "x": "235.6",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "52",
+        "room": "right",
+        "name": "shparkling",
+        "x": "291.2",
+        "y": "51.9",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "52",
+        "room": "right",
+        "name": "hand",
+        "x": "102",
+        "y": "89.6",
+        "state": ""
+      },
+      {
+        "floor_index": "52",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "51",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "51",
+        "room": "right",
+        "name": "case_3",
+        "x": "93.1",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "51",
+        "room": "right",
+        "name": "bed_1",
+        "x": "152.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "51",
+        "room": "right",
+        "name": "case_64",
+        "x": "136.5",
+        "y": "87.3",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "51",
+        "room": "right",
+        "name": "case_62",
+        "x": "170.9",
+        "y": "104.9",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "51",
+        "room": "right",
+        "name": "retromixer",
+        "x": "231.3",
+        "y": "122.8",
+        "state": ""
+      },
+      {
+        "floor_index": "51",
+        "room": "right",
+        "name": "table_2",
+        "x": "258.6",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "51",
+        "room": "right",
+        "name": "ceilinglight_1",
+        "x": "160.9",
+        "y": "155.2",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "50",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "50",
+        "room": "right",
+        "name": "bed_24",
+        "x": "69.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "50",
+        "room": "right",
+        "name": "case_36",
+        "x": "239.3",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "50",
+        "room": "right",
+        "name": "coffeemaker",
+        "x": "263.8",
+        "y": "32.7",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "50",
+        "room": "right",
+        "name": "case_61",
+        "x": "125.7",
+        "y": "73.2",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "50",
+        "room": "right",
+        "name": "camera_1",
+        "x": "189.6",
+        "y": "91.5",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "49",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "49",
+        "room": "right",
+        "name": "case_44",
+        "x": "193.8",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "49",
+        "room": "right",
+        "name": "bag",
+        "x": "302.9",
+        "y": "99.4",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "49",
+        "room": "right",
+        "name": "floorlamp_4",
+        "x": "134.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "49",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "48",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "48",
+        "room": "right",
+        "name": "bed_30",
+        "x": "143.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "48",
+        "room": "right",
+        "name": "case_2",
+        "x": "292.4",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "48",
+        "room": "right",
+        "name": "ring",
+        "x": "300.6",
+        "y": "29.2",
+        "state": ""
+      },
+      {
+        "floor_index": "48",
+        "room": "right",
+        "name": "shelf_6",
+        "x": "145.6",
+        "y": "77.5",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "48",
+        "room": "right",
+        "name": "bonsai",
+        "x": "188.1",
+        "y": "91.8",
+        "state": ""
+      },
+      {
+        "floor_index": "48",
+        "room": "right",
+        "name": "column_2",
+        "x": "93.09999",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "48",
+        "room": "right",
+        "name": "aquahouse_1",
+        "x": "93.99999",
+        "y": "41.1",
+        "state": "not_used"
+      }
+    ],
+    [
+      {
+        "floor_index": "47",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "47",
+        "room": "right",
+        "name": "bed_8",
+        "x": "210.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "47",
+        "room": "right",
+        "name": "pictures_4",
+        "x": "225.9",
+        "y": "61.6",
+        "state": ""
+      },
+      {
+        "floor_index": "47",
+        "room": "right",
+        "name": "walllamp_6",
+        "x": "261.4",
+        "y": "145.7",
+        "state": ""
+      },
+      {
+        "floor_index": "47",
+        "room": "right",
+        "name": "box_1",
+        "x": "93.39999",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "47",
+        "room": "right",
+        "name": "ceilinglight_19",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "46",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "46",
+        "room": "right",
+        "name": "bed_24",
+        "x": "69.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "46",
+        "room": "right",
+        "name": "column_4",
+        "x": "246.6",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "46",
+        "room": "right",
+        "name": "case_4",
+        "x": "268.5",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "46",
+        "room": "right",
+        "name": "book_1",
+        "x": "274.1",
+        "y": "60.2",
+        "state": ""
+      },
+      {
+        "floor_index": "46",
+        "room": "right",
+        "name": "case_61",
+        "x": "125.7",
+        "y": "73.2",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "46",
+        "room": "right",
+        "name": "boombox",
+        "x": "137",
+        "y": "91.1",
+        "state": ""
+      },
+      {
+        "floor_index": "46",
+        "room": "right",
+        "name": "box_1",
+        "x": "178",
+        "y": "91.5",
+        "state": "not_used"
+      }
+    ],
+    [
+      {
+        "floor_index": "45",
+        "room": "right",
+        "name": "tv",
+        "x": "252",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "45",
+        "room": "right",
+        "name": "ceilinglight_22",
+        "x": "172.1",
+        "y": "155.4",
+        "state": ""
+      },
+      {
+        "floor_index": "45",
+        "room": "right",
+        "name": "case_56",
+        "x": "92.8",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "45",
+        "room": "right",
+        "name": "t_shirt_4",
+        "x": "100.8",
+        "y": "101.9",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "45",
+        "room": "right",
+        "name": "chair_14",
+        "x": "180.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "45",
+        "room": "right",
+        "name": "corner_1",
+        "x": "272.4",
+        "y": "122.3",
+        "state": ""
+      },
+      {
+        "floor_index": "45",
+        "room": "right",
+        "name": "rocket_1",
+        "x": "279.2",
+        "y": "43.7",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "bed_7",
+        "x": "24.39999",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "boombox",
+        "x": "156.9",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "book_1",
+        "x": "215.8",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "glass",
+        "x": "223.1",
+        "y": "20.9",
+        "state": ""
+      },
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "globus",
+        "x": "246.2",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "gramophone_2",
+        "x": "297.8",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "shelf_5",
+        "x": "132.2",
+        "y": "83.1",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "cup_4",
+        "x": "143.9",
+        "y": "107.1",
+        "state": ""
+      },
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "headphones",
+        "x": "142.9",
+        "y": "84.7",
+        "state": ""
+      },
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "book_2",
+        "x": "178.7",
+        "y": "106.6",
+        "state": ""
+      },
+      {
+        "floor_index": "44",
+        "room": "right",
+        "name": "camera_2",
+        "x": "177.6",
+        "y": "85.4",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "43",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "43",
+        "room": "right",
+        "name": "bed_5",
+        "x": "200.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "43",
+        "room": "right",
+        "name": "warbdone_4",
+        "x": "91.8",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "43",
+        "room": "right",
+        "name": "tuner_3",
+        "x": "110.7",
+        "y": "145.6",
+        "state": ""
+      },
+      {
+        "floor_index": "43",
+        "room": "right",
+        "name": "photo",
+        "x": "254.5",
+        "y": "89.2",
+        "state": ""
+      },
+      {
+        "floor_index": "43",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "42",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "42",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "42",
+        "room": "right",
+        "name": "case_14",
+        "x": "227.2",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "42",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "102",
+        "y": "74.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "42",
+        "room": "right",
+        "name": "book_2",
+        "x": "111",
+        "y": "96.3",
+        "state": ""
+      },
+      {
+        "floor_index": "42",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "41",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "41",
+        "room": "right",
+        "name": "case_3",
+        "x": "93.1",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "41",
+        "room": "right",
+        "name": "bed_1",
+        "x": "152.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "41",
+        "room": "right",
+        "name": "case_64",
+        "x": "136.5",
+        "y": "87.3",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "41",
+        "room": "right",
+        "name": "case_62",
+        "x": "170.9",
+        "y": "104.9",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "41",
+        "room": "right",
+        "name": "column_5",
+        "x": "184",
+        "y": "122.8",
+        "state": ""
+      },
+      {
+        "floor_index": "41",
+        "room": "right",
+        "name": "table_2",
+        "x": "258.6",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "41",
+        "room": "right",
+        "name": "boombox",
+        "x": "291.1",
+        "y": "44.8",
+        "state": ""
+      },
+      {
+        "floor_index": "41",
+        "room": "right",
+        "name": "ceilinglight_1",
+        "x": "160.9",
+        "y": "155.2",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "40",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "40",
+        "room": "right",
+        "name": "bed_12",
+        "x": "105.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "40",
+        "room": "right",
+        "name": "case_33",
+        "x": "246",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "40",
+        "room": "right",
+        "name": "recorder",
+        "x": "276.4",
+        "y": "33.8",
+        "state": ""
+      },
+      {
+        "floor_index": "40",
+        "room": "right",
+        "name": "case_66",
+        "x": "122.1",
+        "y": "74.4",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "40",
+        "room": "right",
+        "name": "camera_2",
+        "x": "164.3",
+        "y": "94.10001",
+        "state": ""
+      },
+      {
+        "floor_index": "40",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "39",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "39",
+        "room": "right",
+        "name": "bed_30",
+        "x": "143.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "39",
+        "room": "right",
+        "name": "floorlamp_7",
+        "x": "292.4",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "39",
+        "room": "right",
+        "name": "pictures_3",
+        "x": "174.9517",
+        "y": "58.18965",
+        "state": ""
+      },
+      {
+        "floor_index": "39",
+        "room": "right",
+        "name": "warbdone_2",
+        "x": "71.89999",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "39",
+        "room": "right",
+        "name": "recorder",
+        "x": "80.39999",
+        "y": "145.2",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "38",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "38",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "38",
+        "room": "right",
+        "name": "case_49",
+        "x": "235.6",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "38",
+        "room": "right",
+        "name": "iphone_1",
+        "x": "260.1",
+        "y": "51.9",
+        "state": ""
+      },
+      {
+        "floor_index": "38",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "102",
+        "y": "74.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "38",
+        "room": "right",
+        "name": "gramophone_1",
+        "x": "112",
+        "y": "76.8",
+        "state": ""
+      },
+      {
+        "floor_index": "38",
+        "room": "right",
+        "name": "camera_1",
+        "x": "110.06",
+        "y": "116.09",
+        "state": ""
+      },
+      {
+        "floor_index": "38",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "37",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "37",
+        "room": "right",
+        "name": "bed_7",
+        "x": "24.39999",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "37",
+        "room": "right",
+        "name": "box_1",
+        "x": "156.9",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "37",
+        "room": "right",
+        "name": "book_1",
+        "x": "215.8",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "37",
+        "room": "right",
+        "name": "aquahouse_1",
+        "x": "212.5",
+        "y": "20.9",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "37",
+        "room": "right",
+        "name": "floorlamp_14",
+        "x": "297.8",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "37",
+        "room": "right",
+        "name": "shelf_5",
+        "x": "132.2",
+        "y": "83.1",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "37",
+        "room": "right",
+        "name": "book_3",
+        "x": "168.8",
+        "y": "106.6",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "36",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "36",
+        "room": "right",
+        "name": "bed_4",
+        "x": "193.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "36",
+        "room": "right",
+        "name": "floorlamp_4",
+        "x": "134.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "36",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "35",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "35",
+        "room": "right",
+        "name": "bed_6",
+        "x": "98.09999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "35",
+        "room": "right",
+        "name": "case_14",
+        "x": "227.2",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "35",
+        "room": "right",
+        "name": "headphones",
+        "x": "242.1",
+        "y": "44.3",
+        "state": ""
+      },
+      {
+        "floor_index": "35",
+        "room": "right",
+        "name": "watch_6",
+        "x": "131.6",
+        "y": "115.6",
+        "state": ""
+      },
+      {
+        "floor_index": "35",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      },
+      {
+        "floor_index": "35",
+        "room": "right",
+        "name": "enemy_4",
+        "x": "248",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "34",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "34",
+        "room": "right",
+        "name": "bed_12",
+        "x": "105.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "34",
+        "room": "right",
+        "name": "case_52",
+        "x": "246",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "34",
+        "room": "right",
+        "name": "flower_3",
+        "x": "259.7",
+        "y": "50.9",
+        "state": ""
+      },
+      {
+        "floor_index": "34",
+        "room": "right",
+        "name": "pictures_1",
+        "x": "138.6",
+        "y": "74.4",
+        "state": ""
+      },
+      {
+        "floor_index": "34",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      },
+      {
+        "floor_index": "34",
+        "room": "right",
+        "name": "qh_phone",
+        "x": "150",
+        "y": "0",
+        "state": "not_used"
+      }
+    ],
+    [
+      {
+        "floor_index": "33",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "33",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "33",
+        "room": "right",
+        "name": "case_14",
+        "x": "227.2",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "33",
+        "room": "right",
+        "name": "floorlamp_6",
+        "x": "242.1",
+        "y": "44.3",
+        "state": ""
+      },
+      {
+        "floor_index": "33",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "102",
+        "y": "74.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "33",
+        "room": "right",
+        "name": "retroradio",
+        "x": "112",
+        "y": "76.8",
+        "state": ""
+      },
+      {
+        "floor_index": "33",
+        "room": "right",
+        "name": "book_2",
+        "x": "111",
+        "y": "96.3",
+        "state": ""
+      },
+      {
+        "floor_index": "33",
+        "room": "right",
+        "name": "glass",
+        "x": "121.96",
+        "y": "116.09",
+        "state": ""
+      },
+      {
+        "floor_index": "33",
+        "room": "right",
+        "name": "cup_1",
+        "x": "147.6",
+        "y": "115.9",
+        "state": ""
+      },
+      {
+        "floor_index": "33",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "32",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "32",
+        "room": "right",
+        "name": "bed_24",
+        "x": "69.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "32",
+        "room": "right",
+        "name": "column_4",
+        "x": "246.6",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "32",
+        "room": "right",
+        "name": "case_4",
+        "x": "268.5",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "32",
+        "room": "right",
+        "name": "pencil",
+        "x": "274.1",
+        "y": "60.2",
+        "state": ""
+      },
+      {
+        "floor_index": "32",
+        "room": "right",
+        "name": "case_61",
+        "x": "125.7",
+        "y": "73.2",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "32",
+        "room": "right",
+        "name": "boombox",
+        "x": "137",
+        "y": "91.1",
+        "state": ""
+      },
+      {
+        "floor_index": "32",
+        "room": "right",
+        "name": "aquahouse_1",
+        "x": "189.6",
+        "y": "91.5",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "32",
+        "room": "right",
+        "name": "enemy_6",
+        "x": "248",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "31",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "31",
+        "room": "right",
+        "name": "chair_2",
+        "x": "153.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "31",
+        "room": "right",
+        "name": "case_3",
+        "x": "99",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "31",
+        "room": "right",
+        "name": "phone",
+        "x": "104.6",
+        "y": "46.2",
+        "state": ""
+      },
+      {
+        "floor_index": "31",
+        "room": "right",
+        "name": "case_23",
+        "x": "276",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "31",
+        "room": "right",
+        "name": "toy_1",
+        "x": "286.7",
+        "y": "90.6",
+        "state": ""
+      },
+      {
+        "floor_index": "31",
+        "room": "right",
+        "name": "hand",
+        "x": "102",
+        "y": "89.6",
+        "state": ""
+      },
+      {
+        "floor_index": "31",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "30",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "30",
+        "room": "right",
+        "name": "bonsai",
+        "x": "85.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "30",
+        "room": "right",
+        "name": "bed_21",
+        "x": "144",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "30",
+        "room": "right",
+        "name": "case_1",
+        "x": "297.7",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "30",
+        "room": "right",
+        "name": "boombox",
+        "x": "300.1",
+        "y": "29.8",
+        "state": ""
+      },
+      {
+        "floor_index": "30",
+        "room": "right",
+        "name": "ceilinglight_1",
+        "x": "160.9",
+        "y": "155.2",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "29",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "29",
+        "room": "right",
+        "name": "bed_12",
+        "x": "105.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "29",
+        "room": "right",
+        "name": "case_33",
+        "x": "246",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "29",
+        "room": "right",
+        "name": "rocket_1",
+        "x": "259.9",
+        "y": "33.8",
+        "state": ""
+      },
+      {
+        "floor_index": "29",
+        "room": "right",
+        "name": "pictures_1",
+        "x": "138.6",
+        "y": "74.4",
+        "state": ""
+      },
+      {
+        "floor_index": "29",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "28",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "28",
+        "room": "right",
+        "name": "case_44",
+        "x": "193.8",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "28",
+        "room": "right",
+        "name": "desklamp_10",
+        "x": "302.9",
+        "y": "99.4",
+        "state": ""
+      },
+      {
+        "floor_index": "28",
+        "room": "right",
+        "name": "case_24",
+        "x": "88.39999",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "28",
+        "room": "right",
+        "name": "retroradio",
+        "x": "109.5329",
+        "y": "89.84853",
+        "state": ""
+      },
+      {
+        "floor_index": "28",
+        "room": "right",
+        "name": "ceilinglight_19",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      },
+      {
+        "floor_index": "28",
+        "room": "right",
+        "name": "enemy_4",
+        "x": "248",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "27",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "27",
+        "room": "right",
+        "name": "chair_2",
+        "x": "153.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "27",
+        "room": "right",
+        "name": "case_3",
+        "x": "99",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "27",
+        "room": "right",
+        "name": "ring",
+        "x": "128.6",
+        "y": "46.2",
+        "state": ""
+      },
+      {
+        "floor_index": "27",
+        "room": "right",
+        "name": "shelving_3",
+        "x": "239.4",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "27",
+        "room": "right",
+        "name": "aquahouse_1",
+        "x": "255.9",
+        "y": "16",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "27",
+        "room": "right",
+        "name": "phone",
+        "x": "246.5",
+        "y": "46.6",
+        "state": ""
+      },
+      {
+        "floor_index": "27",
+        "room": "right",
+        "name": "watch_6",
+        "x": "131.6",
+        "y": "115.6",
+        "state": ""
+      },
+      {
+        "floor_index": "27",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "26",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "26",
+        "room": "right",
+        "name": "bed_30",
+        "x": "143.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "26",
+        "room": "right",
+        "name": "floorlamp_7",
+        "x": "292.4",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "26",
+        "room": "right",
+        "name": "shelf_6",
+        "x": "145.6",
+        "y": "77.5",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "26",
+        "room": "right",
+        "name": "t_shirt_4",
+        "x": "206.2",
+        "y": "91.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "26",
+        "room": "right",
+        "name": "case_17",
+        "x": "76.09999",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "26",
+        "room": "right",
+        "name": "desklamp_2",
+        "x": "103.3",
+        "y": "62.8",
+        "state": ""
+      },
+      {
+        "floor_index": "26",
+        "room": "right",
+        "name": "enemy_4",
+        "x": "248",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "25",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "25",
+        "room": "right",
+        "name": "chair_5",
+        "x": "96.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "25",
+        "room": "right",
+        "name": "case_54",
+        "x": "170.7",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "25",
+        "room": "right",
+        "name": "book_1",
+        "x": "209.8",
+        "y": "102.2",
+        "state": ""
+      },
+      {
+        "floor_index": "25",
+        "room": "right",
+        "name": "floorlamp_5",
+        "x": "279.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "25",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "24",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "24",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "24",
+        "room": "right",
+        "name": "case_14",
+        "x": "227.2",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "24",
+        "room": "right",
+        "name": "headphones",
+        "x": "242.1",
+        "y": "44.3",
+        "state": ""
+      },
+      {
+        "floor_index": "24",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "102",
+        "y": "74.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "24",
+        "room": "right",
+        "name": "retroradio",
+        "x": "112",
+        "y": "76.8",
+        "state": ""
+      },
+      {
+        "floor_index": "24",
+        "room": "right",
+        "name": "book_2",
+        "x": "111",
+        "y": "96.3",
+        "state": ""
+      },
+      {
+        "floor_index": "24",
+        "room": "right",
+        "name": "cup_4",
+        "x": "131.62",
+        "y": "116.09",
+        "state": ""
+      },
+      {
+        "floor_index": "24",
+        "room": "right",
+        "name": "cup_3",
+        "x": "147.6",
+        "y": "115.9",
+        "state": ""
+      },
+      {
+        "floor_index": "24",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "23",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "23",
+        "room": "right",
+        "name": "bonsai",
+        "x": "85.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "23",
+        "room": "right",
+        "name": "bed_1",
+        "x": "152.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "23",
+        "room": "right",
+        "name": "walllamp_9",
+        "x": "187.3",
+        "y": "78.10001",
+        "state": ""
+      },
+      {
+        "floor_index": "23",
+        "room": "right",
+        "name": "column_5",
+        "x": "278.7",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "23",
+        "room": "right",
+        "name": "aquahouse_1",
+        "x": "278.7",
+        "y": "26.5",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "23",
+        "room": "right",
+        "name": "ceilinglight_1",
+        "x": "160.9",
+        "y": "155.2",
+        "state": ""
+      },
+      {
+        "floor_index": "23",
+        "room": "right",
+        "name": "enemy_8",
+        "x": "275",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "22",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "22",
+        "room": "right",
+        "name": "bed_24",
+        "x": "69.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "22",
+        "room": "right",
+        "name": "case_50",
+        "x": "239.3",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "22",
+        "room": "right",
+        "name": "imac",
+        "x": "250.8",
+        "y": "51.2",
+        "state": ""
+      },
+      {
+        "floor_index": "22",
+        "room": "right",
+        "name": "sideboard_7",
+        "x": "77.49999",
+        "y": "66.6",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "22",
+        "room": "right",
+        "name": "book_1",
+        "x": "83.69999",
+        "y": "69",
+        "state": ""
+      },
+      {
+        "floor_index": "22",
+        "room": "right",
+        "name": "webcamera_2",
+        "x": "90.49999",
+        "y": "92.2",
+        "state": ""
+      },
+      {
+        "floor_index": "22",
+        "room": "right",
+        "name": "book_3",
+        "x": "138.6",
+        "y": "70.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "21",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "21",
+        "room": "right",
+        "name": "bed_8",
+        "x": "210.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "21",
+        "room": "right",
+        "name": "sideboard_9",
+        "x": "212.9",
+        "y": "70.3",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "21",
+        "room": "right",
+        "name": "book_3",
+        "x": "253",
+        "y": "72.60001",
+        "state": ""
+      },
+      {
+        "floor_index": "21",
+        "room": "right",
+        "name": "desklamp_10",
+        "x": "224.7",
+        "y": "95.7",
+        "state": ""
+      },
+      {
+        "floor_index": "21",
+        "room": "right",
+        "name": "walllamp_5",
+        "x": "290",
+        "y": "72.5",
+        "state": ""
+      },
+      {
+        "floor_index": "21",
+        "room": "right",
+        "name": "case_59",
+        "x": "88.39999",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "21",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "20",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "20",
+        "room": "right",
+        "name": "bed_5",
+        "x": "200.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "20",
+        "room": "right",
+        "name": "warbdone_4",
+        "x": "91.8",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "20",
+        "room": "right",
+        "name": "shelf_2",
+        "x": "250.8",
+        "y": "89.2",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "20",
+        "room": "right",
+        "name": "xbox",
+        "x": "260.2",
+        "y": "100",
+        "state": ""
+      },
+      {
+        "floor_index": "20",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "19",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "19",
+        "room": "right",
+        "name": "bed_6",
+        "x": "98.09999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "19",
+        "room": "right",
+        "name": "case_14",
+        "x": "227.2",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "19",
+        "room": "right",
+        "name": "hand",
+        "x": "102",
+        "y": "89.6",
+        "state": ""
+      },
+      {
+        "floor_index": "19",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "18",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "18",
+        "room": "right",
+        "name": "box_1",
+        "x": "85.5",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "18",
+        "room": "right",
+        "name": "bed_21",
+        "x": "144",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "18",
+        "room": "right",
+        "name": "case_1",
+        "x": "297.7",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "18",
+        "room": "right",
+        "name": "boombox",
+        "x": "300.1",
+        "y": "29.8",
+        "state": ""
+      },
+      {
+        "floor_index": "18",
+        "room": "right",
+        "name": "ceilinglight_9",
+        "x": "160.9",
+        "y": "159.1",
+        "state": ""
+      },
+      {
+        "floor_index": "18",
+        "room": "right",
+        "name": "enemy_6",
+        "x": "248",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "17",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "17",
+        "room": "right",
+        "name": "bed_30",
+        "x": "143.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "17",
+        "room": "right",
+        "name": "floorlamp_7",
+        "x": "292.4",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "17",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "145.6",
+        "y": "77.5",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "17",
+        "room": "right",
+        "name": "projector",
+        "x": "155.6",
+        "y": "79.5",
+        "state": ""
+      },
+      {
+        "floor_index": "17",
+        "room": "right",
+        "name": "book_2",
+        "x": "154.6",
+        "y": "99",
+        "state": ""
+      },
+      {
+        "floor_index": "17",
+        "room": "right",
+        "name": "cup_1",
+        "x": "191.2",
+        "y": "118.6",
+        "state": ""
+      },
+      {
+        "floor_index": "17",
+        "room": "right",
+        "name": "warbdone_2",
+        "x": "71.89999",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "17",
+        "room": "right",
+        "name": "iron",
+        "x": "95.59999",
+        "y": "145.2",
+        "state": ""
+      },
+      {
+        "floor_index": "17",
+        "room": "right",
+        "name": "enemy_8",
+        "x": "275",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "16",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "16",
+        "room": "right",
+        "name": "bed_12",
+        "x": "105.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "16",
+        "room": "right",
+        "name": "warbdone_5",
+        "x": "255",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "16",
+        "room": "right",
+        "name": "box_1",
+        "x": "261.4",
+        "y": "145.3",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "16",
+        "room": "right",
+        "name": "pictures_1",
+        "x": "138.6",
+        "y": "74.4",
+        "state": ""
+      },
+      {
+        "floor_index": "16",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      },
+      {
+        "floor_index": "16",
+        "room": "right",
+        "name": "enemy_7",
+        "x": "248",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "15",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "15",
+        "room": "right",
+        "name": "book_1",
+        "x": "85.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "15",
+        "room": "right",
+        "name": "bed_1",
+        "x": "152.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "15",
+        "room": "right",
+        "name": "case_64",
+        "x": "136.5",
+        "y": "87.3",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "15",
+        "room": "right",
+        "name": "case_62",
+        "x": "170.9",
+        "y": "104.9",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "15",
+        "room": "right",
+        "name": "column_5",
+        "x": "184",
+        "y": "122.8",
+        "state": ""
+      },
+      {
+        "floor_index": "15",
+        "room": "right",
+        "name": "column_5",
+        "x": "278.7",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "15",
+        "room": "right",
+        "name": "box_1",
+        "x": "275.1",
+        "y": "26.5",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "15",
+        "room": "right",
+        "name": "ceilinglight_17",
+        "x": "148",
+        "y": "164",
+        "state": ""
+      },
+      {
+        "floor_index": "15",
+        "room": "right",
+        "name": "enemy_8",
+        "x": "275",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "14",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "14",
+        "room": "right",
+        "name": "bed_12",
+        "x": "105.5",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "14",
+        "room": "right",
+        "name": "case_33",
+        "x": "246",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "14",
+        "room": "right",
+        "name": "pictures_1",
+        "x": "138.6",
+        "y": "74.4",
+        "state": ""
+      },
+      {
+        "floor_index": "14",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "13",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "13",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "13",
+        "room": "right",
+        "name": "case_49",
+        "x": "235.6",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "13",
+        "room": "right",
+        "name": "globus",
+        "x": "245.1",
+        "y": "51.9",
+        "state": ""
+      },
+      {
+        "floor_index": "13",
+        "room": "right",
+        "name": "hand",
+        "x": "102",
+        "y": "89.6",
+        "state": ""
+      },
+      {
+        "floor_index": "13",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "12",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "12",
+        "room": "right",
+        "name": "bed_30",
+        "x": "143.3",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "12",
+        "room": "right",
+        "name": "floorlamp_7",
+        "x": "292.4",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "12",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "145.6",
+        "y": "77.5",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "12",
+        "room": "right",
+        "name": "projector",
+        "x": "155.6",
+        "y": "79.5",
+        "state": ""
+      },
+      {
+        "floor_index": "12",
+        "room": "right",
+        "name": "cup_3",
+        "x": "191.2",
+        "y": "118.6",
+        "state": ""
+      },
+      {
+        "floor_index": "12",
+        "room": "right",
+        "name": "case_17",
+        "x": "76.09999",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "12",
+        "room": "right",
+        "name": "flower_1",
+        "x": "84.69999",
+        "y": "62.8",
+        "state": ""
+      },
+      {
+        "floor_index": "12",
+        "room": "right",
+        "name": "enemy_7",
+        "x": "248",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "11",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "11",
+        "room": "right",
+        "name": "bed_8",
+        "x": "210.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "11",
+        "room": "right",
+        "name": "sideboard_9",
+        "x": "212.9",
+        "y": "70.3",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "11",
+        "room": "right",
+        "name": "book_1",
+        "x": "258.5",
+        "y": "72",
+        "state": ""
+      },
+      {
+        "floor_index": "11",
+        "room": "right",
+        "name": "headphones",
+        "x": "217.5",
+        "y": "73.2",
+        "state": ""
+      },
+      {
+        "floor_index": "11",
+        "room": "right",
+        "name": "desklamp_10",
+        "x": "224.7",
+        "y": "95.7",
+        "state": ""
+      },
+      {
+        "floor_index": "11",
+        "room": "right",
+        "name": "watch_7",
+        "x": "293.1",
+        "y": "95.9",
+        "state": ""
+      },
+      {
+        "floor_index": "11",
+        "room": "right",
+        "name": "floorlamp_4",
+        "x": "134.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "11",
+        "room": "right",
+        "name": "ceilinglight_19",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "10",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "10",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "10",
+        "room": "right",
+        "name": "case_49",
+        "x": "235.6",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "10",
+        "room": "right",
+        "name": "desklamp_13",
+        "x": "291.2",
+        "y": "51.9",
+        "state": ""
+      },
+      {
+        "floor_index": "10",
+        "room": "right",
+        "name": "shelf_7",
+        "x": "102",
+        "y": "74.8",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "10",
+        "room": "right",
+        "name": "projector",
+        "x": "112",
+        "y": "76.8",
+        "state": ""
+      },
+      {
+        "floor_index": "10",
+        "room": "right",
+        "name": "glass",
+        "x": "121.96",
+        "y": "116.09",
+        "state": ""
+      },
+      {
+        "floor_index": "10",
+        "room": "right",
+        "name": "cup_1",
+        "x": "147.6",
+        "y": "115.9",
+        "state": ""
+      },
+      {
+        "floor_index": "10",
+        "room": "right",
+        "name": "ceilinglight_6",
+        "x": "165.6",
+        "y": "155.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "9",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "9",
+        "room": "right",
+        "name": "bed_8",
+        "x": "210.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "9",
+        "room": "right",
+        "name": "sideboard_9",
+        "x": "212.9",
+        "y": "70.3",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "9",
+        "room": "right",
+        "name": "book_1",
+        "x": "258.5",
+        "y": "72",
+        "state": ""
+      },
+      {
+        "floor_index": "9",
+        "room": "right",
+        "name": "headphones",
+        "x": "217.5",
+        "y": "73.2",
+        "state": ""
+      },
+      {
+        "floor_index": "9",
+        "room": "right",
+        "name": "cup_1",
+        "x": "230.5",
+        "y": "95.7",
+        "state": ""
+      },
+      {
+        "floor_index": "9",
+        "room": "right",
+        "name": "watch_7",
+        "x": "293.1",
+        "y": "95.9",
+        "state": ""
+      },
+      {
+        "floor_index": "9",
+        "room": "right",
+        "name": "case_59",
+        "x": "88.39999",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "9",
+        "room": "right",
+        "name": "ceilinglight_19",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      },
+      {
+        "floor_index": "9",
+        "room": "right",
+        "name": "enemy_8",
+        "x": "275",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "8",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "8",
+        "room": "right",
+        "name": "case_3",
+        "x": "93.1",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "8",
+        "room": "right",
+        "name": "bed_21",
+        "x": "144",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "8",
+        "room": "right",
+        "name": "rocket_1",
+        "x": "299.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "8",
+        "room": "right",
+        "name": "ceilinglight_9",
+        "x": "160.9",
+        "y": "159.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "7",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "7",
+        "room": "right",
+        "name": "bed_8",
+        "x": "210.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "7",
+        "room": "right",
+        "name": "pictures_4",
+        "x": "225.9",
+        "y": "61.6",
+        "state": ""
+      },
+      {
+        "floor_index": "7",
+        "room": "right",
+        "name": "walllamp_6",
+        "x": "261.4",
+        "y": "145.7",
+        "state": ""
+      },
+      {
+        "floor_index": "7",
+        "room": "right",
+        "name": "box_1",
+        "x": "93.39999",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "7",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      },
+      {
+        "floor_index": "7",
+        "room": "right",
+        "name": "enemy_7",
+        "x": "248",
+        "y": "0",
+        "state": "live"
+      }
+    ],
+    [
+      {
+        "floor_index": "6",
+        "room": "right",
+        "name": "ceilinglight_10",
+        "x": "163.9",
+        "y": "149.5",
+        "state": ""
+      },
+      {
+        "floor_index": "6",
+        "room": "right",
+        "name": "bed_7",
+        "x": "24.39999",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "6",
+        "room": "right",
+        "name": "boombox",
+        "x": "156.9",
+        "y": "0.1999969",
+        "state": ""
+      },
+      {
+        "floor_index": "6",
+        "room": "right",
+        "name": "box_1",
+        "x": "215.8",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "6",
+        "room": "right",
+        "name": "case_21",
+        "x": "283.6",
+        "y": "0.1999969",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "6",
+        "room": "right",
+        "name": "rocket_2",
+        "x": "318.1",
+        "y": "90.3",
+        "state": ""
+      },
+      {
+        "floor_index": "6",
+        "room": "right",
+        "name": "pictures_6",
+        "x": "49.3",
+        "y": "61.9",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "5",
+        "room": "right",
+        "name": "floorlamp_3",
+        "x": "188.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "5",
+        "room": "right",
+        "name": "bed_20",
+        "x": "87.59999",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "5",
+        "room": "right",
+        "name": "cycle_2",
+        "x": "228.7",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "5",
+        "room": "right",
+        "name": "watch_6",
+        "x": "131.6",
+        "y": "115.6",
+        "state": ""
+      },
+      {
+        "floor_index": "5",
+        "room": "right",
+        "name": "ceilinglight_18",
+        "x": "152.7",
+        "y": "165.1",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "4",
+        "room": "right",
+        "name": "chair_4",
+        "x": "163.9",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "4",
+        "room": "right",
+        "name": "bed_4",
+        "x": "193.8",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "4",
+        "room": "right",
+        "name": "box_1",
+        "x": "93.39999",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "4",
+        "room": "right",
+        "name": "ceilinglight_19",
+        "x": "156.1",
+        "y": "163.1",
+        "state": ""
+      },
+      {
+        "floor_index": "4",
+        "room": "right",
+        "name": "qh_phone",
+        "x": "150",
+        "y": "0",
+        "state": "not_used"
+      }
+    ],
+    [
+      {
+        "floor_index": "3",
+        "room": "right",
+        "name": "floorlamp_13",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "3",
+        "room": "right",
+        "name": "box_1",
+        "x": "85.5",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "3",
+        "room": "right",
+        "name": "bed_1",
+        "x": "152.2",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "3",
+        "room": "right",
+        "name": "pictures_5",
+        "x": "171.6273",
+        "y": "67.88753",
+        "state": ""
+      },
+      {
+        "floor_index": "3",
+        "room": "right",
+        "name": "sideboard_1",
+        "x": "274.4",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "3",
+        "room": "right",
+        "name": "glass",
+        "x": "311.5",
+        "y": "9.9",
+        "state": ""
+      },
+      {
+        "floor_index": "3",
+        "room": "right",
+        "name": "iphone_2",
+        "x": "320",
+        "y": "25.3",
+        "state": ""
+      },
+      {
+        "floor_index": "3",
+        "room": "right",
+        "name": "ceilinglight_1",
+        "x": "160.9",
+        "y": "155.2",
+        "state": ""
+      }
+    ],
+    [
+      {
+        "floor_index": "2",
+        "room": "right",
+        "name": "manecan",
+        "x": "63",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "2",
+        "room": "right",
+        "name": "chair_5",
+        "x": "96.3",
+        "y": "0",
+        "state": ""
+      },
+      {
+        "floor_index": "2",
+        "room": "right",
+        "name": "case_27",
+        "x": "174.2",
+        "y": "0",
+        "state": "not_used"
+      },
+      {
+        "floor_index": "2",
+        "room": "right",
+        "name": "cup_2",
+        "x": "284.6",
+        "y": "43.1",
+        "state": ""
+      },
+      {
+        "floor_index": "2",
+        "room": "right",
+        "name": "ceilinglight_23",
+        "x": "160",
+        "y": "175",
+        "state": ""
+      }
+    ]
+  ]
