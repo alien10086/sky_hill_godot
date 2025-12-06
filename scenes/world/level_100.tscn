@@ -1,10 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://v57ha3afj5f"]
+[gd_scene load_steps=9 format=3 uid="uid://v57ha3afj5f"]
 
 [ext_resource type="PackedScene" uid="uid://baycnhc1arkaf" path="res://scenes/world/vip_left_room.tscn" id="1_gny7m"]
 [ext_resource type="PackedScene" uid="uid://f25xwdiim6mg" path="res://scenes/world/vip_middle_room.tscn" id="2_7j7ei"]
 [ext_resource type="PackedScene" uid="uid://d15n8iau7tcqo" path="res://scenes/world/vip_right_room.tscn" id="3_xrnqk"]
 [ext_resource type="Texture2D" uid="uid://doxdvfi46ryyj" path="res://assets/sprites/world_items/vip_100_out.png" id="4_7j7ei"]
 [ext_resource type="Texture2D" uid="uid://w8od78ah2nq8" path="res://assets/sprites/world_items/vip0.png" id="5_xrnqk"]
+[ext_resource type="Texture2D" uid="uid://bqxg6hjbjtvsp" path="res://assets/sprites/world_items/elevator_close.png" id="6_gfvvp"]
+[ext_resource type="Shader" uid="uid://d2nkkk0q1xgq3" path="res://scenes/world/elevator_door.gdshader" id="6_jw3di"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v7cp6"]
+shader = ExtResource("6_jw3di")
+shader_parameter/top_light_strength = 0.2450000116375
+shader_parameter/light_height = 1.0
+shader_parameter/seam_highlight = 0.21200001007
+shader_parameter/metal_reflect = 0.238000011305
+shader_parameter/brush_strength = 0.0110000005225
 
 [node name="Level100" type="Control"]
 layout_mode = 3
@@ -49,3 +59,14 @@ offset_right = 1215.5518
 offset_bottom = -282.0
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("5_xrnqk")
+
+[node name="evevator_door" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_v7cp6")
+layout_mode = 0
+offset_left = 1568.9656
+offset_top = 155.17245
+offset_right = 1697.9656
+offset_bottom = 382.18396
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("6_gfvvp")
+expand_mode = 1
