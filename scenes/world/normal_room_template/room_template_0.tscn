@@ -1,0 +1,109 @@
+[gd_scene load_steps=11 format=3 uid="uid://b1ybfyf7j04wh"]
+
+[ext_resource type="Texture2D" uid="uid://b15y47co4bqa8" path="res://assets/sprites/world_items/vip_home_background.png" id="2_7q6bw"]
+[ext_resource type="Texture2D" uid="uid://bwnc1qrq6i6o5" path="res://assets/sprites/world_items/room_template_0/bg.png" id="2_j5kik"]
+[ext_resource type="Texture2D" uid="uid://cuirabxrbqrro" path="res://assets/sprites/world_items/room_template_0/ceilinglight_19.png" id="3_ywg85"]
+[ext_resource type="Texture2D" uid="uid://ciyex7c6jogx8" path="res://assets/sprites/world_items/room_template_0/shelf_7.png" id="4_lxbgw"]
+[ext_resource type="Texture2D" uid="uid://dp4ed0y85uin3" path="res://assets/sprites/world_items/room_template_0/shelving_2.png" id="5_fe1gu"]
+[ext_resource type="Texture2D" uid="uid://d2fy24gri21iv" path="res://assets/sprites/world_items/room_template_0/bed_6.png" id="6_2dfn4"]
+[ext_resource type="Texture2D" uid="uid://5470ja0jxbe5" path="res://assets/sprites/world_items/room_template_0/projector.png" id="7_uy68o"]
+[ext_resource type="Texture2D" uid="uid://dslafqs6djgyi" path="res://assets/sprites/world_items/room_template_0/book_3.png" id="8_3b11k"]
+[ext_resource type="Texture2D" uid="uid://gd85b5fy8sxd" path="res://assets/sprites/world_items/room_template_0/headphones.png" id="9_nkdbk"]
+[ext_resource type="Texture2D" uid="uid://bio58f7mns6ha" path="res://assets/sprites/world_items/room_template_0/microwave.png" id="10_0x5rm"]
+
+[node name="Room" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 738.4616
+offset_bottom = 430.7693
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_7q6bw")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect9" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -11.0
+offset_right = 960.0
+offset_bottom = 560.0
+texture = ExtResource("2_j5kik")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 473.00003
+offset_top = 1.0
+offset_right = 513.0
+offset_bottom = 88.0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_ywg85")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 227.00002
+offset_right = 144.0
+offset_bottom = 348.00003
+scale = Vector2(2.8, 2.8)
+texture = ExtResource("4_lxbgw")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 145.00002
+offset_right = 463.0
+offset_bottom = 232.00002
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("5_fe1gu")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 413.0
+offset_right = 530.0
+offset_bottom = 513.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_2dfn4")
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 425.00003
+offset_top = 285.0
+offset_right = 505.00003
+offset_bottom = 326.0
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("7_uy68o")
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 230.0
+offset_right = 690.0
+offset_bottom = 367.5
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_3b11k")
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 415.0
+offset_right = 247.16669
+offset_bottom = 468.66666
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("9_nkdbk")
+
+[node name="TextureRect8" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 102.00001
+offset_top = 333.0
+offset_right = 165.0
+offset_bottom = 373.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_0x5rm")
+flip_v = true

@@ -1,0 +1,110 @@
+[gd_scene load_steps=10 format=3 uid="uid://c18ua4fhbl8fs"]
+
+[ext_resource type="Texture2D" uid="uid://ps2a808rqle5" path="res://assets/sprites/world_items/center_room_template/79789.png" id="1_ht4cr"]
+[ext_resource type="Texture2D" uid="uid://cqkjs2gihspe" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_14.png" id="3_cmoeg"]
+[ext_resource type="Texture2D" uid="uid://dsf874bsb6mus" path="res://assets/sprites/world_items/center_room_template/78987.png" id="3_er881"]
+[ext_resource type="Texture2D" uid="uid://c07jymcnt5hd7" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_02.png" id="3_mhk4w"]
+[ext_resource type="Texture2D" uid="uid://djbiobm6bh4by" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_04.png" id="4_65cej"]
+[ext_resource type="Texture2D" uid="uid://cmqmumfmbmlwg" path="res://assets/sprites/world_items/center_room_template/atlas1-#5928_20.png" id="4_cmoeg"]
+[ext_resource type="Texture2D" uid="uid://kvwklf8d3kgk" path="res://assets/sprites/world_items/center_room_template/atlas1-#5928_297.png" id="7_gat8k"]
+[ext_resource type="Texture2D" uid="uid://ql1fdbcymaat" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_07.png" id="8_bs0u8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxnv8"]
+bg_color = Color(0.28038052, 0.20217752, 0.15286216, 1)
+
+[node name="Room" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = 4.0
+offset_right = 59.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1116.0
+offset_bottom = -527.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oxnv8")
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -477.0
+offset_top = -204.0
+offset_right = 6.0
+offset_bottom = 46.0
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("1_ht4cr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -58.581955
+offset_top = 552.6352
+offset_right = 308.85718
+offset_bottom = 821.1293
+rotation = -1.5683599
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_cmoeg")
+expand_mode = 1
+flip_v = true
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -29.0
+offset_top = 146.0
+offset_right = 454.0
+offset_bottom = 396.0
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("3_er881")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 195.0
+offset_right = 337.0
+offset_bottom = 430.33334
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_65cej")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 330.0
+offset_right = 468.0
+offset_bottom = 468.0
+texture = ExtResource("4_cmoeg")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 477.0
+offset_top = -1.0
+offset_right = 806.0
+offset_bottom = 554.0
+texture = ExtResource("3_mhk4w")
+flip_h = true
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 367.0
+offset_right = 536.0
+offset_bottom = 429.0
+texture = ExtResource("7_gat8k")
+
+[node name="TextureRect8" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 555.00006
+offset_top = 175.0
+offset_right = 684.00006
+offset_bottom = 442.14282
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("8_bs0u8")
+expand_mode = 1
