@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://d0th8ffxj2vio"]
 
 [ext_resource type="Script" uid="uid://cya5k01eivuy" path="res://scenes/world/level_x.gd" id="1_0qjrc"]
-[ext_resource type="PackedScene" uid="uid://bo3735b2sebne" path="res://scenes/world/base/base_room.tscn" id="3_hrh1e"]
+[ext_resource type="PackedScene" uid="uid://tv4mqcchhnao" path="res://scenes/world/base/base_room_0.tscn" id="2_0qjrc"]
 [ext_resource type="PackedScene" uid="uid://c18ua4fhbl8fs" path="res://scenes/world/center_room_template/center_room_template_0.tscn" id="5_0qjrc"]
 [ext_resource type="Texture2D" uid="uid://1hw20gopcst3" path="res://assets/sprites/world_items/8678dg.png" id="9_dk866"]
 [ext_resource type="Texture2D" uid="uid://bn62kd0kwpka0" path="res://assets/sprites/world_items/7989897black.png" id="10_1telx"]
@@ -9,11 +9,11 @@
 [node name="Levelx" type="Node2D"]
 script = ExtResource("1_0qjrc")
 
-[node name="RightRoom" parent="." instance=ExtResource("3_hrh1e")]
-position = Vector2(1866, 27)
+[node name="RightRoom" parent="." instance=ExtResource("2_0qjrc")]
+position = Vector2(4, 38)
 
-[node name="LeftRoom" parent="." instance=ExtResource("3_hrh1e")]
-position = Vector2(3, 24)
+[node name="LeftRoom" parent="." instance=ExtResource("2_0qjrc")]
+position = Vector2(1863, 36)
 
 [node name="centerRoom" parent="." instance=ExtResource("5_0qjrc")]
 position = Vector2(1009.20703, 17)

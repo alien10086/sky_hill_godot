@@ -44,6 +44,8 @@ func _instantiate_levels():
 		level_instance.position = Vector2(0, i * 575 + 575)
 		add_child(level_instance)
 		level_instance.set_level(floor_number - i)
+		level_instance.set_right_room_bg(1)
+		level_instance.set_left_room_bg(25)
 		level_instances.append(level_instance)
 
 func _clear_level_instances():

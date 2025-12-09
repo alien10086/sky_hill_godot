@@ -14,3 +14,4 @@ func _ready() -> void:
 func refresh_ui():
 	if input_bg:
 		bg_sprite_2d.texture = input_bg
+		#bg_sprite_2d.scale.y
