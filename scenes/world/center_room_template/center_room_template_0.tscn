@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://c18ua4fhbl8fs"]
+[gd_scene load_steps=13 format=3 uid="uid://c18ua4fhbl8fs"]
 
+[ext_resource type="Script" uid="uid://dyyua3nuw33xf" path="res://scenes/world/center_room_template/center_room_template_0.gd" id="1_heuyo"]
 [ext_resource type="Texture2D" uid="uid://ps2a808rqle5" path="res://assets/sprites/world_items/center_room_template/79789.png" id="1_ht4cr"]
 [ext_resource type="Texture2D" uid="uid://cqhxub5p0rxv1" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_17.png" id="1_mhk4w"]
 [ext_resource type="Texture2D" uid="uid://cqkjs2gihspe" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_14.png" id="3_cmoeg"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://s0pglnptltd5" path="res://assets/sprites/world_items/center_room_template/7899.png" id="11_bs0u8"]
 
 [node name="BaseCenterRoom" type="Node2D"]
+script = ExtResource("1_heuyo")
 
 [node name="TextureRect9" type="TextureRect" parent="."]
 offset_left = 2.0

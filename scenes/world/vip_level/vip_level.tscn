@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bleuenw304f4h"]
+[gd_scene load_steps=7 format=3 uid="uid://bleuenw304f4h"]
 
 [ext_resource type="PackedScene" uid="uid://baycnhc1arkaf" path="res://scenes/world/vip_level/vip_left_room.tscn" id="1_qlars"]
 [ext_resource type="PackedScene" uid="uid://d15n8iau7tcqo" path="res://scenes/world/vip_level/vip_right_room.tscn" id="2_mpnam"]
-[ext_resource type="PackedScene" uid="uid://cg2cbtotjhh5a" path="res://scenes/world/base/vip_center_room.tscn" id="3_4d4ps"]
+[ext_resource type="PackedScene" uid="uid://cg2cbtotjhh5a" path="res://scenes/world/vip_level/vip_center_room.tscn" id="3_4d4ps"]
 [ext_resource type="Texture2D" uid="uid://doxdvfi46ryyj" path="res://assets/sprites/world_items/vip_100_out.png" id="4_87u13"]
 [ext_resource type="Texture2D" uid="uid://w8od78ah2nq8" path="res://assets/sprites/world_items/vip0.png" id="5_w37bc"]
+[ext_resource type="Texture2D" uid="uid://1hw20gopcst3" path="res://assets/sprites/world_items/8678dg.png" id="6_mpnam"]
 
 [node name="VipLevel" type="Node2D"]
 
@@ -25,3 +26,9 @@ texture = ExtResource("4_87u13")
 position = Vector2(1462.4999, -267.85712)
 scale = Vector2(2.8, 2.8)
 texture = ExtResource("5_w37bc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1438, 264.5)
+scale = Vector2(2.8822963, 2.6026785)
+texture = ExtResource("6_mpnam")
