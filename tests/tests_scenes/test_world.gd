@@ -4,7 +4,7 @@ extends Node2D
 @onready var camera: Camera2D = $Camera2D
 
 var zoom_level: float = 1.0
-var min_zoom: float = 0.5
+var min_zoom: float = 0.01  # 修改为更小的最小缩放级别
 var max_zoom: float = 3.0
 var zoom_speed: float = 0.1
 var pan_speed: float = 500.0
@@ -38,10 +38,10 @@ func _instantiate_levels():
 	
 	# 创建3个level_x实例，垂直排列
 	var floor_number = 99
-	for i in range(100):
+	for i in range(99):
 		var level_instance: = level_x_scene.instantiate()
 		# 设置位置，每个实例垂直间隔500像素
-		level_instance.position = Vector2(0, i * 500 + 500)
+		level_instance.position = Vector2(0, i * 575 + 575)
 		add_child(level_instance)
 		level_instance.set_level(floor_number - i)
 		level_instances.append(level_instance)
