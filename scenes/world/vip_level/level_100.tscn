@@ -1,74 +1,30 @@
-[gd_scene load_steps=10 format=3 uid="uid://v57ha3afj5f"]
+[gd_scene load_steps=6 format=3 uid="uid://v57ha3afj5f"]
 
 [ext_resource type="PackedScene" uid="uid://baycnhc1arkaf" path="res://scenes/world/vip_level/vip_left_room.tscn" id="1_gny7m"]
-[ext_resource type="Script" uid="uid://bscm0yct7t41e" path="res://scenes/world/vip_level/level_100.gd" id="1_v7cp6"]
-[ext_resource type="PackedScene" uid="uid://f25xwdiim6mg" path="res://scenes/world/vip_level/vip_middle_room.tscn" id="2_7j7ei"]
 [ext_resource type="PackedScene" uid="uid://d15n8iau7tcqo" path="res://scenes/world/vip_level/vip_right_room.tscn" id="3_xrnqk"]
 [ext_resource type="Texture2D" uid="uid://doxdvfi46ryyj" path="res://assets/sprites/world_items/vip_100_out.png" id="4_7j7ei"]
 [ext_resource type="Texture2D" uid="uid://w8od78ah2nq8" path="res://assets/sprites/world_items/vip0.png" id="5_xrnqk"]
-[ext_resource type="Texture2D" uid="uid://bqxg6hjbjtvsp" path="res://assets/sprites/world_items/elevator_close.png" id="6_gfvvp"]
-[ext_resource type="Shader" uid="uid://d2nkkk0q1xgq3" path="res://scenes/world/vip_level/elevator_door.gdshader" id="6_jw3di"]
+[ext_resource type="PackedScene" uid="uid://cg2cbtotjhh5a" path="res://scenes/world/base/vip_center_room.tscn" id="7_ruddm"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_v7cp6"]
-shader = ExtResource("6_jw3di")
-shader_parameter/top_light_strength = 0.2450000116375
-shader_parameter/light_height = 1.0
-shader_parameter/seam_highlight = 0.21200001007
-shader_parameter/metal_reflect = 0.238000011305
-shader_parameter/brush_strength = 0.0110000005225
-
-[node name="Level100" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 120.0
-offset_top = 423.0
-offset_right = 160.0
-offset_bottom = 463.0
-scale = Vector2(0.58, 0.58)
-script = ExtResource("1_v7cp6")
+[node name="Level100" type="Node2D"]
+position = Vector2(160, 289)
+scale = Vector2(0.56, 0.56)
+metadata/_edit_lock_ = true
 
 [node name="VipLeftRoom" parent="." instance=ExtResource("1_gny7m")]
-layout_mode = 1
-
-[node name="VipMiddleRoom" parent="." instance=ExtResource("2_7j7ei")]
-layout_mode = 1
-offset_left = 955.0
-offset_top = 2.0
-offset_right = 955.0
-offset_bottom = 2.0
 
 [node name="VipRightRoom" parent="." instance=ExtResource("3_xrnqk")]
-layout_mode = 1
-offset_left = 1908.0
-offset_top = 2.0
-offset_right = 1908.0
-offset_bottom = 2.0
+position = Vector2(1850, -1.7857144)
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -166.66667
-offset_top = -48.333324
-offset_right = 2070.3333
-offset_bottom = 394.6667
-scale = Vector2(1.44, 1.44)
+[node name="VipCenterRoom" parent="." instance=ExtResource("7_ruddm")]
+position = Vector2(1000, -5.357143)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1432.143, 264.26782)
+scale = Vector2(1.4376715, 1.3544825)
 texture = ExtResource("4_7j7ei")
 
-[node name="top" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 446.55176
-offset_top = -450.0
-offset_right = 1215.5518
-offset_bottom = -282.0
-scale = Vector2(2.5, 2.5)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1462.4999, -267.85712)
+scale = Vector2(2.8, 2.8)
 texture = ExtResource("5_xrnqk")
-
-[node name="evevator_door" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_v7cp6")
-layout_mode = 0
-offset_left = 1568.9656
-offset_top = 155.17245
-offset_right = 1697.9656
-offset_bottom = 382.18396
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("6_gfvvp")
-expand_mode = 1

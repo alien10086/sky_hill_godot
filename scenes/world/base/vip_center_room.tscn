@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cg2cbtotjhh5a"]
+
+[ext_resource type="Texture2D" uid="uid://dvbpu5qxl8ije" path="res://assets/sprites/world_items/vip_home/atlas0-#6000_30.png" id="1_32cqh"]
+[ext_resource type="Texture2D" uid="uid://drsma4mk48yam" path="res://assets/sprites/world_items/vip_home/vip_middle.png" id="2_431ej"]
+[ext_resource type="Texture2D" uid="uid://ceolq0y50r511" path="res://assets/sprites/world_items/vip_flower.png" id="3_dn1vh"]
+[ext_resource type="Texture2D" uid="uid://bqxg6hjbjtvsp" path="res://assets/sprites/world_items/elevator_close.png" id="4_431ej"]
+[ext_resource type="Texture2D" uid="uid://bwnc1qrq6i6o5" path="res://assets/sprites/world_items/room_template_0/bg.png" id="5_dn1vh"]
+
+[node name="VipCenterRoom" type="Node2D"]
+
+[node name="BgSprite2D" type="Sprite2D" parent="."]
+position = Vector2(426, 285)
+scale = Vector2(0.8532934, 1.384804)
+texture = ExtResource("1_32cqh")
+region_enabled = true
+region_rect = Rect2(-1.4448547, 0, 1002.2217, 408)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(428.49994, 285.99997)
+scale = Vector2(1.5043781, 1.4064838)
+texture = ExtResource("2_431ej")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(399, 450)
+scale = Vector2(2, 2)
+texture = ExtResource("3_dn1vh")
+
+[node name="door" type="Sprite2D" parent="."]
+position = Vector2(651, 382.49997)
+scale = Vector2(1.5503876, 1.4128114)
+texture = ExtResource("4_431ej")
+
+[node name="FilterSprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(425.5, 290)
+scale = Vector2(1.6075947, 1.4326924)
+texture = ExtResource("5_dn1vh")
