@@ -1,25 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0th8ffxj2vio"]
+[gd_scene load_steps=6 format=3 uid="uid://d0th8ffxj2vio"]
 
-[ext_resource type="Script" uid="uid://bscm0yct7t41e" path="res://scenes/world/vip_level/level_100.gd" id="1_luivv"]
-[ext_resource type="PackedScene" uid="uid://baycnhc1arkaf" path="res://scenes/world/vip_level/vip_left_room.tscn" id="2_y10iv"]
-[ext_resource type="PackedScene" uid="uid://f25xwdiim6mg" path="res://scenes/world/vip_level/vip_middle_room.tscn" id="3_348v5"]
-[ext_resource type="PackedScene" uid="uid://d15n8iau7tcqo" path="res://scenes/world/vip_level/vip_right_room.tscn" id="4_510v5"]
-[ext_resource type="Texture2D" uid="uid://doxdvfi46ryyj" path="res://assets/sprites/world_items/vip_100_out.png" id="5_j41xf"]
-[ext_resource type="Texture2D" uid="uid://w8od78ah2nq8" path="res://assets/sprites/world_items/vip0.png" id="6_6vcas"]
-[ext_resource type="Shader" uid="uid://d2nkkk0q1xgq3" path="res://scenes/world/vip_level/elevator_door.gdshader" id="7_od3ni"]
-[ext_resource type="Texture2D" uid="uid://bqxg6hjbjtvsp" path="res://assets/sprites/world_items/elevator_close.png" id="8_42jbk"]
+[ext_resource type="Script" uid="uid://cg3qqwx2l6gvy" path="res://scenes/world/level_x.gd" id="1_0qjrc"]
+[ext_resource type="PackedScene" uid="uid://b1ybfyf7j04wh" path="res://scenes/world/normal_room_template/room_template_0.tscn" id="4_hrh1e"]
+[ext_resource type="PackedScene" uid="uid://c18ua4fhbl8fs" path="res://scenes/world/center_room_template/center_room_template_0.tscn" id="5_0qjrc"]
 [ext_resource type="Texture2D" uid="uid://1hw20gopcst3" path="res://assets/sprites/world_items/8678dg.png" id="9_dk866"]
 [ext_resource type="Texture2D" uid="uid://bn62kd0kwpka0" path="res://assets/sprites/world_items/7989897black.png" id="10_1telx"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_v7cp6"]
-shader = ExtResource("7_od3ni")
-shader_parameter/top_light_strength = 0.2450000116375
-shader_parameter/light_height = 1.0
-shader_parameter/seam_highlight = 0.21200001007
-shader_parameter/metal_reflect = 0.238000011305
-shader_parameter/brush_strength = 0.0110000005225
-
-[node name="Level100" type="Control"]
+[node name="Levelx" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 120.0
@@ -27,66 +14,43 @@ offset_top = 423.0
 offset_right = 160.0
 offset_bottom = 463.0
 scale = Vector2(0.58, 0.58)
-script = ExtResource("1_luivv")
+script = ExtResource("1_0qjrc")
 
-[node name="VipLeftRoom" parent="." instance=ExtResource("2_y10iv")]
+[node name="Room" parent="." instance=ExtResource("4_hrh1e")]
 layout_mode = 1
+offset_left = -136.207
+offset_top = -600.0
+offset_right = -136.207
+offset_bottom = -600.0
 
-[node name="VipMiddleRoom" parent="." instance=ExtResource("3_348v5")]
+[node name="Room4" parent="." instance=ExtResource("4_hrh1e")]
 layout_mode = 1
-offset_left = 955.0
-offset_top = 2.0
-offset_right = 955.0
-offset_bottom = 2.0
+offset_left = 1715.517
+offset_top = -600.00006
+offset_right = 1715.517
+offset_bottom = -600.00006
 
-[node name="VipRightRoom" parent="." instance=ExtResource("4_510v5")]
+[node name="centerRoom" parent="." instance=ExtResource("5_0qjrc")]
 layout_mode = 1
-offset_left = 1908.0
-offset_top = 2.0
-offset_right = 1908.0
-offset_bottom = 2.0
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -166.66667
-offset_top = -48.333324
-offset_right = 2070.3333
-offset_bottom = 394.6667
-scale = Vector2(1.44, 1.44)
-texture = ExtResource("5_j41xf")
-
-[node name="top" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 446.55176
-offset_top = -450.0
-offset_right = 1215.5518
-offset_bottom = -282.0
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("6_6vcas")
-
-[node name="evevator_door" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_v7cp6")
-layout_mode = 0
-offset_left = 1568.9656
-offset_top = 155.17245
-offset_right = 1697.9656
-offset_bottom = 382.18396
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("8_42jbk")
-expand_mode = 1
+anchors_preset = -1
+offset_left = 922.414
+offset_top = -600.0
+offset_right = 922.414
+offset_bottom = -600.0
 
 [node name="floorslab" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -63.79311
-offset_top = 541.3794
-offset_right = 2956.8967
-offset_bottom = 1175.8623
+offset_left = -224.13794
+offset_top = -655.1724
+offset_right = 2796.552
+offset_bottom = -20.689514
 texture = ExtResource("9_dk866")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
-offset_left = -55.172413
-offset_top = 568.9655
-offset_right = 2943.104
-offset_bottom = 1160.3448
+offset_left = -217.2414
+offset_top = -624.138
+offset_right = 2781.035
+offset_bottom = -15.517151
 texture = ExtResource("10_1telx")

@@ -17,7 +17,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="background" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 738.4616
 offset_bottom = 430.7693

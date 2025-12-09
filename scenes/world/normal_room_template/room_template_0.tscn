@@ -21,8 +21,8 @@ grow_vertical = 2
 
 [node name="background" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 738.4616
-offset_bottom = 430.7693
+offset_right = 765.3847
+offset_bottom = 439.2308
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("2_7q6bw")
 expand_mode = 1
@@ -30,9 +30,9 @@ stretch_mode = 6
 
 [node name="TextureRect9" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -11.0
-offset_right = 960.0
-offset_bottom = 560.0
+offset_left = -21.0
+offset_right = 1005.0
+offset_bottom = 570.0
 texture = ExtResource("2_j5kik")
 
 [node name="TextureRect" type="TextureRect" parent="."]
