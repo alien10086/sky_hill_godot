@@ -38,14 +38,14 @@ func _instantiate_levels():
 	
 	# 创建3个level_x实例，垂直排列
 	var floor_number = 99
-	for i in range(99):
+	for i in range(99):  # 创建3个实例
 		var level_instance: = level_x_scene.instantiate()
-		# 设置位置，每个实例垂直间隔500像素
+		# 设置位置，每个实例垂直间隔575像素
 		level_instance.position = Vector2(0, i * 575 + 575)
 		add_child(level_instance)
 		level_instance.set_level(floor_number - i)
-		level_instance.set_right_room_bg(1)
-		level_instance.set_left_room_bg(25)
+		level_instance.set_right_room_bg(randi() % 26)  # 随机生成0-25的数字
+		level_instance.set_left_room_bg(randi() % 26)   # 随机生成0-25的数字
 		level_instances.append(level_instance)
 
 func _clear_level_instances():
