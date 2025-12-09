@@ -1,13 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfo0ctwcxhwqi"]
+[gd_scene load_steps=9 format=3 uid="uid://bhwwotdde45m8"]
 
-[ext_resource type="Texture2D" uid="uid://b15y47co4bqa8" path="res://assets/sprites/world_items/vip_home_background.png" id="1_jyr4v"]
-[ext_resource type="Texture2D" uid="uid://bwnc1qrq6i6o5" path="res://assets/sprites/world_items/room_template_0/bg.png" id="2_c2xth"]
-[ext_resource type="Texture2D" uid="uid://bb81au7t1h33s" path="res://assets/sprites/world_items/room_template_1/ceilinglight_17.png" id="3_jyr4v"]
-[ext_resource type="Texture2D" uid="uid://cym43cxh32g4s" path="res://assets/sprites/world_items/room_template_1/light.png" id="4_gajud"]
-[ext_resource type="Texture2D" uid="uid://jxgb22hnvdu5" path="res://assets/sprites/world_items/room_template_1/6575.png" id="5_uyu8s"]
-[ext_resource type="Texture2D" uid="uid://b0g8upvtsc60g" path="res://assets/sprites/world_items/room_template_1/bag.png" id="6_jyr4v"]
-[ext_resource type="Texture2D" uid="uid://dhmaq7rpbqgdi" path="res://assets/sprites/world_items/room_template_1/table.png" id="7_c2xth"]
-[ext_resource type="Texture2D" uid="uid://kgo8pye45tdc" path="res://assets/sprites/world_items/room_template_1/electronics_9.png" id="8_fucxs"]
+[ext_resource type="Texture2D" uid="uid://b15y47co4bqa8" path="res://assets/sprites/world_items/vip_home_background.png" id="1_h5x7o"]
+[ext_resource type="Texture2D" uid="uid://bwnc1qrq6i6o5" path="res://assets/sprites/world_items/room_template_0/bg.png" id="2_206oq"]
+[ext_resource type="Texture2D" uid="uid://bb81au7t1h33s" path="res://assets/sprites/world_items/room_template_1/ceilinglight_17.png" id="3_f0va0"]
+[ext_resource type="Texture2D" uid="uid://cym43cxh32g4s" path="res://assets/sprites/world_items/room_template_1/light.png" id="4_gijm8"]
+[ext_resource type="Texture2D" uid="uid://jxgb22hnvdu5" path="res://assets/sprites/world_items/room_template_1/6575.png" id="5_h5x7o"]
+[ext_resource type="Texture2D" uid="uid://b0g8upvtsc60g" path="res://assets/sprites/world_items/room_template_1/bag.png" id="6_206oq"]
+[ext_resource type="Texture2D" uid="uid://dhmaq7rpbqgdi" path="res://assets/sprites/world_items/room_template_1/table.png" id="7_q2awm"]
+[ext_resource type="Texture2D" uid="uid://kgo8pye45tdc" path="res://assets/sprites/world_items/room_template_1/electronics_9.png" id="8_ctvtk"]
 
 [node name="Room" type="Control"]
 layout_mode = 3
@@ -18,21 +18,20 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="background" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
-offset_right = 738.4616
-offset_bottom = 430.7693
+offset_right = 765.3847
+offset_bottom = 439.2308
 scale = Vector2(1.3, 1.3)
-texture = ExtResource("1_jyr4v")
+texture = ExtResource("1_h5x7o")
 expand_mode = 1
 stretch_mode = 6
 
 [node name="TextureRect9" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -11.0
-offset_right = 960.0
-offset_bottom = 560.0
-texture = ExtResource("2_c2xth")
+offset_left = -21.0
+offset_right = 1005.0
+offset_bottom = 570.0
+texture = ExtResource("2_206oq")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -41,7 +40,7 @@ offset_top = 26.0
 offset_right = 559.5
 offset_bottom = 113.0
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("3_jyr4v")
+texture = ExtResource("3_f0va0")
 flip_h = true
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -51,7 +50,7 @@ offset_top = 227.00002
 offset_right = 126.99999
 offset_bottom = 341.64288
 scale = Vector2(2.8, 2.8)
-texture = ExtResource("4_gajud")
+texture = ExtResource("4_gijm8")
 expand_mode = 1
 
 [node name="TextureRect4" type="TextureRect" parent="."]
@@ -61,7 +60,7 @@ offset_top = 226.0
 offset_right = 659.0
 offset_bottom = 441.0
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("5_uyu8s")
+texture = ExtResource("5_h5x7o")
 
 [node name="TextureRect3" type="TextureRect" parent="."]
 layout_mode = 0
@@ -70,7 +69,7 @@ offset_top = 442.00003
 offset_right = 334.0
 offset_bottom = 528.0
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("6_jyr4v")
+texture = ExtResource("6_206oq")
 
 [node name="TextureRect5" type="TextureRect" parent="."]
 layout_mode = 0
@@ -78,7 +77,7 @@ offset_left = 839.0
 offset_top = 482.0
 offset_right = 930.0
 offset_bottom = 546.0
-texture = ExtResource("7_c2xth")
+texture = ExtResource("7_q2awm")
 
 [node name="TextureRect6" type="TextureRect" parent="."]
 layout_mode = 0
@@ -87,4 +86,4 @@ offset_top = 428.0
 offset_right = 896.00006
 offset_bottom = 468.0
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_fucxs")
+texture = ExtResource("8_ctvtk")
