@@ -27,19 +27,19 @@ scale = Vector2(1.3, 1.3)
 texture = ExtResource("3_ss6h2")
 
 [node name="door" type="TextureRect" parent="."]
-offset_left = 796.0
-offset_top = 207.00002
-offset_right = 924.0
-offset_bottom = 475.0
+offset_left = 849.0
+offset_top = 212.00002
+offset_right = 977.0
+offset_bottom = 480.0
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("4_sb3rp")
 flip_h = true
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 875.0
-offset_top = 5.0
-offset_right = 958.0
-offset_bottom = 562.0
+offset_left = 928.0
+offset_top = 10.0
+offset_right = 1011.0
+offset_bottom = 567.0
 
 [node name="TableTextureButton" type="TextureButton" parent="."]
 offset_left = 225.00002

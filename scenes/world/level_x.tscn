@@ -15,13 +15,13 @@ position = Vector2(1866, 27)
 [node name="LeftRoom" parent="." instance=ExtResource("3_hrh1e")]
 position = Vector2(3, 24)
 
+[node name="centerRoom" parent="." instance=ExtResource("5_0qjrc")]
+position = Vector2(1009.20703, 17)
+
 [node name="Floorslab" type="Sprite2D" parent="."]
 position = Vector2(1438, 287)
 scale = Vector2(2.8822963, 2.8035715)
 texture = ExtResource("9_dk866")
-
-[node name="centerRoom" parent="." instance=ExtResource("5_0qjrc")]
-position = Vector2(1009.20703, 17)
 
 [node name="Floorshelter" type="Sprite2D" parent="."]
 visible = false

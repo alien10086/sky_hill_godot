@@ -9,15 +9,15 @@
 [node name="VipCenterRoom" type="Node2D"]
 
 [node name="BgSprite2D" type="Sprite2D" parent="."]
-position = Vector2(426, 285)
-scale = Vector2(0.8532934, 1.384804)
+position = Vector2(427.25, 285)
+scale = Vector2(0.8507985, 1.384804)
 texture = ExtResource("1_32cqh")
 region_enabled = true
 region_rect = Rect2(-1.4448547, 0, 1002.2217, 408)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(428.49994, 285.99997)
-scale = Vector2(1.5043781, 1.4064838)
+position = Vector2(428.9999, 285.99997)
+scale = Vector2(1.5026264, 1.4064838)
 texture = ExtResource("2_431ej")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]

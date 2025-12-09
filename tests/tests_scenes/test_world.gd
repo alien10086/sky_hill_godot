@@ -1,7 +1,6 @@
 extends Node2D
 
 # 镜头控制变量
-#var camera: Camera2D
 @onready var camera: Camera2D = $Camera2D
 
 var zoom_level: float = 1.0
@@ -12,22 +11,47 @@ var pan_speed: float = 500.0
 var is_dragging: bool = false
 var drag_start_position: Vector2
 
-## 初始镜头设置
-#@export var initial_camera_position: Vector2 = Vector2(500, 300)  # 默认初始位置
-#@export var initial_zoom_level: float = 1.0  # 默认初始缩放级别
+# 场景实例化
+var level_x_scene = preload("res://scenes/world/level_x.tscn")
+var level_instances = []
 
 # UI元素
 var zoom_in_button: Button
 var zoom_out_button: Button
 var reset_button: Button
+var regenerate_button: Button
 var zoom_label: Label
 
 func _ready():
 	# 设置相机
 	#_setup_camera()
 	
+	# 实例化3个level_x场景
+	_instantiate_levels()
+	
 	# 创建UI
 	_setup_ui()
+
+func _instantiate_levels():
+	# 清除已存在的实例
+	_clear_level_instances()
+	
+	# 创建3个level_x实例，垂直排列
+	var floor_number = 99
+	for i in range(100):
+		var level_instance: = level_x_scene.instantiate()
+		# 设置位置，每个实例垂直间隔500像素
+		level_instance.position = Vector2(0, i * 500 + 500)
+		add_child(level_instance)
+		level_instance.set_level(floor_number - i)
+		level_instances.append(level_instance)
+
+func _clear_level_instances():
+	# 清除所有已存在的实例
+	for instance in level_instances:
+		if is_instance_valid(instance):
+			instance.queue_free()
+	level_instances.clear()
 
 #func _setup_camera():
 	# 创建相机
@@ -67,6 +91,12 @@ func _setup_ui():
 	reset_button.text = "重置 (R)"
 	reset_button.pressed.connect(_on_reset_pressed)
 	ui_container.add_child(reset_button)
+	
+	# 创建重新生成按钮
+	regenerate_button = Button.new()
+	regenerate_button.text = "重新生成楼层"
+	regenerate_button.pressed.connect(_on_regenerate_pressed)
+	ui_container.add_child(regenerate_button)
 	
 	# 创建缩放级别标签
 	zoom_label = Label.new()
@@ -135,3 +165,6 @@ func _on_zoom_out_pressed():
 
 func _on_reset_pressed():
 	_reset_camera()
+
+func _on_regenerate_pressed():
+	_instantiate_levels()
