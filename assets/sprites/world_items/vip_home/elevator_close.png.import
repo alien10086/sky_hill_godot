@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6sx8wk5x0br2"
-path="res://.godot/imported/atlas0-#6000_22.png-b16567c009a13ed7d5a9e4f66f44d2e6.ctex"
+uid="uid://bqxg6hjbjtvsp"
+path="res://.godot/imported/elevator_close.png-83cc7506f59a912d7e886a583d7a1cdf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/world_items/vip_home/atlas0-#6000_22.png"
-dest_files=["res://.godot/imported/atlas0-#6000_22.png-b16567c009a13ed7d5a9e4f66f44d2e6.ctex"]
+source_file="res://assets/sprites/world_items/vip_home/elevator_close.png"
+dest_files=["res://.godot/imported/elevator_close.png-83cc7506f59a912d7e886a583d7a1cdf.ctex"]
 
 [params]
 

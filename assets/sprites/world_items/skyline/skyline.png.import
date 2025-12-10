@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6sx8wk5x0br2"
-path="res://.godot/imported/atlas0-#6000_22.png-b16567c009a13ed7d5a9e4f66f44d2e6.ctex"
+uid="uid://d17nxuefveov"
+path="res://.godot/imported/skyline.png-3fb937e3b943e4ff8e0e6e2906842fcd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/world_items/vip_home/atlas0-#6000_22.png"
-dest_files=["res://.godot/imported/atlas0-#6000_22.png-b16567c009a13ed7d5a9e4f66f44d2e6.ctex"]
+source_file="res://assets/sprites/world_items/skyline/skyline.png"
+dest_files=["res://.godot/imported/skyline.png-3fb937e3b943e4ff8e0e6e2906842fcd.ctex"]
 
 [params]
 
