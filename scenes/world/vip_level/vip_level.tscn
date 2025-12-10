@@ -1,21 +1,115 @@
-[gd_scene load_steps=7 format=3 uid="uid://bleuenw304f4h"]
+[gd_scene load_steps=15 format=3 uid="uid://bleuenw304f4h"]
 
-[ext_resource type="PackedScene" uid="uid://baycnhc1arkaf" path="res://scenes/world/vip_level/vip_left_room.tscn" id="1_qlars"]
-[ext_resource type="PackedScene" uid="uid://d15n8iau7tcqo" path="res://scenes/world/vip_level/vip_right_room.tscn" id="2_mpnam"]
-[ext_resource type="PackedScene" uid="uid://cg2cbtotjhh5a" path="res://scenes/world/vip_level/vip_center_room.tscn" id="3_4d4ps"]
+[ext_resource type="Texture2D" uid="uid://dvbpu5qxl8ije" path="res://assets/sprites/world_items/vip_home/atlas0-#6000_30.png" id="1_emrr5"]
+[ext_resource type="Texture2D" uid="uid://dmr72s87h2vsj" path="res://assets/sprites/world_items/vip_base_table1.png" id="2_8g4xg"]
+[ext_resource type="Texture2D" uid="uid://eanbm2law12y" path="res://assets/sprites/world_items/vip_base_kitchen1.png" id="3_d247y"]
 [ext_resource type="Texture2D" uid="uid://doxdvfi46ryyj" path="res://assets/sprites/world_items/vip_100_out.png" id="4_87u13"]
+[ext_resource type="Texture2D" uid="uid://ckabadnlrug4o" path="res://assets/sprites/world_items/vip_red_door.png" id="4_bvevl"]
+[ext_resource type="Texture2D" uid="uid://cm54xhwvfklfy" path="res://assets/sprites/world_items/vip_table_build.png" id="5_vanmn"]
 [ext_resource type="Texture2D" uid="uid://w8od78ah2nq8" path="res://assets/sprites/world_items/vip0.png" id="5_w37bc"]
 [ext_resource type="Texture2D" uid="uid://1hw20gopcst3" path="res://assets/sprites/world_items/8678dg.png" id="6_mpnam"]
+[ext_resource type="Texture2D" uid="uid://dj6fxywx1kbgu" path="res://assets/sprites/world_items/vip_bed1.png" id="6_wrcdv"]
+[ext_resource type="Texture2D" uid="uid://bqkmtvdiisslj" path="res://assets/sprites/world_items/vip_tv.png" id="7_prnv5"]
+[ext_resource type="Texture2D" uid="uid://ceolq0y50r511" path="res://assets/sprites/world_items/vip_flower.png" id="8_uano4"]
+[ext_resource type="Texture2D" uid="uid://dyv4gnxjureg0" path="res://assets/sprites/world_items/home_furniture2/decoration/decoration_4.png" id="9_gcefl"]
+[ext_resource type="Texture2D" uid="uid://drsma4mk48yam" path="res://assets/sprites/world_items/vip_home/vip_middle.png" id="10_d247y"]
+[ext_resource type="Texture2D" uid="uid://bqxg6hjbjtvsp" path="res://assets/sprites/world_items/elevator_close.png" id="11_bvevl"]
 
 [node name="VipLevel" type="Node2D"]
 
-[node name="VipLeftRoom" parent="." instance=ExtResource("1_qlars")]
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(1437.0001, 289)
+scale = Vector2(1.4308538, 1.3578433)
+texture = ExtResource("1_emrr5")
 
-[node name="VipRightRoom" parent="." instance=ExtResource("2_mpnam")]
-position = Vector2(1850, -1.7857144)
+[node name="leftRoom" type="Node2D" parent="."]
 
-[node name="VipCenterRoom" parent="." instance=ExtResource("3_4d4ps")]
-position = Vector2(1000, -5.357143)
+[node name="table" type="TextureRect" parent="leftRoom"]
+offset_left = 60.000004
+offset_top = 411.0
+offset_right = 356.0
+offset_bottom = 530.0
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_8g4xg")
+
+[node name="kitchen" type="TextureRect" parent="leftRoom"]
+offset_left = 516.00006
+offset_top = 479.0
+offset_right = 635.00006
+offset_bottom = 545.0
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("3_d247y")
+
+[node name="door" type="TextureRect" parent="leftRoom"]
+offset_left = 852.0
+offset_top = 207.00002
+offset_right = 980.0
+offset_bottom = 475.0
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("4_bvevl")
+flip_h = true
+
+[node name="Panel" type="Panel" parent="leftRoom"]
+offset_left = 933.0
+offset_top = 4.0
+offset_right = 1016.0
+offset_bottom = 561.0
+
+[node name="TableTextureButton" type="TextureButton" parent="leftRoom"]
+offset_left = 225.00002
+offset_top = 467.00003
+offset_right = 265.0
+offset_bottom = 508.00003
+scale = Vector2(1.3, 1.3)
+texture_normal = ExtResource("5_vanmn")
+
+[node name="rightRoom" type="Node2D" parent="."]
+position = Vector2(1919, -24)
+
+[node name="bed" type="TextureRect" parent="rightRoom"]
+offset_left = 184.00002
+offset_top = 371.00003
+offset_right = 619.0
+offset_bottom = 524.0
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("6_wrcdv")
+
+[node name="tv" type="TextureRect" parent="rightRoom"]
+offset_left = 331.0
+offset_top = 72.00003
+offset_right = 570.0
+offset_bottom = 211.00003
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("7_prnv5")
+flip_h = true
+
+[node name="Panel" type="Panel" parent="rightRoom"]
+offset_left = -40.0
+offset_top = 23.0
+offset_right = 43.0
+offset_bottom = 580.0
+
+[node name="centerRoom" type="Node2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="centerRoom"]
+position = Vector2(1369, 447)
+scale = Vector2(2, 2)
+texture = ExtResource("8_uano4")
+
+[node name="draw" type="Sprite2D" parent="centerRoom"]
+position = Vector2(1326, 198)
+scale = Vector2(3, 3)
+texture = ExtResource("9_gcefl")
+
+[node name="Sprite2D" type="Sprite2D" parent="centerRoom"]
+position = Vector2(1705.5, 326.25)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_d247y")
+
+[node name="Sprite2D3" type="Sprite2D" parent="centerRoom"]
+position = Vector2(1705.5, 356.25)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_bvevl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1432.143, 264.26782)
