@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://cry2qac5oqp3k"]
+
+[ext_resource type="Script" uid="uid://dc64g2t3md8cg" path="res://scenes/world/base/base_room.gd" id="1_kccj8"]
+[ext_resource type="Texture2D" uid="uid://edcf1kr5dglv" path="res://assets/sprites/world_items/normal_room/wallpaper/wallpaper_2.png" id="2_35dwv"]
+[ext_resource type="Texture2D" uid="uid://bwnc1qrq6i6o5" path="res://assets/sprites/world_items/room_template_0/bg.png" id="3_2ywu7"]
+[ext_resource type="Texture2D" uid="uid://ctetihlkp6beq" path="res://assets/sprites/world_items/room_template_3/atlas1-#5928_386.png" id="4_5hibx"]
+[ext_resource type="Texture2D" uid="uid://edib78ulmnnn" path="res://assets/sprites/world_items/room_template_3/Sofa_31.png" id="5_bhkhb"]
+[ext_resource type="Texture2D" uid="uid://d1v84yuyhqqra" path="res://assets/sprites/world_items/room_template_3/decoration_23.png" id="6_8drc7"]
+[ext_resource type="Texture2D" uid="uid://7ws0al3vh87f" path="res://assets/sprites/world_items/room_template_3/atlas1-#5928_14.png" id="7_u15b3"]
+[ext_resource type="Texture2D" uid="uid://b8v63hhw2j8rb" path="res://assets/sprites/world_items/room_template_3/atlas1-#5928_281.png" id="8_siphw"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_kccj8")
+
+[node name="BgSprite2D" type="Sprite2D" parent="."]
+position = Vector2(512.5, 282)
+scale = Vector2(2.8567338, 2.5388126)
+texture = ExtResource("2_35dwv")
+region_rect = Rect2(-1.4448547, 0, 1002.2217, 408)
+
+[node name="FilterSprite2D" type="Sprite2D" parent="."]
+position = Vector2(508.87497, 277.25)
+scale = Vector2(1.8340868, 1.3906251)
+texture = ExtResource("3_2ywu7")
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+offset_left = 266.0
+offset_top = 7.0
+offset_right = 314.33325
+offset_bottom = 111.99999
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_5hibx")
+expand_mode = 1
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 613.0
+offset_top = 8.0
+offset_right = 661.3333
+offset_bottom = 112.99999
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_5hibx")
+expand_mode = 1
+flip_h = true
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+offset_left = 203.0
+offset_top = 329.0
+offset_right = 577.0
+offset_bottom = 481.3333
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_bhkhb")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 426.0
+offset_top = 129.0
+offset_right = 466.0
+offset_bottom = 169.0
+scale = Vector2(2, 2)
+texture = ExtResource("6_8drc7")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = 70.0
+offset_top = 418.0
+offset_right = 115.0
+offset_bottom = 485.0
+scale = Vector2(2, 2)
+texture = ExtResource("7_u15b3")
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+offset_left = 91.0
+offset_top = 332.0
+offset_right = 135.0
+offset_bottom = 423.0
+texture = ExtResource("8_siphw")

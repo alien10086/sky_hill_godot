@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://b0fvpdkjvla3p"]
+
+[ext_resource type="Script" uid="uid://dc64g2t3md8cg" path="res://scenes/world/base/base_room.gd" id="1_jhkot"]
+[ext_resource type="Texture2D" uid="uid://edcf1kr5dglv" path="res://assets/sprites/world_items/normal_room/wallpaper/wallpaper_2.png" id="2_tlpkx"]
+[ext_resource type="Texture2D" uid="uid://bwnc1qrq6i6o5" path="res://assets/sprites/world_items/room_template_0/bg.png" id="3_w053q"]
+[ext_resource type="Texture2D" uid="uid://ci1yif0tecwik" path="res://assets/sprites/world_items/room_template_2/atlas1-#5928_08.png" id="4_y6gwx"]
+[ext_resource type="Texture2D" uid="uid://b1pk1x6bc32d4" path="res://assets/sprites/world_items/room_template_2/Sofa_30.png" id="5_t8gxj"]
+[ext_resource type="Texture2D" uid="uid://wubevx4peqbi" path="res://assets/sprites/world_items/room_template_2/Cabinet_5.png" id="6_yfvgc"]
+[ext_resource type="Texture2D" uid="uid://bb6hjcgh2i8q5" path="res://assets/sprites/world_items/room_template_2/decoration_4.png" id="7_y6pj8"]
+[ext_resource type="Texture2D" uid="uid://ddfhom5iyiyhp" path="res://assets/sprites/world_items/room_template_2/atlas1-#5928_346.png" id="8_ljbla"]
+[ext_resource type="Texture2D" uid="uid://b6ppvebbmcpwr" path="res://assets/sprites/world_items/room_template_2/atlas1-#5928_170.png" id="9_jeho7"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jhkot")
+
+[node name="BgSprite2D" type="Sprite2D" parent="."]
+position = Vector2(512.5, 282)
+scale = Vector2(2.8567338, 2.5388126)
+texture = ExtResource("2_tlpkx")
+region_rect = Rect2(-1.4448547, 0, 1002.2217, 408)
+
+[node name="FilterSprite2D" type="Sprite2D" parent="."]
+position = Vector2(508.87497, 277.25)
+scale = Vector2(1.8340868, 1.3906251)
+texture = ExtResource("3_w053q")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 463.00003
+offset_top = 7.0
+offset_right = 511.33334
+offset_bottom = 111.99999
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_y6gwx")
+expand_mode = 1
+flip_h = true
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+offset_left = 241.0
+offset_top = 331.0
+offset_right = 615.0
+offset_bottom = 483.3333
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_t8gxj")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = 809.0
+offset_top = 386.0
+offset_right = 911.3333
+offset_bottom = 521.1666
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("6_yfvgc")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 393.0
+offset_top = 157.0
+offset_right = 597.0
+offset_bottom = 314.0
+texture = ExtResource("7_y6pj8")
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+offset_left = 125.0
+offset_top = 363.0
+offset_right = 167.0
+offset_bottom = 538.0
+texture = ExtResource("8_ljbla")
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+offset_left = 841.0
+offset_top = 346.0
+offset_right = 900.0
+offset_bottom = 395.0
+texture = ExtResource("9_jeho7")
