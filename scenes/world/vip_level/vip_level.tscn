@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bleuenw304f4h"]
+[gd_scene load_steps=14 format=3 uid="uid://bleuenw304f4h"]
 
 [ext_resource type="Texture2D" uid="uid://c7erkoqh5m8fr" path="res://assets/sprites/world_items/vip_home/atlas0-#6000_30.png" id="1_emrr5"]
 [ext_resource type="Texture2D" uid="uid://dmr72s87h2vsj" path="res://assets/sprites/world_items/vip_home/vip_base_table1.png" id="2_8g4xg"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dj6fxywx1kbgu" path="res://assets/sprites/world_items/vip_home/vip_bed1.png" id="6_wrcdv"]
 [ext_resource type="Texture2D" uid="uid://bqkmtvdiisslj" path="res://assets/sprites/world_items/vip_home/vip_tv.png" id="7_prnv5"]
 [ext_resource type="Texture2D" uid="uid://ceolq0y50r511" path="res://assets/sprites/world_items/vip_home/vip_flower.png" id="8_uano4"]
-[ext_resource type="Texture2D" uid="uid://dyv4gnxjureg0" path="res://assets/sprites/world_items/home_furniture2/decoration/decoration_4.png" id="9_gcefl"]
 [ext_resource type="Texture2D" uid="uid://b84k6eex5bn6n" path="res://assets/sprites/world_items/vip_home/vip_middle.png" id="10_d247y"]
 [ext_resource type="Texture2D" uid="uid://bqxg6hjbjtvsp" path="res://assets/sprites/world_items/vip_home/elevator_close.png" id="11_bvevl"]
 
@@ -99,7 +98,6 @@ texture = ExtResource("8_uano4")
 [node name="draw" type="Sprite2D" parent="centerRoom"]
 position = Vector2(1326, 198)
 scale = Vector2(3, 3)
-texture = ExtResource("9_gcefl")
 
 [node name="Sprite2D" type="Sprite2D" parent="centerRoom"]
 position = Vector2(1705.5, 326.25)
@@ -122,7 +120,6 @@ scale = Vector2(2.8, 2.8)
 texture = ExtResource("5_w37bc")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1438, 264.5)
 scale = Vector2(2.8822963, 2.6026785)
 texture = ExtResource("6_mpnam")

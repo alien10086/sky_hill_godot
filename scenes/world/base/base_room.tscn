@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dc64g2t3md8cg" path="res://scenes/world/base/base_room.gd" id="1_foh74"]
 [ext_resource type="Texture2D" uid="uid://bwnc1qrq6i6o5" path="res://assets/sprites/world_items/room_template_0/bg.png" id="2_233gh"]
-[ext_resource type="Texture2D" uid="uid://dvbpu5qxl8ije" path="res://assets/sprites/world_items/vip_home/atlas0-#6000_30.png" id="3_hf730"]
+[ext_resource type="Texture2D" uid="uid://c7erkoqh5m8fr" path="res://assets/sprites/world_items/vip_home/atlas0-#6000_30.png" id="3_hf730"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_foh74")
@@ -15,7 +15,6 @@ region_enabled = true
 region_rect = Rect2(-1.4448547, 0, 1002.2217, 408)
 
 [node name="FilterSprite2D" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(508.87497, 277.25)
 scale = Vector2(1.8340868, 1.3906251)
 texture = ExtResource("2_233gh")
