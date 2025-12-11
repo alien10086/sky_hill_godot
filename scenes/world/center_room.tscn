@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://n31q21xv6y6j"]
+
+[ext_resource type="Script" uid="uid://dingb4pnkuk7i" path="res://scenes/world/center_room.gd" id="1_qel7u"]
+[ext_resource type="Texture2D" uid="uid://cqhxub5p0rxv1" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_17.png" id="1_up3ji"]
+[ext_resource type="Texture2D" uid="uid://c07jymcnt5hd7" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_02.png" id="2_auxri"]
+[ext_resource type="Texture2D" uid="uid://cqkjs2gihspe" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_14.png" id="3_y6r4h"]
+[ext_resource type="Texture2D" uid="uid://djbiobm6bh4by" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_04.png" id="4_8ry0a"]
+[ext_resource type="Texture2D" uid="uid://d0fhc75vi2q1c" path="res://assets/sprites/world_items/center_room_template/door_black.png" id="5_mvc0n"]
+[ext_resource type="Texture2D" uid="uid://cmqmumfmbmlwg" path="res://assets/sprites/world_items/center_room_template/atlas1-#5928_20.png" id="6_mvc0n"]
+[ext_resource type="Texture2D" uid="uid://kvwklf8d3kgk" path="res://assets/sprites/world_items/center_room_template/atlas1-#5928_297.png" id="7_qel7u"]
+[ext_resource type="Texture2D" uid="uid://ql1fdbcymaat" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_07.png" id="8_4uneh"]
+
+[node name="CenterRoom" type="Node2D"]
+script = ExtResource("1_qel7u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(278, 200)
+texture = ExtResource("1_up3ji")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(428, 206)
+texture = ExtResource("2_auxri")
+flip_h = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(136.00002, 206)
+rotation = -1.5713129
+texture = ExtResource("3_y6r4h")
+flip_v = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(161, 290)
+texture = ExtResource("4_8ry0a")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(6, 202)
+scale = Vector2(0.29444444, 0.40332514)
+texture = ExtResource("5_mvc0n")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(547, 207)
+scale = Vector2(0.29444444, 0.40332514)
+texture = ExtResource("5_mvc0n")
+flip_h = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(264, 302)
+texture = ExtResource("6_mvc0n")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(333, 294)
+texture = ExtResource("7_qel7u")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(428, 268)
+texture = ExtResource("8_4uneh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 45.0
+offset_top = 102.0
+offset_right = 114.0
+offset_bottom = 185.0
+theme_override_font_sizes/font_size = 60
+text = "99"

@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://b13vge7jvtl1e"]
+
+[ext_resource type="Script" uid="uid://cya5k01eivuy" path="res://scenes/world/level_x.gd" id="1_0qjrc"]
+[ext_resource type="Texture2D" uid="uid://c7erkoqh5m8fr" path="res://assets/sprites/world_items/vip_home/atlas0-#6000_30.png" id="1_dk866"]
+[ext_resource type="Texture2D" uid="uid://1hw20gopcst3" path="res://assets/sprites/world_items/vip_home/8678dg.png" id="2_1telx"]
+[ext_resource type="PackedScene" uid="uid://c2v3y6j0b7xqf" path="res://scenes/world/normal_room_template/base_room_2.tscn" id="5_4rk4a"]
+[ext_resource type="PackedScene" uid="uid://mvbrcoscn844" path="res://scenes/world/normal_room_template/base_room_4.tscn" id="6_au4ci"]
+[ext_resource type="PackedScene" uid="uid://n31q21xv6y6j" path="res://scenes/world/center_room.tscn" id="12_wa6ug"]
+
+[node name="LevelX" type="Node2D"]
+script = ExtResource("1_0qjrc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1009, 217)
+texture = ExtResource("1_dk866")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1011, 203.5)
+scale = Vector2(2.0191386, 1.924107)
+texture = ExtResource("2_1telx")
+
+[node name="CenterRoom" parent="." instance=ExtResource("12_wa6ug")]
+position = Vector2(731, 12)
+
+[node name="leftRoom" parent="." instance=ExtResource("5_4rk4a")]
+position = Vector2(11, 24)
+
+[node name="rightRoom" parent="." instance=ExtResource("6_au4ci")]
+position = Vector2(1286, 25)

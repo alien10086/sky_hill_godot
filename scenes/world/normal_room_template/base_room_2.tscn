@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://c2v3y6j0b7xqf"]
+
+[ext_resource type="Script" uid="uid://bwtfdwgtykqps" path="res://scenes/world/normal_room_template/template_room.gd" id="1_5m1f7"]
+[ext_resource type="PackedScene" uid="uid://dd650vsxeuqiv" path="res://scenes/world/base_room.tscn" id="1_g04x8"]
+[ext_resource type="Texture2D" uid="uid://jxgb22hnvdu5" path="res://assets/sprites/world_items/room_template_1/6575.png" id="2_lytw8"]
+[ext_resource type="Texture2D" uid="uid://cym43cxh32g4s" path="res://assets/sprites/world_items/room_template_1/light.png" id="3_v1av1"]
+[ext_resource type="Texture2D" uid="uid://bb81au7t1h33s" path="res://assets/sprites/world_items/room_template_1/ceilinglight_17.png" id="4_a6ehy"]
+[ext_resource type="Texture2D" uid="uid://b0g8upvtsc60g" path="res://assets/sprites/world_items/room_template_1/bag.png" id="5_on1nd"]
+[ext_resource type="Texture2D" uid="uid://dhmaq7rpbqgdi" path="res://assets/sprites/world_items/room_template_1/table.png" id="6_57m4k"]
+[ext_resource type="Texture2D" uid="uid://kgo8pye45tdc" path="res://assets/sprites/world_items/room_template_1/electronics_9.png" id="7_eih4b"]
+
+[node name="BaseRoom1" type="Node2D"]
+script = ExtResource("1_5m1f7")
+
+[node name="BaseRoom" parent="." instance=ExtResource("1_g04x8")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(441, 269)
+scale = Vector2(2, 2)
+texture = ExtResource("2_lytw8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(154, 272.5)
+texture = ExtResource("3_v1av1")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(367, 39.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_a6ehy")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(238, 341.5)
+texture = ExtResource("5_on1nd")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(654, 357)
+texture = ExtResource("6_57m4k")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(654, 307)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_eih4b")

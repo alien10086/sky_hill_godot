@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://mvbrcoscn844"]
+
+[ext_resource type="PackedScene" uid="uid://dd650vsxeuqiv" path="res://scenes/world/base_room.tscn" id="1_44r2n"]
+[ext_resource type="Script" uid="uid://bwtfdwgtykqps" path="res://scenes/world/normal_room_template/template_room.gd" id="1_qbh44"]
+[ext_resource type="Texture2D" uid="uid://edib78ulmnnn" path="res://assets/sprites/world_items/room_template_3/Sofa_31.png" id="2_5qs2k"]
+[ext_resource type="Texture2D" uid="uid://7ws0al3vh87f" path="res://assets/sprites/world_items/room_template_3/atlas1-#5928_14.png" id="3_0clw3"]
+[ext_resource type="Texture2D" uid="uid://d1v84yuyhqqra" path="res://assets/sprites/world_items/room_template_3/decoration_23.png" id="4_c4kc2"]
+[ext_resource type="Texture2D" uid="uid://ctetihlkp6beq" path="res://assets/sprites/world_items/room_template_3/atlas1-#5928_386.png" id="5_uj0pb"]
+[ext_resource type="Texture2D" uid="uid://b8v63hhw2j8rb" path="res://assets/sprites/world_items/room_template_3/atlas1-#5928_281.png" id="6_761ee"]
+
+[node name="BaseRoom1" type="Node2D"]
+script = ExtResource("1_qbh44")
+
+[node name="BaseRoom" parent="." instance=ExtResource("1_44r2n")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(405, 317.00003)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_5qs2k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(92, 329)
+scale = Vector2(2, 2)
+texture = ExtResource("3_0clw3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(400, 136)
+scale = Vector2(3, 3)
+texture = ExtResource("4_c4kc2")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(251, 45)
+texture = ExtResource("5_uj0pb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(98, 219)
+texture = ExtResource("6_761ee")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(526, 44)
+texture = ExtResource("5_uj0pb")

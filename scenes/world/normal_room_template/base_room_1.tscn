@@ -1,0 +1,59 @@
+[gd_scene load_steps=12 format=3 uid="uid://b8ue3f7evf2p3"]
+
+[ext_resource type="Script" uid="uid://bwtfdwgtykqps" path="res://scenes/world/normal_room_template/template_room.gd" id="1_b8adn"]
+[ext_resource type="PackedScene" uid="uid://dd650vsxeuqiv" path="res://scenes/world/base_room.tscn" id="2_yyxwv"]
+[ext_resource type="Texture2D" uid="uid://bwnc1qrq6i6o5" path="res://assets/sprites/world_items/room_template_0/bg.png" id="3_7eb1k"]
+[ext_resource type="Texture2D" uid="uid://d2fy24gri21iv" path="res://assets/sprites/world_items/room_template_0/bed_6.png" id="4_pyayi"]
+[ext_resource type="Texture2D" uid="uid://ciyex7c6jogx8" path="res://assets/sprites/world_items/room_template_0/shelf_7.png" id="5_j8gp6"]
+[ext_resource type="Texture2D" uid="uid://dp4ed0y85uin3" path="res://assets/sprites/world_items/room_template_0/shelving_2.png" id="6_toacu"]
+[ext_resource type="Texture2D" uid="uid://cuirabxrbqrro" path="res://assets/sprites/world_items/room_template_0/ceilinglight_19.png" id="7_h411k"]
+[ext_resource type="Texture2D" uid="uid://dslafqs6djgyi" path="res://assets/sprites/world_items/room_template_0/book_3.png" id="8_2qy4k"]
+[ext_resource type="Texture2D" uid="uid://5470ja0jxbe5" path="res://assets/sprites/world_items/room_template_0/projector.png" id="9_k1geo"]
+[ext_resource type="Texture2D" uid="uid://bio58f7mns6ha" path="res://assets/sprites/world_items/room_template_0/microwave.png" id="10_vxo3y"]
+[ext_resource type="Texture2D" uid="uid://gd85b5fy8sxd" path="res://assets/sprites/world_items/room_template_0/headphones.png" id="11_7x4um"]
+
+[node name="BaseRoom1" type="Node2D"]
+script = ExtResource("1_b8adn")
+
+[node name="BaseRoom" parent="." instance=ExtResource("2_yyxwv")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(366.75, 198)
+scale = Vector2(1.3209765, 0.94711536)
+texture = ExtResource("3_7eb1k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(354, 330)
+texture = ExtResource("4_pyayi")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(131, 265)
+scale = Vector2(2, 2)
+texture = ExtResource("5_j8gp6")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(394, 181)
+scale = Vector2(2, 2)
+texture = ExtResource("6_toacu")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(379, 46)
+texture = ExtResource("7_h411k")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(420, 183)
+texture = ExtResource("8_2qy4k")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(394, 219)
+texture = ExtResource("9_k1geo")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(126, 237)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("10_vxo3y")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(159, 299)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("11_7x4um")

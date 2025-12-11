@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://clrecm11lbbxu"]
+
+[ext_resource type="Script" uid="uid://bwtfdwgtykqps" path="res://scenes/world/normal_room_template/template_room.gd" id="1_314gy"]
+[ext_resource type="PackedScene" uid="uid://dd650vsxeuqiv" path="res://scenes/world/base_room.tscn" id="2_y6gwx"]
+[ext_resource type="Texture2D" uid="uid://b1pk1x6bc32d4" path="res://assets/sprites/world_items/room_template_2/Sofa_30.png" id="3_t8gxj"]
+[ext_resource type="Texture2D" uid="uid://bb6hjcgh2i8q5" path="res://assets/sprites/world_items/room_template_2/decoration_4.png" id="4_yfvgc"]
+[ext_resource type="Texture2D" uid="uid://ddfhom5iyiyhp" path="res://assets/sprites/world_items/room_template_2/atlas1-#5928_346.png" id="5_y6pj8"]
+[ext_resource type="Texture2D" uid="uid://wubevx4peqbi" path="res://assets/sprites/world_items/room_template_2/Cabinet_5.png" id="6_ljbla"]
+[ext_resource type="Texture2D" uid="uid://ci1yif0tecwik" path="res://assets/sprites/world_items/room_template_2/atlas1-#5928_08.png" id="7_jeho7"]
+[ext_resource type="Texture2D" uid="uid://b6ppvebbmcpwr" path="res://assets/sprites/world_items/room_template_2/atlas1-#5928_170.png" id="8_svyuw"]
+
+[node name="BaseRoom1" type="Node2D"]
+script = ExtResource("1_314gy")
+
+[node name="BaseRoom" parent="." instance=ExtResource("2_y6gwx")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(410, 314)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_t8gxj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(402.00003, 178)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_yfvgc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(141, 309)
+texture = ExtResource("5_y6pj8")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(632, 321)
+scale = Vector2(2, 2)
+texture = ExtResource("6_ljbla")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(397, 56)
+texture = ExtResource("7_jeho7")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(635, 225.00002)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_svyuw")
