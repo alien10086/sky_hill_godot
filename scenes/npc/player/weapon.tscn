@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl044drmtfjqj"]
+
+[ext_resource type="Texture2D" uid="uid://pvjdmgl8yc43" path="res://assets/sprites/all_weapon.png" id="1_entno"]
+
+[node name="Weapon" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_entno")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(127, 152, 18, 195)
