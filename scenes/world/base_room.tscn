@@ -1,13 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dd650vsxeuqiv"]
+[gd_scene load_steps=3 format=3 uid="uid://dd650vsxeuqiv"]
 
 [ext_resource type="Texture2D" uid="uid://ddg8w18jnkjbu" path="res://assets/sprites/world_items/normal_room/wallpaper/wallpaper_8.png" id="1_pqtwy"]
 [ext_resource type="Script" uid="uid://mj3ugii3jaqw" path="res://scenes/world/base_room.gd" id="1_wm43t"]
-[ext_resource type="Texture2D" uid="uid://dpc3rosofusbq" path="res://assets/ui/ui_backpack_plus_icon.png" id="3_72gd3"]
-
-[sub_resource type="Theme" id="Theme_button"]
-Button/colors/font_color = Color(1, 1, 1, 1)
-Button/colors/font_focus_color = Color(0.47, 0.47, 0.47, 1)
-Button/constants/outline_size = 0
 
 [node name="BaseRoom" type="Node2D"]
 script = ExtResource("1_wm43t")
@@ -16,18 +10,3 @@ script = ExtResource("1_wm43t")
 position = Vector2(362.99997, 200)
 scale = Vector2(2.0802293, 1.8)
 texture = ExtResource("1_pqtwy")
-
-[node name="CenterMarker" type="Sprite2D" parent="."]
-modulate = Color(1, 0, 0, 0.8)
-position = Vector2(362.99997, 200)
-texture = ExtResource("3_72gd3")
-
-[node name="MoveButton" type="Button" parent="."]
-z_index = 10
-offset_left = 22.0
-offset_top = 29.0
-offset_right = 695.0
-offset_bottom = 376.0
-theme = SubResource("Theme_button")
-theme_override_font_sizes/font_size = 20
-text = "移动到中心"
