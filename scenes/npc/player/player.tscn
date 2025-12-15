@@ -175,6 +175,7 @@ script = ExtResource("1_g5biw")
 metadata/_edit_group_ = true
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
+position = Vector2(-89.19553, -5.39987)
 modification_stack = SubResource("SkeletonModificationStack2D_g5biw")
 metadata/_edit_group_ = true
 
@@ -241,7 +242,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D3/rightArmTop/rightArmBottom"]
 position = Vector2(-1, 42)
 rotation = 0.57228565
-scale = Vector2(0.99999976, 0.99999976)
+scale = Vector2(0.99999994, 0.99999994)
 rest = Transform2D(0.84066534, 0.5415549, -0.5415549, 0.84066534, -1, 42)
 
 [node name="head" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D3"]
@@ -254,6 +255,7 @@ bone_angle = 0.0
 metadata/_local_pose_override_enabled_ = true
 
 [node name="playerSkin" type="Node2D" parent="."]
+position = Vector2(-89.19553, -5.39987)
 metadata/_edit_group_ = true
 
 [node name="leftArmNode2D" type="Node2D" parent="playerSkin"]
@@ -385,11 +387,12 @@ polygon = PackedVector2Array(146.574, 210.32742, 135.27594, 201.32172, 130.85495
 uv = PackedVector2Array(146.574, 210.32742, 135.27594, 201.32172, 130.85495, 206.72514, 141.98929, 223.75412, 140.84311, 266.8178, 151.32248, 273.03995, 159.01826, 264.36172, 154.2698, 223.75412, 159.182, 204.26904, 149.84882, 201.15797)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(88, 131)
+position = Vector2(-1.1955338, 125.60013)
 shape = SubResource("CapsuleShape2D_msdsj")
 metadata/_edit_group_ = true
 
 [node name="tagets" type="Node2D" parent="."]
+position = Vector2(-89.19553, -5.39987)
 
 [node name="leftArmMarker2D" type="Marker2D" parent="tagets"]
 position = Vector2(114, 147)
@@ -404,7 +407,7 @@ position = Vector2(101, 239)
 position = Vector2(69, 245)
 
 [node name="headMarker2D" type="Marker2D" parent="tagets"]
-position = Vector2(94, -73)
+position = Vector2(90.165924, 6.4286194)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
