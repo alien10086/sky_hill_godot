@@ -10,3 +10,11 @@ script = ExtResource("1_wm43t")
 position = Vector2(362.99997, 200)
 scale = Vector2(2.0802293, 1.8)
 texture = ExtResource("1_pqtwy")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 22.0
+offset_top = 29.0
+offset_right = 693.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 100
+text = "go"
