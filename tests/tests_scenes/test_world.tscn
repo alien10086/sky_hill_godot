@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfqxmonvx4roi"]
+[gd_scene load_steps=4 format=3 uid="uid://cfqxmonvx4roi"]
 
 [ext_resource type="PackedScene" uid="uid://bleuenw304f4h" path="res://scenes/world/vip_level/vip_level.tscn" id="1_j7db4"]
 [ext_resource type="Script" uid="uid://cppkdowkrn7kc" path="res://tests/tests_scenes/test_world.gd" id="1_tf63l"]
+[ext_resource type="PackedScene" uid="uid://dmkct1pm5q8m8" path="res://scenes/npc/player/palyer.tscn" id="3_qntl7"]
 
 [node name="TestWorld" type="Node2D"]
 script = ExtResource("1_tf63l")
@@ -20,3 +21,6 @@ offset_right = 2505.0
 offset_bottom = 760.0
 theme_override_font_sizes/font_size = 200
 text = "创造游戏地图：搭建 100 层骨架"
+
+[node name="Palyer" parent="." instance=ExtResource("3_qntl7")]
+position = Vector2(874, 163)

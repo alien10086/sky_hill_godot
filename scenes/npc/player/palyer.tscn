@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmkct1pm5q8m8"]
+[gd_scene load_steps=13 format=3 uid="uid://dmkct1pm5q8m8"]
 
 [ext_resource type="Texture2D" uid="uid://6key7x2s1q1n" path="res://assets/sprites/all_player.png" id="1_msdsj"]
 
@@ -157,9 +157,13 @@ tracks/3/keys = {
 "values": [Vector2(114, 147)]
 }
 
+[sub_resource type="Animation" id="Animation_775c0"]
+resource_name = "left_weapone"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g5biw"]
 _data = {
 &"RESET": SubResource("Animation_g5biw"),
+&"left_weapon_attack": SubResource("Animation_775c0"),
 &"run": SubResource("Animation_msdsj")
 }
 
