@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://n31q21xv6y6j"]
+[gd_scene load_steps=12 format=3 uid="uid://n31q21xv6y6j"]
 
 [ext_resource type="Script" uid="uid://dingb4pnkuk7i" path="res://scenes/world/center_room.gd" id="1_qel7u"]
 [ext_resource type="Texture2D" uid="uid://cqhxub5p0rxv1" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_17.png" id="1_up3ji"]
@@ -9,6 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://cmqmumfmbmlwg" path="res://assets/sprites/world_items/center_room_template/atlas1-#5928_20.png" id="6_mvc0n"]
 [ext_resource type="Texture2D" uid="uid://kvwklf8d3kgk" path="res://assets/sprites/world_items/center_room_template/atlas1-#5928_297.png" id="7_qel7u"]
 [ext_resource type="Texture2D" uid="uid://ql1fdbcymaat" path="res://assets/sprites/world_items/center_room_template/atlas0-#5899_07.png" id="8_4uneh"]
+[ext_resource type="Texture2D" uid="uid://dpc3rosofusbq" path="res://assets/ui/ui_backpack_plus_icon.png" id="10_4uneh"]
+
+[sub_resource type="Theme" id="Theme_button"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(0.47, 0.47, 0.47, 1)
+Button/constants/outline_size = 0
 
 [node name="CenterRoom" type="Node2D"]
 script = ExtResource("1_qel7u")
@@ -63,10 +69,16 @@ offset_bottom = 185.0
 theme_override_font_sizes/font_size = 60
 text = "99"
 
+[node name="CenterMarker" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 0.8)
+position = Vector2(500, 100)
+texture = ExtResource("10_4uneh")
+
 [node name="MoveButton" type="Button" parent="."]
 offset_left = 42.0
 offset_top = 16.0
-offset_right = 521.0
-offset_bottom = 391.0
-theme_override_font_sizes/font_size = 100
-text = "go"
+offset_right = 508.0
+offset_bottom = 394.0
+theme = SubResource("Theme_button")
+theme_override_font_sizes/font_size = 20
+text = "移动到中心"

@@ -24,6 +24,7 @@ theme_override_font_sizes/font_size = 200
 text = "创造游戏地图：搭建 100 层骨架"
 
 [node name="Player" parent="." instance=ExtResource("3_qntl7")]
+z_index = 10
 position = Vector2(874, 163)
 
 [node name="LevelX" parent="." instance=ExtResource("4_xhkk4")]
