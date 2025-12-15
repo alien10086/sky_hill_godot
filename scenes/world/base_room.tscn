@@ -11,7 +11,8 @@ position = Vector2(362.99997, 200)
 scale = Vector2(2.0802293, 1.8)
 texture = ExtResource("1_pqtwy")
 
-[node name="Button" type="Button" parent="."]
+[node name="MoveButton" type="Button" parent="."]
+z_index = 10
 offset_left = 22.0
 offset_top = 29.0
 offset_right = 693.0

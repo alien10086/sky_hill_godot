@@ -63,7 +63,7 @@ offset_bottom = 185.0
 theme_override_font_sizes/font_size = 60
 text = "99"
 
-[node name="Button" type="Button" parent="."]
+[node name="MoveButton" type="Button" parent="."]
 offset_left = 42.0
 offset_top = 16.0
 offset_right = 521.0

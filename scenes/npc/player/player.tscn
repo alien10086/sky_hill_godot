@@ -168,7 +168,7 @@ _data = {
 &"run": SubResource("Animation_msdsj")
 }
 
-[node name="Palyer" type="CharacterBody2D"]
+[node name="Palyer" type="CharacterBody2D" groups=["player"]]
 rotation = 0.029180825
 script = ExtResource("1_g5biw")
 metadata/_edit_group_ = true

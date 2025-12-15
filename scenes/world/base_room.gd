@@ -4,6 +4,7 @@ class_name BaseRoomUI
 @onready var bg_sprite_2d: Sprite2D = $BgSprite2D
 @onready var move_button: Button = $MoveButton
 
+
 @export var input_bg: CompressedTexture2D
 
 # 房间中心位置
