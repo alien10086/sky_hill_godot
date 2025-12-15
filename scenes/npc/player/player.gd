@@ -4,6 +4,7 @@ extends CharacterBody2D
 var is_moving = false
 var target_position = Vector2.ZERO
 var move_speed = 100.0
+# var facing_right = true  # 记录当前朝向
 
 # 动画相关变量
 @onready var animation_player = $AnimationPlayer
@@ -42,6 +43,16 @@ func move_to_target(delta):
 	if distance < 5.0:
 		stop_movement()
 		return
+	
+	# 根据移动方向翻转角色
+	if direction.x > 0:
+		# 向右移动，但当前朝向左
+		scale.x = 1.0
+		# facing_right = true
+	elif direction.x < 0:
+		# 向左移动，但当前朝向右
+		scale.x = -1.0
+		# facing_right = false
 	
 	# 移动
 	velocity = direction * move_speed
