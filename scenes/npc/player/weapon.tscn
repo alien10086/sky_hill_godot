@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dl044drmtfjqj"]
+[gd_scene load_steps=3 format=3 uid="uid://dl044drmtfjqj"]
 
-[ext_resource type="Texture2D" uid="uid://pvjdmgl8yc43" path="res://assets/sprites/all_weapon.png" id="1_entno"]
+[ext_resource type="Script" uid="uid://bhkjtje75qnbn" path="res://scenes/npc/player/weapon.gd" id="1_wmyjk"]
+[ext_resource type="Texture2D" uid="uid://b0lqiucuccsor" path="res://resources/weapon_atlas_texture/28.tres" id="2_wmyjk"]
 
 [node name="Weapon" type="Node2D"]
+script = ExtResource("1_wmyjk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_entno")
-flip_h = true
-region_enabled = true
+position = Vector2(0, -64)
+texture = ExtResource("2_wmyjk")
+centered = false
 region_rect = Rect2(127, 152, 18, 195)

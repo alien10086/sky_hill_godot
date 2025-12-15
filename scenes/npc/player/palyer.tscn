@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmkct1pm5q8m8"]
+[gd_scene load_steps=12 format=3 uid="uid://dmkct1pm5q8m8"]
 
 [ext_resource type="Texture2D" uid="uid://6key7x2s1q1n" path="res://assets/sprites/all_player.png" id="1_msdsj"]
 
@@ -41,6 +41,7 @@ joint_two_bone2d_node = NodePath("Bone2D/Bone2D3/head")
 
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_g5biw"]
 enabled = true
+strength = 0.6
 modification_count = 5
 modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_msdsj")
 modifications/1 = SubResource("SkeletonModification2DTwoBoneIK_g5biw")
@@ -52,7 +53,118 @@ modifications/4 = SubResource("SkeletonModification2DTwoBoneIK_r44p3")
 radius = 36.0
 height = 236.0
 
+[sub_resource type="Animation" id="Animation_msdsj"]
+resource_name = "run"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tagets/rightLegMarker2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20306544, 0.39968437, 0.6011382, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(69, 245), Vector2(59, 244), Vector2(106, 235), Vector2(141, 233), Vector2(69, 245)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tagets/leftLegMarker2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.20306544, 0.39968437, 0.6011382, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(101, 239), Vector2(145, 241), Vector2(96, 249), Vector2(94, 237), Vector2(101, 239)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tagets/rightArmMarker2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.20306544, 0.39968437, 0.6011382, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(86, 137), Vector2(88, 139), Vector2(39, 153), Vector2(134, 144), Vector2(86, 137)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("tagets/leftArmMarker2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.20306544, 0.39968437, 0.6011382, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(114, 147), Vector2(125, 146), Vector2(151, 142), Vector2(115, 139), Vector2(114, 147)]
+}
+
+[sub_resource type="Animation" id="Animation_g5biw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tagets/rightLegMarker2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(69, 245)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tagets/leftLegMarker2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(101, 239)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tagets/rightArmMarker2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(86, 137)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("tagets/leftArmMarker2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(114, 147)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g5biw"]
+_data = {
+&"RESET": SubResource("Animation_g5biw"),
+&"run": SubResource("Animation_msdsj")
+}
+
 [node name="Palyer" type="CharacterBody2D"]
+rotation = 0.029180825
 metadata/_edit_group_ = true
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
@@ -122,7 +234,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D3/rightArmTop/rightArmBottom"]
 position = Vector2(-1, 42)
 rotation = 0.57228565
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(0.9999998, 0.9999998)
 rest = Transform2D(0.84066534, 0.5415549, -0.5415549, 0.84066534, -1, 42)
 
 [node name="head" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D3"]
@@ -274,16 +386,21 @@ metadata/_edit_group_ = true
 [node name="tagets" type="Node2D" parent="."]
 
 [node name="leftArmMarker2D" type="Marker2D" parent="tagets"]
-position = Vector2(147, 133)
+position = Vector2(114, 147)
 
 [node name="rightArmMarker2D" type="Marker2D" parent="tagets"]
-position = Vector2(56, 128)
+position = Vector2(86, 137)
 
 [node name="leftLegMarker2D" type="Marker2D" parent="tagets"]
-position = Vector2(98, 243)
+position = Vector2(101, 239)
 
 [node name="rightLegMarker2D" type="Marker2D" parent="tagets"]
-position = Vector2(68, 239)
+position = Vector2(69, 245)
 
 [node name="headMarker2D" type="Marker2D" parent="tagets"]
 position = Vector2(94, -73)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_g5biw")
+}
