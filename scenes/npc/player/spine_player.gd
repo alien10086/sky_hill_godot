@@ -38,8 +38,8 @@ func move_to_position(pos):
 	is_moving = true
 	
 	# 播放跑步动画
-	if animation_player and animation_player.has_animation("run"):
-		animation_player.play("run")
+	if animation_player and animation_player.has_animation("walk"):
+		animation_player.play("walk")
 
 # 向目标位置移动
 func move_to_target(delta):
@@ -57,15 +57,16 @@ func move_to_target(delta):
 		stop_movement()
 		return
 	
-	# 根据移动方向翻转角色
-	if direction.x > 0:
-		# 向右移动，但当前朝向左
-		scale.x = 1.0
-		# facing_right = true
-	elif direction.x < 0:
-		# 向左移动，但当前朝向右
-		scale.x = -1.0
-		# facing_right = false
+	# 根据移动方向翻转角色 - 只在距离足够大时翻转，避免抖动
+	if distance > 10.0:  # 只在距离大于10像素时翻转
+		if direction.x > 0:
+			# 向右移动，但当前朝向左
+			scale.x = 1.0
+			# facing_right = true
+		elif direction.x < 0:
+			# 向左移动，但当前朝向右
+			scale.x = -1.0
+			# facing_right = false
 	
 	# 移动
 	velocity = direction * move_speed
