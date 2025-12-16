@@ -1,0 +1,69 @@
+[gd_scene load_steps=16 format=3 uid="uid://bi3mv1avpgsrl"]
+
+[ext_resource type="Texture2D" uid="uid://d03mfab5kdju1" path="res://assets/sprites/players/skeleton-animation_00.png" id="1_152t2"]
+[ext_resource type="Script" uid="uid://dbv7n8yt7x5te" path="res://scenes/npc/Player/spine_player.gd" id="1_o2fxq"]
+[ext_resource type="Texture2D" uid="uid://bvo62gm5s1swn" path="res://assets/sprites/players/skeleton-animation_01.png" id="2_ncd6i"]
+[ext_resource type="Texture2D" uid="uid://bbgwbf7c0sawe" path="res://assets/sprites/players/skeleton-animation_02.png" id="3_o2fxq"]
+[ext_resource type="Texture2D" uid="uid://ce1f05k34nqfq" path="res://assets/sprites/players/skeleton-animation_03.png" id="4_wegem"]
+[ext_resource type="Texture2D" uid="uid://dbkymgtsccprx" path="res://assets/sprites/players/skeleton-animation_04.png" id="5_d8tyq"]
+[ext_resource type="Texture2D" uid="uid://vmtd7tpl26xs" path="res://assets/sprites/players/skeleton-animation_05.png" id="6_dbb08"]
+[ext_resource type="Texture2D" uid="uid://bad5wbe1lgqd0" path="res://assets/sprites/players/skeleton-animation_06.png" id="7_133lu"]
+[ext_resource type="Texture2D" uid="uid://du2wk4mqd3jia" path="res://assets/sprites/players/skeleton-animation_07.png" id="8_ebrvf"]
+[ext_resource type="Texture2D" uid="uid://dxfgxbnvto0y4" path="res://assets/sprites/players/skeleton-animation_08.png" id="9_w1fxk"]
+[ext_resource type="Texture2D" uid="uid://cfv0wkw6b5xwf" path="res://assets/sprites/players/skeleton-animation_09.png" id="10_i74t0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_152t2"]
+radius = 36.0
+height = 238.0
+
+[sub_resource type="Animation" id="Animation_152t2"]
+resource_name = "walk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_152t2"), ExtResource("2_ncd6i"), ExtResource("3_o2fxq"), ExtResource("4_wegem"), ExtResource("5_d8tyq"), ExtResource("6_dbb08"), ExtResource("7_133lu"), ExtResource("8_ebrvf"), ExtResource("9_w1fxk"), ExtResource("10_i74t0"), ExtResource("1_152t2")]
+}
+
+[sub_resource type="Animation" id="Animation_a8f17"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_152t2")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jn45l"]
+_data = {
+&"RESET": SubResource("Animation_a8f17"),
+&"walk": SubResource("Animation_152t2")
+}
+
+[node name="SpinePlayer" type="CharacterBody2D"]
+script = ExtResource("1_o2fxq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_152t2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-4, 1)
+shape = SubResource("CapsuleShape2D_152t2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_jn45l")
+}

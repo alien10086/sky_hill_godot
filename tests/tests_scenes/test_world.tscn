@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bleuenw304f4h" path="res://scenes/world/vip_level/vip_level.tscn" id="1_j7db4"]
 [ext_resource type="Script" uid="uid://cppkdowkrn7kc" path="res://tests/tests_scenes/test_world.gd" id="1_tf63l"]
-[ext_resource type="PackedScene" uid="uid://dmkct1pm5q8m8" path="res://scenes/npc/Player/player.tscn" id="3_qntl7"]
+[ext_resource type="PackedScene" uid="uid://bi3mv1avpgsrl" path="res://scenes/npc/Player/spine_player.tscn" id="4_qt6v7"]
 [ext_resource type="PackedScene" uid="uid://b13vge7jvtl1e" path="res://scenes/world/level_x.tscn" id="4_xhkk4"]
 
 [node name="TestWorld" type="Node2D"]
@@ -23,9 +23,8 @@ offset_bottom = 760.0
 theme_override_font_sizes/font_size = 200
 text = "创造游戏地图：搭建 100 层骨架"
 
-[node name="Player" parent="." instance=ExtResource("3_qntl7")]
-z_index = 10
-position = Vector2(874, 163)
-
 [node name="LevelX" parent="." instance=ExtResource("4_xhkk4")]
 position = Vector2(0, 422)
+
+[node name="SpinePlayer" parent="." instance=ExtResource("4_qt6v7")]
+position = Vector2(932, 302)
