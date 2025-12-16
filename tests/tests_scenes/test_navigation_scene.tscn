@@ -1,0 +1,128 @@
+[gd_scene load_steps=7 format=3 uid="uid://do1uag3qiqoui"]
+
+[ext_resource type="PackedScene" uid="uid://bi3mv1avpgsrl" path="res://scenes/npc/Player/spine_player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://bleuenw304f4h" path="res://scenes/world/vip_level/vip_level.tscn" id="3_vip_level"]
+[ext_resource type="PackedScene" uid="uid://b13vge7jvtl1e" path="res://scenes/world/level_x.tscn" id="4_level_x"]
+
+[sub_resource type="GDScript" id="GDScript_225ka"]
+script/source = "extends Node2D
+
+# 导航测试场景脚本
+@onready var player: CharacterBody2D = $SpinePlayer
+@onready var navigation_region: NavigationRegion2D = $NavigationRegion2D
+
+func _ready():
+	# 初始化导航区域
+	setup_navigation_region()
+	
+	# 连接玩家的导航完成信号（如果存在）
+	if player and player.has_method(\"connect_navigation_signals\"):
+		player.connect_navigation_signals()
+
+func setup_navigation_region():
+	# 创建导航多边形
+	var nav_polygon = NavigationPolygon.new()
+	
+	# 定义导航区域边界（根据您的地图大小调整）
+	var outline = PackedVector2Array([
+		Vector2(0, 0),      # 左上角
+		Vector2(2000, 0),   # 右上角
+		Vector2(2000, 800), # 右下角
+		Vector2(0, 800)     # 左下角
+	])
+	
+	# 添加导航边界
+	nav_polygon.add_outline(outline)
+	
+	# 添加一些障碍物区域（示例）
+	# 墙壁障碍物
+	var wall_obstacles = [
+		PackedVector2Array([Vector2(500, 200), Vector2(600, 200), Vector2(600, 400), Vector2(500, 400)]),
+		PackedVector2Array([Vector2(1200, 300), Vector2(1300, 300), Vector2(1300, 500), Vector2(1200, 500)])
+	]
+	
+	# 为每个障碍物添加轮廓
+	for obstacle in wall_obstacles:
+		nav_polygon.add_outline(obstacle)
+	
+	# 生成导航网格
+	nav_polygon.make_polygons_from_outlines()
+	
+	# 设置到导航区域
+	navigation_region.navigation_polygon = nav_polygon
+	
+	print(\"导航区域设置完成\")
+
+func _input(event):
+	# 测试导航功能
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
+		# 右键点击测试导航
+		var target_position = get_global_mouse_position()
+		print(\"测试导航到位置: \", target_position)
+		
+		if player and player.has_method(\"move_to_position_with_navigation\"):
+			player.move_to_position_with_navigation(target_position)
+
+func _draw():
+	# 绘制调试信息
+	if navigation_region and navigation_region.navigation_polygon:
+		var color = Color(0, 1, 0, 0.3)
+		
+		# 绘制导航边界 - 使用正确的NavigationPolygon API
+		var nav_polygon = navigation_region.navigation_polygon
+		
+		# NavigationPolygon使用vertices和polygons来定义形状
+		# 绘制所有多边形
+		for polygon_idx in range(nav_polygon.get_polygon_count()):
+			var polygon = nav_polygon.get_polygon(polygon_idx)
+			for i in range(polygon.size()):
+				var start_idx = polygon[i]
+				var end_idx = polygon[(i + 1) % polygon.size()]
+				var start = nav_polygon.vertices[start_idx]
+				var end = nav_polygon.vertices[end_idx]
+				draw_line(start, end, color, 2.0)
+		
+		# 绘制当前玩家路径（如果存在）
+		if player and player.has_method(\"get_current_path\"):
+			var path = player.get_current_path()
+			if path.size() > 1:
+				var path_color = Color(1, 0, 0, 0.8)
+				for i in range(path.size() - 1):
+					draw_line(path[i], path[i + 1], path_color, 3.0)"
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_test"]
+vertices = PackedVector2Array(0, 0, 2000, 0, 2000, 800, 0, 800)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 0, 2000, 0, 2000, 800, 0, 800)])
+
+[sub_resource type="Environment" id="Environment_test"]
+background_mode = 3
+
+[node name="TestNavigationScene" type="Node2D"]
+script = SubResource("GDScript_225ka")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_test")
+
+[node name="VipLevel" parent="." instance=ExtResource("3_vip_level")]
+
+[node name="LevelX" parent="." instance=ExtResource("4_level_x")]
+position = Vector2(0, 422)
+
+[node name="SpinePlayer" parent="." instance=ExtResource("2_player")]
+position = Vector2(932, 302)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1036, 187)
+zoom = Vector2(0.77, 0.77)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -341.0
+offset_top = 50.0
+offset_right = 2505.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 50
+text = "NavigationAgent2D 导航测试 - 左键点击移动，右键测试导航"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_test")
