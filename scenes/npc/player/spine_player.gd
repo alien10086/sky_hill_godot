@@ -4,7 +4,8 @@ extends CharacterBody2D
 var is_moving = false
 var target_position = Vector2.ZERO
 var move_speed = 100.0
-var facing_right = true  # 记录当前朝向，默认朝右
+@onready var sprite_2d: Sprite2D = $Sprite2D
+
 #@onready var sprite_2d: Sprite2D = $Sprite2D
 
 # 动画相关变量
@@ -16,8 +17,8 @@ func _ready():
 		animation_player.stop()
 	
 	# 确保角色初始朝右
-	scale.x = 1.0
-	facing_right = true
+	# scale.x = 1.0
+
 	
 	# 启用输入处理，以便接收鼠标点击事件
 	set_process_input(true)
@@ -28,16 +29,16 @@ func _input(event):
 		# 获取鼠标在世界坐标中的位置
 		var world_position = get_global_mouse_position()
 		# 只根据x轴位置判断转向
+		print("world_position.x: ", world_position.x)
+		print("global_position.x: ", global_position.x)
 		if world_position.x > global_position.x:
 			# 鼠标在玩家右边
-			if not facing_right:
-				scale.x = 1.0
-				facing_right = true
+			#scale.x = 1.0
+			sprite_2d.flip_h =false
 		else:
 			# 鼠标在玩家左边
-			if facing_right:
-				scale.x = -1.0
-				facing_right = false
+			sprite_2d.flip_h =true
+			#scale.x = -1.0
 		# 开始移动到该位置
 		move_to_position(world_position)
 		
