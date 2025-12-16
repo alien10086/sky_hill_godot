@@ -27,6 +27,17 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		# 获取鼠标在世界坐标中的位置
 		var world_position = get_global_mouse_position()
+		# 只根据x轴位置判断转向
+		if world_position.x > global_position.x:
+			# 鼠标在玩家右边
+			if not facing_right:
+				scale.x = 1.0
+				facing_right = true
+		else:
+			# 鼠标在玩家左边
+			if facing_right:
+				scale.x = -1.0
+				facing_right = false
 		# 开始移动到该位置
 		move_to_position(world_position)
 		
@@ -61,18 +72,7 @@ func move_to_target(delta):
 		stop_movement()
 		return
 	
-	# 根据移动方向翻转角色 - 只在距离足够大时翻转，避免抖动
-	if distance > 15.0:  # 增加距离阈值到15像素，避免抖动
-		if direction.x > 0 and not facing_right:
-			# 向右移动，但当前朝向左 - 翻转到右
-			scale.x = 1.0
-			facing_right = true
-		elif direction.x < 0 and facing_right:
-			# 向左移动，但当前朝向右 - 翻转到左
-			scale.x = -1.0
-			facing_right = false
-	
-	# 移动
+	# 移动 - 不再在移动过程中翻转，翻转逻辑只在点击时处理
 	velocity = direction * move_speed
 	move_and_slide()
 
