@@ -81,6 +81,11 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		# 获取鼠标在世界坐标中的位置
 		var world_position = get_global_mouse_position()
+
+		if world_position.x > sprite_2d.global_position.x:
+			sprite_2d.flip_h = false
+		elif world_position.x < sprite_2d.global_position.x:
+			sprite_2d.flip_h = true
 		
 		# 使用导航寻路
 		if navigation_agent:
@@ -96,17 +101,22 @@ func _physics_process(delta):
 		var next_path_position = navigation_agent.get_next_path_position()
 		print("下一个路径点: ", next_path_position)
 		# 计算移动方向
-		var direction = (next_path_position - global_position).normalized()
+		target_position = next_path_position
+		move_to_target(delta)
+		# var direction = (next_path_position - global_position).normalized()
+		# print("移动方向: ", direction)
 		
 		# 根据移动方向翻转角色
-		if direction.x > 0:
-			sprite_2d.flip_h = false
-		elif direction.x < 0:
-			sprite_2d.flip_h = true
+		# if direction.x > 0:
+		# 	sprite_2d.flip_h = false
+		# elif direction.x < 0:
+		# 	sprite_2d.flip_h = true
 		
 		# 设置速度并请求导航计算
-		var desired_velocity = direction * move_speed
-		navigation_agent.set_velocity(desired_velocity)
+		# var desired_velocity = direction * move_speed
+		# print("期望速度: ", desired_velocity)
+		# move_and_slide(desired_velocity)
+		# navigation_agent.set_velocity(desired_velocity)
 		
 	# elif is_moving:
 	# 	# 回退到直接移动
