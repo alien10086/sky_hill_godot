@@ -4,7 +4,7 @@ extends CharacterBody2D
 var is_moving = false
 var target_position = Vector2.ZERO
 var move_speed = 100.0
-# var facing_right = true  # 记录当前朝向
+var facing_right = true  # 记录当前朝向，默认朝右
 #@onready var sprite_2d: Sprite2D = $Sprite2D
 
 # 动画相关变量
@@ -14,6 +14,10 @@ func _ready():
 	# 初始化时停止所有动画
 	if animation_player:
 		animation_player.stop()
+	
+	# 确保角色初始朝右
+	scale.x = 1.0
+	facing_right = true
 	
 	# 启用输入处理，以便接收鼠标点击事件
 	set_process_input(true)
@@ -58,15 +62,15 @@ func move_to_target(delta):
 		return
 	
 	# 根据移动方向翻转角色 - 只在距离足够大时翻转，避免抖动
-	if distance > 10.0:  # 只在距离大于10像素时翻转
-		if direction.x > 0:
-			# 向右移动，但当前朝向左
+	if distance > 15.0:  # 增加距离阈值到15像素，避免抖动
+		if direction.x > 0 and not facing_right:
+			# 向右移动，但当前朝向左 - 翻转到右
 			scale.x = 1.0
-			# facing_right = true
-		elif direction.x < 0:
-			# 向左移动，但当前朝向右
+			facing_right = true
+		elif direction.x < 0 and facing_right:
+			# 向左移动，但当前朝向右 - 翻转到左
 			scale.x = -1.0
-			# facing_right = false
+			facing_right = false
 	
 	# 移动
 	velocity = direction * move_speed
