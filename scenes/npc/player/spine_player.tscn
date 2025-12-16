@@ -69,3 +69,5 @@ shape = SubResource("CapsuleShape2D_152t2")
 libraries = {
 &"": SubResource("AnimationLibrary_jn45l")
 }
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

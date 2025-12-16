@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfqxmonvx4roi"]
+[gd_scene load_steps=6 format=3 uid="uid://cfqxmonvx4roi"]
 
 [ext_resource type="PackedScene" uid="uid://bleuenw304f4h" path="res://scenes/world/vip_level/vip_level.tscn" id="1_j7db4"]
 [ext_resource type="Script" uid="uid://cppkdowkrn7kc" path="res://tests/tests_scenes/test_world.gd" id="1_tf63l"]
 [ext_resource type="PackedScene" uid="uid://bi3mv1avpgsrl" path="res://scenes/npc/Player/spine_player.tscn" id="4_qt6v7"]
 [ext_resource type="PackedScene" uid="uid://b13vge7jvtl1e" path="res://scenes/world/level_x.tscn" id="4_xhkk4"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_xhkk4"]
+vertices = PackedVector2Array(269.89063, 598.7422, 2.2578125, 605.71875, 7.7578125, 384.60156, 272.65625, 373.60938, 789.14844, 399.22656, 279.3672, 189, 6.5, 189, 19.507813, -78.796875, 1117, -57.1875, 785.85156, 177.21094, 1132.8516, 391.2422, 1130.1328, 580.4375, 802.60156, 595.4219, 1123, 1003.1328, 8.078125, 1017.8594, 9.90625, 804.85156, 272.10938, 800.85156, 1123, 789.8828, 790.34375, 785.8672, 1117, 170.20313)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 9), PackedInt32Array(4, 10, 11, 12, 0), PackedInt32Array(13, 14, 15, 16, 17), PackedInt32Array(18, 17, 16), PackedInt32Array(18, 16, 0, 12), PackedInt32Array(9, 4, 3, 5), PackedInt32Array(9, 8, 19)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(10, -89, 1127, -67, 1127, 180, 796, 187, 799, 389, 1143, 381, 1140, 590, 812, 605, 801, 776, 1133, 780, 1133, 1013, -2, 1028, 0, 795, 262, 791, 260, 609, -8, 616, -2, 375, 263, 364, 269, 199, -4, 199)])
 
 [node name="TestWorld" type="Node2D"]
 script = ExtResource("1_tf63l")
@@ -28,3 +33,10 @@ position = Vector2(0, 422)
 
 [node name="SpinePlayer" parent="." instance=ExtResource("4_qt6v7")]
 position = Vector2(932, 302)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(474, 227)
+navigation_polygon = SubResource("NavigationPolygon_xhkk4")
+
+[node name="LevelX2" parent="." instance=ExtResource("4_xhkk4")]
+position = Vector2(0, 839)
