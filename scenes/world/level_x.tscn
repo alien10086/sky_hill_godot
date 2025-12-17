@@ -27,3 +27,12 @@ position = Vector2(11, 24)
 
 [node name="rightRoom" parent="." instance=ExtResource("6_au4ci")]
 position = Vector2(1286, 25)
+
+[node name="leftMarker2D" type="Marker2D" parent="."]
+position = Vector2(545, 300)
+
+[node name="centerMarker2D" type="Marker2D" parent="."]
+position = Vector2(994, 300)
+
+[node name="rightMarker2D" type="Marker2D" parent="."]
+position = Vector2(1493, 300)

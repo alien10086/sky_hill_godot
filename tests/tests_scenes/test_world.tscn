@@ -1,14 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfqxmonvx4roi"]
+[gd_scene load_steps=5 format=3 uid="uid://cfqxmonvx4roi"]
 
 [ext_resource type="PackedScene" uid="uid://bleuenw304f4h" path="res://scenes/world/vip_level/vip_level.tscn" id="1_j7db4"]
 [ext_resource type="Script" uid="uid://cppkdowkrn7kc" path="res://tests/tests_scenes/test_world.gd" id="1_tf63l"]
 [ext_resource type="PackedScene" uid="uid://bi3mv1avpgsrl" path="res://scenes/npc/Player/spine_player.tscn" id="4_qt6v7"]
-[ext_resource type="PackedScene" uid="uid://b13vge7jvtl1e" path="res://scenes/world/level_x.tscn" id="4_xhkk4"]
-
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_xhkk4"]
-vertices = PackedVector2Array(35.007813, 1017.96875, 22.101563, 893.1797, 270, 897.15625, 1089.0938, 1015.03125, 1076.8281, 874.96094, 569.22656, 872.96094, 273.8125, 470, 566.2578, 468.85938, 1058.2578, 475.8672, 1073.5469, 586.2969, 562.77344, 600.28125, 270, 599.03906, 26.90625, 598.03906, 38.15625, 470, 54.921875, 183.25, 54.070313, 66.9375, 1051.6875, 61.046875, 1059.2969, 168.46094, 558.7422, 190.4375, 279.1875, 189.27344)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5), PackedInt32Array(6, 7, 8, 9, 10, 11), PackedInt32Array(11, 12, 13, 6), PackedInt32Array(5, 2, 11, 10), PackedInt32Array(14, 15, 16, 17, 18, 19), PackedInt32Array(18, 7, 6, 19)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(44, 57, 1061, 51, 1070, 178, 569, 200, 576, 459, 1067, 466, 1085, 596, 573, 610, 579, 863, 1086, 865, 1100, 1025, 26, 1028, 11, 883, 260, 887, 260, 609, 16, 608, 29, 460, 264, 460, 269, 199, 45, 193)])
+[ext_resource type="Script" uid="uid://b27uwg02v44ex" path="res://tests/tests_scenes/astar.gd" id="4_xhkk4"]
 
 [node name="TestWorld" type="Node2D"]
 script = ExtResource("1_tf63l")
@@ -28,15 +23,8 @@ offset_bottom = 760.0
 theme_override_font_sizes/font_size = 200
 text = "创造游戏地图：搭建 100 层骨架"
 
-[node name="LevelX" parent="." instance=ExtResource("4_xhkk4")]
-position = Vector2(0, 422)
-
 [node name="SpinePlayer" parent="." instance=ExtResource("4_qt6v7")]
 position = Vector2(932, 302)
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-position = Vector2(474, 227)
-navigation_polygon = SubResource("NavigationPolygon_xhkk4")
-
-[node name="LevelX2" parent="." instance=ExtResource("4_xhkk4")]
-position = Vector2(0, 839)
+[node name="astar" type="Node2D" parent="."]
+script = ExtResource("4_xhkk4")

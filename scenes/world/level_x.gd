@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name LevelxUI
+
 
 # 房间模板路径
 const ROOM_TEMPLATES = [
@@ -11,6 +13,11 @@ const ROOM_TEMPLATES = [
 @onready var left_room: TemplateRoomUI = $leftRoom
 @onready var right_room: TemplateRoomUI = $rightRoom
 @onready var center_room: Node2D = $CenterRoom
+@onready var left_marker_2d: Marker2D = $leftMarker2D
+@onready var center_marker_2d: Marker2D = $centerMarker2D
+@onready var right_marker_2d: Marker2D = $rightMarker2D
+
+
 
 var wall_paper_manager: WallpaperManager
 
@@ -69,4 +76,14 @@ func set_left_room_bg(number:int):
 func set_level(floor:int):
 	center_room.level_number = floor
 	center_room.refresh_ui()
+	
+
+func get_left_mark_point() -> Vector2:
+	return left_marker_2d.global_position
+	
+func get_center_mark_point() -> Vector2:
+	return center_marker_2d.global_position
+	
+func get_right_mark_point() -> Vector2:
+	return right_marker_2d.global_position
 	

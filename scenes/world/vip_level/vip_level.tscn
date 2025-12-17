@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://bleuenw304f4h"]
+[gd_scene load_steps=14 format=3 uid="uid://bleuenw304f4h"]
 
 [ext_resource type="Texture2D" uid="uid://c7erkoqh5m8fr" path="res://assets/sprites/world_items/vip_home/atlas0-#6000_30.png" id="1_dpc7p"]
+[ext_resource type="Script" uid="uid://dfpkhfdcxls7a" path="res://scenes/world/vip_level/vip_level.gd" id="1_emrr5"]
 [ext_resource type="Texture2D" uid="uid://doxdvfi46ryyj" path="res://assets/sprites/world_items/vip_home/vip_100_out.png" id="2_tjik1"]
 [ext_resource type="Texture2D" uid="uid://w8od78ah2nq8" path="res://assets/sprites/world_items/vip_home/vip0.png" id="3_u6syp"]
 [ext_resource type="Texture2D" uid="uid://dmr72s87h2vsj" path="res://assets/sprites/world_items/vip_home/vip_base_table1.png" id="4_emrr5"]
@@ -14,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bqxg6hjbjtvsp" path="res://assets/sprites/world_items/vip_home/elevator_close.png" id="12_u6syp"]
 
 [node name="VipLevel" type="Node2D"]
+script = ExtResource("1_emrr5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1009, 217)
@@ -86,3 +88,12 @@ texture = ExtResource("11_uano4")
 [node name="Sprite2D5" type="Sprite2D" parent="centerRoom"]
 position = Vector2(1159, 272)
 texture = ExtResource("12_u6syp")
+
+[node name="leftMarker2D" type="Marker2D" parent="."]
+position = Vector2(545, 300)
+
+[node name="centerMarker2D" type="Marker2D" parent="."]
+position = Vector2(994, 300)
+
+[node name="rightMarker2D" type="Marker2D" parent="."]
+position = Vector2(1493, 300)

@@ -1,6 +1,6 @@
 extends Node2D
 
-
+@export var debug_mode: bool = true
 # 镜头控制变量
 @onready var camera: Camera2D = $Camera2D
 
@@ -23,11 +23,21 @@ var zoom_out_button: Button
 var reset_button: Button
 var regenerate_button: Button
 var zoom_label: Label
+@onready var astar: MyAstar = $astar
+@onready var vip_level: VipLevelUI = $VipLevel
+
+
+#var astar = AStar2D.new()
 
 func _ready():
 	# 设置相机
 	#_setup_camera()
+	astar.add_point(0, vip_level.get_left_mark_point())   # 左房间
+	astar.add_point(1, vip_level.get_center_mark_point())
+	astar.add_point(2, vip_level.get_right_mark_point())
 	
+	astar.connect_points(0, 1)
+	astar.connect_points(2, 1)
 	# 实例化3个level_x场景
 	_instantiate_levels()
 	
@@ -39,16 +49,56 @@ func _instantiate_levels():
 	_clear_level_instances()
 	
 	# 创建3个level_x实例，垂直排列
-	var floor_number = 99
-	for i in range(99):  # 创建3个实例
-		var level_instance: = level_x_scene.instantiate()
+	var floor_number = 100
+	for i in range(1, 100):  # 创建3个实例
+		var level_instance:LevelxUI = level_x_scene.instantiate()
 		# 设置位置，每个实例垂直间隔575像素
-		level_instance.position = Vector2(0, i * floor_height + floor_height)
+		level_instance.position = Vector2(0, i * floor_height)
 		add_child(level_instance)
 		level_instance.set_level(floor_number - i)
 		level_instance.set_right_room_bg(randi() % 26)  # 随机生成0-25的数字
 		level_instance.set_left_room_bg(randi() % 26)   # 随机生成0-25的数字
 		level_instances.append(level_instance)
+		
+		var left_id = i * 10 + 0
+		var stair_id = i * 10 + 1
+		var right_id = i * 10 + 2
+		# 2. 添加点到 AStar (Vector2 需要替换为你地图上的真实坐标)
+		astar.add_point(left_id, level_instance.get_left_mark_point())   # 左房间
+		astar.add_point(stair_id, level_instance.get_center_mark_point())  # 楼梯间
+		astar.add_point(right_id, level_instance.get_right_mark_point())  # 右房间
+		# 3. 建立层内连接 (双向连接)
+		astar.connect_points(left_id, stair_id)
+		astar.connect_points(right_id, stair_id)
+		# 4. 建立层间连接 (如果不是第一层，将本层楼梯连接到上一层楼梯)
+		if i > 0:
+			var prev_stair_id = (i - 1) * 10 + 1
+			astar.connect_points(stair_id, prev_stair_id)
+			
+	queue_redraw()
+			#
+#func _draw():
+	##draw_rect(Rect2(0, 0, 1000, 1000), Color.RED) # 测试用
+	#if not debug_mode or astar.get_point_count() == 0:
+		#return
+#
+	#var points = astar.get_point_ids()
+	#for p in points:
+		#var p_pos = astar.get_point_position(p)
+		#
+		## 绘制点：蓝色代表房间，红色代表楼梯
+		#var color = Color.CORNFLOWER_BLUE
+		#if p % 10 == 1: # 逻辑：ID末尾为1的是楼梯
+			#color = Color.INDIAN_RED
+		#
+		#draw_circle(p_pos, 8.0, color)
+		#
+		## 绘制连线
+		#var connections = astar.get_point_connections(p)
+		#for c in connections:
+			#var c_pos = astar.get_point_position(c)
+			## 绘制从当前点到连接点的线
+			#draw_line(p_pos, c_pos, Color(1, 1, 1, 0.5), 2.0)
 
 func _clear_level_instances():
 	# 清除所有已存在的实例
