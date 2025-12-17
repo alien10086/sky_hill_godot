@@ -31,9 +31,9 @@ func _input(event):
 		current_path_point_list = []
 		var world_position = get_global_mouse_position()
 
-		if world_position.x > sprite_2d.global_position.x:
+		if world_position.x > self.global_position.x:
 			sprite_2d.flip_h = false
-		elif world_position.x < sprite_2d.global_position.x:
+		elif world_position.x < self.global_position.x:
 			sprite_2d.flip_h = true
 			
 		current_path_point_list = my_astar.find_path_from_player_to_mouse(self.global_position, world_position)
