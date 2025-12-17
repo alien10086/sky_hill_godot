@@ -31,8 +31,20 @@ position = Vector2(1286, 25)
 [node name="leftMarker2D" type="Marker2D" parent="."]
 position = Vector2(545, 300)
 
-[node name="centerMarker2D" type="Marker2D" parent="."]
+[node name="centerMarker2D0" type="Marker2D" parent="."]
 position = Vector2(994, 300)
 
 [node name="rightMarker2D" type="Marker2D" parent="."]
 position = Vector2(1493, 300)
+
+[node name="centerMarker2D1" type="Marker2D" parent="."]
+position = Vector2(764, 300)
+
+[node name="centerMarker2D2" type="Marker2D" parent="."]
+position = Vector2(845, 237)
+
+[node name="centerMarker2D3" type="Marker2D" parent="."]
+position = Vector2(1005, 144)
+
+[node name="centerMarker2D4" type="Marker2D" parent="."]
+position = Vector2(879, 25)

@@ -62,18 +62,32 @@ func _instantiate_levels():
 		
 		var left_id = i * 10 + 0
 		var stair_id = i * 10 + 1
-		var right_id = i * 10 + 2
+		var stair_bottom_id_1 = i * 10 + 2
+		var stair_bottom_id_2 = i * 10 + 3
+		var stair_bottom_id_3 = i * 10 + 4
+		var stair_bottom_id_4 = i * 10 + 5
+		var right_id = i * 10 + 6
 		# 2. 添加点到 AStar (Vector2 需要替换为你地图上的真实坐标)
 		astar.add_point(left_id, level_instance.get_left_mark_point())   # 左房间
 		astar.add_point(stair_id, level_instance.get_center_mark_point())  # 楼梯间
 		astar.add_point(right_id, level_instance.get_right_mark_point())  # 右房间
+		#var stair_id = i * 10 + 1
+		var stairs_bottom_2_top_point_list:Array = level_instance.get_stairs_bottom_2_top_point_list()
+		for each_index in range(stairs_bottom_2_top_point_list.size()):
+			astar.add_point(i * 10 + 2 + each_index, stairs_bottom_2_top_point_list[each_index]) 
+		
+		astar.connect_points(stair_id, stair_bottom_id_1)
+		astar.connect_points(stair_bottom_id_1, stair_bottom_id_2)
+		astar.connect_points(stair_bottom_id_2, stair_bottom_id_3)
+		astar.connect_points(stair_bottom_id_3, stair_bottom_id_4)
+	
 		# 3. 建立层内连接 (双向连接)
 		astar.connect_points(left_id, stair_id)
 		astar.connect_points(right_id, stair_id)
 		# 4. 建立层间连接 (如果不是第一层，将本层楼梯连接到上一层楼梯)
 		if i > 0:
 			var prev_stair_id = (i - 1) * 10 + 1
-			astar.connect_points(stair_id, prev_stair_id)
+			astar.connect_points(stair_bottom_id_4, prev_stair_id)
 			
 	queue_redraw()
 			#

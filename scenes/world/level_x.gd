@@ -14,8 +14,16 @@ const ROOM_TEMPLATES = [
 @onready var right_room: TemplateRoomUI = $rightRoom
 @onready var center_room: Node2D = $CenterRoom
 @onready var left_marker_2d: Marker2D = $leftMarker2D
-@onready var center_marker_2d: Marker2D = $centerMarker2D
+@onready var center_marker_2d: Marker2D = $centerMarker2D0
 @onready var right_marker_2d: Marker2D = $rightMarker2D
+
+@onready var center_marker_2d_1: Marker2D = $centerMarker2D1
+@onready var center_marker_2d_2: Marker2D = $centerMarker2D2
+@onready var center_marker_2d_3: Marker2D = $centerMarker2D3
+@onready var center_marker_2d_4: Marker2D = $centerMarker2D4
+
+
+
 
 
 
@@ -86,4 +94,12 @@ func get_center_mark_point() -> Vector2:
 	
 func get_right_mark_point() -> Vector2:
 	return right_marker_2d.global_position
+	
+func get_stairs_bottom_2_top_point_list()->Array:
+	return [
+		center_marker_2d_1.global_position,
+		center_marker_2d_2.global_position,
+		center_marker_2d_3.global_position,
+		center_marker_2d_4.global_position,
+	]
 	
