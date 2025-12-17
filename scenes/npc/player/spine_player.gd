@@ -29,11 +29,6 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		# 获取鼠标在世界坐标中的位置
 		var world_position = get_global_mouse_position()
-
-		if world_position.x > self.global_position.x:
-			sprite_2d.flip_h = false
-		elif world_position.x < self.global_position.x:
-			sprite_2d.flip_h = true
 		
 		# 如果正在移动，找到合适的路径起点
 		var path_start_position = global_position
@@ -93,6 +88,12 @@ func move_to_target(delta):
 	# 计算到当前目标点的方向和距离
 	var direction = (current_target - global_position).normalized()
 	var distance = global_position.distance_to(current_target)
+	
+	# 根据移动方向设置精灵翻转
+	if direction.x > 0:
+		sprite_2d.flip_h = false  # 向右移动，不翻转
+	elif direction.x < 0:
+		sprite_2d.flip_h = true   # 向左移动，翻转
 	
 	# 如果距离很小，认为已到达该点，从列表中移除
 	if distance < 5.0:
