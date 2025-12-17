@@ -101,3 +101,59 @@ func _draw():
 				line_width = 12.0
 			
 			draw_line(p_pos, c_pos, line_color, line_width)
+	
+	# 新增函数：找到从玩家位置到鼠标位置的路径
+func find_path_from_player_to_mouse(player_global_pos: Vector2, mouse_global_pos: Vector2) -> Array:
+	"""
+	找到从玩家最近的AStar点到鼠标最近的AStar点的路径
+	返回包含路径点ID的数组，让玩家可以按顺序移动
+	"""
+	if astar.get_point_count() == 0:
+		return []
+	
+	# 找到玩家最近的AStar点
+	var player_nearest_point = find_nearest_point(player_global_pos)
+	if player_nearest_point == -1:
+		return []
+	
+	# 找到鼠标最近的AStar点
+	var mouse_nearest_point = find_nearest_point(mouse_global_pos)
+	if mouse_nearest_point == -1:
+		return []
+	
+	# 如果玩家和鼠标位置相同，返回空路径
+	if player_nearest_point == mouse_nearest_point:
+		return []
+	
+	# 使用AStar找到路径
+	var path_ids = astar.get_id_path(player_nearest_point, mouse_nearest_point)
+	
+	# 高亮显示路径上的点（可选）
+	if path_ids.size() > 0:
+		print("找到路径: ", path_ids)
+		# 可以在这里添加路径高亮逻辑
+
+		return get_path_point_positions(path_ids)
+	
+	return []
+	
+# 新增函数：获取路径点的世界坐标
+func get_path_point_positions(path_ids: Array) -> Array:
+	"""
+	将路径点ID数组转换为世界坐标数组
+	"""
+	var positions = []
+	for point_id in path_ids:
+		var pos = astar.get_point_position(point_id)
+		positions.append(pos)
+	return positions
+	
+	# # 新增函数：高亮显示路径
+	# func highlight_path(path_ids: Array):
+	# 	"""
+	# 	高亮显示指定路径上的所有点
+	# 	"""
+	# 	# 这里可以实现路径高亮逻辑
+	# 	# 例如，可以存储当前高亮的路径，在_draw()中特殊绘制
+	# 	print("高亮路径: ", path_ids)
+	# 	queue_redraw()

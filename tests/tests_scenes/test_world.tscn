@@ -23,8 +23,9 @@ offset_bottom = 760.0
 theme_override_font_sizes/font_size = 200
 text = "创造游戏地图：搭建 100 层骨架"
 
-[node name="SpinePlayer" parent="." instance=ExtResource("4_qt6v7")]
+[node name="SpinePlayer" parent="." node_paths=PackedStringArray("my_astar") instance=ExtResource("4_qt6v7")]
 position = Vector2(932, 302)
+my_astar = NodePath("../astar")
 
 [node name="astar" type="Node2D" parent="."]
 script = ExtResource("4_xhkk4")

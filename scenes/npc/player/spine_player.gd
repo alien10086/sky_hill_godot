@@ -12,6 +12,7 @@ var move_speed = 100.0
 @onready var animation_player = $AnimationPlayer
 
 @export var my_astar:MyAstar
+var current_path_point_list: Array = [] # 存储当前路径点
 
 func _ready():
 	# 初始化时停止所有动画
@@ -27,27 +28,30 @@ func _input(event):
 	# 检查是否是鼠标左键点击事件
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		# 获取鼠标在世界坐标中的位置
+		current_path_point_list = []
 		var world_position = get_global_mouse_position()
 
 		if world_position.x > sprite_2d.global_position.x:
 			sprite_2d.flip_h = false
 		elif world_position.x < sprite_2d.global_position.x:
 			sprite_2d.flip_h = true
+			
+		current_path_point_list = my_astar.find_path_from_player_to_mouse(self.global_position, world_position)
 		
 		
 		# 回退到直接移动
-		move_to_position_direct(world_position)
+		move_to_position_direct()
 
 
 
 # 直接移动到指定位置（原始方法）
-func move_to_position_direct(pos):
-	target_position = pos
+func move_to_position_direct():
 	is_moving = true
 	
 	# 播放跑步动画
 	if animation_player and animation_player.has_animation("walk"):
 		animation_player.play("walk")
+	
 		
 func _process(delta: float) -> void:
 	move_to_target(delta)
