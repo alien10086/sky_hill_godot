@@ -3,6 +3,7 @@ extends Node2D
 @export var debug_mode: bool = true
 # 镜头控制变量
 @onready var camera: Camera2D = $Camera2D
+@onready var player = $SpinePlayer
 
 var zoom_level: float = 1.0
 var min_zoom: float = 0.01  # 修改为更小的最小缩放级别
@@ -12,6 +13,10 @@ var pan_speed: float = 500.0
 var is_dragging: bool = false
 var drag_start_position: Vector2
 var floor_height: int = 420
+
+# 相机跟随参数
+var follow_player: bool = true
+var follow_smoothness: float = 0.1  # 跟随平滑度
 
 # 场景实例化
 var level_x_scene = preload("res://scenes/world/level_x.tscn")
@@ -43,6 +48,10 @@ func _ready():
 	
 	# 创建UI
 	_setup_ui()
+	
+	# 设置初始相机位置为玩家位置
+	if player:
+		camera.position = Vector2(camera.position.x, player.global_position.y)
 
 func _instantiate_levels():
 	# 清除已存在的实例
@@ -175,6 +184,14 @@ func _setup_ui():
 	var help_label = Label.new()
 	help_label.text = "使用鼠标滚轮缩放，按住鼠标右键拖动平移"
 	ui_container.add_child(help_label)
+
+func _process(delta):
+	# 相机跟随玩家Y轴
+	if follow_player and player and camera:
+		var target_y = player.global_position.y
+		var current_camera_y = camera.position.y
+		# 使用平滑插值更新相机Y坐标
+		camera.position.y = lerp(current_camera_y, target_y, follow_smoothness)
 
 func _unhandled_input(event):
 	# 鼠标滚轮缩放
