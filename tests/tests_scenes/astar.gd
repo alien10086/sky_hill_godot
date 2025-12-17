@@ -102,7 +102,7 @@ func _draw():
 			
 			draw_line(p_pos, c_pos, line_color, line_width)
 	
-	# 新增函数：找到从玩家位置到鼠标位置的路径
+# 新增函数：找到从玩家位置到鼠标位置的路径
 func find_path_from_player_to_mouse(player_global_pos: Vector2, mouse_global_pos: Vector2) -> Array:
 	"""
 	找到从玩家最近的AStar点到鼠标最近的AStar点的路径

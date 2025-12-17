@@ -28,20 +28,33 @@ func _input(event):
 	# 检查是否是鼠标左键点击事件
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		# 获取鼠标在世界坐标中的位置
-		stop_movement()
-		current_path_point_list = []
-
 		var world_position = get_global_mouse_position()
 
 		if world_position.x > self.global_position.x:
 			sprite_2d.flip_h = false
 		elif world_position.x < self.global_position.x:
 			sprite_2d.flip_h = true
-			
-		current_path_point_list = my_astar.find_path_from_player_to_mouse(self.global_position, world_position)
 		
+		# 如果正在移动，找到合适的路径起点
+		var path_start_position = global_position
+		if is_moving and current_path_point_list.size() > 0:
+			# 计算当前位置到最后一个路径点的距离
+			var distance_to_last_point = global_position.distance_to(current_path_point_list[0])
+			# 如果玩家已经接近当前目标点（距离 < 20），使用下一个点作为起点
+			if distance_to_last_point < 20.0 and current_path_point_list.size() > 1:
+				path_start_position = current_path_point_list[1]
+			else:
+				# 否则使用当前位置作为起点，但A*会找到最近的节点
+				path_start_position = current_path_point_list[0]
 		
-		# 回退到直接移动
+		# 停止当前移动并清空旧路径
+		stop_movement()
+		current_path_point_list = []
+		
+		# 从新起点到目标位置查找路径
+		current_path_point_list = my_astar.find_path_from_player_to_mouse(path_start_position, world_position)
+		
+		# 开始新的路径移动
 		move_to_position_direct()
 
 
