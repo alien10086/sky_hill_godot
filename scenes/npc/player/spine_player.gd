@@ -28,7 +28,9 @@ func _input(event):
 	# 检查是否是鼠标左键点击事件
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		# 获取鼠标在世界坐标中的位置
+		stop_movement()
 		current_path_point_list = []
+
 		var world_position = get_global_mouse_position()
 
 		if world_position.x > self.global_position.x:
