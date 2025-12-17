@@ -44,8 +44,12 @@ func _input(event):
 
 
 
-# 直接移动到指定位置（原始方法）
+# 开始路径点消费移动
 func move_to_position_direct():
+	# 如果没有路径点，不开始移动
+	if current_path_point_list.size() == 0:
+		return
+	
 	is_moving = true
 	
 	# 播放跑步动画
@@ -58,23 +62,32 @@ func _process(delta: float) -> void:
 
 
 
-# 向目标位置移动（原始方法）
+# 向目标位置移动（消费路径点）
 func move_to_target(delta):
 	if not is_moving:
 		return
 	
-	# 计算方向
-	var direction = (target_position - global_position).normalized()
-	
-	# 计算距离
-	var distance = global_position.distance_to(target_position)
-	
-	# 如果距离很小，认为已到达目标
-	if distance < 5.0:
+	# 如果没有路径点，停止移动
+	if current_path_point_list.size() == 0:
 		stop_movement()
 		return
 	
-	# 移动
+	# 获取当前目标点（列表中的第一个点）
+	var current_target = current_path_point_list[0]
+	
+	# 计算到当前目标点的方向和距离
+	var direction = (current_target - global_position).normalized()
+	var distance = global_position.distance_to(current_target)
+	
+	# 如果距离很小，认为已到达该点，从列表中移除
+	if distance < 5.0:
+		current_path_point_list.remove_at(0)  # 消费掉当前点
+		# 如果还有剩余点，继续移动；否则停止
+		if current_path_point_list.size() == 0:
+			stop_movement()
+		return
+	
+	# 移动到当前目标点
 	velocity = direction * move_speed
 	move_and_slide()
 
