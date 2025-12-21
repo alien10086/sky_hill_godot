@@ -103,9 +103,20 @@ func move_to_target(delta):
 			stop_movement()
 		return
 	
-	# 移动到当前目标点
-	velocity = direction * move_speed
-	move_and_slide()
+	# 使用delta计算移动距离，确保帧率无关
+	var move_distance = move_speed * delta
+	var new_position = global_position + direction * move_distance
+	
+	# 检查是否会越过目标点
+	if global_position.distance_to(current_target) <= move_distance:
+		# 直接到达目标点
+		global_position = current_target
+		current_path_point_list.remove_at(0)
+		if current_path_point_list.size() == 0:
+			stop_movement()
+	else:
+		# 正常移动
+		global_position = new_position
 
 # 停止移动
 func stop_movement():
