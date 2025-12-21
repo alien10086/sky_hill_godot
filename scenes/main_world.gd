@@ -47,7 +47,7 @@ func _ready():
 	_instantiate_levels()
 	
 	# 创建UI
-	_setup_ui()
+	#_setup_ui()
 	
 	# 设置初始相机位置为玩家位置
 	if player:
@@ -86,16 +86,21 @@ func _instantiate_levels():
 			astar.add_point(i * 10 + 2 + each_index, stairs_bottom_2_top_point_list[each_index]) 
 		
 		astar.connect_points(stair_id, stair_bottom_id_1)
+		
 		astar.connect_points(stair_bottom_id_1, stair_bottom_id_2)
 		astar.connect_points(stair_bottom_id_2, stair_bottom_id_3)
 		astar.connect_points(stair_bottom_id_3, stair_bottom_id_4)
 	
 		# 3. 建立层内连接 (双向连接)
-		astar.connect_points(left_id, stair_id)
+		astar.connect_points(left_id, stair_bottom_id_1)
 		astar.connect_points(right_id, stair_id)
 		# 4. 建立层间连接 (如果不是第一层，将本层楼梯连接到上一层楼梯)
-		if i > 0:
+		if i == 1:
 			var prev_stair_id = (i - 1) * 10 + 1
+			astar.connect_points(stair_bottom_id_4, prev_stair_id)
+			
+		if i > 1:
+			var prev_stair_id = (i - 1) * 10 + 2
 			astar.connect_points(stair_bottom_id_4, prev_stair_id)
 			
 	queue_redraw()
@@ -141,49 +146,49 @@ func _clear_level_instances():
 	#zoom_level = initial_zoom_level
 	#camera.zoom = Vector2(zoom_level, zoom_level)
 
-func _setup_ui():
-	# 创建UI容器
-	var ui_container = VBoxContainer.new()
-	ui_container.position = Vector2(10, 10)
-	add_child(ui_container)
-	
-	# 创建缩放控制容器
-	var zoom_container = HBoxContainer.new()
-	ui_container.add_child(zoom_container)
-	
-	# 创建放大按钮
-	zoom_in_button = Button.new()
-	zoom_in_button.text = "放大 (+)"
-	zoom_in_button.pressed.connect(_on_zoom_in_pressed)
-	zoom_container.add_child(zoom_in_button)
-	
-	# 创建缩小按钮
-	zoom_out_button = Button.new()
-	zoom_out_button.text = "缩小 (-)"
-	zoom_out_button.pressed.connect(_on_zoom_out_pressed)
-	zoom_container.add_child(zoom_out_button)
-	
-	# 创建重置按钮
-	reset_button = Button.new()
-	reset_button.text = "重置 (R)"
-	reset_button.pressed.connect(_on_reset_pressed)
-	ui_container.add_child(reset_button)
-	
-	# 创建重新生成按钮
-	regenerate_button = Button.new()
-	regenerate_button.text = "重新生成楼层"
-	regenerate_button.pressed.connect(_on_regenerate_pressed)
-	ui_container.add_child(regenerate_button)
-	
-	# 创建缩放级别标签
-	zoom_label = Label.new()
-	zoom_label.text = "缩放: %.1fx" % zoom_level
-	ui_container.add_child(zoom_label)
-	
-	# 创建操作提示
-	var help_label = Label.new()
-	help_label.text = "使用鼠标滚轮缩放，按住鼠标右键拖动平移"
-	ui_container.add_child(help_label)
+#func _setup_ui():
+	## 创建UI容器
+	#var ui_container = VBoxContainer.new()
+	#ui_container.position = Vector2(10, 10)
+	#add_child(ui_container)
+	#
+	## 创建缩放控制容器
+	#var zoom_container = HBoxContainer.new()
+	#ui_container.add_child(zoom_container)
+	#
+	## 创建放大按钮
+	#zoom_in_button = Button.new()
+	#zoom_in_button.text = "放大 (+)"
+	#zoom_in_button.pressed.connect(_on_zoom_in_pressed)
+	#zoom_container.add_child(zoom_in_button)
+	#
+	## 创建缩小按钮
+	#zoom_out_button = Button.new()
+	#zoom_out_button.text = "缩小 (-)"
+	#zoom_out_button.pressed.connect(_on_zoom_out_pressed)
+	#zoom_container.add_child(zoom_out_button)
+	#
+	## 创建重置按钮
+	#reset_button = Button.new()
+	#reset_button.text = "重置 (R)"
+	#reset_button.pressed.connect(_on_reset_pressed)
+	#ui_container.add_child(reset_button)
+	#
+	## 创建重新生成按钮
+	#regenerate_button = Button.new()
+	#regenerate_button.text = "重新生成楼层"
+	#regenerate_button.pressed.connect(_on_regenerate_pressed)
+	#ui_container.add_child(regenerate_button)
+	#
+	## 创建缩放级别标签
+	#zoom_label = Label.new()
+	#zoom_label.text = "缩放: %.1fx" % zoom_level
+	#ui_container.add_child(zoom_label)
+	#
+	## 创建操作提示
+	#var help_label = Label.new()
+	#help_label.text = "使用鼠标滚轮缩放，按住鼠标右键拖动平移"
+	#ui_container.add_child(help_label)
 
 func _process(_delta):
 	# 相机跟随玩家Y轴

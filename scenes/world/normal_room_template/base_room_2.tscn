@@ -14,29 +14,31 @@ script = ExtResource("1_5m1f7")
 
 [node name="BaseRoom" parent="." instance=ExtResource("1_g04x8")]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(441, 269)
-scale = Vector2(2, 2)
-texture = ExtResource("2_lytw8")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(154, 272.5)
-texture = ExtResource("3_v1av1")
-
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(367, 39.5)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_a6ehy")
 
-[node name="Sprite2D4" type="Sprite2D" parent="."]
-position = Vector2(238, 341.5)
+[node name="all_room_ornament" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="all_room_ornament"]
+position = Vector2(396, 271)
+scale = Vector2(2, 2)
+texture = ExtResource("2_lytw8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="all_room_ornament"]
+position = Vector2(109, 274.5)
+texture = ExtResource("3_v1av1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="all_room_ornament"]
+position = Vector2(193, 343.5)
 texture = ExtResource("5_on1nd")
 
-[node name="Sprite2D5" type="Sprite2D" parent="."]
-position = Vector2(654, 357)
+[node name="Sprite2D5" type="Sprite2D" parent="all_room_ornament"]
+position = Vector2(609, 359)
 texture = ExtResource("6_57m4k")
 
-[node name="Sprite2D6" type="Sprite2D" parent="."]
-position = Vector2(654, 307)
+[node name="Sprite2D6" type="Sprite2D" parent="all_room_ornament"]
+position = Vector2(609, 309)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("7_eih4b")

@@ -51,6 +51,7 @@ func _replace_left_room_templates():
 	new_left_room.name = "LeftRoom"
 	new_left_room.position = left_room_position
 	left_room_parent.add_child(new_left_room)
+	new_left_room.set_room_ornament_offset(-80)
 	left_room = new_left_room
 	
 func _replace_right_room_templates():
@@ -67,6 +68,7 @@ func _replace_right_room_templates():
 	new_right_room.name = "RightRoom"
 	new_right_room.position = right_room_position
 	right_room_parent.add_child(new_right_room)
+	new_right_room.set_room_ornament_offset(80)
 	right_room = new_right_room
 	
 func set_right_room_bg(number:int):

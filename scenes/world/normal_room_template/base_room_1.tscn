@@ -22,38 +22,41 @@ position = Vector2(366.75, 198)
 scale = Vector2(1.3209765, 0.94711536)
 texture = ExtResource("3_7eb1k")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(372, 51)
+texture = ExtResource("7_h411k")
+
+[node name="all_room_ornament" type="Node2D" parent="."]
+position = Vector2(87, 10)
+
+[node name="Sprite2D2" type="Sprite2D" parent="all_room_ornament"]
 position = Vector2(354, 330)
 texture = ExtResource("4_pyayi")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="Sprite2D3" type="Sprite2D" parent="all_room_ornament"]
 position = Vector2(131, 265)
 scale = Vector2(2, 2)
 texture = ExtResource("5_j8gp6")
 
-[node name="Sprite2D4" type="Sprite2D" parent="."]
+[node name="Sprite2D4" type="Sprite2D" parent="all_room_ornament"]
 position = Vector2(394, 181)
 scale = Vector2(2, 2)
 texture = ExtResource("6_toacu")
 
-[node name="Sprite2D5" type="Sprite2D" parent="."]
-position = Vector2(379, 46)
-texture = ExtResource("7_h411k")
-
-[node name="Sprite2D6" type="Sprite2D" parent="."]
+[node name="Sprite2D6" type="Sprite2D" parent="all_room_ornament"]
 position = Vector2(420, 183)
 texture = ExtResource("8_2qy4k")
 
-[node name="Sprite2D7" type="Sprite2D" parent="."]
+[node name="Sprite2D7" type="Sprite2D" parent="all_room_ornament"]
 position = Vector2(394, 219)
 texture = ExtResource("9_k1geo")
 
-[node name="Sprite2D8" type="Sprite2D" parent="."]
+[node name="Sprite2D8" type="Sprite2D" parent="all_room_ornament"]
 position = Vector2(126, 237)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("10_vxo3y")
 
-[node name="Sprite2D9" type="Sprite2D" parent="."]
+[node name="Sprite2D9" type="Sprite2D" parent="all_room_ornament"]
 position = Vector2(159, 299)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("11_7x4um")
