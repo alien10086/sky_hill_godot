@@ -185,7 +185,7 @@ func _setup_ui():
 	help_label.text = "使用鼠标滚轮缩放，按住鼠标右键拖动平移"
 	ui_container.add_child(help_label)
 
-func _process(delta):
+func _process(_delta):
 	# 相机跟随玩家Y轴
 	if follow_player and player and camera:
 		var target_y = player.global_position.y

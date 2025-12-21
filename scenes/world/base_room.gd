@@ -2,8 +2,8 @@ extends Node2D
 class_name BaseRoomUI
 
 @onready var bg_sprite_2d: Sprite2D = $BgSprite2D
-@onready var move_button: Button = $MoveButton
-@onready var center_marker: Sprite2D = $CenterMarker
+#@onready var move_button: Button = $MoveButton
+#@onready var center_marker: Sprite2D = $CenterMarker
 
 @export var input_bg: CompressedTexture2D
 

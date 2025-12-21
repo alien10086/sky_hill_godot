@@ -81,8 +81,8 @@ func set_left_room_bg(number:int):
 	left_room.input_bg = wall_paper_data.icon
 	left_room.refresh_ui()
 	
-func set_level(floor:int):
-	center_room.level_number = floor
+func set_level(floor_number:int):
+	center_room.level_number = floor_number
 	center_room.refresh_ui()
 	
 

@@ -1,7 +1,7 @@
 extends Node2D
 @onready var label: Label = $Label
-@onready var move_button: Button = $MoveButton
-@onready var center_marker: Sprite2D = $CenterMarker
+#@onready var move_button: Button = $MoveButton
+#@onready var center_marker: Sprite2D = $CenterMarker
 
 @export var level_number: int
 

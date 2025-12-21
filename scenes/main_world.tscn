@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfqxmonvx4roi"]
+
+[ext_resource type="Script" uid="uid://cppkdowkrn7kc" path="res://scenes/main_world.gd" id="1_bdp8l"]
+[ext_resource type="PackedScene" uid="uid://bleuenw304f4h" path="res://scenes/world/vip_level/vip_level.tscn" id="2_jj0au"]
+[ext_resource type="Script" uid="uid://b27uwg02v44ex" path="res://tests/tests_scenes/astar.gd" id="3_wy0bs"]
+[ext_resource type="PackedScene" uid="uid://bi3mv1avpgsrl" path="res://scenes/npc/Player/spine_player.tscn" id="4_emumq"]
+
+[node name="TestWorld" type="Node2D"]
+script = ExtResource("1_bdp8l")
+
+[node name="VipLevel" parent="." instance=ExtResource("2_jj0au")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1036, 187)
+zoom = Vector2(0.77, 0.77)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -341.0
+offset_top = 478.0
+offset_right = 2505.0
+offset_bottom = 760.0
+theme_override_font_sizes/font_size = 200
+text = "创造游戏地图：搭建 100 层骨架"
+
+[node name="astar" type="Node2D" parent="."]
+script = ExtResource("3_wy0bs")
+
+[node name="SpinePlayer" parent="." node_paths=PackedStringArray("my_astar") instance=ExtResource("4_emumq")]
+position = Vector2(894, 301)
+my_astar = NodePath("../astar")
