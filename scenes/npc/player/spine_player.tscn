@@ -16,6 +16,21 @@
 radius = 36.0
 height = 238.0
 
+[sub_resource type="Animation" id="Animation_a8f17"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_152t2")]
+}
+
 [sub_resource type="Animation" id="Animation_152t2"]
 resource_name = "walk"
 loop_mode = 1
@@ -30,21 +45,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("1_152t2"), ExtResource("2_ncd6i"), ExtResource("3_o2fxq"), ExtResource("4_wegem"), ExtResource("5_d8tyq"), ExtResource("6_dbb08"), ExtResource("7_133lu"), ExtResource("8_ebrvf"), ExtResource("9_w1fxk"), ExtResource("10_i74t0"), ExtResource("1_152t2")]
-}
-
-[sub_resource type="Animation" id="Animation_a8f17"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_152t2")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jn45l"]

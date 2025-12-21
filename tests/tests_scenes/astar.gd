@@ -5,7 +5,7 @@ var astar = AStar2D.new()
 var highlighted_point = -1  # 当前高亮的节点ID
 var highlight_scale = 1.0  # 高亮缩放比例
 var highlight_timer = 0.0  # 高亮动画计时器
-
+@export var is_debug:bool = true
 
 func _ready():
 	z_index = 100 # 确保在大多数物体之上
@@ -57,6 +57,8 @@ func _process(delta):
 		queue_redraw()
 
 func _draw():
+	if not is_debug:
+		return 
 	#draw_rect(Rect2(0, 0, 1000, 1000), Color.RED) # 测试用
 	if astar.get_point_count() == 0:
 		return
