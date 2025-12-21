@@ -18,16 +18,16 @@ layout_mode = 1
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 1344.0
-offset_top = 91.0
-offset_right = 1344.0
-offset_bottom = 91.0
+offset_left = 892.0
+offset_top = 24.0
+offset_right = 892.0
+offset_bottom = 24.0
 grow_horizontal = 1
 grow_vertical = 1
 
 [node name="InventoryArea" parent="." instance=ExtResource("2_5s35r")]
 layout_mode = 1
-offset_left = 452.0
-offset_top = 224.0
-offset_right = 452.0
-offset_bottom = 224.0
+offset_left = 29.0
+offset_top = 117.0
+offset_right = 29.0
+offset_bottom = 117.0

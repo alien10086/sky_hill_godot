@@ -157,8 +157,8 @@ func get_random_item()->ItemData:
 	if not all_identity.is_empty():
 		var random_key = all_identity.pick_random()
 		print("随机到的键是: ", random_key)
-		print("对应的值是: ", all_identity[random_key])
-		return all_identity[random_key]
+		print("对应的值是: ", items_by_identity[random_key])
+		return items_by_identity[random_key]
 	return
 	
 	

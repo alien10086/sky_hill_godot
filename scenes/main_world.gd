@@ -28,13 +28,32 @@ var zoom_out_button: Button
 var reset_button: Button
 var regenerate_button: Button
 var zoom_label: Label
+@onready var bag: Control = $CanvasLayer/Bag
+@onready var backpack: Control = $CanvasLayer/Backpack
+@onready var panel: Panel = $CanvasLayer/Panel
+
+
 @onready var astar: MyAstar = $astar
 @onready var vip_level: VipLevelUI = $VipLevel
+@onready var canvas_layer: CanvasLayer = $CanvasLayer
+
 
 
 #var astar = AStar2D.new()
+func _on_bag_open():
+	backpack.visible = true
+	panel.visible = true
+	
+func _on_bag_close():
+	backpack.visible = false
+	panel.visible = false
+	
+
 
 func _ready():
+	bag.bag_open.connect(_on_bag_open)
+	bag.bag_close.connect(_on_bag_close)
+	
 	# 设置相机
 	#_setup_camera()
 	astar.add_point(0, vip_level.get_left_mark_point())   # 左房间
@@ -63,6 +82,7 @@ func _instantiate_levels():
 		var level_instance:LevelxUI = level_x_scene.instantiate()
 		# 设置位置，每个实例垂直间隔575像素
 		level_instance.position = Vector2(0, i * floor_height)
+		level_instance.ui_canvas_layer =  canvas_layer
 		add_child(level_instance)
 		level_instance.set_level(floor_number - i)
 		level_instance.set_right_room_bg(randi() % 26)  # 随机生成0-25的数字

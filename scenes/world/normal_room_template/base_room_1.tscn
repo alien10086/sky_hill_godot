@@ -61,4 +61,4 @@ position = Vector2(159, 299)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("11_7x4um")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Node2D" type="Node2D" parent="."]

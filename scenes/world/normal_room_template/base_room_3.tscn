@@ -43,3 +43,5 @@ texture = ExtResource("6_ljbla")
 position = Vector2(599, 223.25002)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_svyuw")
+
+[node name="Node2D" type="Node2D" parent="."]

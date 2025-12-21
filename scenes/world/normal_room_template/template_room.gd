@@ -7,7 +7,12 @@ class_name  TemplateRoomUI
 
 @onready var all_room_ornament: Node2D = $all_room_ornament
 
-@onready var canvas_layer: CanvasLayer = $CanvasLayer
+#@onready var canvas_layer: Control = $Control
+#@onready var canvas_layer: Node2D = $Node2D
+
+@export var ui_canvas_layer:CanvasLayer
+
+
 
 
 #const UI_EYE = preload("uid://l5pvqrq3vshh")
@@ -47,8 +52,5 @@ func _gen_items():
 			
 			var eye_scene = EYE_ITEM_SCENE.instantiate()
 
-			eye_scene.global_position = each_room_ornament.global_position
-			
-	
-			canvas_layer.add_child(eye_scene)
-	
+			eye_scene.ui_canvas_layer = ui_canvas_layer
+			each_room_ornament.add_child(eye_scene)

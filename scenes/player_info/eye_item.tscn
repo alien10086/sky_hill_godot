@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bsov4xjmuwssk" path="res://scenes/player_info/eye_item.gd" id="1_t3f87"]
 
 [node name="TextureButton" type="TextureButton"]
+z_index = 30
 offset_right = 20.0
 offset_bottom = 15.0
 texture_normal = ExtResource("1_a3c0l")

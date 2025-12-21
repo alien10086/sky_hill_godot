@@ -2,6 +2,7 @@ extends Node2D
 
 class_name LevelxUI
 
+@export var ui_canvas_layer:CanvasLayer
 
 # 房间模板路径
 const ROOM_TEMPLATES = [
@@ -50,6 +51,7 @@ func _replace_left_room_templates():
 	var new_left_room = room_scene.instantiate()
 	new_left_room.name = "LeftRoom"
 	new_left_room.position = left_room_position
+	new_left_room.ui_canvas_layer = ui_canvas_layer
 	left_room_parent.add_child(new_left_room)
 	new_left_room.set_room_ornament_offset(-80)
 	left_room = new_left_room
@@ -67,6 +69,7 @@ func _replace_right_room_templates():
 	var new_right_room = room_scene.instantiate()
 	new_right_room.name = "RightRoom"
 	new_right_room.position = right_room_position
+	new_right_room.ui_canvas_layer = ui_canvas_layer
 	right_room_parent.add_child(new_right_room)
 	new_right_room.set_room_ornament_offset(80)
 	right_room = new_right_room

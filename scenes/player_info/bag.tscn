@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs181fpbjvajy"]
+
+[ext_resource type="Texture2D" uid="uid://biu7e4kqbmy5c" path="res://assets/ui/player_ui/ui_bag.png" id="1_e7ars"]
+[ext_resource type="Script" uid="uid://cvemyja7r11r2" path="res://scenes/player_info/bag.gd" id="1_oxing"]
+[ext_resource type="Texture2D" uid="uid://dntwanhhsa5cx" path="res://assets/ui/player_ui/ui_x.png" id="2_4neri"]
+
+[node name="Bag" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1864.0
+offset_bottom = -1014.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oxing")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_e7ars")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 15.0
+offset_top = 26.0
+offset_right = 70.0
+offset_bottom = 81.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4neri")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 56.0
+offset_bottom = 66.0
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

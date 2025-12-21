@@ -41,3 +41,5 @@ texture = ExtResource("4_c4kc2")
 [node name="Sprite2D5" type="Sprite2D" parent="all_room_ornament"]
 position = Vector2(124, 225)
 texture = ExtResource("6_761ee")
+
+[node name="Node2D" type="Node2D" parent="."]
