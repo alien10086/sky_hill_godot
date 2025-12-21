@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjhfdy0lw625t"]
+
+[ext_resource type="Script" uid="uid://qkbxn3rov3hk" path="res://scenes/player_info/speed_contral.gd" id="1_7dber"]
+[ext_resource type="Texture2D" uid="uid://baf1ig1tphx5f" path="res://assets/ui/player_ui/ui_slow_button_0.png" id="2_14yah"]
+[ext_resource type="Texture2D" uid="uid://djqvkr5u61pl5" path="res://assets/ui/player_ui/ui_slow_button_1.png" id="3_jk7ps"]
+[ext_resource type="Texture2D" uid="uid://1ytkq301e13c" path="res://assets/ui/player_ui/ui_fast_button_0.png" id="4_2vgva"]
+[ext_resource type="Texture2D" uid="uid://baus3hqyevude" path="res://assets/ui/player_ui/ui_fast_button_1.png" id="5_fi3jr"]
+[ext_resource type="Texture2D" uid="uid://8cfij4noajsm" path="res://assets/ui/player_ui/ui_fast2_button_0.png" id="6_632wb"]
+[ext_resource type="Texture2D" uid="uid://dpfrupgle8jvr" path="res://assets/ui/player_ui/ui_fast2_button_1.png" id="7_ioqb7"]
+
+[node name="SpeedContral" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7dber")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="slowTextureButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_14yah")
+texture_pressed = ExtResource("3_jk7ps")
+
+[node name="fastTextureButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_2vgva")
+texture_pressed = ExtResource("5_fi3jr")
+
+[node name="superFastTextureButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_632wb")
+texture_pressed = ExtResource("7_ioqb7")

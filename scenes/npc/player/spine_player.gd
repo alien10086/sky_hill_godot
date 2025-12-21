@@ -14,7 +14,12 @@ var move_speed = 100.0
 @export var my_astar:MyAstar
 var current_path_point_list: Array = [] # 存储当前路径点
 
+var player_manager: PlayerManager
+
 func _ready():
+	player_manager = PlayerManager.get_instance()
+	
+	player_manager.speed_changed.connect(_on_speed_changed)
 	# 初始化时停止所有动画
 	if animation_player:
 		animation_player.stop()
@@ -22,12 +27,20 @@ func _ready():
 	
 	
 	# 启用输入处理，以便接收鼠标点击事件
-	set_process_input(true)
-
-func _input(event):
+	#set_process_input(true)
+	
+func _on_speed_changed():
+	var player_data = player_manager.get_player_data()
+	move_speed = player_data.speed
+	
+func _unhandled_input(event):
+	#if event is InputEventMouseButton and event.pressed:
+	#print("UI没挡住我，我点到了游戏世界！")
+#func _input(event):
 	# 检查是否是鼠标左键点击事件
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		# 获取鼠标在世界坐标中的位置
+		print("UI没挡住我，我点到了游戏世界！")
 		var world_position = get_global_mouse_position()
 		
 		# 如果正在移动，找到合适的路径起点

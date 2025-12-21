@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bbytbn8r47o5c"]
+[gd_scene load_steps=14 format=3 uid="uid://bf3y011gmbhjn"]
 
 [ext_resource type="Texture2D" uid="uid://6key7x2s1q1n" path="res://assets/sprites/all_player.png" id="1_msdsj"]
 
@@ -324,7 +324,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D3/rightArmTop/rightArmBottom"]
 position = Vector2(-1, 42)
 rotation = 0.57228565
-scale = Vector2(0.9999998, 0.9999998)
+scale = Vector2(0.99999976, 0.99999976)
 rest = Transform2D(0.84066534, 0.5415549, -0.5415549, 0.84066534, -1, 42)
 
 [node name="head" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D3"]
