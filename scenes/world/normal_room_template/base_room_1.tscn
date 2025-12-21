@@ -34,7 +34,7 @@ position = Vector2(354, 330)
 texture = ExtResource("4_pyayi")
 
 [node name="Sprite2D3" type="Sprite2D" parent="all_room_ornament"]
-position = Vector2(131, 265)
+position = Vector2(131, 260)
 scale = Vector2(2, 2)
 texture = ExtResource("5_j8gp6")
 
@@ -60,3 +60,5 @@ texture = ExtResource("10_vxo3y")
 position = Vector2(159, 299)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("11_7x4um")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

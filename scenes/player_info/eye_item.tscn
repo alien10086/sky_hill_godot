@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg7o0ifyuignl"]
+
+[ext_resource type="Texture2D" uid="uid://l5pvqrq3vshh" path="res://assets/ui/player_ui/ui_eye.png" id="1_a3c0l"]
+[ext_resource type="Script" uid="uid://bsov4xjmuwssk" path="res://scenes/player_info/eye_item.gd" id="1_t3f87"]
+
+[node name="TextureButton" type="TextureButton"]
+offset_right = 20.0
+offset_bottom = 15.0
+texture_normal = ExtResource("1_a3c0l")
+script = ExtResource("1_t3f87")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -151,6 +151,17 @@ func load_items():
 	is_loaded = true
 	print("已加载 ", all_items.size(), " 个物品")
 
+func get_random_item()->ItemData:
+	# 从 items_by_identity 随机获取一个key
+	var all_identity = items_by_identity.keys()
+	if not all_identity.is_empty():
+		var random_key = all_identity.pick_random()
+		print("随机到的键是: ", random_key)
+		print("对应的值是: ", all_identity[random_key])
+		return all_identity[random_key]
+	return
+	
+	
 			
 
 ## 根据身份标识获取物品
