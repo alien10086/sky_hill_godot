@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://bi3mv1avpgsrl"]
 
 [ext_resource type="Texture2D" uid="uid://d03mfab5kdju1" path="res://assets/sprites/players/skeleton-animation_00.png" id="1_152t2"]
-[ext_resource type="Script" uid="uid://dbv7n8yt7x5te" path="res://scenes/npc/Player/spine_player.gd" id="1_o2fxq"]
+[ext_resource type="Script" uid="uid://5imiryv0xupo" path="res://scenes/npc/Player/spine_player.gd" id="1_o2fxq"]
 [ext_resource type="Texture2D" uid="uid://bvo62gm5s1swn" path="res://assets/sprites/players/skeleton-animation_01.png" id="2_ncd6i"]
 [ext_resource type="Texture2D" uid="uid://bbgwbf7c0sawe" path="res://assets/sprites/players/skeleton-animation_02.png" id="3_o2fxq"]
 [ext_resource type="Texture2D" uid="uid://ce1f05k34nqfq" path="res://assets/sprites/players/skeleton-animation_03.png" id="4_wegem"]

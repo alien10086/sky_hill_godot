@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfqxmonvx4roi"]
+[gd_scene load_steps=10 format=3 uid="uid://cfqxmonvx4roi"]
 
 [ext_resource type="Script" uid="uid://cppkdowkrn7kc" path="res://scenes/main_world.gd" id="1_bdp8l"]
 [ext_resource type="PackedScene" uid="uid://bleuenw304f4h" path="res://scenes/world/vip_level/vip_level.tscn" id="2_jj0au"]
 [ext_resource type="Script" uid="uid://b27uwg02v44ex" path="res://tests/tests_scenes/astar.gd" id="3_wy0bs"]
 [ext_resource type="PackedScene" uid="uid://bi3mv1avpgsrl" path="res://scenes/npc/player/spine_player.tscn" id="4_emumq"]
 [ext_resource type="PackedScene" uid="uid://drmmjx5y1axeb" path="res://scenes/player_info/avatar_hub.tscn" id="5_jj0au"]
+[ext_resource type="Script" uid="uid://dahxdvkiu1w6n" path="res://scenes/main_ui_canvas_layer.gd" id="5_wj2hs"]
 [ext_resource type="PackedScene" uid="uid://cjhfdy0lw625t" path="res://scenes/player_info/speed_contral.tscn" id="6_wy0bs"]
 [ext_resource type="PackedScene" uid="uid://bs181fpbjvajy" path="res://scenes/player_info/bag.tscn" id="7_emumq"]
 [ext_resource type="PackedScene" uid="uid://buxpspgy0pbv4" path="res://scenes/backpack/backpack.tscn" id="8_5irk3"]
@@ -35,6 +36,7 @@ position = Vector2(894, 301)
 my_astar = NodePath("../astar")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("5_wj2hs")
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 visible = false
@@ -70,3 +72,9 @@ offset_left = 435.0
 offset_top = 127.0
 offset_right = -113.0
 offset_bottom = 127.0
+
+[node name="CenterMarker2D" type="Marker2D" parent="CanvasLayer"]
+position = Vector2(947, 516)
+
+[node name="BagMarker2D2" type="Marker2D" parent="CanvasLayer"]
+position = Vector2(131, 936)

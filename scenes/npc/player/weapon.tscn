@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dl044drmtfjqj"]
 
-[ext_resource type="Script" uid="uid://bhkjtje75qnbn" path="res://scenes/npc/Player/weapon.gd" id="1_wmyjk"]
+[ext_resource type="Script" uid="uid://bhkjtje75qnbn" path="res://scenes/npc/player/weapon.gd" id="1_wmyjk"]
 [ext_resource type="Texture2D" uid="uid://b0lqiucuccsor" path="res://resources/weapon_atlas_texture/28.tres" id="2_wmyjk"]
 
 [node name="Weapon" type="Node2D"]
