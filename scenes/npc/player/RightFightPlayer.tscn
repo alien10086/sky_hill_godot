@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bvf7pnvao512c"]
+[gd_scene load_steps=19 format=3 uid="uid://bvf7pnvao512c"]
 
 [ext_resource type="Texture2D" uid="uid://dsfxaubi2kwlh" path="res://assets/fighter_player/body.png" id="1_2kkey"]
 [ext_resource type="Texture2D" uid="uid://bybuwejxed3wo" path="res://assets/fighter_player/nick.png" id="2_l05gf"]
@@ -13,9 +13,57 @@
 [ext_resource type="Texture2D" uid="uid://byxn2u7cv2sn8" path="res://assets/fighter_player/shoe.png" id="11_r4tqi"]
 [ext_resource type="Texture2D" uid="uid://bwqywycf6qomh" path="res://assets/fighter_player/back_top_leg.png" id="12_2ys73"]
 
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_2ys73"]
+target_nodepath = NodePath("../Node2D/headMarker")
+joint_one_bone_idx = 2
+joint_one_bone2d_node = NodePath("RootBone2D/bodyBone2D/nickBone2D")
+joint_two_bone_idx = 3
+joint_two_bone2d_node = NodePath("RootBone2D/bodyBone2D/nickBone2D/headBone2D")
+
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_r4tqi"]
+target_nodepath = NodePath("../Node2D/frontArmMarker")
+flip_bend_direction = true
+joint_one_bone_idx = 4
+joint_one_bone2d_node = NodePath("RootBone2D/bodyBone2D/frontBone2D")
+joint_two_bone_idx = 5
+joint_two_bone2d_node = NodePath("RootBone2D/bodyBone2D/frontBone2D/frontBone2D2")
+
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_4ka44"]
+target_nodepath = NodePath("../Node2D/backArmMarker")
+flip_bend_direction = true
+joint_one_bone_idx = 7
+joint_one_bone2d_node = NodePath("RootBone2D/bodyBone2D/backBone2D")
+joint_two_bone_idx = 8
+joint_two_bone2d_node = NodePath("RootBone2D/bodyBone2D/backBone2D/backBone2D2")
+
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_x8dak"]
+target_nodepath = NodePath("../Node2D/frontLegMarker")
+joint_one_bone_idx = 10
+joint_one_bone2d_node = NodePath("RootBone2D/bodyBone2D/frontLegBone2D")
+joint_two_bone_idx = 11
+joint_two_bone2d_node = NodePath("RootBone2D/bodyBone2D/frontLegBone2D/frontLegBone2D2")
+
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_jm54w"]
+target_nodepath = NodePath("../Node2D/backLegMarker")
+joint_one_bone_idx = 13
+joint_one_bone2d_node = NodePath("RootBone2D/bodyBone2D/backBone2D2")
+joint_two_bone_idx = 14
+joint_two_bone2d_node = NodePath("RootBone2D/bodyBone2D/backBone2D2/backBone2D2")
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_r4tqi"]
+enabled = true
+modification_count = 5
+modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_2ys73")
+modifications/1 = SubResource("SkeletonModification2DTwoBoneIK_r4tqi")
+modifications/2 = SubResource("SkeletonModification2DTwoBoneIK_4ka44")
+modifications/3 = SubResource("SkeletonModification2DTwoBoneIK_x8dak")
+modifications/4 = SubResource("SkeletonModification2DTwoBoneIK_jm54w")
+
 [node name="FightPlayer" type="CharacterBody2D"]
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
+modification_stack = SubResource("SkeletonModificationStack2D_r4tqi")
+metadata/_edit_lock_ = true
 
 [node name="RootBone2D" type="Bone2D" parent="Skeleton2D"]
 rest = Transform2D(1, 0, 0, 1, 0, 0)
@@ -25,27 +73,40 @@ position = Vector2(0, -25)
 rest = Transform2D(1, 0, 0, 1, 0, -25)
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
+z_index = -2
 position = Vector2(-3, -38)
 texture = ExtResource("1_2kkey")
 
-[node name="headBone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
-position = Vector2(1, -78)
-rest = Transform2D(1, 0, 0, 1, 1, -78)
-auto_calculate_length_and_angle = false
-length = 35.61
-bone_angle = -92.013
+[node name="nickBone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
+position = Vector2(3.0000002, -74.000015)
+rotation = -1.610775
+scale = Vector2(0.99993235, 0.99993235)
+metadata/_local_pose_override_enabled_ = true
 
-[node name="Sprite2D2" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/headBone2D"]
-position = Vector2(1, -8)
+[node name="Sprite2D2" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/nickBone2D"]
+position = Vector2(12.0311775, -0.5196214)
+rotation = 1.6059299
+scale = Vector2(0.99994963, 0.99994963)
 texture = ExtResource("2_l05gf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/headBone2D"]
-position = Vector2(1, -24)
+[node name="headBone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D/nickBone2D"]
+position = Vector2(11.040551, 0.36481917)
+rotation = 1.6059299
+scale = Vector2(0.999947, 0.999947)
+rest = Transform2D(1, 0, 0, 1, 1, -78)
+auto_calculate_length_and_angle = false
+length = 12.731
+bone_angle = -92.013
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/nickBone2D/headBone2D"]
+position = Vector2(0.5094206, -16.11913)
 texture = ExtResource("3_m54a0")
 
 [node name="frontBone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
 position = Vector2(-30, -67)
 rest = Transform2D(1, 0, 0, 1, -30, -67)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D"]
 position = Vector2(1, 24)
@@ -54,8 +115,10 @@ texture = ExtResource("4_gfwn5")
 [node name="frontBone2D2" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D"]
 position = Vector2(-1, 48)
 rest = Transform2D(1, 0, 0, 1, -1, 48)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D/frontBone2D2"]
+z_index = -1
 position = Vector2(0, 20)
 texture = ExtResource("5_blnse")
 
@@ -67,6 +130,7 @@ length = 65.026
 bone_angle = -16.101997
 
 [node name="Weapon" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D/frontBone2D2/frontWeaponeBone2D" instance=ExtResource("6_g4hep")]
+z_index = -1
 position = Vector2(0, -2)
 rotation = 1.1466731
 
@@ -76,6 +140,7 @@ rest = Transform2D(1, 0, 0, 1, 28, -68)
 auto_calculate_length_and_angle = false
 length = 45.505
 bone_angle = 78.211
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D"]
 z_index = -1
@@ -85,6 +150,7 @@ texture = ExtResource("7_m54a0")
 [node name="backBone2D2" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D"]
 position = Vector2(11, 46)
 rest = Transform2D(1, 0, 0, 1, 11, 46)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D/backBone2D2"]
 z_index = -2
@@ -105,6 +171,7 @@ rotation = 1.5106612
 position = Vector2(-14, 8)
 rotation = 2.2226117
 rest = Transform2D(-0.60663056, 0.79498386, -0.79498386, -0.60663056, -14, 8)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontLegBone2D"]
 position = Vector2(22.25955, -16.985655)
@@ -115,6 +182,7 @@ texture = ExtResource("9_g4hep")
 position = Vector2(49.142223, -31.209656)
 rotation = -0.2364237
 rest = Transform2D(0.97218186, -0.23422731, 0.23422731, 0.97218186, 49.142223, -31.209656)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontLegBone2D/frontLegBone2D2"]
 z_index = -1
@@ -140,6 +208,7 @@ texture = ExtResource("11_r4tqi")
 [node name="backBone2D2" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
 position = Vector2(17, 4)
 rest = Transform2D(1, 0, 0, 1, 17, 4)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D2"]
 position = Vector2(-4, 34)
@@ -148,6 +217,7 @@ texture = ExtResource("12_2ys73")
 [node name="backBone2D2" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D2"]
 position = Vector2(-3, 63)
 rest = Transform2D(1, 0, 0, 1, -3, 63)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D2/backBone2D2"]
 position = Vector2(-3, 27)
@@ -161,3 +231,20 @@ rest = Transform2D(1, 0, 0, 1, -2, 53)
 z_index = -3
 position = Vector2(13, 0)
 texture = ExtResource("11_r4tqi")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="headMarker" type="Marker2D" parent="Node2D"]
+position = Vector2(4, -138)
+
+[node name="frontArmMarker" type="Marker2D" parent="Node2D"]
+position = Vector2(-1, -88)
+
+[node name="backArmMarker" type="Marker2D" parent="Node2D"]
+position = Vector2(44, -67)
+
+[node name="frontLegMarker" type="Marker2D" parent="Node2D"]
+position = Vector2(-41, 20)
+
+[node name="backLegMarker" type="Marker2D" parent="Node2D"]
+position = Vector2(41, -15)
