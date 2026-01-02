@@ -43,6 +43,8 @@ var zoom_label: Label
 func _on_bag_open():
 	backpack.visible = true
 	panel.visible = true
+	# 将 panel 移动到 backpack 之前，确保它遮挡住 CanvasLayer 下的其他 UI 元素
+	# panel.get_parent().move_child(panel, backpack.get_index())
 	
 func _on_bag_close():
 	backpack.visible = false
@@ -219,6 +221,10 @@ func _process(_delta):
 		camera.position.y = lerp(current_camera_y, target_y, follow_smoothness)
 
 func _unhandled_input(event):
+	# 如果背包打开，拦截所有针对游戏世界的输入（如相机缩放、拖拽）
+	if backpack.visible:
+		return
+		
 	# 鼠标滚轮缩放
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
