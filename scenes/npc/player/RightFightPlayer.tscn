@@ -81,6 +81,7 @@ texture = ExtResource("1_2kkey")
 position = Vector2(3.0000002, -74.000015)
 rotation = -1.610775
 scale = Vector2(0.99993235, 0.99993235)
+rest = Transform2D(-0.0330233, -0.99938434, 0.99938434, -0.0330233, 3.0000002, -74.000015)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/nickBone2D"]
@@ -93,7 +94,7 @@ texture = ExtResource("2_l05gf")
 position = Vector2(11.040551, 0.36481917)
 rotation = 1.6059299
 scale = Vector2(0.999947, 0.999947)
-rest = Transform2D(1, 0, 0, 1, 1, -78)
+rest = Transform2D(-0.0681087, 0.9976246, -0.9976246, -0.0681087, 11.040551, 0.36481917)
 auto_calculate_length_and_angle = false
 length = 12.731
 bone_angle = -92.013
@@ -105,7 +106,7 @@ texture = ExtResource("3_m54a0")
 
 [node name="frontBone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
 position = Vector2(-30, -67)
-rest = Transform2D(1, 0, 0, 1, -30, -67)
+rest = Transform2D(0.92584133, 0.37790945, -0.37790945, 0.92584133, -30, -67)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D"]
@@ -114,7 +115,7 @@ texture = ExtResource("4_gfwn5")
 
 [node name="frontBone2D2" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D"]
 position = Vector2(-1, 48)
-rest = Transform2D(1, 0, 0, 1, -1, 48)
+rest = Transform2D(0.99966985, -0.025644926, 0.025644926, 0.99966985, -1, 48)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D/frontBone2D2"]
@@ -127,7 +128,7 @@ position = Vector2(-2, 43)
 rest = Transform2D(1, 0, 0, 1, -2, 43)
 auto_calculate_length_and_angle = false
 length = 65.026
-bone_angle = -16.101997
+bone_angle = -16.101995
 
 [node name="Weapon" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D/frontBone2D2/frontWeaponeBone2D" instance=ExtResource("6_g4hep")]
 z_index = -1
@@ -136,7 +137,7 @@ rotation = 1.1466731
 
 [node name="backBone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
 position = Vector2(28, -68)
-rest = Transform2D(1, 0, 0, 1, 28, -68)
+rest = Transform2D(0.7033226, -0.7108695, 0.7108695, 0.7033226, 28, -68)
 auto_calculate_length_and_angle = false
 length = 45.505
 bone_angle = 78.211
@@ -149,7 +150,7 @@ texture = ExtResource("7_m54a0")
 
 [node name="backBone2D2" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D"]
 position = Vector2(11, 46)
-rest = Transform2D(1, 0, 0, 1, 11, 46)
+rest = Transform2D(0.99982363, -0.018776506, 0.018776506, 0.99982363, 11, 46)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D/backBone2D2"]
@@ -170,7 +171,7 @@ rotation = 1.5106612
 [node name="frontLegBone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
 position = Vector2(-14, 8)
 rotation = 2.2226117
-rest = Transform2D(-0.60663056, 0.79498386, -0.79498386, -0.60663056, -14, 8)
+rest = Transform2D(-0.74803126, 0.6636623, -0.6636623, -0.74803126, -14, 8)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontLegBone2D"]
@@ -181,7 +182,7 @@ texture = ExtResource("9_g4hep")
 [node name="frontLegBone2D2" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontLegBone2D"]
 position = Vector2(49.142223, -31.209656)
 rotation = -0.2364237
-rest = Transform2D(0.97218186, -0.23422731, 0.23422731, 0.97218186, 49.142223, -31.209656)
+rest = Transform2D(0.9826062, -0.18569249, 0.18569249, 0.9826062, 49.142223, -31.209656)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontLegBone2D/frontLegBone2D2"]
@@ -192,9 +193,9 @@ texture = ExtResource("10_2ys73")
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontLegBone2D/frontLegBone2D2"]
 position = Vector2(51.129803, -20.365242)
-rotation = 0.024227366
-scale = Vector2(0.99999994, 0.99999994)
-rest = Transform2D(0.9997065, 0.024224995, -0.024224995, 0.9997065, 51.129803, -20.365242)
+rotation = 0.024227368
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.99970645, 0.024224995, -0.024224995, 0.99970645, 51.129803, -20.365242)
 auto_calculate_length_and_angle = false
 length = 24.7
 bone_angle = -117.315994
@@ -207,7 +208,7 @@ texture = ExtResource("11_r4tqi")
 
 [node name="backBone2D2" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
 position = Vector2(17, 4)
-rest = Transform2D(1, 0, 0, 1, 17, 4)
+rest = Transform2D(0.9678453, -0.25153476, 0.25153476, 0.9678453, 17, 4)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D2"]
@@ -216,7 +217,7 @@ texture = ExtResource("12_2ys73")
 
 [node name="backBone2D2" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D2"]
 position = Vector2(-3, 63)
-rest = Transform2D(1, 0, 0, 1, -3, 63)
+rest = Transform2D(0.99995047, 0.009865015, -0.009865015, 0.99995047, -3, 63)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D2/backBone2D2"]
@@ -235,16 +236,16 @@ texture = ExtResource("11_r4tqi")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="headMarker" type="Marker2D" parent="Node2D"]
-position = Vector2(4, -138)
+position = Vector2(3, -197)
 
 [node name="frontArmMarker" type="Marker2D" parent="Node2D"]
-position = Vector2(-1, -88)
+position = Vector2(-75, 12)
 
 [node name="backArmMarker" type="Marker2D" parent="Node2D"]
-position = Vector2(44, -67)
+position = Vector2(113, -38)
 
 [node name="frontLegMarker" type="Marker2D" parent="Node2D"]
-position = Vector2(-41, 20)
+position = Vector2(-53, 119)
 
 [node name="backLegMarker" type="Marker2D" parent="Node2D"]
-position = Vector2(41, -15)
+position = Vector2(43, 103)
