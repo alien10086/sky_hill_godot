@@ -4,7 +4,9 @@ const  slot_scene = preload("res://scenes/game_items/base_game_item.tscn")
 
 @onready var delete_area: Control = $DeleteArea
 
-@onready var grid_container: GridContainer = $GridContainer
+#@onready var grid_container: GridContainer = $GridContainer
+@onready var grid_container: GridContainer = $ScrollContainer/GridContainer
+
 @onready var left_weapon_slot: WeaponSlot = $LeftWeaponSlot
 @onready var right_weapon_slot: WeaponSlot = $RightWeaponSlot
 
@@ -12,6 +14,7 @@ const  slot_scene = preload("res://scenes/game_items/base_game_item.tscn")
 
 var item_manager: ItemManager
 var inventory_manage: InventoryManage
+var weapon_manager: WeaponManager
 # 库存物品UI字典
 var inventory_item_slots: Dictionary = {}
 
@@ -23,6 +26,7 @@ func _on_inventory_updated():
 func _ready() -> void:
 	inventory_manage = InventoryManage.get_instance()
 	item_manager = ItemManager.get_instance()
+	weapon_manager = WeaponManager.get_instance()
 	inventory_manage.inventory_updated.connect(_on_inventory_updated)
 	
 	delete_area.item_deleted.connect(_on_item_deleted)
@@ -33,8 +37,16 @@ func _ready() -> void:
 	_setup_weapon_slots()
 	# 添加测试武器
 	#_add_test_weapons()
+	
 	# 初始显示库存物品
 	_update_inventory_display()
+	
+	# 加载武器并添加到背包
+	weapon_manager.load_weapons()
+	for weapon in weapon_manager.all_weapons:
+		inventory_manage.add_item(weapon.name, 1)
+	
+	
 	
 # 添加测试武器
 func _add_test_weapons():

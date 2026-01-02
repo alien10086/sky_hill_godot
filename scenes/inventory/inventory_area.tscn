@@ -45,13 +45,16 @@ offset_top = 112.0
 offset_right = 802.0
 offset_bottom = 612.0
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 111.0
+offset_right = 809.0
+offset_bottom = 613.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
 custom_minimum_size = Vector2(800, 300)
-layout_mode = 1
-offset_left = 7.0
-offset_top = 115.0
-offset_right = 807.0
-offset_bottom = 608.0
+layout_mode = 2
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 columns = 7

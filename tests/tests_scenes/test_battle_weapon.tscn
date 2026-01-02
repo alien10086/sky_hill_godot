@@ -64,3 +64,6 @@ position = Vector2(947, 516)
 
 [node name="BagMarker2D2" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(131, 936)
+
+[connection signal="bag_close" from="CanvasLayer/Bag" to="." method="_on_bag_close"]
+[connection signal="bag_open" from="CanvasLayer/Bag" to="." method="_on_bag_open"]
