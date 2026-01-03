@@ -1,7 +1,5 @@
 extends Node2D
 
-class_name  WeaponUI
-
 var weapon_manager: WeaponManager
 # 武器纹理资源路径
 #const WEAPON_TEXTURE_PATH = "res://resources/weapon_atlas_texture/"
