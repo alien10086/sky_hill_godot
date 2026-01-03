@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://2u4ysp7vdarj"]
+[gd_scene load_steps=20 format=3 uid="uid://2u4ysp7vdarj"]
 
 [ext_resource type="Script" uid="uid://dxtllaj0go3dr" path="res://scenes/npc/player/fight_player.gd" id="1_8krtv"]
 [ext_resource type="Texture2D" uid="uid://dsfxaubi2kwlh" path="res://assets/fighter_player/body.png" id="1_122xu"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d3i7w7wxfgral" path="res://assets/fighter_player/front_top_arm.png" id="4_sosrt"]
 [ext_resource type="Texture2D" uid="uid://cvq2gvbepqvip" path="res://assets/fighter_player/front_bottom_arm.png" id="5_bk63e"]
 [ext_resource type="Texture2D" uid="uid://ghsfsu3cpptb" path="res://assets/fighter_player/back_top_arm.png" id="7_awsf6"]
+[ext_resource type="Texture2D" uid="uid://b0lqiucuccsor" path="res://resources/weapon_atlas_texture/backsword.tres" id="7_oyf2y"]
 [ext_resource type="Texture2D" uid="uid://cwgtk2x7ahybi" path="res://assets/fighter_player/back_bottom_arm.png" id="8_nxs01"]
 [ext_resource type="Texture2D" uid="uid://ohwob3onfe8y" path="res://assets/fighter_player/front_top_leg.png" id="9_pke5h"]
 [ext_resource type="Texture2D" uid="uid://l675gaax7iga" path="res://assets/fighter_player/bottom_leg.png" id="10_wos3e"]
@@ -115,6 +116,7 @@ rest = Transform2D(0.9322799, -0.36172795, 0.36172795, 0.9322799, 31, -66)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D"]
+z_index = 22
 position = Vector2(0.5, 22.5)
 texture = ExtResource("4_sosrt")
 flip_h = true
@@ -126,7 +128,7 @@ rest = Transform2D(0.68355024, 0.72989947, -0.72989947, 0.68355024, -1, 48)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D/frontBone2D2"]
-z_index = -1
+z_index = 21
 position = Vector2(0, 14)
 rotation = 0.026197592
 texture = ExtResource("5_bk63e")
@@ -140,6 +142,11 @@ length = 45.416
 bone_angle = -197.82695
 
 [node name="frontWeaponSprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D/frontBone2D2/frontWeaponeBone2D"]
+z_index = 20
+rotation = -2.0001473
+texture = ExtResource("7_oyf2y")
+offset = Vector2(-2.73, -31.27)
+flip_h = true
 
 [node name="backBone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
 position = Vector2(-23, -67.000015)
@@ -177,6 +184,8 @@ length = 48.734
 bone_angle = -188.62596
 
 [node name="backWeaponSprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D/backBone2D2/backWeaponBone2D"]
+rotation = -2.8396506
+texture = ExtResource("7_oyf2y")
 
 [node name="frontLegBone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
 position = Vector2(15, 8)
@@ -274,3 +283,4 @@ position = Vector2(22, 95)
 position = Vector2(-27, 94)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.66, 2.66)

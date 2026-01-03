@@ -13,7 +13,7 @@ var weapon_manager: WeaponManager
 # 武器纹理资源路径
 #const WEAPON_TEXTURE_PATH = "res://resources/weapon_atlas_texture/"
 # 当前显示的武器ID
-var current_weapon_name:String = "bat"
+var current_weapon_name:String = "backsword"
 var current_weapon_data:WeaponData
 
 #@onready var weapon_sprite: Sprite2D = $Sprite2D
@@ -28,21 +28,26 @@ func set_weapon(weapon_name: String):
 	
 	
 func refresh_weapon_show():
-	var texture = current_weapon_data.load_icon()
-		#if texture:
+	var texture:AtlasTexture = current_weapon_data.load_icon()
+	if not texture:
+		return
+		
 	front_weapon_sprite_2d.texture = texture
 	back_weapon_sprite_2d.texture = texture
-		
-		# 获取纹理的尺寸信息
-	#var texture_height = texture.region.size.y
-	#var texture_width = texture.region.size.x
-		
-	# 设置精灵位置，使图片底端对齐到(0,0)
-	#weapon_sprite.position = Vector2(0, -texture_height)
-		
-	# 设置精灵中心点为底部中心
-	#weapon_sprite.offset = Vector2(texture_width / 2, texture_height)
-		
+	
+	# 获取骨骼的角度（弧度）
+	var front_angle = front_weapone_bone_2d.bone_angle
+	var back_angle = back_weapon_bone_2d.bone_angle
+	
+	# 设置精灵的旋转角度，使其与骨骼角度一致
+	front_weapon_sprite_2d.rotation = front_angle
+	back_weapon_sprite_2d.rotation = back_angle
+	
+	# 如果是 AtlasTexture，我们需要根据其 region 大小来设置偏移，使武器底部对齐骨骼
+	var size = texture.region.size
+	# 设置偏移，使图片底部中心对齐到骨骼原点
+	front_weapon_sprite_2d.offset = Vector2(0, -size.y / 2)
+	back_weapon_sprite_2d.offset = Vector2(0, -size.y / 2)
 
 
 
