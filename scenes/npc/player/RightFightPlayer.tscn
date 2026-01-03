@@ -1,11 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://bvf7pnvao512c"]
+[gd_scene load_steps=18 format=3 uid="uid://bvf7pnvao512c"]
 
 [ext_resource type="Texture2D" uid="uid://dsfxaubi2kwlh" path="res://assets/fighter_player/body.png" id="1_2kkey"]
 [ext_resource type="Texture2D" uid="uid://bybuwejxed3wo" path="res://assets/fighter_player/nick.png" id="2_l05gf"]
 [ext_resource type="Texture2D" uid="uid://dk75qjiq1pcye" path="res://assets/fighter_player/head.png" id="3_m54a0"]
 [ext_resource type="Texture2D" uid="uid://d3i7w7wxfgral" path="res://assets/fighter_player/front_top_arm.png" id="4_gfwn5"]
 [ext_resource type="Texture2D" uid="uid://cvq2gvbepqvip" path="res://assets/fighter_player/front_bottom_arm.png" id="5_blnse"]
-[ext_resource type="PackedScene" uid="uid://dl044drmtfjqj" path="res://scenes/npc/player/weapon.tscn" id="6_g4hep"]
 [ext_resource type="Texture2D" uid="uid://ghsfsu3cpptb" path="res://assets/fighter_player/back_top_arm.png" id="7_m54a0"]
 [ext_resource type="Texture2D" uid="uid://cwgtk2x7ahybi" path="res://assets/fighter_player/back_bottom_arm.png" id="8_gfwn5"]
 [ext_resource type="Texture2D" uid="uid://ohwob3onfe8y" path="res://assets/fighter_player/front_top_leg.png" id="9_g4hep"]
@@ -130,10 +129,7 @@ auto_calculate_length_and_angle = false
 length = 65.026
 bone_angle = -16.101995
 
-[node name="Weapon" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D/frontBone2D2/frontWeaponeBone2D" instance=ExtResource("6_g4hep")]
-z_index = -1
-position = Vector2(0, -2)
-rotation = 1.1466731
+[node name="frontWeaponSprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/frontBone2D/frontBone2D2/frontWeaponeBone2D"]
 
 [node name="backBone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
 position = Vector2(28, -68)
@@ -165,8 +161,7 @@ auto_calculate_length_and_angle = false
 length = 61.807
 bone_angle = 0.0
 
-[node name="Weapon" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D/backBone2D2/backWeaponBone2D" instance=ExtResource("6_g4hep")]
-rotation = 1.5106612
+[node name="backWeaponSprite2D" type="Sprite2D" parent="Skeleton2D/RootBone2D/bodyBone2D/backBone2D/backBone2D2/backWeaponBone2D"]
 
 [node name="frontLegBone2D" type="Bone2D" parent="Skeleton2D/RootBone2D/bodyBone2D"]
 position = Vector2(-14, 8)
@@ -249,3 +244,5 @@ position = Vector2(-53, 119)
 
 [node name="backLegMarker" type="Marker2D" parent="Node2D"]
 position = Vector2(43, 103)
+
+[node name="Camera2D" type="Camera2D" parent="."]

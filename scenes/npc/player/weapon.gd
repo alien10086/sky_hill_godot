@@ -30,7 +30,7 @@ func refresh_weapon_show():
 	var texture_width = texture.region.size.x
 		
 	# 设置精灵位置，使图片底端对齐到(0,0)
-	weapon_sprite.position = Vector2(0, -texture_height)
+	#weapon_sprite.position = Vector2(0, -texture_height)
 		
 	# 设置精灵中心点为底部中心
 	weapon_sprite.offset = Vector2(texture_width / 2, texture_height)
