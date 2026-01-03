@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://b7fidy6hatlp1"
+path="res://.godot/imported/skeleton.atlas-aaf50876fdf84b887c8796e7cf615736.spatlas"
+
+[deps]
+
+source_file="res://assets/fight_spine/skeleton.atlas"
+dest_files=["res://.godot/imported/skeleton.atlas-aaf50876fdf84b887c8796e7cf615736.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"
