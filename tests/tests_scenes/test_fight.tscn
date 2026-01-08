@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfyopn0sjynaq"]
+
+[ext_resource type="PackedScene" uid="uid://ct1hmjoitapqo" path="res://scenes/npc/player/spineFighter.tscn" id="1_p35rh"]
+[ext_resource type="PackedScene" uid="uid://xpea2thbb05k" path="res://scenes/npc/enemy/longArmMonst.tscn" id="2_a6s0n"]
+[ext_resource type="PackedScene" uid="uid://dxjnxt1keathj" path="res://scenes/npc/enemy/bigFatMonst.tscn" id="3_1xv3f"]
+
+[node name="TestFight" type="Node2D"]
+
+[node name="SpineFighter" parent="." instance=ExtResource("1_p35rh")]
+position = Vector2(406, 729)
+
+[node name="LongArmMonst" parent="." instance=ExtResource("2_a6s0n")]
+position = Vector2(1389, 927)
+scale = Vector2(1, 1)
+
+[node name="BigFatMonst" parent="." instance=ExtResource("3_1xv3f")]
+position = Vector2(900, 621)
+scale = Vector2(2, 2)

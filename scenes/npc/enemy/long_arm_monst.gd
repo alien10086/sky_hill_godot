@@ -8,4 +8,4 @@ func _ready() -> void:
 func play_animation(anim_name: String, loop: bool = false) -> void:
 	if spine_sprite:
 		var animation_state = spine_sprite.get_animation_state()
-		animation_state.set_animation_by_name(anim_name, loop, 0)
+		animation_state.set_animation(anim_name, loop, 0)

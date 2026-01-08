@@ -17,6 +17,3 @@ preview_animation = "attack"
 preview_frame = true
 preview_time = 0.0
 script = ExtResource("3_5iq7c")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.98, 1.98)
