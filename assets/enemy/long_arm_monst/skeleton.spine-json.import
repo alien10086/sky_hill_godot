@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.json"
+type="SpineSkeletonFileResource"
+uid="uid://cpejyv2vqvxbi"
+path="res://.godot/imported/skeleton.spine-json-2eea70a3f4d4b4b2b478eaf9918440f0.spjson"
+
+[deps]
+
+source_file="res://assets/enemy/long_arm_monst/skeleton.spine-json"
+dest_files=["res://.godot/imported/skeleton.spine-json-2eea70a3f4d4b4b2b478eaf9918440f0.spjson"]
+
+[params]
+

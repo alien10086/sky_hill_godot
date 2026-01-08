@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://cdsx787gksajb"
+path="res://.godot/imported/skeleton.atlas-91da0984dc9997d81113861a2abc24ec.spatlas"
+
+[deps]
+
+source_file="res://assets/enemy/big_fat_monst/skeleton.atlas"
+dest_files=["res://.godot/imported/skeleton.atlas-91da0984dc9997d81113861a2abc24ec.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

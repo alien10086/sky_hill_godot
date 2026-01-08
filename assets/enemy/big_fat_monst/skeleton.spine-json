@@ -1,0 +1,234 @@
+{
+"skeleton": {
+	"hash": "k+gNcKV0c2U",
+	"spine": "4.2.43",
+	"x": -89.33,
+	"y": -16.03,
+	"width": 179.15,
+	"height": 190.52,
+	"images": "./monst/",
+	"audio": "./audio"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "x": -2.81, "y": 65.29 },
+	{ "name": "bodybone", "parent": "bone", "length": 63.94, "rotation": 90, "y": 3.67 },
+	{ "name": "headbone", "parent": "bodybone", "length": 35.35, "rotation": -3.58, "x": 65.41, "y": 0.73 },
+	{ "name": "backArmbone", "parent": "bodybone", "length": 85.28, "rotation": 158.24, "x": 91.13, "y": 25.72 },
+	{ "name": "front_arm_bone", "parent": "bodybone", "length": 89.55, "rotation": 177.55, "x": 70.55, "y": -42.63 },
+	{ "name": "backLegbone", "parent": "root", "length": 56.25, "rotation": -76.84, "x": -33.67, "y": 69.7 },
+	{ "name": "front_leg_bone", "parent": "root", "length": 56.92, "rotation": -78.58, "x": 31, "y": 66.03 },
+	{ "name": "front_arm_bone2", "parent": "front_arm_bone", "length": 22.02, "rotation": -76.35, "x": 87.36, "y": 0.87 },
+	{ "name": "bodybone2", "parent": "bodybone", "length": 36.04, "rotation": 2.34, "x": 37.48, "y": 7.35 },
+	{ "name": "headbone2", "parent": "headbone", "length": 15.45, "rotation": 0.85, "x": 24.3, "y": 0.05 }
+],
+"slots": [
+	{ "name": "back_arm_slot", "bone": "backArmbone", "attachment": "切片15" },
+	{ "name": "back_leg_slot", "bone": "backLegbone", "attachment": "切片4" },
+	{ "name": "bodyslot", "bone": "bodybone", "attachment": "切片3" },
+	{ "name": "backArmbone", "bone": "backArmbone", "attachment": "backArmbone" },
+	{ "name": "front_leg_slot", "bone": "front_leg_bone", "attachment": "切片24" },
+	{ "name": "bodyskinItem", "bone": "bodybone", "attachment": "bodyskinItem" },
+	{ "name": "bodybone2", "bone": "bodybone2", "attachment": "bodybone2" },
+	{ "name": "front_arm_slot", "bone": "front_arm_bone2", "attachment": "front_arm_weapon_item" },
+	{ "name": "切片16", "bone": "front_arm_bone", "attachment": "切片16" },
+	{ "name": "headslot", "bone": "headbone", "attachment": "切片8" },
+	{ "name": "hatslot", "bone": "headbone2", "attachment": "hatslot" },
+	{ "name": "headbone2", "bone": "headbone2", "attachment": "headbone2" },
+	{ "name": "front_arm_bone", "bone": "front_arm_bone", "attachment": "front_arm_bone" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"back_arm_slot": {
+				"切片15": { "x": 41.36, "y": 9.39, "rotation": -174.49, "width": 96, "height": 50 }
+			},
+			"back_leg_slot": {
+				"切片4": { "x": 23.69, "y": 1.25, "rotation": 71.27, "width": 38, "height": 73 }
+			},
+			"bodyslot": {
+				"切片3": { "x": 42.63, "y": -13.23, "rotation": -90, "width": 99, "height": 120 }
+			},
+			"front_leg_slot": {
+				"切片24": { "x": 29.41, "y": 4.55, "rotation": 154.58, "width": 65, "height": 53 }
+			},
+			"headslot": {
+				"切片8": { "x": 19.44, "y": -4.68, "rotation": -86.42, "width": 42, "height": 42 }
+			},
+			"切片16": {
+				"切片16": { "x": 41.94, "y": -0.69, "rotation": 148.53, "width": 90, "height": 66 }
+			}
+		}
+	},
+	{
+		"name": "chef",
+		"attachments": {
+			"bodyskinItem": {
+				"bodyskinItem": {
+					"name": "切片2",
+					"x": 33.07,
+					"y": -8.82,
+					"scaleY": -1,
+					"rotation": -6.03,
+					"width": 119,
+					"height": 92
+				}
+			},
+			"front_arm_slot": {
+				"front_arm_weapon_item": { "name": "切片14", "x": 55.14, "y": 18.75, "rotation": 174.53, "width": 146, "height": 64 }
+			}
+		}
+	},
+	{
+		"name": "empty",
+		"attachments": {
+			"front_arm_slot": {
+				"front_arm_weapon_item": { "name": "切片18", "x": 57.06, "y": 8.18, "rotation": 165.64, "width": 131, "height": 55 }
+			}
+		}
+	},
+	{
+		"name": "police",
+		"attachments": {
+			"backArmbone": {
+				"backArmbone": { "name": "切片7", "x": 19.26, "y": 5.57, "rotation": 148.93, "width": 48, "height": 42 }
+			},
+			"bodybone2": {
+				"bodybone2": { "name": "切片17", "x": -39.52, "y": -13.1, "rotation": -101.79, "width": 97, "height": 41 }
+			},
+			"bodyskinItem": {
+				"bodyskinItem": {
+					"name": "切片6",
+					"x": 62.47,
+					"y": -10.29,
+					"scaleY": -1,
+					"rotation": -12.37,
+					"width": 88,
+					"height": 90
+				}
+			},
+			"front_arm_bone": {
+				"front_arm_bone": { "name": "切片9", "x": 9.64, "y": -2.42, "rotation": 68.87, "width": 38, "height": 39 }
+			},
+			"front_arm_slot": {
+				"front_arm_weapon_item": { "name": "切片13", "x": 62.99, "y": 0.27, "rotation": 168.8, "width": 144, "height": 41 }
+			},
+			"hatslot": {
+				"hatslot": { "name": "切片21", "x": 11.47, "y": -6.99, "rotation": -119.7, "width": 40, "height": 37 }
+			},
+			"headbone2": {
+				"headbone2": { "name": "切片22", "x": 13.16, "y": -8.21, "rotation": -87.27, "width": 18, "height": 18 }
+			}
+		}
+	},
+	{
+		"name": "rugby",
+		"attachments": {
+			"backArmbone": {
+				"backArmbone": { "name": "切片12", "x": 14.87, "y": 3.83, "rotation": -165.26, "width": 43, "height": 40 }
+			},
+			"bodybone2": {
+				"bodybone2": { "name": "切片1", "x": 3.28, "y": -22.7, "rotation": -92.34, "width": 103, "height": 122 }
+			},
+			"front_arm_bone": {
+				"front_arm_bone": { "name": "切片23", "x": 20.63, "y": 0.5, "rotation": 144.97, "width": 55, "height": 46 }
+			},
+			"front_arm_slot": {
+				"front_arm_weapon_item": { "name": "切片10", "x": 56.64, "y": 2.81, "rotation": 161.81, "width": 134, "height": 58 }
+			}
+		}
+	}
+],
+"animations": {
+	"attcak": {
+		"bones": {
+			"front_arm_bone": {
+				"rotate": [
+					{ "time": 0.6667, "value": -95.64 },
+					{ "time": 1.3333, "value": 87.02 },
+					{ "time": 1.6667, "value": -8.75 }
+				]
+			},
+			"backArmbone": {
+				"rotate": [
+					{ "time": 0.6667, "value": -70.11 },
+					{ "time": 1.6667, "value": -1.22 }
+				]
+			},
+			"backLegbone": {
+				"rotate": [
+					{ "time": 0.6667, "value": -49.25 },
+					{ "time": 1.6667, "value": -27.05 }
+				]
+			},
+			"front_leg_bone": {
+				"rotate": [
+					{ "time": 0.6667, "value": -1.7 },
+					{ "time": 1.6667, "value": 3.73 }
+				]
+			},
+			"headbone": {
+				"rotate": [
+					{ "time": 0.6667, "value": 10.5 },
+					{ "time": 1.6667, "value": 0.04 }
+				]
+			},
+			"bodybone": {
+				"rotate": [
+					{ "time": 0.6667, "value": 9.94 },
+					{ "time": 1.6667, "value": -0.27 }
+				]
+			},
+			"root": {
+				"translate": [
+					{ "time": 0.6667, "x": -22.66, "y": 2.06 },
+					{ "time": 1.6667 }
+				]
+			}
+		}
+	},
+	"idea": {
+		"bones": {
+			"bodybone": {
+				"rotate": [
+					{ "time": 0.4667, "value": -1.86 }
+				],
+				"translate": [
+					{ "time": 0.4667, "x": 0.66 },
+					{ "time": 0.5333, "x": -0.53, "y": -4.75 },
+					{ "time": 1, "x": 8.45, "y": -0.53 },
+					{ "time": 1.3333, "x": 2.11, "y": 0.53 },
+					{ "time": 1.7333, "x": -0.99, "y": -1.19 },
+					{ "time": 2, "x": 0.23, "y": -0.37 }
+				]
+			},
+			"backArmbone": {
+				"rotate": [
+					{ "time": 0.5333, "value": -4.1 }
+				]
+			},
+			"front_arm_bone": {
+				"rotate": [
+					{ "time": 0.5333, "value": -5.67 }
+				]
+			},
+			"front_leg_bone": {
+				"rotate": [
+					{ "time": 0.5333, "value": -9.89 },
+					{ "time": 1, "value": -1.29 }
+				]
+			},
+			"backLegbone": {
+				"rotate": [
+					{ "time": 0.5333, "value": -8.76 },
+					{ "time": 1, "value": -14.05 }
+				],
+				"translate": [
+					{ "time": 1, "x": 2.11, "y": -1.58 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,112 @@
+{
+"skeleton": {
+	"hash": "DOdGmm5Sqo8",
+	"spine": "4.2.43",
+	"x": -387.24,
+	"y": 9.63,
+	"width": 695.86,
+	"height": 608.67,
+	"images": "./long_arm/",
+	"audio": "./audio"
+},
+"bones": [
+	{ "name": "root", "x": 1.29, "y": 1.29 },
+	{ "name": "bodybone", "parent": "root", "length": 193.66, "rotation": 92.79, "x": -8.41, "y": 295.8 },
+	{ "name": "back_arm_top_bone", "parent": "bodybone", "length": 138.33, "rotation": 104.88, "x": 190.99, "y": 36.24 },
+	{ "name": "back_arm_bottom_bone", "parent": "back_arm_top_bone", "length": 159.61, "rotation": 25.06, "x": 140.83, "y": 4.69 },
+	{ "name": "back_hand_bone", "parent": "back_arm_bottom_bone", "length": 94.84, "rotation": 35.92, "x": 163.24, "y": 0.38 },
+	{ "name": "front_arm_top_bone", "parent": "bodybone", "length": 116.14, "rotation": -91.69, "x": 193.49, "y": -43.89 },
+	{ "name": "front_arm_bottom_bone", "parent": "front_arm_top_bone", "length": 148.66, "rotation": -70.28, "x": 118.7, "y": -1.32 },
+	{ "name": "front_hand_bone", "parent": "front_arm_bottom_bone", "length": 116.31, "rotation": -10.37, "x": 151.17, "y": -0.6 },
+	{ "name": "nick_bone", "parent": "bodybone", "length": 61.56, "rotation": 31.11, "x": 196.2, "y": -1.38 },
+	{ "name": "head_bone", "parent": "nick_bone", "length": 55.17, "rotation": -22.24, "x": 65.13, "y": 0.76 },
+	{ "name": "back_top_leg_bone", "parent": "bodybone", "length": 145.1, "rotation": 134.17, "x": -13.33, "y": 26.27 },
+	{ "name": "back_bottom_leg_bone", "parent": "back_top_leg_bone", "length": 144.53, "rotation": 51.62, "x": 145.1 },
+	{ "name": "front_top_leg_bone", "parent": "bodybone", "length": 129.2, "rotation": 174.08, "x": -12.29, "y": -20.25 },
+	{ "name": "front_bottom_leg_bone", "parent": "front_top_leg_bone", "length": 141.97, "rotation": 29.3, "x": 135.7, "y": -0.97 }
+],
+"slots": [
+	{ "name": "head_slot", "bone": "head_bone", "attachment": "head" },
+	{ "name": "back_bottom_leg_slot", "bone": "back_bottom_leg_bone", "attachment": "back_bottom_leg" },
+	{ "name": "front_hand_slot", "bone": "front_hand_bone", "attachment": "front_hand" },
+	{ "name": "back_top_leg_slot", "bone": "back_top_leg_bone", "attachment": "back_top_leg" },
+	{ "name": "nick_slot", "bone": "nick_bone", "attachment": "nick" },
+	{ "name": "back_hand", "bone": "back_hand_bone", "attachment": "back_hand" },
+	{ "name": "front_bottom_leg_slot", "bone": "front_bottom_leg_bone", "attachment": "front_bottom_leg" },
+	{ "name": "front_arm_top_slot", "bone": "front_arm_top_bone", "attachment": "front_arm_top" },
+	{ "name": "back_arm_top", "bone": "back_arm_top_bone", "attachment": "back_arm_top" },
+	{ "name": "back_arm_bottom", "bone": "back_arm_bottom_bone", "attachment": "back_arm_bottom" },
+	{ "name": "front_arm_bottom_slot", "bone": "front_arm_bottom_bone", "attachment": "front_arm_bottom" },
+	{ "name": "front_leg_top_slot", "bone": "front_top_leg_bone", "attachment": "front_leg_top" },
+	{ "name": "body_slot", "bone": "bodybone", "attachment": "body" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"back_arm_bottom": {
+				"back_arm_bottom": { "x": 75.92, "y": -5.76, "rotation": 177, "width": 201, "height": 203 }
+			},
+			"back_arm_top": {
+				"back_arm_top": { "x": 61.91, "y": 10.33, "rotation": 9.5, "width": 168, "height": 63 }
+			},
+			"back_bottom_leg_slot": {
+				"back_bottom_leg": { "x": 79.4, "y": -6.67, "rotation": 82.3, "width": 95, "height": 168 }
+			},
+			"back_hand": {
+				"back_hand": { "x": 51.39, "y": 1.12, "rotation": 111.14, "width": 112, "height": 136 }
+			},
+			"back_top_leg_slot": {
+				"back_top_leg": { "x": 64.77, "y": -0.18, "rotation": 133.92, "width": 129, "height": 136 }
+			},
+			"body_slot": {
+				"body": { "x": 85.3, "y": -11.01, "rotation": -93.28, "width": 100, "height": 241 }
+			},
+			"front_arm_bottom_slot": {
+				"front_arm_bottom": { "x": 77.14, "y": 3.81, "rotation": 92.85, "width": 95, "height": 175 }
+			},
+			"front_arm_top_slot": {
+				"front_arm_top": { "x": 46.84, "y": 0.01, "rotation": 130.78, "width": 109, "height": 155 }
+			},
+			"front_bottom_leg_slot": {
+				"front_bottom_leg": { "x": 69.78, "y": 3.68, "rotation": 64.56, "width": 114, "height": 158 }
+			},
+			"front_hand_slot": {
+				"front_hand": { "x": 68.11, "y": 6.62, "rotation": 107.91, "width": 126, "height": 148 }
+			},
+			"front_leg_top_slot": {
+				"front_leg_top": { "x": 59.25, "y": 3.65, "rotation": 92.86, "width": 180, "height": 179 }
+			},
+			"head_slot": {
+				"head": { "x": 28.49, "y": 4.97, "rotation": -100.86, "width": 92, "height": 88 }
+			},
+			"nick_slot": {
+				"nick": { "x": 25.66, "y": 0.6, "rotation": -123.02, "width": 110, "height": 103 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"front_arm_top_bone": {
+				"rotate": [
+					{ "time": 0.5, "value": 34.01 },
+					{ "time": 1, "value": -131.45 }
+				]
+			},
+			"back_arm_top_bone": {
+				"rotate": [
+					{ "time": 0.5, "value": -43.57 },
+					{ "time": 1, "value": 86.13 }
+				]
+			},
+			"back_arm_bottom_bone": {
+				"rotate": [
+					{ "time": 1, "value": 11.55 }
+				]
+			}
+		}
+	}
+}
+}
