@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://xpea2thbb05k"]
+[gd_scene load_steps=5 format=3 uid="uid://xpea2thbb05k"]
 
+[ext_resource type="Script" uid="uid://oogtcm0g52tp" path="res://scenes/npc/enemy/long_arm_monst.gd" id="1_ctyw7"]
 [ext_resource type="SpineAtlasResource" uid="uid://bfuo6jno1tqmo" path="res://assets/enemy/long_arm_monst/skeleton.atlas" id="1_ridpa"]
 [ext_resource type="SpineSkeletonFileResource" uid="uid://cpejyv2vqvxbi" path="res://assets/enemy/long_arm_monst/skeleton.spine-json" id="2_ctyw7"]
 
@@ -9,10 +10,11 @@ skeleton_file_res = ExtResource("2_ctyw7")
 
 [node name="LongArmMonst" type="Node2D"]
 scale = Vector2(-1, 1)
+script = ExtResource("1_ctyw7")
 
 [node name="SpineSprite" type="SpineSprite" parent="."]
 skeleton_data_res = SubResource("SpineSkeletonDataResource_ogpag")
 preview_skin = "Default"
-preview_animation = "-- Empty --"
+preview_animation = "animation"
 preview_frame = false
 preview_time = 0.0

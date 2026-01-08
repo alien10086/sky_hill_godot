@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://dxjnxt1keathj"]
+[gd_scene load_steps=5 format=3 uid="uid://dxjnxt1keathj"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://cdsx787gksajb" path="res://assets/enemy/big_fat_monst/skeleton.atlas" id="1_2ldrr"]
+[ext_resource type="Script" uid="uid://ca8wxkxsvplyl" path="res://scenes/npc/enemy/big_fat_monst.gd" id="1_107he"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://cxcqhei3nohuo" path="res://assets/enemy/big_fat_monst/skeleton.spine-json" id="2_107he"]
+
+[sub_resource type="SpineSkeletonDataResource" id="SpineSkeletonDataResource_6wav1"]
+atlas_res = ExtResource("1_2ldrr")
+skeleton_file_res = ExtResource("2_107he")
 
 [node name="BigFatMonst" type="Node2D"]
+script = ExtResource("1_107he")
+
+[node name="SpineSprite" type="SpineSprite" parent="."]
+skeleton_data_res = SubResource("SpineSkeletonDataResource_6wav1")
+preview_skin = "Default"
+preview_animation = "attcak"
+preview_frame = false
+preview_time = 0.0
