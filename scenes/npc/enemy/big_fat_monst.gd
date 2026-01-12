@@ -1,9 +1,11 @@
 extends Node2D
 @onready var spine_sprite: SpineSprite = $SpineSprite
+@onready var area_2d: Area2D = $Area2D
 
 signal monster_clicked(monster)
 
 func _ready() -> void:
+	area_2d.input_event.connect(_on_area_input_event)
 	#_setup_clickable_area()
 	# 定义可选皮肤列表
 	#var skins = ["default", "chef", "empty", "police"]

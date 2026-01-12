@@ -238,6 +238,16 @@ func _process(_delta):
 		camera.position.y = lerp(current_camera_y, target_y, follow_smoothness)
 
 func _unhandled_input(event):
+	# 处理退出/关闭 UI 的全局快捷键
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_ESCAPE:
+			if attack_choice.visible:
+				attack_choice.visible = false
+				return # 消费该事件
+			if backpack.visible:
+				_on_bag_close() # 使用现有的关闭逻辑
+				return # 消费该事件
+
 	# 如果背包打开，拦截所有针对游戏世界的输入（如相机缩放、拖拽）
 	if backpack.visible:
 		return
