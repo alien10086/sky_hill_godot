@@ -3,7 +3,7 @@ extends Node2D
 
 func _ready() -> void:
 	set_skin("chef") # 测试设置皮肤
-	play_animation("attcak", true)
+	#play_animation("attcak", true)
 
 # 设置皮肤函数
 func set_skin(skin_name: String) -> void:
