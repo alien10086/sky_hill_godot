@@ -11,6 +11,13 @@ const ROOM_TEMPLATES = [
 	"res://scenes/world/normal_room_template/base_room_3.tscn",
 	"res://scenes/world/normal_room_template/base_room_4.tscn"
 ]
+
+# 怪物模板路径
+const MONSTER_TEMPLATES = [
+	"res://scenes/npc/enemy/bigFatMonst.tscn",
+	"res://scenes/npc/enemy/longArmMonst.tscn"
+]
+
 @onready var left_room: TemplateRoomUI = $leftRoom
 @onready var right_room: TemplateRoomUI = $rightRoom
 @onready var center_room: Node2D = $CenterRoom
@@ -56,6 +63,9 @@ func _replace_left_room_templates():
 	new_left_room.set_room_ornament_offset(-80)
 	left_room = new_left_room
 	
+	# 生成怪物
+	_spawn_random_monster_in_room(new_left_room)
+	
 func _replace_right_room_templates():
 	# 随机选择一个房间模板
 	var random_template_index = randi() % ROOM_TEMPLATES.size()
@@ -74,6 +84,28 @@ func _replace_right_room_templates():
 	new_right_room.set_room_ornament_offset(80)
 	right_room = new_right_room
 	
+	# 生成怪物
+	_spawn_random_monster_in_room(new_right_room)
+	
+func _spawn_random_monster_in_room(room_node: Node2D):
+	# 随机选择一个怪物模板
+	var random_monster_index = randi() % MONSTER_TEMPLATES.size()
+	var monster_path = MONSTER_TEMPLATES[random_monster_index]
+	var monster_scene = load(monster_path)
+	
+	# 实例化怪物
+	var monster = monster_scene.instantiate()
+	# 将怪物添加到房间中
+	room_node.add_child(monster)
+	
+	monster.random_skin()
+	
+	#random_skin
+	
+	# 设置怪物的初始位置（通常在房间中心或指定位置）
+	# 这里假设房间内有一个默认的中心点或者我们手动设置一个位置
+	monster.position = Vector2(200, 0) # 这里的坐标可能需要根据房间内部结构调整
+
 func set_right_room_bg(number:int):
 	
 	var wall_paper_data: WallpaperData =  wall_paper_manager.get_wallpaper_by_id(number)
