@@ -31,6 +31,7 @@ var zoom_label: Label
 @onready var bag: Control = $CanvasLayer/Bag
 @onready var backpack: Control = $CanvasLayer/Backpack
 @onready var panel: Panel = $CanvasLayer/Panel
+@onready var attack_choice: Control = $CanvasLayer/AttackChoice
 
 
 @onready var astar: MyAstar = $astar
@@ -53,6 +54,7 @@ func _on_bag_close():
 
 
 func _ready():
+	get_tree().node_added.connect(_on_node_added)
 	bag.bag_open.connect(_on_bag_open)
 	bag.bag_close.connect(_on_bag_close)
 	
@@ -73,6 +75,12 @@ func _ready():
 	# 设置初始相机位置为玩家位置
 	if player:
 		camera.position = Vector2(camera.position.x, player.global_position.y)
+
+func _on_node_added(node: Node):
+	if node.is_in_group("monsters"):
+		if node.has_signal("monster_clicked"):
+			if not node.monster_clicked.is_connected(_on_monster_clicked):
+				node.monster_clicked.connect(_on_monster_clicked)
 
 func _instantiate_levels():
 	# 清除已存在的实例
@@ -126,6 +134,15 @@ func _instantiate_levels():
 			astar.connect_points(stair_bottom_id_4, prev_stair_id)
 			
 	queue_redraw()
+
+func _on_monster_clicked(monster):
+	print("点击了怪物: ", monster.name)
+	attack_choice.visible = true
+	# 根据怪物的脚本名或属性判断显示哪个 UI
+	if "big_fat_monst" in monster.name.to_lower() or "bigfatmonst" in monster.name.to_lower():
+		attack_choice.show_monst_ui("big_fat_monst")
+	elif "long_arm_monst" in monster.name.to_lower() or "longarmmonst" in monster.name.to_lower():
+		attack_choice.show_monst_ui("long_arm_monst")
 			#
 #func _draw():
 	##draw_rect(Rect2(0, 0, 1000, 1000), Color.RED) # 测试用

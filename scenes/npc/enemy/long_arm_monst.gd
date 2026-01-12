@@ -1,9 +1,30 @@
 extends Node2D
 @onready var spine_sprite: SpineSprite = $SpineSprite
+@onready var area_2d: Area2D = $Area2D
+
+
+signal monster_clicked(monster)
 
 func _ready() -> void:
+	area_2d.input_event.connect(_on_area_input_event)
+	#_setup_clickable_area()
 	pass
 	#play_animation("animation", true)
+
+#func _setup_clickable_area():
+	#var area = Area2D.new()
+	#var collision = CollisionShape2D.new()
+	#var shape = RectangleShape2D.new()
+	#shape.size = Vector2(100, 250) # 根据怪物大小调整
+	#collision.shape = shape
+	#area.add_child(collision)
+	#add_child(area)
+	#area.input_pickable = true
+	#area.input_event.connect(_on_area_input_event)
+
+func _on_area_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		monster_clicked.emit(self)
 	
 func random_skin():
 	pass

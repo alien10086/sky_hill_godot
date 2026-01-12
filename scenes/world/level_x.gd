@@ -95,6 +95,7 @@ func _spawn_random_monster_in_room(room_node: Node2D):
 	
 	# 实例化怪物
 	var monster = monster_scene.instantiate()
+	monster.add_to_group("monsters")
 	# 将怪物添加到房间中
 	room_node.add_child(monster)
 	
