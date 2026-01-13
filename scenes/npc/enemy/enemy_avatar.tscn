@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://wdtxse17n4vu"]
+
+[ext_resource type="Script" uid="uid://cnl2t2bo3xh3x" path="res://scenes/npc/enemy/enemy_avatar.gd" id="1_sxnrn"]
+[ext_resource type="Texture2D" uid="uid://d0tk8662fshwo" path="res://assets/ui/player_info/ui_backpack_heart.png" id="2_b31qh"]
+[ext_resource type="Texture2D" uid="uid://by56cxokfv00a" path="res://assets/ui/player_info/ui_backpack_heart2.png" id="3_o0oh6"]
+[ext_resource type="Texture2D" uid="uid://cawx4ky2tlgky" path="res://assets/ui/player_info/ui_backpack_head.png" id="4_uxo83"]
+[ext_resource type="Texture2D" uid="uid://ual3ckersvco" path="res://assets/ui/enemy/big_fat_head_ui.png" id="5_vvxbs"]
+
+[node name="EnemyAvatar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sxnrn")
+
+[node name="HeartHub" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HeartHub"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 11.0
+offset_right = 271.0
+offset_bottom = 154.0
+value = 60.0
+texture_under = ExtResource("2_b31qh")
+texture_progress = ExtResource("2_b31qh")
+tint_progress = Color(2.5575337, 0.6996819, 0.92487603, 1)
+
+[node name="Label" type="Label" parent="HeartHub"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 50.0
+offset_right = 228.0
+offset_bottom = 73.0
+text = "100/100"
+
+[node name="TextureRect" type="TextureRect" parent="HeartHub"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 39.0
+offset_right = 283.0
+offset_bottom = 88.0
+texture = ExtResource("3_o0oh6")
+
+[node name="Head" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Head"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 138.0
+offset_bottom = 138.0
+texture = ExtResource("4_uxo83")
+
+[node name="TextureRect2" type="TextureRect" parent="Head"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 7.0
+offset_right = 128.0
+offset_bottom = 132.0
+texture = ExtResource("5_vvxbs")
