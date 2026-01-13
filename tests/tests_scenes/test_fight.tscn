@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfyopn0sjynaq"]
+[gd_scene load_steps=5 format=3 uid="uid://cfyopn0sjynaq"]
 
+[ext_resource type="Script" uid="uid://cx6m0x1p5m0n1" path="res://tests/tests_scenes/battle_manager.gd" id="1_battle"]
 [ext_resource type="PackedScene" uid="uid://ct1hmjoitapqo" path="res://scenes/npc/player/spineFighter.tscn" id="1_p35rh"]
 [ext_resource type="PackedScene" uid="uid://xpea2thbb05k" path="res://scenes/npc/enemy/longArmMonst.tscn" id="2_a6s0n"]
 [ext_resource type="PackedScene" uid="uid://dxjnxt1keathj" path="res://scenes/npc/enemy/bigFatMonst.tscn" id="3_1xv3f"]
 
 [node name="TestFight" type="Node2D"]
+script = ExtResource("1_battle")
 
 [node name="SpineFighter" parent="." instance=ExtResource("1_p35rh")]
 position = Vector2(406, 729)
@@ -15,4 +17,23 @@ scale = Vector2(1, 1)
 
 [node name="BigFatMonst" parent="." instance=ExtResource("3_1xv3f")]
 position = Vector2(900, 621)
-scale = Vector2(2, 2)
+	scale = Vector2(2, 2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StatusLabel" type="Label" parent="CanvasLayer"]
+offset_left = 687.0
+offset_top = 74.0
+offset_right = 1256.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 50
+text = "战斗开始"
+horizontal_alignment = 1
+
+[node name="PlayerHP" type="Label" parent="CanvasLayer"]
+offset_left = 100.0
+offset_top = 900.0
+offset_right = 400.0
+offset_bottom = 969.0
+theme_override_font_sizes/font_size = 40
+text = "玩家 HP: 200"
