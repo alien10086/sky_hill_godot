@@ -36,3 +36,19 @@ func attack(target):
 	await get_tree().create_timer(0.5).timeout
 	if is_instance_valid(target):
 		target.take_damage(attack_power)
+
+## 切换武器
+func change_weapon(weapon: WeaponData):
+	if not weapon:
+		return
+	
+	# 1. 切换 Spine 皮肤
+	if spine_sprite:
+		var skeleton = spine_sprite.get_skeleton()
+		# 假设武器名对应 Spine 中的皮肤名
+		skeleton.set_skin_by_name(weapon.name)
+		skeleton.set_to_setup_pose()
+	
+	# 2. 更新攻击力 (这里简单取平均值，实际可以根据需求调整)
+	attack_power = (weapon.damage_min + weapon.damage_max) / 2.0
+	print("切换武器: %s, 基础攻击力更新为: %.1f" % [weapon.name, attack_power])

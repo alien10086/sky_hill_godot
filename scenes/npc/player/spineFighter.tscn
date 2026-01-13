@@ -14,7 +14,7 @@ script = ExtResource("1_fighter")
 
 [node name="SpineSprite" type="SpineSprite" parent="."]
 skeleton_data_res = SubResource("SpineSkeletonDataResource_j3ya8")
-preview_skin = "bat"
+preview_skin = "battle_shovel"
 preview_animation = "-- Empty --"
 preview_frame = true
 preview_time = 0.0

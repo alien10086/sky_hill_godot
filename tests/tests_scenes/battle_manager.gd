@@ -12,19 +12,47 @@ var current_state = BattleState.START
 # UI 引用
 @onready var status_label: Label = $CanvasLayer/StatusLabel
 @onready var player_hp_label: Label = $CanvasLayer/PlayerHP
+@onready var avatar_hub: Control = $CanvasLayer/AvatarHub
+@onready var enemy_avatar: Control = $CanvasLayer/EnemyAvatar
+
 
 func _ready():
 	# 初始化敌人列表
+	# 加载并给玩家换一个武器
+	var wm = WeaponManager.get_instance()
+	var weapons = wm.load_all_weapons()
+	if not weapons.is_empty():
+		# 这里默认给玩家换第一个武器，你也可以根据需要选择特定的
+		player.change_weapon(weapons[10])
 	
 	big_fat_monst.monster_clicked.connect(_on_monster_clicked)
 	big_fat_monst.died.connect(_on_monster_died)
-			# 动态创建敌人的血条/标签 (可选)
+	# 连接怪物血量改变信号到 UI
+	big_fat_monst.hp_changed.connect(_on_monster_hp_changed)
+	
+	# 随机设置怪物皮肤
+	big_fat_monst.random_skin()
+	
+	# 初始化 UI 显示
+	if enemy_avatar:
+		enemy_avatar.set_avatar_type(true) # Big Fat
+		enemy_avatar.update_hp(big_fat_monst.current_hp, big_fat_monst.max_hp)
 	
 	player.hp_changed.connect(_on_player_hp_changed)
+	# 初始化玩家 UI
+	if avatar_hub:
+		avatar_hub._on_health_changed(player.current_hp, player.max_hp)
+		
 	_start_battle()
 
-func _on_player_hp_changed(current, max):
-	player_hp_label.text = "玩家 HP: %d / %d" % [current, max]
+func _on_player_hp_changed(current, max_val):
+	player_hp_label.text = "玩家 HP: %d / %d" % [current, max_val]
+	if avatar_hub:
+		avatar_hub._on_health_changed(current, max_val)
+
+func _on_monster_hp_changed(current, max_val):
+	if enemy_avatar:
+		enemy_avatar.update_hp(current, max_val)
 
 func _start_battle():
 	current_state = BattleState.PLAYER_TURN
@@ -55,7 +83,7 @@ func _enemy_turn():
 	#for enemy in enemies:
 	if is_instance_valid(big_fat_monst):
 		_update_status(big_fat_monst.name + " 正在攻击玩家")
-		big_fat_monst.play_animation("attack", false)
+		big_fat_monst.play_animation("attcak", false)
 		await get_tree().create_timer(0.5).timeout
 		player.take_damage(big_fat_monst.attack_power)
 		await get_tree().create_timer(1.0).timeout
