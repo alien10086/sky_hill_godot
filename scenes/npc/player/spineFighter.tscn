@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ct1hmjoitapqo"]
+[gd_scene load_steps=6 format=3 uid="uid://ct1hmjoitapqo"]
 
-[ext_resource type="Script" uid="uid://dp6m0x1p5m0n1" path="res://scenes/npc/player/spine_fighter.gd" id="1_fighter"]
+[ext_resource type="Script" uid="uid://cstx3x7goyb6i" path="res://scenes/npc/player/spine_fighter.gd" id="1_fighter"]
 [ext_resource type="SpineAtlasResource" uid="uid://b7fidy6hatlp1" path="res://assets/fight_spine/skeleton.atlas" id="1_ij7dp"]
 [ext_resource type="SpineSkeletonFileResource" uid="uid://dwe0ptnckvaer" path="res://assets/fight_spine/skeleton.spine-json" id="2_j3ya8"]
 [ext_resource type="Script" uid="uid://4fhqd374w0oh" path="res://scenes/npc/player/spine_sprite.gd" id="3_5iq7c"]
@@ -14,8 +14,8 @@ script = ExtResource("1_fighter")
 
 [node name="SpineSprite" type="SpineSprite" parent="."]
 skeleton_data_res = SubResource("SpineSkeletonDataResource_j3ya8")
-preview_skin = "chain_sword"
-preview_animation = "attack"
+preview_skin = "bat"
+preview_animation = "-- Empty --"
 preview_frame = true
 preview_time = 0.0
 script = ExtResource("3_5iq7c")

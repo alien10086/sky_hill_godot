@@ -1,8 +1,11 @@
 extends Node2D
+
+class_name BigFatMonstUI
+
 @onready var spine_sprite: SpineSprite = $SpineSprite
 @onready var area_2d: Area2D = $Area2D
 
-const ENEMY_AVATAR = preload("res://scenes/npc/enemy/enemy_avatar.tscn")
+#const ENEMY_AVATAR = preload("res://scenes/npc/enemy/enemy_avatar.tscn")
 
 # 战斗属性
 @export var max_hp: float = 100.0
@@ -17,16 +20,16 @@ signal hp_changed(current, max)
 
 func _ready() -> void:
 	current_hp = max_hp
-	_setup_hp_ui()
+	#_setup_hp_ui()
 	area_2d.input_event.connect(_on_area_input_event)
 
-func _setup_hp_ui():
-	hp_ui = ENEMY_AVATAR.instantiate()
-	add_child(hp_ui)
-	hp_ui.scale = Vector2(0.5, 0.5) # UI 默认很大，缩放一下
-	hp_ui.position = Vector2(-150, -450) # 怪物头顶
-	hp_ui.set_avatar_type(true) # Big Fat
-	hp_ui.update_hp(current_hp, max_hp)
+#func _setup_hp_ui():
+	#hp_ui = ENEMY_AVATAR.instantiate()
+	#add_child(hp_ui)
+	#hp_ui.scale = Vector2(0.5, 0.5) # UI 默认很大，缩放一下
+	#hp_ui.position = Vector2(-150, -450) # 怪物头顶
+	#hp_ui.set_avatar_type(true) # Big Fat
+	#hp_ui.update_hp(current_hp, max_hp)
 
 func take_damage(amount: float):
 	current_hp -= amount

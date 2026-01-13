@@ -5,7 +5,9 @@ enum BattleState { START, PLAYER_TURN, ENEMY_TURN, BUSY, WIN, LOSE }
 var current_state = BattleState.START
 
 @onready var player = $SpineFighter
-@onready var enemies = []
+#@onready var enemies = []
+@onready var big_fat_monst: BigFatMonstUI = $BigFatMonst
+
 
 # UI 引用
 @onready var status_label: Label = $CanvasLayer/StatusLabel
@@ -13,13 +15,9 @@ var current_state = BattleState.START
 
 func _ready():
 	# 初始化敌人列表
-	for child in get_children():
-		if child.is_in_group("monsters") or child.name.contains("Monst"):
-			enemies.append(child)
-			if not child.is_in_group("monsters"):
-				child.add_to_group("monsters")
-			child.monster_clicked.connect(_on_monster_clicked)
-			child.died.connect(_on_monster_died)
+	
+	big_fat_monst.monster_clicked.connect(_on_monster_clicked)
+	big_fat_monst.died.connect(_on_monster_died)
 			# 动态创建敌人的血条/标签 (可选)
 	
 	player.hp_changed.connect(_on_player_hp_changed)
@@ -43,7 +41,7 @@ func _on_monster_clicked(monster):
 	await player.attack(monster)
 	
 	# 检查是否胜利
-	if enemies.is_empty():
+	if big_fat_monst.current_hp <= 0 :
 		_battle_win()
 	else:
 		# 切换到敌人回合
@@ -54,24 +52,25 @@ func _enemy_turn():
 	current_state = BattleState.ENEMY_TURN
 	_update_status("敌人回合...")
 	
-	for enemy in enemies:
-		if is_instance_valid(enemy):
-			_update_status(enemy.name + " 正在攻击玩家")
-			enemy.play_animation("attack", false)
-			await get_tree().create_timer(0.5).timeout
-			player.take_damage(enemy.attack_power)
-			await get_tree().create_timer(1.0).timeout
-			
-			if player.current_hp <= 0:
-				_battle_lose()
-				return
+	#for enemy in enemies:
+	if is_instance_valid(big_fat_monst):
+		_update_status(big_fat_monst.name + " 正在攻击玩家")
+		big_fat_monst.play_animation("attack", false)
+		await get_tree().create_timer(0.5).timeout
+		player.take_damage(big_fat_monst.attack_power)
+		await get_tree().create_timer(1.0).timeout
+		
+		if player.current_hp <= 0:
+			_battle_lose()
+			return
 	
 	# 回到玩家回合
 	_start_battle()
 
 func _on_monster_died(monster):
-	if monster in enemies:
-		enemies.erase(monster)
+	#if monster in enemies:
+	#enemies.erase(monster)
+	pass
 
 func _battle_win():
 	current_state = BattleState.WIN

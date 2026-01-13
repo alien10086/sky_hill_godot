@@ -12,7 +12,7 @@ func _ready():
 	# anim_state.set_animation("attack", true, 0)
 	
 	# 开始武器轮播
-	_start_weapon_carousel()
+	#_start_weapon_carousel()
 
 func _start_weapon_carousel():
 	var weapons = weapon_manager.all_weapons

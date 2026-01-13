@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfyopn0sjynaq"]
+[gd_scene load_steps=6 format=3 uid="uid://cfyopn0sjynaq"]
 
-[ext_resource type="Script" uid="uid://cx6m0x1p5m0n1" path="res://tests/tests_scenes/battle_manager.gd" id="1_battle"]
+[ext_resource type="Script" uid="uid://dm7wsxwumw32u" path="res://tests/tests_scenes/battle_manager.gd" id="1_battle"]
 [ext_resource type="PackedScene" uid="uid://ct1hmjoitapqo" path="res://scenes/npc/player/spineFighter.tscn" id="1_p35rh"]
-[ext_resource type="PackedScene" uid="uid://xpea2thbb05k" path="res://scenes/npc/enemy/longArmMonst.tscn" id="2_a6s0n"]
 [ext_resource type="PackedScene" uid="uid://dxjnxt1keathj" path="res://scenes/npc/enemy/bigFatMonst.tscn" id="3_1xv3f"]
+[ext_resource type="PackedScene" uid="uid://drmmjx5y1axeb" path="res://scenes/player_info/avatar_hub.tscn" id="4_h8mnt"]
+[ext_resource type="PackedScene" uid="uid://wdtxse17n4vu" path="res://scenes/npc/enemy/enemy_avatar.tscn" id="5_wwwhq"]
 
 [node name="TestFight" type="Node2D"]
 script = ExtResource("1_battle")
@@ -11,15 +12,17 @@ script = ExtResource("1_battle")
 [node name="SpineFighter" parent="." instance=ExtResource("1_p35rh")]
 position = Vector2(406, 729)
 
-[node name="LongArmMonst" parent="." instance=ExtResource("2_a6s0n")]
-position = Vector2(1389, 927)
-scale = Vector2(1, 1)
-
 [node name="BigFatMonst" parent="." instance=ExtResource("3_1xv3f")]
-position = Vector2(900, 621)
-	scale = Vector2(2, 2)
+position = Vector2(1356, 901)
+scale = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AvatarHub" parent="CanvasLayer" instance=ExtResource("4_h8mnt")]
+offset_left = 78.0
+offset_top = 65.0
+offset_right = -1543.0
+offset_bottom = -831.0
 
 [node name="StatusLabel" type="Label" parent="CanvasLayer"]
 offset_left = 687.0
@@ -37,3 +40,9 @@ offset_right = 400.0
 offset_bottom = 969.0
 theme_override_font_sizes/font_size = 40
 text = "玩家 HP: 200"
+
+[node name="EnemyAvatar" parent="CanvasLayer" instance=ExtResource("5_wwwhq")]
+offset_left = 1384.0
+offset_top = 70.0
+offset_right = -228.0
+offset_bottom = -855.0
