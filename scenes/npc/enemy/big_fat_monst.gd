@@ -48,7 +48,7 @@ func die():
 	queue_free()
 	
 func random_skin():
-	var skins = ["default", "chef", "empty", "police"]
+	var skins = [ "chef", "rugby", "police"]
 	# 随机选择一个皮肤
 	var random_skin = skins[randi() % skins.size()]
 	set_skin(random_skin)

@@ -16,7 +16,7 @@ script = ExtResource("1_107he")
 
 [node name="SpineSprite" type="SpineSprite" parent="."]
 skeleton_data_res = SubResource("SpineSkeletonDataResource_6wav1")
-preview_skin = "Default"
+preview_skin = "rugby"
 preview_animation = "-- Empty --"
 preview_frame = false
 preview_time = 0.0

@@ -3,6 +3,7 @@ extends Node2D
 enum BattleState { START, PLAYER_TURN, ENEMY_TURN, BUSY, WIN, LOSE }
 
 var current_state = BattleState.START
+var current_target = null
 
 @onready var player = $SpineFighter
 #@onready var enemies = []
@@ -65,8 +66,16 @@ func _ready():
 	# 连接武器槽点击信号
 	left_weapon_slot.weapon_clicked.connect(_on_weapon_selected)
 	right_weapon_slot.weapon_clicked.connect(_on_weapon_selected)
+	
+	# 连接部位选择信号
+	if attack_choice:
+		attack_choice.part_selected.connect(_on_attack_part_selected)
 		
 	_start_battle()
+
+func _on_attack_part_selected(hit_chance: float, damage_multiplier: float):
+	if current_target:
+		_execute_attack(current_target, hit_chance, damage_multiplier)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"): # 通常是 ESC
@@ -105,6 +114,7 @@ func _on_monster_clicked(monster):
 	if current_state != BattleState.PLAYER_TURN:
 		return
 	
+	current_target = monster
 	# 显示攻击选择 UI
 	if attack_choice:
 		attack_choice.visible = true
@@ -126,16 +136,27 @@ func _on_monster_clicked(monster):
 		# 如果没有选择 UI，则执行默认攻击（兼容逻辑）
 		_execute_attack(monster)
 
-func _execute_attack(monster):
+func _execute_attack(monster, hit_chance: float = 1.0, damage_multiplier: float = 1.0):
 	current_state = BattleState.BUSY
 	_set_weapon_slots_visible(false)
 	if attack_choice:
 		attack_choice.visible = false
 	
-	_update_status("正在攻击 " + monster.name)
+	# 判定是否命中
+	var is_hit = randf() <= hit_chance
 	
-	# 玩家攻击
-	await player.attack(monster)
+	if is_hit:
+		var final_damage = player.attack_power * damage_multiplier
+		_update_status("攻击命中！造成 %.1f 伤害" % final_damage)
+		# 临时修改攻击力以应用倍率
+		var original_power = player.attack_power
+		player.attack_power = final_damage
+		await player.attack(monster)
+		player.attack_power = original_power
+	else:
+		_update_status("攻击落空！")
+		# 播放攻击动画但没有伤害（或者播放一个特殊的 miss 效果）
+		await player.attack(null) 
 	
 	# 检查是否胜利
 	if big_fat_monst.current_hp <= 0 :

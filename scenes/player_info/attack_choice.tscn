@@ -5,10 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://b7ukm2l43h6bn" path="res://assets/ui/enemy/ui_big_fat_1.png" id="3_bpvew"]
 [ext_resource type="Texture2D" uid="uid://csuhitevgy1k2" path="res://assets/ui/enemy/ui_long_arm_0.png" id="4_1eioj"]
 [ext_resource type="Texture2D" uid="uid://bblavby4djw48" path="res://assets/ui/enemy/ui_long_arm_1.png" id="5_7jdie"]
-[ext_resource type="Texture2D" uid="uid://chtsv8yun8u6j" path="res://assets/ui/enemy/ui_long_arm_2.png" id="6_p8qse"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhrtj"]
 bg_color = Color(0.3647059, 0.3647059, 0.3647059, 0.5254902)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bhrtj"]
+font_size = 40
+font_color = Color(0.91795665, 0, 0.1741277, 1)
 
 [node name="AttackChoice" type="Control"]
 layout_mode = 3
@@ -50,32 +53,60 @@ offset_right = 1345.0
 offset_bottom = 680.0
 texture_normal = ExtResource("3_bpvew")
 
+[node name="bigFatLabel1" type="Label" parent="big_fat_monst_ui"]
+layout_mode = 0
+offset_left = 674.0
+offset_top = 286.0
+offset_right = 754.0
+offset_bottom = 341.0
+text = "70%"
+label_settings = SubResource("LabelSettings_bhrtj")
+
+[node name="bigFatLabel2" type="Label" parent="big_fat_monst_ui"]
+layout_mode = 0
+offset_left = 1162.0
+offset_top = 295.0
+offset_right = 1242.0
+offset_bottom = 350.0
+text = "30%"
+label_settings = SubResource("LabelSettings_bhrtj")
+
 [node name="long_arm_monst_ui" type="Control" parent="."]
 visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="longArmLabel1" type="Label" parent="long_arm_monst_ui"]
+layout_mode = 0
+offset_left = 679.0
+offset_top = 237.0
+offset_right = 759.0
+offset_bottom = 292.0
+text = "25%"
+label_settings = SubResource("LabelSettings_bhrtj")
+
+[node name="longArmLabel2" type="Label" parent="long_arm_monst_ui"]
+layout_mode = 0
+offset_left = 1159.0
+offset_top = 238.0
+offset_right = 1239.0
+offset_bottom = 293.0
+text = "30%"
+label_settings = SubResource("LabelSettings_bhrtj")
+
 [node name="TextureButton" type="TextureButton" parent="long_arm_monst_ui"]
 layout_mode = 0
-offset_left = 412.0
-offset_top = 332.0
-offset_right = 717.0
-offset_bottom = 703.0
+offset_left = 541.0
+offset_top = 330.0
+offset_right = 846.0
+offset_bottom = 701.0
 texture_normal = ExtResource("4_1eioj")
 
 [node name="TextureButton2" type="TextureButton" parent="long_arm_monst_ui"]
 layout_mode = 0
-offset_left = 846.0
-offset_top = 329.0
-offset_right = 1151.0
-offset_bottom = 700.0
+offset_left = 1036.0
+offset_top = 333.0
+offset_right = 1341.0
+offset_bottom = 704.0
 texture_normal = ExtResource("5_7jdie")
-
-[node name="TextureButton3" type="TextureButton" parent="long_arm_monst_ui"]
-layout_mode = 0
-offset_left = 1338.0
-offset_top = 335.0
-offset_right = 1643.0
-offset_bottom = 706.0
-texture_normal = ExtResource("6_p8qse")
