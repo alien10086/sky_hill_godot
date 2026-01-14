@@ -2,6 +2,7 @@ extends Control
 
 class_name WeaponSlot
 signal item_dropped(old_item:ItemData, new_item:ItemData)
+signal weapon_clicked(weapon: WeaponData, slot: WeaponSlot)
 
 @onready var base_game_item: BaseGameItemUI = $BaseGameItem
 @onready var label: Label = $Label
@@ -19,31 +20,47 @@ var is_using_attack_1: bool = true
 
 func open_fighter_model():
 	texture_button.visible = true
-	texture_button.texture_normal = UI_ATTACK_2
-	
+	base_game_item.visible = false
+	texture_rect.visible = false
+	# 初始化显示
+	texture_button.texture_normal = UI_ATTACK_1 if is_using_attack_1 else UI_ATTACK_2
+
 func close_fighter_model():
 	texture_button.visible = false
-	texture_button.texture_normal = UI_ATTACK_2
-	
-
+	base_game_item.visible = true
 
 func _ready() -> void:
 	if texture_button:
 		texture_button.pressed.connect(_on_texture_button_pressed)
 		# 初始化显示
-		texture_button.texture_normal = UI_ATTACK_2
+		texture_button.texture_normal = UI_ATTACK_1 if is_using_attack_1 else UI_ATTACK_2
 	
 	if input_item_data:
 		base_game_item.input_item_data = input_item_data
 		base_game_item.input_text = ""
 		
 func _on_texture_button_pressed():
-	is_using_attack_1 = !is_using_attack_1
+	if is_using_attack_1: # 如果已经选中，则不再处理（或者根据需求切换攻击方式）
+		return
+		
+	set_selected(true)
+	
+	if input_item_data:
+		var wm = WeaponManager.get_instance()
+		var weapon = wm.get_weapon_by_name(input_item_data.identity)
+		if weapon:
+			weapon_clicked.emit(weapon, self)
+			print("切换武器为: ", weapon.name)
+		else:
+			print("未找到对应的武器数据: ", input_item_data.identity)
+
+# 设置选中状态
+func set_selected(selected: bool):
+	is_using_attack_1 = selected
 	if texture_button:
 		texture_button.texture_normal = UI_ATTACK_1 if is_using_attack_1 else UI_ATTACK_2
-	print("切换攻击图标，当前是否为攻击1: ", is_using_attack_1)
-		
-	
+	print("槽位 %s 选中状态更新为: %s" % [name, is_using_attack_1])
+
 func  show_plus():
 	base_game_item.visible = false
 	label.visible = false
