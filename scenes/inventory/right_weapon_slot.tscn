@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc71f10ac1l2b"]
+[gd_scene load_steps=6 format=3 uid="uid://bc71f10ac1l2b"]
 
 [ext_resource type="Script" uid="uid://4nyewqowpi0w" path="res://scenes/inventory/left_weapon_slot.gd" id="1_bsaa0"]
 [ext_resource type="PackedScene" uid="uid://0clqwb0ftmqk" path="res://scenes/game_items/base_game_item.tscn" id="2_14c0p"]
 [ext_resource type="Texture2D" uid="uid://dpc3rosofusbq" path="res://assets/ui/ui_backpack_plus_icon.png" id="3_6rimq"]
+[ext_resource type="Texture2D" uid="uid://lnoy7wiwfiey" path="res://assets/ui/enemy/ui_attack_2.png" id="4_14c0p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lh34f"]
 bg_color = Color(0.101960786, 0.09803922, 0.08235294, 1)
@@ -72,3 +73,12 @@ offset_top = 13.0
 offset_right = 338.0
 offset_bottom = 113.0
 texture = ExtResource("3_6rimq")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 229.0
+offset_top = -1.0
+offset_right = 348.0
+offset_bottom = 119.0
+texture_normal = ExtResource("4_14c0p")

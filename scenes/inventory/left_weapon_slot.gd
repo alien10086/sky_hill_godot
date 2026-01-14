@@ -9,14 +9,39 @@ signal item_dropped(old_item:ItemData, new_item:ItemData)
 @onready var rich_text_label: RichTextLabel = $RichTextLabel
 @onready var texture_rect: TextureRect = $TextureRect
 
+@onready var texture_button: TextureButton = $TextureButton
+const UI_ATTACK_1 = preload("uid://bdvrt65p5x710")
+const UI_ATTACK_2 = preload("uid://lnoy7wiwfiey")
+
+var is_using_attack_1: bool = true
 
 @export var input_item_data: ItemData
 
-func  _ready() -> void:
+func open_fighter_model():
+	texture_button.visible = true
+	texture_button.texture_normal = UI_ATTACK_2
+	
+func close_fighter_model():
+	texture_button.visible = false
+	texture_button.texture_normal = UI_ATTACK_2
+	
+
+
+func _ready() -> void:
+	if texture_button:
+		texture_button.pressed.connect(_on_texture_button_pressed)
+		# 初始化显示
+		texture_button.texture_normal = UI_ATTACK_2
 	
 	if input_item_data:
 		base_game_item.input_item_data = input_item_data
 		base_game_item.input_text = ""
+		
+func _on_texture_button_pressed():
+	is_using_attack_1 = !is_using_attack_1
+	if texture_button:
+		texture_button.texture_normal = UI_ATTACK_1 if is_using_attack_1 else UI_ATTACK_2
+	print("切换攻击图标，当前是否为攻击1: ", is_using_attack_1)
 		
 	
 func  show_plus():

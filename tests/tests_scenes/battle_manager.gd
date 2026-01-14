@@ -15,8 +15,13 @@ var current_state = BattleState.START
 @onready var avatar_hub: Control = $CanvasLayer/AvatarHub
 @onready var enemy_avatar: Control = $CanvasLayer/EnemyAvatar
 
+@onready var left_weapon_slot: WeaponSlot = $CanvasLayer/LeftWeaponSlot
+@onready var right_weapon_slot: WeaponSlot = $CanvasLayer/RightWeaponSlot
+
 
 func _ready():
+	left_weapon_slot.open_fighter_model()
+	right_weapon_slot.open_fighter_model()
 	# 初始化敌人列表
 	# 加载并给玩家换一个武器
 	var wm = WeaponManager.get_instance()
