@@ -17,6 +17,7 @@ var current_state = BattleState.START
 
 @onready var left_weapon_slot: WeaponSlot = $CanvasLayer/LeftWeaponSlot
 @onready var right_weapon_slot: WeaponSlot = $CanvasLayer/RightWeaponSlot
+@onready var attack_choice: Control = $CanvasLayer/AttackChoice
 
 
 func _ready():
@@ -67,6 +68,14 @@ func _ready():
 		
 	_start_battle()
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"): # 通常是 ESC
+		if attack_choice and attack_choice.visible:
+			attack_choice.visible = false
+			if current_state == BattleState.PLAYER_TURN:
+				_set_weapon_slots_visible(true)
+			_update_status("玩家回合 - 请选择目标攻击")
+
 func _on_weapon_selected(weapon: WeaponData, clicked_slot: WeaponSlot):
 	if weapon:
 		# 处理互斥逻辑：取消另一个槽位的选中状态
@@ -96,8 +105,33 @@ func _on_monster_clicked(monster):
 	if current_state != BattleState.PLAYER_TURN:
 		return
 	
+	# 显示攻击选择 UI
+	if attack_choice:
+		attack_choice.visible = true
+		_set_weapon_slots_visible(false) # 显示选择 UI 时隐藏武器槽
+		
+		# 根据怪物类型显示对应的 UI
+		var monster_type = ""
+		if monster.name.to_lower().contains("bigfat"):
+			monster_type = "big_fat_monst"
+		elif monster.name.to_lower().contains("longarm"):
+			monster_type = "long_arm_monst"
+		
+		if monster_type != "":
+			attack_choice.show_monst_ui(monster_type)
+			_update_status("请选择攻击部位")
+		else:
+			print("未知的怪物类型: ", monster.name)
+	else:
+		# 如果没有选择 UI，则执行默认攻击（兼容逻辑）
+		_execute_attack(monster)
+
+func _execute_attack(monster):
 	current_state = BattleState.BUSY
-	_set_weapon_slots_visible(false) # 开始攻击动作，隐藏武器槽
+	_set_weapon_slots_visible(false)
+	if attack_choice:
+		attack_choice.visible = false
+	
 	_update_status("正在攻击 " + monster.name)
 	
 	# 玩家攻击

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cfyopn0sjynaq"]
+[gd_scene load_steps=9 format=3 uid="uid://cfyopn0sjynaq"]
 
 [ext_resource type="Script" uid="uid://dm7wsxwumw32u" path="res://tests/tests_scenes/battle_manager.gd" id="1_battle"]
 [ext_resource type="PackedScene" uid="uid://ct1hmjoitapqo" path="res://scenes/npc/player/spineFighter.tscn" id="1_p35rh"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://wdtxse17n4vu" path="res://scenes/npc/enemy/enemy_avatar.tscn" id="5_wwwhq"]
 [ext_resource type="PackedScene" uid="uid://dxchamw7gq7ex" path="res://scenes/inventory/left_weapon_slot.tscn" id="6_yc61j"]
 [ext_resource type="PackedScene" uid="uid://bc71f10ac1l2b" path="res://scenes/inventory/right_weapon_slot.tscn" id="7_0ap4l"]
+[ext_resource type="PackedScene" uid="uid://d2wk56woe3psa" path="res://scenes/player_info/attack_choice.tscn" id="8_0ap4l"]
 
 [node name="TestFight" type="Node2D"]
 script = ExtResource("1_battle")
@@ -60,3 +61,6 @@ offset_left = 757.0
 offset_top = 831.0
 offset_right = -814.0
 offset_bottom = -125.0
+
+[node name="AttackChoice" parent="CanvasLayer" instance=ExtResource("8_0ap4l")]
+visible = false
