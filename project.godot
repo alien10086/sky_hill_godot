@@ -14,6 +14,10 @@ config/name="skyHillGodot"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AudioManager="*res://src/audio/audio_manager.gd"
+
 [display]
 
 window/size/viewport_width=1920

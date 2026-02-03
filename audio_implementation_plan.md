@@ -26,59 +26,26 @@
 - `assets/audio/sfx/`：存放短促音效（攻击、点击、受击等）。
 
 ### 2.2 实现全局音频管理器 (AudioManager)
-建议在 `src/audio/` 目录下创建 `audio_manager.gd`，并将其注册为全局单例（Autoload）或遵循项目中现有的 `Manager` 模式。
+建议将 `src/audio/audio_manager.gd` 注册为全局单例（Autoload）。这样在任何脚本中都可以直接通过 `AudioManager` 访问其方法。
 
-#### 核心代码示例：
+#### 核心代码结构：
 ```gdscript
 extends Node
 
-class_name AudioManager
+# 自动在 _ready 中初始化播放器节点
+func _ready():
+    _setup_audio_nodes()
 
-static var instance: AudioManager
+# 接口示例
+func play_bgm(stream: AudioStream): ...
+func play_sfx(stream: AudioStream): ...
+```
 
-# 播放器引用
-var bgm_player: AudioStreamPlayer
-var sfx_pool: Array[AudioStreamPlayer] = []
-var pool_size: int = 8
-
-func _init():
-    if instance == null:
-        instance = self
-        _setup_audio_nodes()
-    else:
-        queue_free()
-
-static func get_instance() -> AudioManager:
-    if instance == null:
-        instance = AudioManager.new()
-    return instance
-
-func _setup_audio_nodes():
-    # 配置背景音乐播放器
-    bgm_player = AudioStreamPlayer.new()
-    bgm_player.bus = "Music"
-    add_child(bgm_player)
-    
-    # 配置音效池
-    for i in range(pool_size):
-        var p = AudioStreamPlayer.new()
-        p.bus = "SFX"
-        add_child(p)
-        sfx_pool.append(p)
-
-# 接口：播放背景音乐
-func play_bgm(stream: AudioStream):
-    if bgm_player.stream == stream: return
-    bgm_player.stream = stream
-    bgm_player.play()
-
-# 接口：播放音效
-func play_sfx(stream: AudioStream):
-    for p in sfx_pool:
-        if not p.playing:
-            p.stream = stream
-            p.play()
-            return
+#### 调用方式：
+```gdscript
+# 直接使用 Autoload 名称调用
+AudioManager.play_bgm(music_resource)
+AudioManager.play_sfx(sfx_resource)
 ```
 
 ### 2.3 配置音频总线 (Audio Bus)
