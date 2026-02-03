@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://chc76ybhuqjcd"
+path="res://.godot/imported/death_version 2_last_breath.wav-fbedcf27b14c794e3d52fe85ab934021.sample"
+
+[deps]
+
+source_file="res://assets/audio/AudioClip/death_version 2_last_breath.wav"
+dest_files=["res://.godot/imported/death_version 2_last_breath.wav-fbedcf27b14c794e3d52fe85ab934021.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmw7jyxli8bf8"
+path="res://.godot/imported/lamp exploding [ver. 2].wav-9f14cacfa488d0b27dbb5f58a501cf01.sample"
+
+[deps]
+
+source_file="res://assets/audio/AudioClip/lamp exploding [ver. 2].wav"
+dest_files=["res://.godot/imported/lamp exploding [ver. 2].wav-9f14cacfa488d0b27dbb5f58a501cf01.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
