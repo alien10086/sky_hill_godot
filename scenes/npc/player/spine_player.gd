@@ -11,6 +11,15 @@ var move_speed = 100.0
 # 动画相关变量
 @onready var animation_player = $AnimationPlayer
 
+# 音效资源
+var sfx_walk = preload("res://assets/audio/sfx/walk.wav")
+var sfx_stairs_up = preload("res://assets/audio/sfx/walk_stairs_up.wav")
+var sfx_stairs_down = preload("res://assets/audio/sfx/walk_stairs_down.wav")
+
+# 脚步声控制
+var footstep_timer = 0.0
+var footstep_interval = 0.4 # 每 0.4 秒播放一次脚步声，可根据 move_speed 调整
+
 @export var my_astar:MyAstar
 var current_path_point_list: Array = [] # 存储当前路径点
 
@@ -88,7 +97,11 @@ func _process(delta: float) -> void:
 # 向目标位置移动（消费路径点）
 func move_to_target(delta):
 	if not is_moving:
+		footstep_timer = 0.0 # 停止移动时重置计时器
 		return
+	
+	# 处理脚步声计时
+	footstep_timer -= delta
 	
 	# 如果没有路径点，停止移动
 	if current_path_point_list.size() == 0:
@@ -100,6 +113,12 @@ func move_to_target(delta):
 	
 	# 计算到当前目标点的方向和距离
 	var direction = (current_target - global_position).normalized()
+	
+	# 播放脚步声
+	if footstep_timer <= 0:
+		_play_footstep_sfx(direction)
+		footstep_timer = footstep_interval
+	
 	var distance = global_position.distance_to(current_target)
 	
 	# 根据移动方向设置精灵翻转
@@ -135,8 +154,21 @@ func move_to_target(delta):
 func stop_movement():
 	is_moving = false
 	velocity = Vector2.ZERO
+	footstep_timer = 0.0
 	
 	# 停止动画
 	if animation_player:
 		animation_player.stop()
+
+## 播放脚步声逻辑
+func _play_footstep_sfx(dir: Vector2):
+	# 根据 Y 轴分量判断移动类型
+	# 如果 Y 轴移动明显（大于 X 轴的一定比例），认为是爬楼梯
+	if abs(dir.y) > 0.5:
+		if dir.y < 0:
+			AudioManager.play_sfx(sfx_stairs_up)
+		else:
+			AudioManager.play_sfx(sfx_stairs_down)
+	else:
+		AudioManager.play_sfx(sfx_walk)
 	

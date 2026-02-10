@@ -1,7 +1,5 @@
 extends Node
 
-class_name AudioManager
-
 ## 背景音乐播放器
 var bgm_player: AudioStreamPlayer
 ## 音效播放器池
