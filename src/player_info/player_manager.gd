@@ -38,7 +38,9 @@ var player_data = {
 		"current": 100,
 		"max": 100
 	},
-	"speed": 100
+	"speed": 100,
+	"explored_floors": [], # 记录已探索的楼层索引 (中心区域)
+	"explored_rooms": [] # 记录已探索的房间标识，格式如 "100_left", "100_right"
 }
 # 信号定义
 signal level_changed(new_level:int)
@@ -48,12 +50,34 @@ signal attribute_changed(attribute_name:String, new_value:int)
 signal health_changed(current_health:int, max_health:int)
 signal hunger_changed(current_hunger:int, max_hunger:int)
 signal speed_changed()
+signal floor_explored(floor_index: int)
+signal room_explored(room_id: String)
 
 # 设置等级
 func set_level(new_level: int):
 	player_data.level = new_level
 	level_changed.emit(new_level)
-	
+
+# 记录探索过的楼层
+func mark_floor_as_explored(floor_index: int):
+	if not floor_index in player_data.explored_floors:
+		player_data.explored_floors.append(floor_index)
+		floor_explored.emit(floor_index)
+
+# 检查楼层是否已探索
+func is_floor_explored(floor_index: int) -> bool:
+	return floor_index in player_data.explored_floors
+
+# 记录探索过的房间
+func mark_room_as_explored(room_id: String):
+	if not room_id in player_data.explored_rooms:
+		player_data.explored_rooms.append(room_id)
+		room_explored.emit(room_id)
+
+# 检查房间是否已探索
+func is_room_explored(room_id: String) -> bool:
+	return room_id in player_data.explored_rooms
+
 # 增加经验值
 func add_exp(exp_amount: int):
 	player_data.current_exp += exp_amount
