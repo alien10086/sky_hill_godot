@@ -44,8 +44,8 @@ var zoom_label: Label
 func _on_bag_open():
 	backpack.visible = true
 	panel.visible = true
-	# 将 panel 移动到 backpack 之前，确保它遮挡住 CanvasLayer 下的其他 UI 元素
-	# panel.get_parent().move_child(panel, backpack.get_index())
+	# 确保背景面板不会拦截本该传递给背包的鼠标事件
+	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	
 func _on_bag_close():
 	backpack.visible = false

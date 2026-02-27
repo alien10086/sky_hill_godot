@@ -18,6 +18,8 @@ var _pos: Vector2 = Vector2(50, 50)
 var is_hovered: bool = false
 var item_manager:ItemManager
 
+var sfx_chewing = preload("res://assets/audio/sfx/chewing.wav")
+
 func _ready() -> void:
 	item_manager = ItemManager.get_instance()
 	#var temp_item_data:ItemData = item_manager.get_item_by_identity("coin")
@@ -26,6 +28,31 @@ func _ready() -> void:
 	#if input_text != null:
 		#label.text = input_text
 	init_from_input_item_data()
+	mouse_filter = Control.MOUSE_FILTER_STOP
+	
+	# 确保子节点不会拦截鼠标事件，让父节点处理点击和拖拽
+	if panel: panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if texture_rect: texture_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if texture_rect_2: texture_rect_2.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if label: label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+func _gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		# 支持左键或右键点击食用食物
+		if (event.button_index == MOUSE_BUTTON_LEFT or event.button_index == MOUSE_BUTTON_RIGHT) and event.pressed:
+			print("点击了物品: ", input_item_data.identity if input_item_data else "未知")
+			if input_item_data and input_item_data.type == ItemData.ItemType.FOOD:
+				print("尝试食用食物: ", input_item_data.identity)
+				# 播放进食音效 (咀嚼声)
+				if sfx_chewing:
+					AudioManager.play_sfx(sfx_chewing)
+				
+				# 暂时硬编码增加 20 饥饿度
+				PlayerManager.get_instance().modify_hunger(20)
+				# 从库存中移除
+				InventoryManage.get_instance().remove_item(input_item_data.identity, 1)
+				# 消耗事件，防止触发拖拽
+				accept_event()
 		
 	
 

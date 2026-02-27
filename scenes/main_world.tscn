@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cfqxmonvx4roi"]
+[gd_scene format=3 uid="uid://cfqxmonvx4roi"]
 
 [ext_resource type="Script" uid="uid://cppkdowkrn7kc" path="res://scenes/main_world.gd" id="1_bdp8l"]
 [ext_resource type="PackedScene" uid="uid://bleuenw304f4h" path="res://scenes/world/vip_level/vip_level.tscn" id="2_jj0au"]
@@ -11,16 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://buxpspgy0pbv4" path="res://scenes/backpack/backpack.tscn" id="8_5irk3"]
 [ext_resource type="PackedScene" uid="uid://d2wk56woe3psa" path="res://scenes/player_info/attack_choice.tscn" id="10_oa7qk"]
 
-[node name="TestWorld" type="Node2D"]
+[node name="TestWorld" type="Node2D" unique_id=337520155]
 script = ExtResource("1_bdp8l")
 
-[node name="VipLevel" parent="." instance=ExtResource("2_jj0au")]
+[node name="VipLevel" parent="." unique_id=1682496097 instance=ExtResource("2_jj0au")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=871978426]
 position = Vector2(1036, 187)
 zoom = Vector2(0.77, 0.77)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=2066071362]
 visible = false
 offset_left = -341.0
 offset_top = 478.0
@@ -29,17 +29,17 @@ offset_bottom = 760.0
 theme_override_font_sizes/font_size = 200
 text = "创造游戏地图：搭建 100 层骨架"
 
-[node name="astar" type="Node2D" parent="."]
+[node name="astar" type="Node2D" parent="." unique_id=932777875]
 script = ExtResource("3_wy0bs")
 
-[node name="SpinePlayer" parent="." node_paths=PackedStringArray("my_astar") instance=ExtResource("4_emumq")]
+[node name="SpinePlayer" parent="." unique_id=1594038532 node_paths=PackedStringArray("my_astar") instance=ExtResource("4_emumq")]
 position = Vector2(894, 301)
 my_astar = NodePath("../astar")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=742766375]
 script = ExtResource("5_wj2hs")
 
-[node name="Panel" type="Panel" parent="CanvasLayer"]
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1241517718]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,38 +47,38 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AvatarHub" parent="CanvasLayer" instance=ExtResource("5_jj0au")]
+[node name="AvatarHub" parent="CanvasLayer" unique_id=2014859436 instance=ExtResource("5_jj0au")]
 offset_left = 53.0
 offset_top = 41.0
 offset_right = -1544.0
 offset_bottom = -830.0
 
-[node name="SpeedContral" parent="CanvasLayer" instance=ExtResource("6_wy0bs")]
+[node name="SpeedContral" parent="CanvasLayer" unique_id=354808902 instance=ExtResource("6_wy0bs")]
 offset_left = 918.0
 offset_top = 40.0
 offset_right = -908.5
 offset_bottom = -1010.0
 scale = Vector2(2, 2)
 
-[node name="Bag" parent="CanvasLayer" instance=ExtResource("7_emumq")]
+[node name="Bag" parent="CanvasLayer" unique_id=939825262 instance=ExtResource("7_emumq")]
 offset_left = 76.0
 offset_top = 868.0
 offset_right = -1788.0
 offset_bottom = -146.0
 scale = Vector2(2, 2)
 
-[node name="Backpack" parent="CanvasLayer" instance=ExtResource("8_5irk3")]
+[node name="Backpack" parent="CanvasLayer" unique_id=2015807393 instance=ExtResource("8_5irk3")]
 visible = false
 offset_left = 435.0
 offset_top = 127.0
 offset_right = -113.0
 offset_bottom = 127.0
 
-[node name="CenterMarker2D" type="Marker2D" parent="CanvasLayer"]
+[node name="CenterMarker2D" type="Marker2D" parent="CanvasLayer" unique_id=1610959723]
 position = Vector2(947, 516)
 
-[node name="BagMarker2D2" type="Marker2D" parent="CanvasLayer"]
+[node name="BagMarker2D2" type="Marker2D" parent="CanvasLayer" unique_id=1041354341]
 position = Vector2(131, 936)
 
-[node name="AttackChoice" parent="CanvasLayer" instance=ExtResource("10_oa7qk")]
+[node name="AttackChoice" parent="CanvasLayer" unique_id=1331705770 instance=ExtResource("10_oa7qk")]
 visible = false

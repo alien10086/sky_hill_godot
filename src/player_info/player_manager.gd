@@ -163,17 +163,32 @@ func modify_health(amount: int):
 
 # 设置饥饿度
 func set_hunger(current: int, max_hunger: int = -1):
+	var old_hunger = player_data.hunger.current
 	player_data.hunger.current = clamp(current, 0, player_data.hunger.max)
 	if max_hunger > 0:
 		player_data.hunger.max = max_hunger
 		player_data.hunger.current = min(player_data.hunger.current, player_data.hunger.max)
+	
 	hunger_changed.emit(player_data.hunger.current, player_data.hunger.max)
-
+	
+	# 如果饥饿度增加（吃食物），播放音效
+	if player_data.hunger.current > old_hunger:
+		_play_after_food_sfx()
 
 # 增加或减少饥饿度
 func modify_hunger(amount: int):
+	var old_hunger = player_data.hunger.current
 	player_data.hunger.current = clamp(player_data.hunger.current + amount, 0, player_data.hunger.max)
 	hunger_changed.emit(player_data.hunger.current, player_data.hunger.max)
+	
+	# 如果饥饿度增加（吃食物），播放音效
+	if player_data.hunger.current > old_hunger:
+		_play_after_food_sfx()
+
+func _play_after_food_sfx():
+	var sfx = load("res://assets/audio/sfx/after_food.wav")
+	if sfx:
+		AudioManager.play_sfx(sfx)
 
 func set_speed(speed_number:int):
 	player_data.speed = speed_number

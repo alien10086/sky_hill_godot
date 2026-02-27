@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bbudj7hhf78xp"
-path="res://.godot/imported/chewing.wav-5d621b99d263442ca39433cb8c916605.sample"
+uid="uid://dhmnojtpk215n"
+path="res://.godot/imported/chewing.wav-16642d1a8cfd0f1b54426d2de141708a.sample"
 
 [deps]
 
-source_file="res://assets/audio/AudioClip/chewing.wav"
-dest_files=["res://.godot/imported/chewing.wav-5d621b99d263442ca39433cb8c916605.sample"]
+source_file="res://assets/audio/sfx/chewing.wav"
+dest_files=["res://.godot/imported/chewing.wav-16642d1a8cfd0f1b54426d2de141708a.sample"]
 
 [params]
 
