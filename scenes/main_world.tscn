@@ -86,13 +86,6 @@ position = Vector2(131, 936)
 [node name="AttackChoice" parent="CanvasLayer" unique_id=1331705770 instance=ExtResource("10_oa7qk")]
 visible = false
 
-[node name="LeftWeaponSlot" parent="CanvasLayer" instance=ExtResource("11_lh34f")]
-visible = false
-offset_left = 306.0
-offset_top = 835.0
-offset_right = -1263.0
-offset_bottom = -122.0
-
 [node name="RightWeaponSlot" parent="CanvasLayer" instance=ExtResource("12_lh34f")]
 visible = false
 offset_left = 757.0

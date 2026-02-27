@@ -7,10 +7,7 @@ const  slot_scene = preload("res://scenes/game_items/base_game_item.tscn")
 #@onready var grid_container: GridContainer = $GridContainer
 @onready var grid_container: GridContainer = $ScrollContainer/GridContainer
 
-@onready var left_weapon_slot: WeaponSlot = $LeftWeaponSlot
 @onready var right_weapon_slot: WeaponSlot = $RightWeaponSlot
-
-
 
 var item_manager: ItemManager
 var inventory_manage: InventoryManage
@@ -91,16 +88,17 @@ func _on_weapon_slot_item_dropped(
 		# 从库存中移除装备的武器
 		#var inventory_manager = InventoryManager.get_instance()
 		inventory_manage.remove_item(new_item_data.identity, 1)
+		
+		# 同步到全局玩家管理器，确保战斗场景能获取到最新武器
+		PlayerManager.get_instance().set_current_weapon(new_item_data)
 	
 	# 更新库存显示
 	_update_inventory_display()
 
 
 func _setup_weapon_slots():
-	left_weapon_slot.item_dropped.connect(_on_weapon_slot_item_dropped)
 	right_weapon_slot.item_dropped.connect(_on_weapon_slot_item_dropped)
 	# 初始化武器槽显示
-	_update_weapon_slot(left_weapon_slot, null)
 	_update_weapon_slot(right_weapon_slot, null)
 	
 # 更新武器槽显示
@@ -154,11 +152,8 @@ func _create_inventory_item_slot(inventory_item: InventoryItem):
 	
 	slot.init_from_input_item_data()
 	
-	slot.item_drag_started.connect(left_weapon_slot._on_item_drag_started)
 	slot.item_drag_started.connect(right_weapon_slot._on_item_drag_started)
-	slot.item_drag_cancel.connect(left_weapon_slot._on_item_drag_cancel)
 	slot.item_drag_cancel.connect(right_weapon_slot._on_item_drag_cancel)
-	slot.item_drag_ended.connect(left_weapon_slot._on_item_drag_succeed)
 	slot.item_drag_ended.connect(right_weapon_slot._on_item_drag_succeed)
 	# 保存槽位引用
 	inventory_item_slots[inventory_item.identity] = slot

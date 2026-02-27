@@ -45,7 +45,15 @@ var player_data = {
 	"speed": 100,
 	"explored_floors": [], # 记录已探索的楼层索引 (中心区域)
 	"explored_rooms": [], # 记录已探索的房间标识，格式如 "100_left", "100_right"
-	"current_weapon": null # 当前装备的武器 ItemData
+	"current_weapon": null, # 当前装备的武器 ItemData
+	"current_floor": 100, # 记录当前所在的楼层
+	"attack_mode": "normal", # "normal" (直接攻击) 或 "focused" (部位选择)
+	"battle_context": { # 战斗上下文
+		"monster_type": "", # big_fat 或 long_arm
+		"monster_hp": 0,
+		"floor_index": -1,
+		"room_type": "" # "left" 或 "right"
+	}
 }
 # 信号定义
 signal level_changed(new_level:int)

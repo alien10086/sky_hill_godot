@@ -150,29 +150,19 @@ func _instantiate_levels():
 
 func _init_weapon_slots():
 	var item_manager = ItemManager.get_instance()
-	# 初始给玩家装备小木棍
+	# 初始给玩家装备小木棍到右手
 	var stick_item = item_manager.get_item_by_identity("stick")
-	if left_weapon_slot and stick_item:
-		left_weapon_slot.set_item_data(stick_item)
-		left_weapon_slot.set_selected(true)
-	
-	var hands_item = item_manager.get_item_by_identity("hands")
-	if right_weapon_slot and hands_item:
-		right_weapon_slot.set_item_data(hands_item)
-		right_weapon_slot.set_selected(false)
+	if right_weapon_slot and stick_item:
+		right_weapon_slot.set_item_data(stick_item)
+		right_weapon_slot.set_selected(true)
+		player_manager.set_current_weapon(stick_item)
 	
 	# 连接点击信号
-	if left_weapon_slot:
-		left_weapon_slot.weapon_clicked.connect(_on_weapon_selected)
 	if right_weapon_slot:
 		right_weapon_slot.weapon_clicked.connect(_on_weapon_selected)
 
-func _on_weapon_selected(weapon_item, clicked_slot):
-	if clicked_slot == left_weapon_slot:
-		right_weapon_slot.set_selected(false)
-	else:
-		left_weapon_slot.set_selected(false)
-	
+func _on_weapon_selected(weapon_item, _clicked_slot):
+	# 只有一个武器槽，不需要处理互斥
 	# 更新全局武器状态
 	player_manager.set_current_weapon(weapon_item)
 	
@@ -212,7 +202,7 @@ func _set_battle_ui_visible(is_visible: bool):
 		enemy_avatar.visible = is_visible
 
 func _on_monster_clicked(monster):
-	# 如果已经在战斗中，不能再次点击触发（或者处理战斗中的目标切换，这里先简单化）
+	# 如果已经在战斗中，不能再次点击触发
 	if player_manager.current_mode == PlayerManager.GameMode.BATTLE:
 		return
 
@@ -220,56 +210,35 @@ func _on_monster_clicked(monster):
 	var monster_room = monster.get_parent()
 	var player_global_pos = player.global_position
 	
-	# 获取房间的矩形区域（基于其子节点或 Marker2D）
-	# 这里简单判断玩家和怪物是否在同一个 LevelX 实例下，且 X 轴距离在房间范围内
 	var level_x = monster_room.get_parent()
 	if not level_x is LevelxUI:
-		# 如果怪物的直接父级不是房间节点，尝试往上找
 		level_x = monster_room.get_parent().get_parent()
 	
 	if level_x is LevelxUI:
 		var rel_pos = level_x.to_local(player_global_pos)
 		var in_same_room = false
 		
-		# 根据怪物房间名称判断玩家是否在对应区域
 		if monster_room.name == "LeftRoom":
-			# 左房间范围大约在 X: 0-600
-			if rel_pos.x < 650:
-				in_same_room = true
+			if rel_pos.x < 650: in_same_room = true
 		elif monster_room.name == "RightRoom":
-			# 右房间范围大约 in X: 1400+
-			if rel_pos.x > 1350:
-				in_same_room = true
+			if rel_pos.x > 1350: in_same_room = true
 		
 		if not in_same_room:
 			print("玩家不在该房间内，无法攻击！")
 			return
 
-	current_target_monster = monster
+	# 设置战斗上下文
+	var context = player_manager.player_data.battle_context
+	context.monster_type = "big_fat" if "big_fat" in monster.name.to_lower() else "long_arm"
+	context.monster_hp = monster.current_hp
+	context.floor_index = level_x.floor_index
+	context.room_type = "left" if monster_room.name == "LeftRoom" else "right"
+	
 	player_manager.set_game_mode(PlayerManager.GameMode.BATTLE)
 	
-	# 替换玩家为战斗模型
-	_swap_to_fighter()
-	
-	# 停止玩家移动
-	if player.has_method("stop_movement"):
-		player.stop_movement()
-	
-	# 显示战斗 UI
-	_set_battle_ui_visible(true)
-	if enemy_avatar:
-		# 判断怪物类型设置头像
-		var is_big_fat = "big_fat" in monster.name.to_lower() or "bigfat" in monster.name.to_lower()
-		enemy_avatar.set_avatar_type(is_big_fat)
-		enemy_avatar.update_hp(monster.current_hp, monster.max_hp)
-	
-	print("点击了怪物: ", monster.name)
-	attack_choice.visible = true
-	# 根据怪物的脚本名或属性判断显示哪个 UI
-	if "big_fat_monst" in monster.name.to_lower() or "bigfatmonst" in monster.name.to_lower():
-		attack_choice.show_monst_ui("big_fat_monst")
-	elif "long_arm_monst" in monster.name.to_lower() or "longarmmonst" in monster.name.to_lower():
-		attack_choice.show_monst_ui("long_arm_monst")
+	# 切换到专门的战斗场景
+	print("切换到专门战斗场景，对战怪物: ", monster.name)
+	get_tree().change_scene_to_file("res://scenes/world/battle_scene.tscn")
 
 func _swap_to_fighter():
 	var fighter_scene = load("res://scenes/npc/player/spineFighter.tscn")
@@ -388,14 +357,7 @@ func _end_battle(is_win: bool):
 		print("战斗失败... 回到探索模式 (这里可能需要处理死亡逻辑)")
 
 func _unhandled_input(event: InputEvent) -> void:
-	# 1. 优先处理战斗模式下的 ESC 逃跑逻辑
-	if event.is_action_pressed("ui_cancel"):
-		if player_manager.current_mode == PlayerManager.GameMode.BATTLE:
-			_end_battle(false)
-			print("玩家选择了逃跑，回到探索模式")
-			return # 消费该事件
-
-	# 2. 处理退出/关闭 UI 的全局快捷键
+	# 1. 处理退出/关闭 UI 的全局快捷键
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_ESCAPE:
 			if attack_choice.visible:
@@ -405,11 +367,11 @@ func _unhandled_input(event: InputEvent) -> void:
 				_on_bag_close() # 使用现有的关闭逻辑
 				return # 消费该事件
 
-	# 3. 如果背包打开，拦截所有针对游戏世界的输入（如相机缩放、拖拽）
+	# 2. 如果背包打开，拦截所有针对游戏世界的输入（如相机缩放、拖拽）
 	if backpack.visible:
 		return
 		
-	# 4. 鼠标滚轮缩放
+	# 3. 鼠标滚轮缩放
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			_zoom_in()
@@ -422,13 +384,13 @@ func _unhandled_input(event: InputEvent) -> void:
 			else:
 				is_dragging = false
 	
-	# 5. 鼠标右键拖动平移
+	# 4. 鼠标右键拖动平移
 	if event is InputEventMouseMotion and is_dragging:
 		var delta = event.position - drag_start_position
 		camera.position -= delta / camera.zoom.x
 		drag_start_position = event.position
 	
-	# 6. 键盘快捷键
+	# 5. 键盘快捷键
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_PLUS or event.keycode == KEY_EQUAL:
 			_zoom_in()
