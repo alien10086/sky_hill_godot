@@ -149,7 +149,7 @@ func _replace_right_room_templates():
 	
 func _spawn_random_monster_in_room(room_node: Node2D):
 	# VIP 楼层 (100层) 不会出现怪物
-	if floor_index == 100:
+	if floor_index == 99:
 		print("VIP 楼层不生成怪物")
 		return
 		

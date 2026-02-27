@@ -43,6 +43,10 @@ func _on_speed_changed():
 	move_speed = player_data.speed
 	
 func _unhandled_input(event):
+	# 如果在战斗模式下，禁止点击地面移动
+	if PlayerManager.get_instance().current_mode == PlayerManager.GameMode.BATTLE:
+		return
+
 	#if event is InputEventMouseButton and event.pressed:
 	#print("UI没挡住我，我点到了游戏世界！")
 #func _input(event):

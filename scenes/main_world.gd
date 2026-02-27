@@ -33,6 +33,8 @@ var zoom_label: Label
 @onready var panel: Panel = $CanvasLayer/Panel
 @onready var attack_choice: Control = $CanvasLayer/AttackChoice
 
+var player_manager: PlayerManager
+var current_target_monster = null
 
 @onready var astar: MyAstar = $astar
 @onready var vip_level: VipLevelUI = $VipLevel
@@ -54,9 +56,14 @@ func _on_bag_close():
 
 
 func _ready():
+	player_manager = PlayerManager.get_instance()
 	get_tree().node_added.connect(_on_node_added)
 	bag.bag_open.connect(_on_bag_open)
 	bag.bag_close.connect(_on_bag_close)
+	
+	# 连接部位选择信号
+	if attack_choice:
+		attack_choice.part_selected.connect(_on_attack_part_selected)
 	
 	# 设置相机
 	#_setup_camera()
@@ -136,6 +143,10 @@ func _instantiate_levels():
 	queue_redraw()
 
 func _on_monster_clicked(monster):
+	# 如果已经在战斗中，不能再次点击触发（或者处理战斗中的目标切换，这里先简单化）
+	if player_manager.current_mode == PlayerManager.GameMode.BATTLE:
+		return
+
 	# 检查玩家是否在怪物所在的房间
 	var monster_room = monster.get_parent()
 	var player_global_pos = player.global_position
@@ -165,6 +176,13 @@ func _on_monster_clicked(monster):
 			print("玩家不在该房间内，无法攻击！")
 			return
 
+	current_target_monster = monster
+	player_manager.set_game_mode(PlayerManager.GameMode.BATTLE)
+	
+	# 停止玩家移动
+	if player.has_method("stop_movement"):
+		player.stop_movement()
+	
 	print("点击了怪物: ", monster.name)
 	attack_choice.visible = true
 	# 根据怪物的脚本名或属性判断显示哪个 UI
@@ -172,29 +190,113 @@ func _on_monster_clicked(monster):
 		attack_choice.show_monst_ui("big_fat_monst")
 	elif "long_arm_monst" in monster.name.to_lower() or "longarmmonst" in monster.name.to_lower():
 		attack_choice.show_monst_ui("long_arm_monst")
-			#
-#func _draw():
-	##draw_rect(Rect2(0, 0, 1000, 1000), Color.RED) # 测试用
-	#if not debug_mode or astar.get_point_count() == 0:
-		#return
-#
-	#var points = astar.get_point_ids()
-	#for p in points:
-		#var p_pos = astar.get_point_position(p)
-		#
-		## 绘制点：蓝色代表房间，红色代表楼梯
-		#var color = Color.CORNFLOWER_BLUE
-		#if p % 10 == 1: # 逻辑：ID末尾为1的是楼梯
-			#color = Color.INDIAN_RED
-		#
-		#draw_circle(p_pos, 8.0, color)
-		#
-		## 绘制连线
-		#var connections = astar.get_point_connections(p)
-		#for c in connections:
-			#var c_pos = astar.get_point_position(c)
-			## 绘制从当前点到连接点的线
-			#draw_line(p_pos, c_pos, Color(1, 1, 1, 0.5), 2.0)
+
+func _on_attack_part_selected(hit_chance: float, damage_multiplier: float):
+	if current_target_monster:
+		_execute_battle_turn(current_target_monster, hit_chance, damage_multiplier)
+
+func _execute_battle_turn(monster, hit_chance: float, damage_multiplier: float):
+	# 隐藏选择 UI
+	attack_choice.visible = false
+	
+	# 1. 玩家攻击
+	var is_hit = randf() <= hit_chance
+	if is_hit:
+		var damage = 10.0 * damage_multiplier # 基础伤害先定为 10
+		print("玩家攻击命中，造成伤害: ", damage)
+		if monster.has_method("take_damage"):
+			monster.take_damage(damage)
+	else:
+		print("玩家攻击落空！")
+	
+	# 检查怪物是否死亡
+	await get_tree().create_timer(1.0).timeout
+	if not is_instance_valid(monster):
+		_end_battle(true)
+		return
+	
+	# 2. 怪物反击 (如果还没死)
+	print("怪物开始反击...")
+	if monster.has_method("play_animation"):
+		monster.play_animation("attcak", false)
+	
+	await get_tree().create_timer(0.5).timeout
+	var monster_damage = 10.0 # 基础怪物伤害
+	if monster.get("attack_power"):
+		monster_damage = monster.attack_power
+		
+	player_manager.modify_health(-monster_damage)
+	print("玩家受到伤害: ", monster_damage)
+	
+	# 检查玩家是否死亡
+	if player_manager.player_data.health.current <= 0:
+		_end_battle(false)
+		return
+	
+	# 3. 回到攻击选择或结束战斗 (这里简单处理为一轮后可以继续选择或逃跑)
+	# 如果想做逃跑，可以加个逃跑按钮，或者 ESC 退出
+	await get_tree().create_timer(0.5).timeout
+	attack_choice.visible = true
+	print("请选择下一次攻击部位")
+
+func _end_battle(is_win: bool):
+	attack_choice.visible = false
+	player_manager.set_game_mode(PlayerManager.GameMode.EXPLORATION)
+	current_target_monster = null
+	if is_win:
+		print("战斗胜利！回到探索模式")
+	else:
+		print("战斗失败... 回到探索模式 (这里可能需要处理死亡逻辑)")
+
+func _unhandled_input(event: InputEvent) -> void:
+	# 1. 优先处理战斗模式下的 ESC 逃跑逻辑
+	if event.is_action_pressed("ui_cancel"):
+		if player_manager.current_mode == PlayerManager.GameMode.BATTLE:
+			_end_battle(false)
+			print("玩家选择了逃跑，回到探索模式")
+			return # 消费该事件
+
+	# 2. 处理退出/关闭 UI 的全局快捷键
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_ESCAPE:
+			if attack_choice.visible:
+				attack_choice.visible = false
+				return # 消费该事件
+			if backpack.visible:
+				_on_bag_close() # 使用现有的关闭逻辑
+				return # 消费该事件
+
+	# 3. 如果背包打开，拦截所有针对游戏世界的输入（如相机缩放、拖拽）
+	if backpack.visible:
+		return
+		
+	# 4. 鼠标滚轮缩放
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			_zoom_in()
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			_zoom_out()
+		elif event.button_index == MOUSE_BUTTON_RIGHT:
+			if event.pressed:
+				is_dragging = true
+				drag_start_position = event.position
+			else:
+				is_dragging = false
+	
+	# 5. 鼠标右键拖动平移
+	if event is InputEventMouseMotion and is_dragging:
+		var delta = event.position - drag_start_position
+		camera.position -= delta / camera.zoom.x
+		drag_start_position = event.position
+	
+	# 6. 键盘快捷键
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_PLUS or event.keycode == KEY_EQUAL:
+			_zoom_in()
+		elif event.keycode == KEY_MINUS:
+			_zoom_out()
+		elif event.keycode == KEY_R:
+			_reset_camera()
 
 func _clear_level_instances():
 	# 清除所有已存在的实例
@@ -265,49 +367,6 @@ func _process(_delta):
 		var current_camera_y = camera.position.y
 		# 使用平滑插值更新相机Y坐标
 		camera.position.y = lerp(current_camera_y, target_y, follow_smoothness)
-
-func _unhandled_input(event):
-	# 处理退出/关闭 UI 的全局快捷键
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_ESCAPE:
-			if attack_choice.visible:
-				attack_choice.visible = false
-				return # 消费该事件
-			if backpack.visible:
-				_on_bag_close() # 使用现有的关闭逻辑
-				return # 消费该事件
-
-	# 如果背包打开，拦截所有针对游戏世界的输入（如相机缩放、拖拽）
-	if backpack.visible:
-		return
-		
-	# 鼠标滚轮缩放
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			_zoom_in()
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			_zoom_out()
-		elif event.button_index == MOUSE_BUTTON_RIGHT:
-			if event.pressed:
-				is_dragging = true
-				drag_start_position = event.position
-			else:
-				is_dragging = false
-	
-	# 鼠标右键拖动平移
-	if event is InputEventMouseMotion and is_dragging:
-		var delta = event.position - drag_start_position
-		camera.position -= delta / camera.zoom.x
-		drag_start_position = event.position
-	
-	# 键盘快捷键
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_PLUS or event.keycode == KEY_EQUAL:
-			_zoom_in()
-		elif event.keycode == KEY_MINUS:
-			_zoom_out()
-		elif event.keycode == KEY_R:
-			_reset_camera()
 
 func _zoom_in():
 	zoom_level = min(zoom_level + zoom_speed, max_zoom)

@@ -17,6 +17,10 @@ static func get_instance() ->PlayerManager:
 	return instance
 
 
+# 游戏模式
+enum GameMode { EXPLORATION, BATTLE }
+var current_mode: GameMode = GameMode.EXPLORATION
+
 # 玩家数据
 var player_data = {
 	"name": "PREEY JASON",
@@ -52,6 +56,7 @@ signal hunger_changed(current_hunger:int, max_hunger:int)
 signal speed_changed()
 signal floor_explored(floor_index: int)
 signal room_explored(room_id: String)
+signal game_mode_changed(new_mode: GameMode)
 
 # 设置等级
 func set_level(new_level: int):
@@ -184,6 +189,13 @@ func modify_hunger(amount: int):
 	# 如果饥饿度增加（吃食物），播放音效
 	if player_data.hunger.current > old_hunger:
 		_play_after_food_sfx()
+
+# 设置游戏模式
+func set_game_mode(new_mode: GameMode):
+	if current_mode != new_mode:
+		current_mode = new_mode
+		game_mode_changed.emit(new_mode)
+		print("游戏模式切换为: ", "战斗模式" if new_mode == GameMode.BATTLE else "探索模式")
 
 func _play_after_food_sfx():
 	var sfx = load("res://assets/audio/sfx/after_food.wav")
