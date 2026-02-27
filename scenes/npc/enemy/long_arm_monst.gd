@@ -17,16 +17,16 @@ signal hp_changed(current, max)
 
 func _ready() -> void:
 	current_hp = max_hp
-	_setup_hp_ui()
+	# _setup_hp_ui()
 	area_2d.input_event.connect(_on_area_input_event)
 
-func _setup_hp_ui():
-	hp_ui = ENEMY_AVATAR.instantiate()
-	add_child(hp_ui)
-	hp_ui.scale = Vector2(0.5, 0.5) # UI 默认很大，缩放一下
-	hp_ui.position = Vector2(-150, -550) # 怪物头顶，长手怪更高
-	hp_ui.set_avatar_type(false) # Long Arm
-	hp_ui.update_hp(current_hp, max_hp)
+# func _setup_hp_ui():
+# 	hp_ui = ENEMY_AVATAR.instantiate()
+# 	add_child(hp_ui)
+# 	hp_ui.scale = Vector2(0.5, 0.5) # UI 默认很大，缩放一下
+# 	hp_ui.position = Vector2(-150, -550) # 怪物头顶，长手怪更高
+# 	hp_ui.set_avatar_type(false) # Long Arm
+# 	hp_ui.update_hp(current_hp, max_hp)
 
 func take_damage(amount: float):
 	current_hp -= amount

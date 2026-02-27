@@ -136,6 +136,35 @@ func _instantiate_levels():
 	queue_redraw()
 
 func _on_monster_clicked(monster):
+	# 检查玩家是否在怪物所在的房间
+	var monster_room = monster.get_parent()
+	var player_global_pos = player.global_position
+	
+	# 获取房间的矩形区域（基于其子节点或 Marker2D）
+	# 这里简单判断玩家和怪物是否在同一个 LevelX 实例下，且 X 轴距离在房间范围内
+	var level_x = monster_room.get_parent()
+	if not level_x is LevelxUI:
+		# 如果怪物的直接父级不是房间节点，尝试往上找
+		level_x = monster_room.get_parent().get_parent()
+	
+	if level_x is LevelxUI:
+		var rel_pos = level_x.to_local(player_global_pos)
+		var in_same_room = false
+		
+		# 根据怪物房间名称判断玩家是否在对应区域
+		if monster_room.name == "LeftRoom":
+			# 左房间范围大约在 X: 0-600
+			if rel_pos.x < 650:
+				in_same_room = true
+		elif monster_room.name == "RightRoom":
+			# 右房间范围大约在 X: 1400+
+			if rel_pos.x > 1350:
+				in_same_room = true
+		
+		if not in_same_room:
+			print("玩家不在该房间内，无法攻击！")
+			return
+
 	print("点击了怪物: ", monster.name)
 	attack_choice.visible = true
 	# 根据怪物的脚本名或属性判断显示哪个 UI

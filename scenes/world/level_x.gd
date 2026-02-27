@@ -49,10 +49,6 @@ func _ready() -> void:
 	player_manager.floor_explored.connect(_on_floor_explored)
 	player_manager.room_explored.connect(_on_room_explored)
 	
-	# 随机选择房间模板并替换左右房间
-	_replace_left_room_templates()
-	_replace_right_room_templates()
-	
 	# 初始化迷雾状态
 	_update_fog_visibility()
 	
@@ -152,6 +148,11 @@ func _replace_right_room_templates():
 	_spawn_random_monster_in_room(new_right_room)
 	
 func _spawn_random_monster_in_room(room_node: Node2D):
+	# VIP 楼层 (100层) 不会出现怪物
+	if floor_index == 100:
+		print("VIP 楼层不生成怪物")
+		return
+		
 	# 随机选择一个怪物模板
 	var random_monster_index = randi() % MONSTER_TEMPLATES.size()
 	var monster_path = MONSTER_TEMPLATES[random_monster_index]
@@ -188,6 +189,10 @@ func set_level(floor_number:int):
 	center_room.level_number = floor_number
 	center_room.refresh_ui()
 	_update_fog_visibility()
+	
+	# 设置楼层后生成房间和怪物
+	_replace_left_room_templates()
+	_replace_right_room_templates()
 
 	
 
