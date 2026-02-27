@@ -44,7 +44,8 @@ var player_data = {
 	},
 	"speed": 100,
 	"explored_floors": [], # 记录已探索的楼层索引 (中心区域)
-	"explored_rooms": [] # 记录已探索的房间标识，格式如 "100_left", "100_right"
+	"explored_rooms": [], # 记录已探索的房间标识，格式如 "100_left", "100_right"
+	"current_weapon": null # 当前装备的武器 ItemData
 }
 # 信号定义
 signal level_changed(new_level:int)
@@ -57,6 +58,13 @@ signal speed_changed()
 signal floor_explored(floor_index: int)
 signal room_explored(room_id: String)
 signal game_mode_changed(new_mode: GameMode)
+signal weapon_changed(new_weapon: ItemData)
+
+# 设置武器
+func set_current_weapon(weapon: ItemData):
+	player_data.current_weapon = weapon
+	weapon_changed.emit(weapon)
+	print("玩家装备了武器: ", weapon.identity if weapon else "徒手")
 
 # 设置等级
 func set_level(new_level: int):
@@ -163,6 +171,21 @@ func set_health(current: int, max_health: int = -1):
 func modify_health(amount: int):
 	player_data.health.current = clamp(player_data.health.current + amount, 0, player_data.health.max)
 	health_changed.emit(player_data.health.current, player_data.health.max)
+	
+	# 检查死亡
+	if player_data.health.current <= 0:
+		_on_player_death()
+
+func _on_player_death():
+	print("玩家死亡，跳转到结算场景")
+	# 检查是否在场景树中，如果在，可以使用 SceneTree 的 timer
+	if is_inside_tree():
+		await get_tree().create_timer(1.0).timeout
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+	else:
+		# 如果不在场景树中（可能是刚初始化或单例模式问题），直接跳转
+		# 或者通过主循环获取场景树
+		Engine.get_main_loop().change_scene_to_file("res://scenes/game_over.tscn")
 
 
 

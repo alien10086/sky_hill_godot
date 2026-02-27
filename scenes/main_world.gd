@@ -32,6 +32,9 @@ var zoom_label: Label
 @onready var backpack: Control = $CanvasLayer/Backpack
 @onready var panel: Panel = $CanvasLayer/Panel
 @onready var attack_choice: Control = $CanvasLayer/AttackChoice
+@onready var left_weapon_slot: WeaponSlot = $CanvasLayer/LeftWeaponSlot
+@onready var right_weapon_slot: WeaponSlot = $CanvasLayer/RightWeaponSlot
+@onready var enemy_avatar: Control = $CanvasLayer/EnemyAvatar
 
 var player_manager: PlayerManager
 var current_target_monster = null
@@ -64,6 +67,9 @@ func _ready():
 	# 连接部位选择信号
 	if attack_choice:
 		attack_choice.part_selected.connect(_on_attack_part_selected)
+	
+	# 初始化武器栏显示
+	_init_weapon_slots()
 	
 	# 设置相机
 	#_setup_camera()
@@ -142,6 +148,69 @@ func _instantiate_levels():
 			
 	queue_redraw()
 
+func _init_weapon_slots():
+	var item_manager = ItemManager.get_instance()
+	# 初始给玩家装备小木棍
+	var stick_item = item_manager.get_item_by_identity("stick")
+	if left_weapon_slot and stick_item:
+		left_weapon_slot.set_item_data(stick_item)
+		left_weapon_slot.set_selected(true)
+	
+	var hands_item = item_manager.get_item_by_identity("hands")
+	if right_weapon_slot and hands_item:
+		right_weapon_slot.set_item_data(hands_item)
+		right_weapon_slot.set_selected(false)
+	
+	# 连接点击信号
+	if left_weapon_slot:
+		left_weapon_slot.weapon_clicked.connect(_on_weapon_selected)
+	if right_weapon_slot:
+		right_weapon_slot.weapon_clicked.connect(_on_weapon_selected)
+
+func _on_weapon_selected(weapon_item, clicked_slot):
+	if clicked_slot == left_weapon_slot:
+		right_weapon_slot.set_selected(false)
+	else:
+		left_weapon_slot.set_selected(false)
+	
+	# 更新全局武器状态
+	player_manager.set_current_weapon(weapon_item)
+	
+	# 如果正在战斗中，实时切换 SpineFighter 的武器
+	if player_manager.current_mode == PlayerManager.GameMode.BATTLE and player.has_node("SpineSprite"):
+		_sync_fighter_weapon(player, weapon_item)
+	
+	print("切换了武器: ", weapon_item.identity if weapon_item else "徒手")
+
+func _sync_fighter_weapon(fighter: Node, weapon_item: ItemData):
+	if not fighter or not weapon_item:
+		return
+		
+	# 映射 ItemData 到 SpineFighter 需要的皮肤名
+	# 假设 identity 对应皮肤名，或者在 ItemData 中有皮肤信息
+	var skin_name = "battle_shovel" # 默认
+	match weapon_item.identity:
+		"stick": skin_name = "battle_stick"
+		"knife": skin_name = "battle_knife"
+		"axe": skin_name = "battle_axe"
+		"mace": skin_name = "battle_mace"
+		"shovel": skin_name = "battle_shovel"
+		"hands": skin_name = "battle_hand"
+	
+	if fighter.has_node("SpineSprite"):
+		var spine_sprite = fighter.get_node("SpineSprite")
+		var skeleton = spine_sprite.get_skeleton()
+		skeleton.set_skin_by_name(skin_name)
+		skeleton.set_to_setup_pose()
+
+func _set_battle_ui_visible(is_visible: bool):
+	if left_weapon_slot:
+		left_weapon_slot.visible = is_visible
+	if right_weapon_slot:
+		right_weapon_slot.visible = is_visible
+	if enemy_avatar:
+		enemy_avatar.visible = is_visible
+
 func _on_monster_clicked(monster):
 	# 如果已经在战斗中，不能再次点击触发（或者处理战斗中的目标切换，这里先简单化）
 	if player_manager.current_mode == PlayerManager.GameMode.BATTLE:
@@ -168,7 +237,7 @@ func _on_monster_clicked(monster):
 			if rel_pos.x < 650:
 				in_same_room = true
 		elif monster_room.name == "RightRoom":
-			# 右房间范围大约在 X: 1400+
+			# 右房间范围大约 in X: 1400+
 			if rel_pos.x > 1350:
 				in_same_room = true
 		
@@ -179,9 +248,20 @@ func _on_monster_clicked(monster):
 	current_target_monster = monster
 	player_manager.set_game_mode(PlayerManager.GameMode.BATTLE)
 	
+	# 替换玩家为战斗模型
+	_swap_to_fighter()
+	
 	# 停止玩家移动
 	if player.has_method("stop_movement"):
 		player.stop_movement()
+	
+	# 显示战斗 UI
+	_set_battle_ui_visible(true)
+	if enemy_avatar:
+		# 判断怪物类型设置头像
+		var is_big_fat = "big_fat" in monster.name.to_lower() or "bigfat" in monster.name.to_lower()
+		enemy_avatar.set_avatar_type(is_big_fat)
+		enemy_avatar.update_hp(monster.current_hp, monster.max_hp)
 	
 	print("点击了怪物: ", monster.name)
 	attack_choice.visible = true
@@ -191,41 +271,94 @@ func _on_monster_clicked(monster):
 	elif "long_arm_monst" in monster.name.to_lower() or "longarmmonst" in monster.name.to_lower():
 		attack_choice.show_monst_ui("long_arm_monst")
 
+func _swap_to_fighter():
+	var fighter_scene = load("res://scenes/npc/player/spineFighter.tscn")
+	var fighter = fighter_scene.instantiate()
+	
+	# 记录原位置
+	var old_pos = player.global_position
+	var parent = player.get_parent()
+	
+	# 移除原玩家节点，添加新战斗节点
+	parent.add_child(fighter)
+	fighter.global_position = old_pos
+	
+	# 如果玩家面朝左，战斗模型也面朝左
+	if player.has_node("SpineSprite") and player.get_node("SpineSprite").scale.x < 0:
+		if fighter.has_node("SpineSprite"):
+			fighter.get_node("SpineSprite").scale.x = -1
+	
+	# 更新当前武器皮肤
+	_sync_fighter_weapon(fighter, player_manager.player_data.current_weapon)
+	
+	# 替换全局引用
+	var old_player = player
+	player = fighter
+	old_player.queue_free()
+
+func _swap_to_explorer():
+	var explorer_scene = load("res://scenes/npc/player/spine_player.tscn")
+	var explorer = explorer_scene.instantiate()
+	
+	# 记录位置
+	var old_pos = player.global_position
+	var parent = player.get_parent()
+	
+	parent.add_child(explorer)
+	explorer.global_position = old_pos
+	
+	# 替换全局引用
+	var old_fighter = player
+	player = explorer
+	old_fighter.queue_free()
+
 func _on_attack_part_selected(hit_chance: float, damage_multiplier: float):
 	if current_target_monster:
 		_execute_battle_turn(current_target_monster, hit_chance, damage_multiplier)
 
 func _execute_battle_turn(monster, hit_chance: float, damage_multiplier: float):
-	# 隐藏选择 UI
+	# 隐藏选择 UI，暂时隐藏武器栏
 	attack_choice.visible = false
+	left_weapon_slot.visible = false
+	right_weapon_slot.visible = false
 	
-	# 1. 玩家攻击
+	# 1. 玩家攻击动画
+	if player.has_method("attack"):
+		await player.attack(monster)
+	
+	# 计算并造成伤害
 	var is_hit = randf() <= hit_chance
 	if is_hit:
-		var damage = 10.0 * damage_multiplier # 基础伤害先定为 10
+		var damage = 10.0 * damage_multiplier # 基础伤害
 		print("玩家攻击命中，造成伤害: ", damage)
 		if monster.has_method("take_damage"):
 			monster.take_damage(damage)
+		
+		# 更新敌人头像血量
+		if enemy_avatar:
+			enemy_avatar.update_hp(monster.current_hp, monster.max_hp)
 	else:
 		print("玩家攻击落空！")
 	
 	# 检查怪物是否死亡
-	await get_tree().create_timer(1.0).timeout
-	if not is_instance_valid(monster):
+	await get_tree().create_timer(0.5).timeout
+	if not is_instance_valid(monster) or monster.current_hp <= 0:
 		_end_battle(true)
 		return
 	
-	# 2. 怪物反击 (如果还没死)
+	# 2. 怪物反击
 	print("怪物开始反击...")
 	if monster.has_method("play_animation"):
 		monster.play_animation("attcak", false)
 	
 	await get_tree().create_timer(0.5).timeout
-	var monster_damage = 10.0 # 基础怪物伤害
+	var monster_damage = 10.0
 	if monster.get("attack_power"):
 		monster_damage = monster.attack_power
 		
-	player_manager.modify_health(-monster_damage)
+	if player.has_method("take_damage"):
+		player.take_damage(monster_damage)
+	
 	print("玩家受到伤害: ", monster_damage)
 	
 	# 检查玩家是否死亡
@@ -233,15 +366,21 @@ func _execute_battle_turn(monster, hit_chance: float, damage_multiplier: float):
 		_end_battle(false)
 		return
 	
-	# 3. 回到攻击选择或结束战斗 (这里简单处理为一轮后可以继续选择或逃跑)
-	# 如果想做逃跑，可以加个逃跑按钮，或者 ESC 退出
+	# 3. 回到攻击选择
 	await get_tree().create_timer(0.5).timeout
 	attack_choice.visible = true
+	left_weapon_slot.visible = true
+	right_weapon_slot.visible = true
 	print("请选择下一次攻击部位")
 
 func _end_battle(is_win: bool):
 	attack_choice.visible = false
+	_set_battle_ui_visible(false)
 	player_manager.set_game_mode(PlayerManager.GameMode.EXPLORATION)
+	
+	# 战斗结束，换回探索模型
+	_swap_to_explorer()
+	
 	current_target_monster = null
 	if is_win:
 		print("战斗胜利！回到探索模式")

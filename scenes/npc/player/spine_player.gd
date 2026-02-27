@@ -41,7 +41,47 @@ func _ready():
 func _on_speed_changed():
 	var player_data = player_manager.get_player_data()
 	move_speed = player_data.speed
+
+func take_damage(amount: float):
+	player_manager.modify_health(-amount)
+	play_animation("hit", false)
+	if player_manager.player_data.health.current <= 0:
+		die()
+
+func die():
+	play_animation("die", false)
+	# 处理死亡逻辑...
+
+func play_animation(anim_name: String, loop: bool = false):
+	if animation_player and animation_player.has_animation(anim_name):
+		if loop:
+			animation_player.play(anim_name)
+		else:
+			animation_player.play(anim_name)
+			# 如果是非循环动画，可以等待播放完成
+	elif anim_name == "hit":
+		# 如果没有 hit 动画，可以做一个变红效果
+		var tween = create_tween()
+		sprite_2d.modulate = Color.RED
+		tween.tween_property(sprite_2d, "modulate", Color.WHITE, 0.2)
+
+func attack(target):
+	# 暂时用 walk 动画代替攻击，直到有真正的攻击帧动画
+	if animation_player.has_animation("attack"):
+		play_animation("attack", false)
+	else:
+		# 做一个向前的位移效果代表攻击
+		var original_pos = sprite_2d.position
+		var tween = create_tween()
+		var direction = 1.0 if not sprite_2d.flip_h else -1.0
+		tween.tween_property(sprite_2d, "position", original_pos + Vector2(50 * direction, 0), 0.1)
+		tween.tween_property(sprite_2d, "position", original_pos, 0.1)
 	
+	await get_tree().create_timer(0.2).timeout
+	if is_instance_valid(target) and target.has_method("take_damage"):
+		return true # 返回 true 表示触发了攻击逻辑
+	return false
+
 func _unhandled_input(event):
 	# 如果在战斗模式下，禁止点击地面移动
 	if PlayerManager.get_instance().current_mode == PlayerManager.GameMode.BATTLE:

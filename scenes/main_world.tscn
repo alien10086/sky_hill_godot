@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://cjhfdy0lw625t" path="res://scenes/player_info/speed_contral.tscn" id="6_wy0bs"]
 [ext_resource type="PackedScene" uid="uid://bs181fpbjvajy" path="res://scenes/player_info/bag.tscn" id="7_emumq"]
 [ext_resource type="PackedScene" uid="uid://buxpspgy0pbv4" path="res://scenes/backpack/backpack.tscn" id="8_5irk3"]
+[ext_resource type="PackedScene" uid="uid://dxchamw7gq7ex" path="res://scenes/inventory/left_weapon_slot.tscn" id="11_lh34f"]
+[ext_resource type="PackedScene" uid="uid://bc71f10ac1l2b" path="res://scenes/inventory/right_weapon_slot.tscn" id="12_lh34f"]
+[ext_resource type="PackedScene" uid="uid://wdtxse17n4vu" path="res://scenes/npc/enemy/enemy_avatar.tscn" id="13_lh34f"]
 [ext_resource type="PackedScene" uid="uid://d2wk56woe3psa" path="res://scenes/player_info/attack_choice.tscn" id="10_oa7qk"]
 
 [node name="TestWorld" type="Node2D" unique_id=337520155]
@@ -82,3 +85,24 @@ position = Vector2(131, 936)
 
 [node name="AttackChoice" parent="CanvasLayer" unique_id=1331705770 instance=ExtResource("10_oa7qk")]
 visible = false
+
+[node name="LeftWeaponSlot" parent="CanvasLayer" instance=ExtResource("11_lh34f")]
+visible = false
+offset_left = 306.0
+offset_top = 835.0
+offset_right = -1263.0
+offset_bottom = -122.0
+
+[node name="RightWeaponSlot" parent="CanvasLayer" instance=ExtResource("12_lh34f")]
+visible = false
+offset_left = 757.0
+offset_top = 831.0
+offset_right = -814.0
+offset_bottom = -125.0
+
+[node name="EnemyAvatar" parent="CanvasLayer" instance=ExtResource("13_lh34f")]
+visible = false
+offset_left = 1384.0
+offset_top = 70.0
+offset_right = -228.0
+offset_bottom = -855.0
