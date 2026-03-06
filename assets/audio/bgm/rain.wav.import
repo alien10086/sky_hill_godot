@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bawrqyn30iivn"
-path="res://.godot/imported/rain.wav-5eee6507024cf77a6a8628f38298f382.sample"
+uid="uid://cobp6jef1n71"
+path="res://.godot/imported/rain.wav-b6211d1a93cd7ad6cba07264bc58135f.sample"
 
 [deps]
 
-source_file="res://assets/audio/AudioClip/rain.wav"
-dest_files=["res://.godot/imported/rain.wav-5eee6507024cf77a6a8628f38298f382.sample"]
+source_file="res://assets/audio/bgm/rain.wav"
+dest_files=["res://.godot/imported/rain.wav-b6211d1a93cd7ad6cba07264bc58135f.sample"]
 
 [params]
 
