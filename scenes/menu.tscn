@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cqmxyqpnyboaf" path="res://scenes/menu.gd" id="1_vjb58"]
 [ext_resource type="Texture2D" uid="uid://8aye6h5aypd6" path="res://assets/ui/menu/menu.png" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://cmcyubw3bvx7t" path="res://assets/ui/menu/rain.png" id="3_con2f"]
 
 [sub_resource type="Animation" id="Animation_yqeox"]
 length = 0.001
@@ -72,6 +73,11 @@ script = ExtResource("1_vjb58")
 texture = ExtResource("1_yqeox")
 region_enabled = true
 region_rect = Rect2(2, 1280, 1133, 766)
+
+[node name="backfroundRain" type="Sprite2D" parent="." unique_id=856097888]
+texture = ExtResource("3_con2f")
+region_enabled = true
+region_rect = Rect2(2, 768, 1133, 637)
 
 [node name="LightNode2D" type="Node2D" parent="." unique_id=261126858]
 

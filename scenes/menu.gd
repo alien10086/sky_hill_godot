@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var rain_particles: CPUParticles2D = $RainParticles
 
 var bgm_music = preload("res://assets/audio/bgm/menu_theme.wav")
 var bgm_rain = preload("res://assets/audio/bgm/rain.wav")
@@ -8,6 +9,9 @@ var bgm_rain = preload("res://assets/audio/bgm/rain.wav")
 func _ready() -> void:
 	if animation_player:
 		animation_player.play("light")
+	
+	if rain_particles:
+		rain_particles.emitting = true
 	
 	_play_menu_audio()
 
