@@ -75,6 +75,7 @@ region_enabled = true
 region_rect = Rect2(2, 1280, 1133, 766)
 
 [node name="backfroundRain" type="Sprite2D" parent="." unique_id=856097888]
+visible = false
 texture = ExtResource("3_con2f")
 region_enabled = true
 region_rect = Rect2(2, 768, 1133, 637)
@@ -122,3 +123,8 @@ libraries/ = SubResource("AnimationLibrary_con2f")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=896704107]
 zoom = Vector2(1.85, 1.85)
+
+[node name="rainSprite2D" type="Sprite2D" parent="." unique_id=128457463]
+texture = ExtResource("3_con2f")
+region_enabled = true
+region_rect = Rect2(2, 127, 1133, 637)
