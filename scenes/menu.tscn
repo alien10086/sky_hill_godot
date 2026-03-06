@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://c48avwjh6popu"]
+
+[ext_resource type="Script" uid="uid://cqmxyqpnyboaf" path="res://scenes/menu.gd" id="1_vjb58"]
+[ext_resource type="Texture2D" uid="uid://8aye6h5aypd6" path="res://assets/ui/menu/menu.png" id="1_yqeox"]
+
+[sub_resource type="Animation" id="Animation_yqeox"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("light:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.9127187, 0.9127187, 0.9127187, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blackLight:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1.3715448, 1.3715448, 1.3715448, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vjb58"]
+resource_name = "light"
+length = 2.0666666
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("light:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.9127187, 0.9127187, 0.9127187, 1), Color(1.4369954, 1.4369954, 1.4369954, 1), Color(0.937531, 0.937531, 0.937531, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blackLight:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.96950716, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1.1638972, 1.1638972, 1.1638972, 1), Color(1.3715448, 1.3715448, 1.3715448, 1), Color(1.3945211, 1.3945211, 1.3945211, 1), Color(1.1638972, 1.1638972, 1.1638972, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_con2f"]
+_data = {
+&"RESET": SubResource("Animation_yqeox"),
+&"light": SubResource("Animation_vjb58")
+}
+
+[node name="Menu" type="Node2D" unique_id=1306491820]
+script = ExtResource("1_vjb58")
+
+[node name="background" type="Sprite2D" parent="." unique_id=362928730]
+texture = ExtResource("1_yqeox")
+region_enabled = true
+region_rect = Rect2(2, 1280, 1133, 766)
+
+[node name="LightNode2D" type="Node2D" parent="." unique_id=261126858]
+
+[node name="lightBuilding" type="Sprite2D" parent="LightNode2D" unique_id=779582483]
+position = Vector2(0, 43)
+texture = ExtResource("1_yqeox")
+region_enabled = true
+region_rect = Rect2(4, 598, 859, 678)
+
+[node name="window" type="Sprite2D" parent="." unique_id=1435095743]
+position = Vector2(-256, 120)
+rotation = -1.5546029
+texture = ExtResource("1_yqeox")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(1769, 331, 198, 143)
+
+[node name="top" type="Sprite2D" parent="." unique_id=56757813]
+position = Vector2(-1, -86)
+texture = ExtResource("1_yqeox")
+region_enabled = true
+region_rect = Rect2(1141, 1178, 860, 427)
+
+[node name="blackLight" type="Sprite2D" parent="." unique_id=1106396265]
+self_modulate = Color(1.3715448, 1.3715448, 1.3715448, 1)
+position = Vector2(282, -129)
+rotation = -1.6150478
+texture = ExtResource("1_yqeox")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(900, 1106, 203, 147)
+
+[node name="light" type="Sprite2D" parent="." unique_id=730631705]
+self_modulate = Color(0.9127187, 0.9127187, 0.9127187, 1)
+position = Vector2(229, -82)
+texture = ExtResource("1_yqeox")
+region_enabled = true
+region_rect = Rect2(25, 41, 423, 418)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1132164160]
+libraries/ = SubResource("AnimationLibrary_con2f")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=896704107]
+zoom = Vector2(1.85, 1.85)
