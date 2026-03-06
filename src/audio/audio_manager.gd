@@ -39,6 +39,16 @@ func play_bgm(stream: AudioStream):
 func stop_bgm():
 	bgm_player.stop()
 
+## 停止所有音效
+func stop_all_sfx():
+	for p in sfx_pool:
+		p.stop()
+
+## 停止所有音频
+func stop_all():
+	stop_bgm()
+	stop_all_sfx()
+
 ## 播放音效
 ## @param stream 音频资源
 ## @param volume_db 音量偏移
