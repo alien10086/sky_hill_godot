@@ -101,7 +101,7 @@ func _setup_exploration_trigger():
 	# 该函数已过时，逻辑并入 _connect_triggers，使用场景中预设的 Area2D
 	pass
 
-func _on_player_entered(body: Node2D):
+func _on_player_entered(_body: Node2D):
 	# 该函数已过时，逻辑并入 _on_area_entered
 	pass
 

@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var rain_system: Node2D = $RainSystem
 @onready var new_game_button: Button = %NewGameButton
 @onready var continue_button: Button = %ContinueButton
 @onready var exit_button: Button = %ExitButton
@@ -13,8 +12,8 @@ func _ready() -> void:
 	if animation_player:
 		animation_player.play("light")
 	
-	if rain_system:
-		rain_system.visible = true
+	#if rain_system:
+		#rain_system.visible = true
 	
 	if new_game_button:
 		new_game_button.pressed.connect(_on_new_game_pressed)

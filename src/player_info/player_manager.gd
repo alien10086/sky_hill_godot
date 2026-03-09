@@ -296,7 +296,7 @@ func load_game() -> bool:
 			# 恢复武器
 			if loaded_data.has("current_weapon_id"):
 				var weapon_id = loaded_data.current_weapon_id
-				var item_manager = load("res://src/player_info/item_manager.gd").get_instance()
+				var item_manager = ItemManager.get_instance()
 				if item_manager:
 					player_data.current_weapon = item_manager.get_item_by_identity(weapon_id)
 			

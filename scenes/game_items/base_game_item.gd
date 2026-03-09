@@ -88,7 +88,7 @@ func _on_mouse_exited() -> void:
 	
 
 # 1. 当鼠标在这个控件上按下并移动时触发
-func _get_drag_data(at_position):
+func _get_drag_data(_at_position):
 	
 	var data = {
 		"origin_node": self,

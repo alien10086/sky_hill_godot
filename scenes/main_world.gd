@@ -35,6 +35,7 @@ var zoom_label: Label
 @onready var left_weapon_slot: WeaponSlot = $CanvasLayer/LeftWeaponSlot
 @onready var right_weapon_slot: WeaponSlot = $CanvasLayer/RightWeaponSlot
 @onready var enemy_avatar: Control = $CanvasLayer/EnemyAvatar
+@onready var pause_menu: Control = $CanvasLayer/PauseMenu
 
 var player_manager: PlayerManager
 var current_target_monster = null
@@ -96,9 +97,11 @@ func _ready():
 	# 创建UI
 	#_setup_ui()
 	
-	# 设置初始相机位置为玩家位置
+	# 初始化相机位置
 	if player:
 		camera.position = Vector2(camera.position.x, player.global_position.y)
+	
+
 
 func _on_node_added(node: Node):
 	if node.is_in_group("monsters"):
@@ -409,12 +412,21 @@ func _unhandled_input(event: InputEvent) -> void:
 	# 1. 处理退出/关闭 UI 的全局快捷键
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_ESCAPE:
+			# 如果暂停菜单已经打开，由 PauseMenu 自己处理（或者这里统一处理）
+			if pause_menu.visible:
+				pause_menu._resume()
+				return
+
 			if attack_choice.visible:
 				attack_choice.visible = false
 				return # 消费该事件
 			if backpack.visible:
 				_on_bag_close() # 使用现有的关闭逻辑
 				return # 消费该事件
+			
+			# 如果没有其他 UI 打开，则打开暂停菜单
+			pause_menu.show_menu()
+			return
 
 	# 2. 如果背包打开，拦截所有针对游戏世界的输入（如相机缩放、拖拽）
 	if backpack.visible:
