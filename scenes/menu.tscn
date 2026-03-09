@@ -165,6 +165,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
+[node name="ContinueButton" type="Button" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "继续游戏"
+
 [node name="NewGameButton" type="Button" parent="Control/VBoxContainer" unique_id=1298568528]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 50)

@@ -60,6 +60,9 @@ var player_data = {
 		"room_type": "" # "left" 或 "right"
 	}
 }
+# 存档文件路径
+const SAVE_PATH = "user://savegame.json"
+
 # 信号定义
 signal level_changed(new_level:int)
 signal exp_changed(current_exp:int, max_exp:int)
@@ -238,10 +241,83 @@ func mark_monster_as_defeated(monster_id: String):
 	if not player_data.defeated_monsters.has(monster_id):
 		player_data.defeated_monsters.append(monster_id)
 		print("怪物已击败: ", monster_id)
+		save_game() # 自动存档
 
 # 检查怪物是否已击败
 func is_monster_defeated(monster_id: String) -> bool:
 	return player_data.defeated_monsters.has(monster_id)
+
+## --- 存档系统 ---
+
+# 保存游戏
+func save_game():
+	# 处理不能直接序列化的 Vector2
+	var data_to_save = player_data.duplicate(true)
+	data_to_save.last_world_position = {
+		"x": player_data.last_world_position.x,
+		"y": player_data.last_world_position.y
+	}
+	
+	# 如果有武器，目前只记录 identity，加载时再重新获取数据对象
+	if data_to_save.current_weapon:
+		data_to_save.current_weapon_id = data_to_save.current_weapon.identity
+		data_to_save.erase("current_weapon")
+	
+	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	if file:
+		var json_string = JSON.stringify(data_to_save)
+		file.store_string(json_string)
+		file.close()
+		print("游戏已保存到: ", SAVE_PATH)
+
+# 加载游戏
+func load_game() -> bool:
+	if not FileAccess.file_exists(SAVE_PATH):
+		print("未找到存档文件")
+		return false
+		
+	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
+	if file:
+		var json_string = file.get_as_text()
+		file.close()
+		
+		var json = JSON.new()
+		var error = json.parse(json_string)
+		if error == OK:
+			var loaded_data = json.data
+			
+			# 恢复 Vector2
+			if loaded_data.has("last_world_position"):
+				player_data.last_world_position = Vector2(
+					loaded_data.last_world_position.x,
+					loaded_data.last_world_position.y
+				)
+			
+			# 恢复武器
+			if loaded_data.has("current_weapon_id"):
+				var weapon_id = loaded_data.current_weapon_id
+				var item_manager = load("res://src/player_info/item_manager.gd").get_instance()
+				if item_manager:
+					player_data.current_weapon = item_manager.get_item_by_identity(weapon_id)
+			
+			# 合并其他简单数据
+			for key in loaded_data.keys():
+				if key != "last_world_position" and key != "current_weapon_id":
+					player_data[key] = loaded_data[key]
+			
+			print("存档加载成功")
+			return true
+	return false
+
+# 检查是否存在存档
+func has_save_file() -> bool:
+	return FileAccess.file_exists(SAVE_PATH)
+
+# 删除存档
+func delete_save_file():
+	if FileAccess.file_exists(SAVE_PATH):
+		DirAccess.remove_absolute(SAVE_PATH)
+		print("存档已删除")
 
 func _play_after_food_sfx():
 	var sfx = load("res://assets/audio/sfx/after_food.wav")

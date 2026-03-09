@@ -3,6 +3,7 @@ extends Node2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var rain_system: Node2D = $RainSystem
 @onready var new_game_button: Button = %NewGameButton
+@onready var continue_button: Button = %ContinueButton
 @onready var exit_button: Button = %ExitButton
 
 var bgm_music = preload("res://assets/audio/bgm/menu_theme.wav")
@@ -17,6 +18,13 @@ func _ready() -> void:
 	
 	if new_game_button:
 		new_game_button.pressed.connect(_on_new_game_pressed)
+	if continue_button:
+		continue_button.pressed.connect(_on_continue_pressed)
+		# 检查是否有存档，没有则隐藏“继续”按钮
+		var pm = PlayerManager.get_instance()
+		if not pm.has_save_file():
+			continue_button.visible = false
+			
 	if exit_button:
 		exit_button.pressed.connect(_on_exit_pressed)
 	
@@ -25,9 +33,22 @@ func _ready() -> void:
 func _on_new_game_pressed():
 	# 停止菜单背景音乐和环境音
 	AudioManager.stop_all()
-	# 重置玩家数据并进入游戏主场景
-	PlayerManager.get_instance().reset_all_attributes()
+	# 删除旧存档并重置数据
+	var pm = PlayerManager.get_instance()
+	pm.delete_save_file()
+	pm.reset_all_attributes()
 	get_tree().change_scene_to_file("res://scenes/main_world.tscn")
+
+func _on_continue_pressed():
+	# 停止菜单背景音乐和环境音
+	AudioManager.stop_all()
+	# 加载存档
+	var pm = PlayerManager.get_instance()
+	if pm.load_game():
+		get_tree().change_scene_to_file("res://scenes/main_world.tscn")
+	else:
+		print("加载失败，进入新游戏")
+		_on_new_game_pressed()
 
 func _on_exit_pressed():
 	# 退出游戏

@@ -90,6 +90,9 @@ func _ready():
 	# 实例化3个level_x场景
 	_instantiate_levels()
 	
+	# 自动保存一次初始状态
+	player_manager.save_game()
+	
 	# 创建UI
 	#_setup_ui()
 	
