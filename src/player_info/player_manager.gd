@@ -43,6 +43,7 @@ var player_data = {
 		"max": 100
 	},
 	"speed": 100,
+	"speed_mode": 0, # 0: 正常, 1: 快速, 2: 超快
 	"explored_floors": [], # 记录已探索的楼层索引 (中心区域)
 	"explored_rooms": [], # 记录已探索的房间标识，格式如 "100_left", "100_right"
 	"defeated_monsters": [], # 记录已击败的怪物，格式如 "100_left", "99_right"
@@ -249,6 +250,14 @@ func _play_after_food_sfx():
 func set_speed(speed_number:int):
 	player_data.speed = speed_number
 	speed_changed.emit()
+
+func set_speed_mode(mode: int):
+	player_data.speed_mode = mode
+	match mode:
+		0: set_speed(100)
+		1: set_speed(200)
+		2: set_speed(300)
+	print("游戏速度模式设置为: ", mode)
 	
 
 # 获取玩家数据
@@ -267,3 +276,4 @@ func reset_all_attributes():
 	set_attribute("accuracy", 5)
 	set_health(100, 100)
 	set_hunger(100, 100)
+	set_speed_mode(0) # 重置速度模式为正常

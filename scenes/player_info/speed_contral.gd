@@ -18,6 +18,9 @@ var player_manager: PlayerManager
 
 func _ready() -> void:
 	player_manager = PlayerManager.get_instance()
+	# 从全局数据初始化当前速度模式
+	current_speed_mode = player_manager.player_data.speed_mode
+	
 	slow_texture_button.pressed.connect(_on_normal_button_pressed)
 	fast_texture_button.pressed.connect(_on_fast_button_pressed)
 	super_fast_texture_button.pressed.connect(_on_super_fast_button_pressed)
@@ -43,14 +46,8 @@ func _set_speed_mode(mode:int):
 	
 	current_speed_mode = mode
 	_update_speed_button_states()
-	match mode:
-		0:
-			player_manager.set_speed(100)
-			
-		1:
-			player_manager.set_speed(200)
-		2:
-			player_manager.set_speed(300)
+	# 保存到全局状态
+	player_manager.set_speed_mode(mode)
 			
 # 速度控制按钮响应函数
 func _on_normal_button_pressed():

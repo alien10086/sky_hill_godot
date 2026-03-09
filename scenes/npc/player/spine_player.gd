@@ -29,6 +29,9 @@ func _ready():
 	player_manager = PlayerManager.get_instance()
 	
 	player_manager.speed_changed.connect(_on_speed_changed)
+	# 初始化速度
+	_on_speed_changed()
+	
 	# 初始化时停止所有动画
 	if animation_player:
 		animation_player.stop()
