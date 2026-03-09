@@ -47,6 +47,7 @@ var player_data = {
 	"explored_floors": [], # 记录已探索的楼层索引 (中心区域)
 	"explored_rooms": [], # 记录已探索的房间标识，格式如 "100_left", "100_right"
 	"defeated_monsters": [], # 记录已击败的怪物，格式如 "100_left", "99_right"
+	"floor_data": {}, # 记录楼层持久化数据，如背景索引：{floor_index: {"left_bg": 0, "right_bg": 5}}
 	"last_world_position": Vector2.ZERO, # 记录进入战斗前在主世界的位置
 	"current_weapon": null, # 当前装备的武器 ItemData
 	"current_floor": 100, # 记录当前所在的楼层
@@ -277,3 +278,8 @@ func reset_all_attributes():
 	set_health(100, 100)
 	set_hunger(100, 100)
 	set_speed_mode(0) # 重置速度模式为正常
+	player_data.defeated_monsters = []
+	player_data.floor_data = {}
+	player_data.explored_rooms = []
+	player_data.explored_floors = []
+	print("重置所有持久化游戏数据")

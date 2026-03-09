@@ -106,9 +106,13 @@ func _on_player_entered(body: Node2D):
 	pass
 
 func _replace_left_room_templates():
-	# 随机选择一个房间模板
-	var random_template_index = randi() % ROOM_TEMPLATES.size()
-	var template_path = ROOM_TEMPLATES[random_template_index]
+	var floor_data = player_manager.player_data.floor_data
+	var template_idx = randi() % ROOM_TEMPLATES.size()
+	
+	if floor_data.has(floor_index):
+		template_idx = floor_data[floor_index].left_template_idx
+		
+	var template_path = ROOM_TEMPLATES[template_idx]
 	var room_scene =  load(template_path)
 	
 	# 替换左房间
@@ -127,9 +131,13 @@ func _replace_left_room_templates():
 	_spawn_monster_with_persistence(new_left_room, "left")
 	
 func _replace_right_room_templates():
-	# 随机选择一个房间模板
-	var random_template_index = randi() % ROOM_TEMPLATES.size()
-	var template_path = ROOM_TEMPLATES[random_template_index]
+	var floor_data = player_manager.player_data.floor_data
+	var template_idx = randi() % ROOM_TEMPLATES.size()
+	
+	if floor_data.has(floor_index):
+		template_idx = floor_data[floor_index].right_template_idx
+		
+	var template_path = ROOM_TEMPLATES[template_idx]
 	var room_scene = load(template_path)
 	
 	# 替换右房间
@@ -179,9 +187,16 @@ func _spawn_random_monster_in_room(room_node: Node2D):
 		print("VIP 楼层不生成怪物")
 		return
 		
-	# 随机选择一个怪物模板
-	var random_monster_index = randi() % MONSTER_TEMPLATES.size()
-	var monster_path = MONSTER_TEMPLATES[random_monster_index]
+	var floor_data = player_manager.player_data.floor_data
+	var monster_idx = randi() % MONSTER_TEMPLATES.size()
+	
+	if floor_data.has(floor_index):
+		if room_node.name == "LeftRoom":
+			monster_idx = floor_data[floor_index].left_monster_idx
+		else:
+			monster_idx = floor_data[floor_index].right_monster_idx
+			
+	var monster_path = MONSTER_TEMPLATES[monster_idx]
 	var monster_scene = load(monster_path)
 	
 	# 实例化怪物

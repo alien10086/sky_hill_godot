@@ -105,19 +105,53 @@ func _on_node_added(node: Node):
 
 func _instantiate_levels():
 	# 清除已存在的实例
-	_clear_level_instances()
+	# _clear_level_instances()
 	
-	# 创建3个level_x实例，垂直排列
+	# 获取楼层持久化数据引用
+	var floor_data = player_manager.player_data.floor_data
+	
+	# 创建level_x实例，垂直排列
 	var floor_number = 100
-	for i in range(1, 100):  # 创建3个实例
+	for i in range(1, 100):
 		var level_instance:LevelxUI = level_x_scene.instantiate()
-		# 设置位置，每个实例垂直间隔575像素
+		var current_floor_idx = floor_number - i
+		
+		# 设置位置，每个实例垂直间隔 floor_height
 		level_instance.position = Vector2(0, i * floor_height)
-		level_instance.ui_canvas_layer =  canvas_layer
+		level_instance.ui_canvas_layer = canvas_layer
 		add_child(level_instance)
-		level_instance.set_level(floor_number - i)
-		level_instance.set_right_room_bg(randi() % 26)  # 随机生成0-25的数字
-		level_instance.set_left_room_bg(randi() % 26)   # 随机生成0-25的数字
+		level_instance.set_level(current_floor_idx)
+		
+		# 检查是否有保存的楼层数据
+		if floor_data.has(current_floor_idx):
+			var saved_data = floor_data[current_floor_idx]
+			level_instance.set_right_room_bg(saved_data.right_bg)
+			level_instance.set_left_room_bg(saved_data.left_bg)
+			# 这里可以扩展传递更多持久化数据给 level_instance
+		else:
+			# 第一次生成，记录随机数据
+			var left_bg = randi() % 26
+			var right_bg = randi() % 26
+			# 随机选择房间模板索引
+			var left_template_idx = randi() % level_instance.ROOM_TEMPLATES.size()
+			var right_template_idx = randi() % level_instance.ROOM_TEMPLATES.size()
+			# 随机选择怪物模板索引
+			var left_monster_idx = randi() % level_instance.MONSTER_TEMPLATES.size()
+			var right_monster_idx = randi() % level_instance.MONSTER_TEMPLATES.size()
+			
+			# 保存到持久化数据中
+			floor_data[current_floor_idx] = {
+				"left_bg": left_bg,
+				"right_bg": right_bg,
+				"left_template_idx": left_template_idx,
+				"right_template_idx": right_template_idx,
+				"left_monster_idx": left_monster_idx,
+				"right_monster_idx": right_monster_idx
+			}
+			
+			level_instance.set_left_room_bg(left_bg)
+			level_instance.set_right_room_bg(right_bg)
+			
 		level_instances.append(level_instance)
 		
 		var left_id = i * 10 + 0
@@ -417,6 +451,15 @@ func _clear_level_instances():
 		if is_instance_valid(instance):
 			instance.queue_free()
 	level_instances.clear()
+	
+	# 重置 AStar
+	astar.clear()
+	# 重新添加 VIP 层的点
+	astar.add_point(0, vip_level.get_left_mark_point())
+	astar.add_point(1, vip_level.get_center_mark_point())
+	astar.add_point(2, vip_level.get_right_mark_point())
+	astar.connect_points(0, 1)
+	astar.connect_points(2, 1)
 
 #func _setup_camera():
 	# 创建相机
