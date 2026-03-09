@@ -230,6 +230,7 @@ func _on_monster_clicked(monster):
 	# 设置战斗上下文
 	var context = player_manager.player_data.battle_context
 	context.monster_type = "big_fat" if "big_fat" in monster.name.to_lower() else "long_arm"
+	context.monster_scene_path = monster.scene_file_path
 	context.monster_hp = monster.current_hp
 	context.floor_index = level_x.floor_index
 	context.room_type = "left" if monster_room.name == "LeftRoom" else "right"

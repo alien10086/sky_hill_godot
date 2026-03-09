@@ -50,6 +50,7 @@ var player_data = {
 	"attack_mode": "normal", # "normal" (直接攻击) 或 "focused" (部位选择)
 	"battle_context": { # 战斗上下文
 		"monster_type": "", # big_fat 或 long_arm
+		"monster_scene_path": "", # 怪物的场景文件路径
 		"monster_hp": 0,
 		"floor_index": -1,
 		"room_type": "" # "left" 或 "right"

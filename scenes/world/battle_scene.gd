@@ -55,11 +55,13 @@ func _setup_battle():
 	# 		player.get_node("SpineSprite").scale.x = 1
 	# 	monster_container.scale.x = 2
 
-	var monster_scene_path = ""
-	if "big_fat" in context.monster_type:
-		monster_scene_path = "res://scenes/npc/enemy/bigFatMonst.tscn"
-	else:
-		monster_scene_path = "res://scenes/npc/enemy/longArmMonst.tscn"
+	var monster_scene_path = context.monster_scene_path
+	if monster_scene_path == "":
+		# 回退逻辑，防止路径丢失
+		if "big_fat" in context.monster_type:
+			monster_scene_path = "res://scenes/npc/enemy/bigFatMonst.tscn"
+		else:
+			monster_scene_path = "res://scenes/npc/enemy/longArmMonst.tscn"
 		
 	var monster_scene = load(monster_scene_path)
 	var monster = monster_scene.instantiate()
