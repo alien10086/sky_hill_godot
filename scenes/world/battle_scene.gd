@@ -23,7 +23,7 @@ func _ready():
 	# 进入战斗场景时重置为普通攻击模式
 	player_manager.player_data.attack_mode = "normal"
 	
-	_setup_battle()
+	await _setup_battle()
 	_init_ui()
 	_update_attack_mode_ui()
 	_start_battle()
@@ -92,7 +92,7 @@ func _init_ui():
 	
 	if enemy_avatar and current_target:
 		var context = player_manager.player_data.battle_context
-		var is_big_fat = context.monster_type == "big_fat"
+		var is_big_fat = "big_fat" in context.monster_type
 		enemy_avatar.set_avatar_type(is_big_fat)
 		enemy_avatar.update_hp(current_target.current_hp, current_target.max_hp)
 		
@@ -152,12 +152,9 @@ func _start_battle():
 	if player_manager.player_data.attack_mode == "focused":
 		attack_choice.visible = true
 		var context = player_manager.player_data.battle_context
-		
-		# 使用枚举类型进行 UI 显示切换
-		var monster_type_enum = attack_choice.MonsterType.LONG_ARM
-		if context.monster_type == "big_fat":
-			monster_type_enum = attack_choice.MonsterType.BIG_FAT
-			
+		# 优先使用 context 中记录的类型，确保 UI 显示正确
+		var is_big_fat = "big_fat" in context.monster_type
+		var monster_type_enum = attack_choice.MonsterType.BIG_FAT if is_big_fat else attack_choice.MonsterType.LONG_ARM
 		attack_choice.show_monst_ui(monster_type_enum)
 	else:
 		attack_choice.visible = false
