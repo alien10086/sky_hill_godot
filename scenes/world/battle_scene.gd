@@ -20,6 +20,9 @@ var player_manager: PlayerManager
 
 func _ready():
 	player_manager = PlayerManager.get_instance()
+	# 进入战斗场景时重置为普通攻击模式
+	player_manager.player_data.attack_mode = "normal"
+	
 	_setup_battle()
 	_init_ui()
 	_update_attack_mode_ui()
@@ -215,9 +218,13 @@ func _end_battle(state):
 	current_state = state
 	attack_choice.visible = false
 	
+	var context = player_manager.player_data.battle_context
+	var monster_id = str(context.floor_index) + "_" + context.room_type
+	
 	if state == BattleState.WIN:
 		_update_status("战斗胜利！")
-		# 记录怪物已被击败（可以根据 context.room_type 移除 MainWorld 中的怪物）
+		# 记录怪物已被击败
+		player_manager.mark_monster_as_defeated(monster_id)
 	elif state == BattleState.LOSE:
 		_update_status("你被打败了...")
 		# 已经在 PlayerManager 处理了死亡跳转

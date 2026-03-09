@@ -45,6 +45,8 @@ var player_data = {
 	"speed": 100,
 	"explored_floors": [], # 记录已探索的楼层索引 (中心区域)
 	"explored_rooms": [], # 记录已探索的房间标识，格式如 "100_left", "100_right"
+	"defeated_monsters": [], # 记录已击败的怪物，格式如 "100_left", "99_right"
+	"last_world_position": Vector2.ZERO, # 记录进入战斗前在主世界的位置
 	"current_weapon": null, # 当前装备的武器 ItemData
 	"current_floor": 100, # 记录当前所在的楼层
 	"attack_mode": "normal", # "normal" (直接攻击) 或 "focused" (部位选择)
@@ -228,6 +230,16 @@ func set_game_mode(new_mode: GameMode):
 		current_mode = new_mode
 		game_mode_changed.emit(new_mode)
 		print("游戏模式切换为: ", "战斗模式" if new_mode == GameMode.BATTLE else "探索模式")
+
+# 记录击败怪物
+func mark_monster_as_defeated(monster_id: String):
+	if not player_data.defeated_monsters.has(monster_id):
+		player_data.defeated_monsters.append(monster_id)
+		print("怪物已击败: ", monster_id)
+
+# 检查怪物是否已击败
+func is_monster_defeated(monster_id: String) -> bool:
+	return player_data.defeated_monsters.has(monster_id)
 
 func _play_after_food_sfx():
 	var sfx = load("res://assets/audio/sfx/after_food.wav")

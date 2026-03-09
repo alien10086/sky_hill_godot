@@ -124,7 +124,7 @@ func _replace_left_room_templates():
 	left_room = new_left_room
 	
 	# 生成怪物
-	_spawn_random_monster_in_room(new_left_room)
+	_spawn_monster_with_persistence(new_left_room, "left")
 	
 func _replace_right_room_templates():
 	# 随机选择一个房间模板
@@ -145,8 +145,34 @@ func _replace_right_room_templates():
 	right_room = new_right_room
 	
 	# 生成怪物
-	_spawn_random_monster_in_room(new_right_room)
+	_spawn_monster_with_persistence(new_right_room, "right")
+
+func _spawn_monster_with_persistence(room_node: Node2D, side: String):
+	var monster_id = str(floor_index) + "_" + side
 	
+	# 检查是否已击败
+	if player_manager.is_monster_defeated(monster_id):
+		# 如果已击败，显示骷髅头图标
+		_show_defeated_icon(room_node)
+		return
+		
+	# 如果没击败，正常生成
+	_spawn_random_monster_in_room(room_node)
+
+func _show_defeated_icon(room_node: Node2D):
+	var skull_tex = load("res://assets/ui/enemy/skull_head.png")
+	if skull_tex:
+		var sprite = Sprite2D.new()
+		sprite.texture = skull_tex
+		sprite.scale = Vector2(0.2, 0.2) # 根据图标大小缩放
+		room_node.add_child(sprite)
+		sprite.position = Vector2(200, -100) # 悬浮在怪物原位置上方
+		
+		# 添加一个简单的呼吸悬浮效果
+		var tween = create_tween().set_loops()
+		tween.tween_property(sprite, "position:y", sprite.position.y - 20, 1.0).set_trans(Tween.TRANS_SINE)
+		tween.tween_property(sprite, "position:y", sprite.position.y, 1.0).set_trans(Tween.TRANS_SINE)
+
 func _spawn_random_monster_in_room(room_node: Node2D):
 	# VIP 楼层 (100层) 不会出现怪物
 	if floor_index == 99:

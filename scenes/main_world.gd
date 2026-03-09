@@ -60,6 +60,14 @@ func _on_bag_close():
 
 func _ready():
 	player_manager = PlayerManager.get_instance()
+	
+	# 如果是从战斗场景回来的，恢复位置
+	if player_manager.player_data.last_world_position != Vector2.ZERO:
+		player.global_position = player_manager.player_data.last_world_position
+		# 恢复后清空，避免下次进入主世界误触发
+		player_manager.player_data.last_world_position = Vector2.ZERO
+		print("恢复玩家在主世界的位置")
+	
 	get_tree().node_added.connect(_on_node_added)
 	bag.bag_open.connect(_on_bag_open)
 	bag.bag_close.connect(_on_bag_close)
@@ -234,6 +242,9 @@ func _on_monster_clicked(monster):
 	context.monster_hp = monster.current_hp
 	context.floor_index = level_x.floor_index
 	context.room_type = "left" if monster_room.name == "LeftRoom" else "right"
+	
+	# 记录进入战斗前的位置
+	player_manager.player_data.last_world_position = player.global_position
 	
 	player_manager.set_game_mode(PlayerManager.GameMode.BATTLE)
 	
