@@ -7,5 +7,5 @@ func _ready():
 func _on_restart_button_pressed():
 	# 重置玩家数据
 	PlayerManager.get_instance().reset_all_attributes()
-	# 重新加载主场景
-	get_tree().change_scene_to_file("res://scenes/main_world.tscn")
+	# 返回主菜单
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
