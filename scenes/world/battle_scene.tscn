@@ -1,31 +1,30 @@
 [gd_scene format=3 uid="uid://deuqsrlvs3cep"]
 
-[ext_resource type="Script" uid="uid://d3xchamw7gq7ex" path="res://scenes/world/battle_scene.gd" id="1_battle"]
+[ext_resource type="Script" uid="uid://mj72j77fi3rx" path="res://scenes/world/battle_scene.gd" id="1_tvqny"]
 [ext_resource type="PackedScene" uid="uid://ct1hmjoitapqo" path="res://scenes/npc/player/spineFighter.tscn" id="2_fighter"]
 [ext_resource type="PackedScene" uid="uid://drmmjx5y1axeb" path="res://scenes/player_info/avatar_hub.tscn" id="3_avatar"]
 [ext_resource type="PackedScene" uid="uid://wdtxse17n4vu" path="res://scenes/npc/enemy/enemy_avatar.tscn" id="4_enemy"]
-[ext_resource type="PackedScene" uid="uid://dxchamw7gq7ex" path="res://scenes/inventory/left_weapon_slot.tscn" id="5_left"]
 [ext_resource type="PackedScene" uid="uid://bc71f10ac1l2b" path="res://scenes/inventory/right_weapon_slot.tscn" id="6_right"]
 [ext_resource type="PackedScene" uid="uid://d2wk56woe3psa" path="res://scenes/player_info/attack_choice.tscn" id="7_attack"]
 
-[node name="BattleScene" type="Node2D"]
-script = ExtResource("1_battle")
+[node name="BattleScene" type="Node2D" unique_id=1724605857]
+script = ExtResource("1_tvqny")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=681102811]
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.12, 0.12, 0.12, 1)
 
-[node name="SpineFighter" parent="." instance=ExtResource("2_fighter")]
+[node name="SpineFighter" parent="." unique_id=461033314 instance=ExtResource("2_fighter")]
 position = Vector2(406, 729)
 
-[node name="MonsterContainer" type="Node2D" parent="."]
+[node name="MonsterContainer" type="Node2D" parent="." unique_id=1535452905]
 position = Vector2(1356, 901)
 scale = Vector2(2, 2)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1931585289]
 
-[node name="StatusLabel" type="Label" parent="CanvasLayer"]
+[node name="StatusLabel" type="Label" parent="CanvasLayer" unique_id=1909532267]
 offset_left = 687.0
 offset_top = 74.0
 offset_right = 1256.0
@@ -34,19 +33,19 @@ theme_override_font_sizes/font_size = 50
 text = "战斗开始"
 horizontal_alignment = 1
 
-[node name="AvatarHub" parent="CanvasLayer" instance=ExtResource("3_avatar")]
+[node name="AvatarHub" parent="CanvasLayer" unique_id=1768679824 instance=ExtResource("3_avatar")]
 offset_left = 78.0
 offset_top = 65.0
 offset_right = -1543.0
 offset_bottom = -831.0
 
-[node name="EnemyAvatar" parent="CanvasLayer" instance=ExtResource("4_enemy")]
+[node name="EnemyAvatar" parent="CanvasLayer" unique_id=147120067 instance=ExtResource("4_enemy")]
 offset_left = 1384.0
 offset_top = 70.0
 offset_right = -228.0
 offset_bottom = -855.0
 
-[node name="AttackModeButton" type="Button" parent="CanvasLayer"]
+[node name="AttackModeButton" type="Button" parent="CanvasLayer" unique_id=821863187]
 offset_left = 306.0
 offset_top = 835.0
 offset_right = 606.0
@@ -54,7 +53,7 @@ offset_bottom = 958.0
 theme_override_font_sizes/font_size = 30
 text = "普通攻击模式"
 
-[node name="FleeButton" type="Button" parent="CanvasLayer"]
+[node name="FleeButton" type="Button" parent="CanvasLayer" unique_id=1342508670]
 offset_left = 1650.0
 offset_top = 930.0
 offset_right = 1850.0
@@ -62,11 +61,11 @@ offset_bottom = 1030.0
 theme_override_font_sizes/font_size = 30
 text = "逃跑"
 
-[node name="RightWeaponSlot" parent="CanvasLayer" instance=ExtResource("6_right")]
+[node name="RightWeaponSlot" parent="CanvasLayer" unique_id=1194757936 instance=ExtResource("6_right")]
 offset_left = 757.0
 offset_top = 831.0
 offset_right = -814.0
 offset_bottom = -125.0
 
-[node name="AttackChoice" parent="CanvasLayer" instance=ExtResource("7_attack")]
+[node name="AttackChoice" parent="CanvasLayer" unique_id=717051466 instance=ExtResource("7_attack")]
 visible = false
