@@ -33,8 +33,28 @@ func _setup_battle():
 	var current_weapon = player_manager.player_data.current_weapon
 	_sync_fighter_weapon(player, current_weapon)
 	
-	# 2. 生成怪物
+	# 2. 生成怪物并根据房间方位调整站位
 	var context = player_manager.player_data.battle_context
+	
+	# # 根据房间方位调整玩家和怪物的初始位置
+	# # 默认布局：玩家在左(406)，怪物在右(1356)
+	#if context.room_type == "left":
+	# 	# 如果是左房间，怪物应该在左边，玩家在右边
+	# 	player.position.x = 1356
+		#monster_container.position.scale.x =  -1
+	# 	# 转向：玩家面向左，怪物面向右
+	# 	if player.has_node("SpineSprite"):
+	# 		player.get_node("SpineSprite").scale.x = -1
+	# 	# 注意：怪物的转向通常在怪物脚本中处理，或者这里统一处理容器 scale
+	# 	monster_container.scale.x = -2 # 之前是 2, 现在反转
+	# else:
+	# 	# 默认右房间布局
+	# 	player.position.x = 406
+	# 	monster_container.position.x = 1356
+	# 	if player.has_node("SpineSprite"):
+	# 		player.get_node("SpineSprite").scale.x = 1
+	# 	monster_container.scale.x = 2
+
 	var monster_scene_path = ""
 	if "big_fat" in context.monster_type:
 		monster_scene_path = "res://scenes/npc/enemy/bigFatMonst.tscn"
@@ -43,8 +63,13 @@ func _setup_battle():
 		
 	var monster_scene = load(monster_scene_path)
 	var monster = monster_scene.instantiate()
+	# monster.scale.x = -1
 	monster_container.add_child(monster)
 	current_target = monster
+	
+	# 从战斗上下文同步怪物血量
+	if context.monster_hp > 0:
+		monster.current_hp = context.monster_hp
 	
 	# 初始化怪物状态
 	if monster.has_method("random_skin"):

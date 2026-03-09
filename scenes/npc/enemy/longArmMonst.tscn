@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://xpea2thbb05k"]
+[gd_scene format=3 uid="uid://xpea2thbb05k"]
 
 [ext_resource type="Script" uid="uid://oogtcm0g52tp" path="res://scenes/npc/enemy/long_arm_monst.gd" id="1_ctyw7"]
 [ext_resource type="SpineAtlasResource" uid="uid://bfuo6jno1tqmo" path="res://assets/enemy/long_arm_monst/skeleton.atlas" id="1_ridpa"]
@@ -9,22 +9,21 @@ atlas_res = ExtResource("1_ridpa")
 skeleton_file_res = ExtResource("2_ctyw7")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctyw7"]
-size = Vector2(418, 396)
+size = Vector2(318, 309)
 
-[node name="LongArmMonst" type="Node2D"]
-scale = Vector2(-1, 1)
+[node name="LongArmMonst" type="Node2D" unique_id=1967999704]
 script = ExtResource("1_ctyw7")
 
-[node name="SpineSprite" type="SpineSprite" parent="."]
+[node name="SpineSprite" type="SpineSprite" parent="." unique_id=376444367]
 skeleton_data_res = SubResource("SpineSkeletonDataResource_ogpag")
 preview_skin = "Default"
 preview_animation = "-- Empty --"
 preview_frame = false
 preview_time = 0.0
-scale = Vector2(0.65, 0.65)
+scale = Vector2(0.5, 0.5)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=196459148]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-24, -200)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=732171640]
+position = Vector2(-23, -156.5)
 shape = SubResource("RectangleShape2D_ctyw7")
