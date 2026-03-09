@@ -36,24 +36,6 @@ func _setup_battle():
 	# 2. 生成怪物并根据房间方位调整站位
 	var context = player_manager.player_data.battle_context
 	
-	# # 根据房间方位调整玩家和怪物的初始位置
-	# # 默认布局：玩家在左(406)，怪物在右(1356)
-	#if context.room_type == "left":
-	# 	# 如果是左房间，怪物应该在左边，玩家在右边
-	# 	player.position.x = 1356
-		#monster_container.position.scale.x =  -1
-	# 	# 转向：玩家面向左，怪物面向右
-	# 	if player.has_node("SpineSprite"):
-	# 		player.get_node("SpineSprite").scale.x = -1
-	# 	# 注意：怪物的转向通常在怪物脚本中处理，或者这里统一处理容器 scale
-	# 	monster_container.scale.x = -2 # 之前是 2, 现在反转
-	# else:
-	# 	# 默认右房间布局
-	# 	player.position.x = 406
-	# 	monster_container.position.x = 1356
-	# 	if player.has_node("SpineSprite"):
-	# 		player.get_node("SpineSprite").scale.x = 1
-	# 	monster_container.scale.x = 2
 
 	var monster_scene_path = context.monster_scene_path
 	if monster_scene_path == "":
@@ -145,19 +127,7 @@ func _sync_fighter_weapon(fighter, weapon_item):
 	if not fighter or not weapon_item: return
 	var skin_name = weapon_item.identity.to_lower()
 	
-	# # 统一映射逻辑，确保 identity 能匹配到 Spine 皮肤
-	# var id = weapon_item.identity.to_lower()
-	# skin_name = 
-	# match id:
-	# 	"stick", "wooden_stick": skin_name = "battle_stick"
-	# 	"knife", "kitchen_knife": skin_name = "battle_knife"
-	# 	"axe", "fire_axe": skin_name = "battle_axe"
-	# 	"mace": skin_name = "battle_mace"
-	# 	"shovel": skin_name = "battle_shovel"
-	# 	"hands": skin_name = "battle_hand"
-	# 	_: 
-	# 		# 如果没有直接匹配，尝试使用 identity 原名
-	# 		skin_name = "battle_" + id
+
 	
 	if fighter.has_node("SpineSprite"):
 		var spine_sprite = fighter.get_node("SpineSprite")
