@@ -9,6 +9,8 @@ extends Control
 
 signal part_selected(hit_chance: float, damage_multiplier: float)
 
+enum MonsterType { BIG_FAT, LONG_ARM }
+
 func _ready():
 	# 连接按钮点击信号
 	big_fat_texture_button.pressed.connect(func(): _on_part_clicked(0.5, 2.0))
@@ -20,12 +22,11 @@ func _ready():
 func _on_part_clicked(hit_chance: float, damage_multiplier: float):
 	part_selected.emit(hit_chance, damage_multiplier)
 
-func show_monst_ui(monst_ui_name:String):
-	
-	if monst_ui_name == "big_fat_monst":
+func show_monst_ui(type: MonsterType):
+	if type == MonsterType.BIG_FAT:
 		big_fat_monst_ui.visible = true
 		long_arm_monst_ui.visible = false
-	elif monst_ui_name == "long_arm_monst":
+	elif type == MonsterType.LONG_ARM:
 		big_fat_monst_ui.visible = false
 		long_arm_monst_ui.visible = true
 		

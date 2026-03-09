@@ -91,7 +91,8 @@ func _init_ui():
 		avatar_hub._on_health_changed(player_manager.player_data.health.current, player_manager.player_data.health.max)
 	
 	if enemy_avatar and current_target:
-		var is_big_fat = "big_fat" in current_target.name.to_lower()
+		var context = player_manager.player_data.battle_context
+		var is_big_fat = context.monster_type == "big_fat"
 		enemy_avatar.set_avatar_type(is_big_fat)
 		enemy_avatar.update_hp(current_target.current_hp, current_target.max_hp)
 		
@@ -150,8 +151,14 @@ func _start_battle():
 	
 	if player_manager.player_data.attack_mode == "focused":
 		attack_choice.visible = true
-		var monster_type = "big_fat_monst" if "big_fat" in current_target.name.to_lower() else "long_arm_monst"
-		attack_choice.show_monst_ui(monster_type)
+		var context = player_manager.player_data.battle_context
+		
+		# 使用枚举类型进行 UI 显示切换
+		var monster_type_enum = attack_choice.MonsterType.LONG_ARM
+		if context.monster_type == "big_fat":
+			monster_type_enum = attack_choice.MonsterType.BIG_FAT
+			
+		attack_choice.show_monst_ui(monster_type_enum)
 	else:
 		attack_choice.visible = false
 		# 普通模式下，可以通过点击怪物或者点击某个“攻击”按钮来触发攻击
