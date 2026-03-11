@@ -290,7 +290,7 @@ func _on_monster_clicked(monster):
 	
 	# 切换到专门的战斗场景
 	print("切换到专门战斗场景，对战怪物: ", monster.name)
-	get_tree().change_scene_to_file("res://scenes/world/battle_scene.tscn")
+	SceneTransition.change_scene("res://scenes/world/battle_scene.tscn")
 
 #func _swap_to_fighter():
 	#var fighter_scene = load("res://scenes/npc/player/spineFighter.tscn")

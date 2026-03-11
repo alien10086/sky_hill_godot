@@ -238,7 +238,7 @@ func _end_battle(state):
 		
 	await get_tree().create_timer(1.5).timeout
 	player_manager.set_game_mode(PlayerManager.GameMode.EXPLORATION)
-	get_tree().change_scene_to_file("res://scenes/main_world.tscn")
+	SceneTransition.change_scene("res://scenes/main_world.tscn")
 
 func _update_status(msg):
 	status_label.text = msg

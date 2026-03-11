@@ -8,4 +8,4 @@ func _on_restart_button_pressed():
 	# 重置玩家数据
 	PlayerManager.get_instance().reset_all_attributes()
 	# 返回主菜单
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	SceneTransition.change_scene("res://scenes/menu.tscn")

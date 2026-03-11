@@ -3,7 +3,10 @@ extends Control
 @onready var resume_button: Button = %ResumeButton
 @onready var quit_to_menu_button: Button = %QuitToMenuButton
 
+var player_manager: PlayerManager
+
 func _ready():
+	player_manager = PlayerManager.get_instance()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	visible = false
 	resume_button.pressed.connect(_on_resume_pressed)
@@ -31,7 +34,7 @@ func _on_resume_pressed():
 
 func _on_quit_to_menu_pressed():
 	# 确保保存
-	PlayerManager.get_instance().save_game()
+	player_manager.save_game()
 	get_tree().paused = false
 	AudioManager.stop_all()
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	SceneTransition.change_scene("res://scenes/menu.tscn")

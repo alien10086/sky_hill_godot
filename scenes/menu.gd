@@ -36,7 +36,7 @@ func _on_new_game_pressed():
 	var pm = PlayerManager.get_instance()
 	pm.delete_save_file()
 	pm.reset_all_attributes()
-	get_tree().change_scene_to_file("res://scenes/main_world.tscn")
+	SceneTransition.change_scene("res://scenes/main_world.tscn")
 
 func _on_continue_pressed():
 	# 停止菜单背景音乐和环境音
@@ -44,7 +44,7 @@ func _on_continue_pressed():
 	# 加载存档
 	var pm = PlayerManager.get_instance()
 	if pm.load_game():
-		get_tree().change_scene_to_file("res://scenes/main_world.tscn")
+		SceneTransition.change_scene("res://scenes/main_world.tscn")
 	else:
 		print("加载失败，进入新游戏")
 		_on_new_game_pressed()
