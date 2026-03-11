@@ -292,30 +292,30 @@ func _on_monster_clicked(monster):
 	print("切换到专门战斗场景，对战怪物: ", monster.name)
 	get_tree().change_scene_to_file("res://scenes/world/battle_scene.tscn")
 
-func _swap_to_fighter():
-	var fighter_scene = load("res://scenes/npc/player/spineFighter.tscn")
-	var fighter = fighter_scene.instantiate()
-	
-	# 记录原位置
-	var old_pos = player.global_position
-	var parent = player.get_parent()
-	
-	# 移除原玩家节点，添加新战斗节点
-	parent.add_child(fighter)
-	fighter.global_position = old_pos
-	
-	# 如果玩家面朝左，战斗模型也面朝左
-	if player.has_node("SpineSprite") and player.get_node("SpineSprite").scale.x < 0:
-		if fighter.has_node("SpineSprite"):
-			fighter.get_node("SpineSprite").scale.x = -1
-	
-	# 更新当前武器皮肤
-	_sync_fighter_weapon(fighter, player_manager.player_data.current_weapon)
-	
-	# 替换全局引用
-	var old_player = player
-	player = fighter
-	old_player.queue_free()
+#func _swap_to_fighter():
+	#var fighter_scene = load("res://scenes/npc/player/spineFighter.tscn")
+	#var fighter = fighter_scene.instantiate()
+	#
+	## 记录原位置
+	#var old_pos = player.global_position
+	#var parent = player.get_parent()
+	#
+	## 移除原玩家节点，添加新战斗节点
+	#parent.add_child(fighter)
+	#fighter.global_position = old_pos
+	#
+	## 如果玩家面朝左，战斗模型也面朝左
+	#if player.has_node("SpineSprite") and player.get_node("SpineSprite").scale.x < 0:
+		#if fighter.has_node("SpineSprite"):
+			#fighter.get_node("SpineSprite").scale.x = -1
+	#
+	## 更新当前武器皮肤
+	#_sync_fighter_weapon(fighter, player_manager.player_data.current_weapon)
+	#
+	## 替换全局引用
+	#var old_player = player
+	#player = fighter
+	#old_player.queue_free()
 
 func _swap_to_explorer():
 	var explorer_scene = load("res://scenes/npc/player/spine_player.tscn")
